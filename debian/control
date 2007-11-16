@@ -1,0 +1,14 @@
+Source: kdebindings
+Section: kde
+Priority: optional
+Maintainer: Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Build-Depends: cdbs, debhelper (>= 5), cmake, quilt, kdelibs5-dev (>=4:3.96.0),
+Standards-Version: 3.7.2
+
+Package: kdebindings
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: KDE bindings
+ Long text about what this package is..
+ .
+
