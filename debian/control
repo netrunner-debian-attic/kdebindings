@@ -2,7 +2,8 @@ Source: kdebindings
 Section: kde
 Priority: optional
 Maintainer: Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
-Build-Depends: cdbs, debhelper (>= 5), cmake, quilt, kdelibs5-dev (>=4:3.96.0),
+Build-Depends: cdbs, debhelper (>= 5), cmake, quilt, kdebase-workspace-dev (>=4:3.96.0),
+ libqscintilla2-dev, mono-gmcs, python-dev, libqwt5-qt4-dev, ruby1.9-dev,
 Standards-Version: 3.7.2
 
 Package: kdebindings
