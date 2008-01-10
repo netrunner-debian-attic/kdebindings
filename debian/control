@@ -8,13 +8,16 @@ Standards-Version: 3.7.3
 Homepage: http://www.kde.org
 
 Package: python-kde4
+Section: python
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: Python bindings for the KDE 4 libraries
  ...
 
 Package: libqt4-ruby1.8
+Section: interpreters
  ...
 
 Package: libsmokeqt4-1
+Section: libs
  ...
