@@ -1,5 +1,0 @@
-#!/usr/bin/make -f
-
-export LDFLAGS+="-Wl,--as-needed"
-include debian/cdbs/kde.mk
-

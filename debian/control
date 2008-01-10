@@ -1,16 +1,20 @@
-Source: kdebindings
+Source: kde4bindings
 Section: kde
 Priority: optional
-Maintainer: Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
-Build-Depends: cdbs, debhelper (>= 5), cmake, quilt, kdebase-workspace-dev (>=4:3.97.0),
- libqscintilla2-dev, mono-gmcs, python-dev, libqwt5-qt4-dev, ruby1.9-dev,
+Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Build-Depends: debhelper (>= 5), kdelibs5-dev (>> 4:4.0), python-all-dev, ..., ruby1.8-dev, ...
+Uploaders: Vincent Fourmond <fourmond@debian.org>, Torsten Marek <shlomme@debian.org>, Adeodato Simó <dato@net.com.org.es>
 Standards-Version: 3.7.3
-Homepage: http://www.kde.org/
+Homepage: http://www.kde.org
 
-Package: kdebindings
+Package: python-kde4
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: KDE bindings
- Long text about what this package is..
- .
+Description: Python bindings for the KDE 4 libraries
+ ...
 
+Package: libqt4-ruby1.8
+ ...
+
+Package: libsmokeqt4-1
+ ...
