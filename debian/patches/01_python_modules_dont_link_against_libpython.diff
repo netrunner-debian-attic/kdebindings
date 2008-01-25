@@ -1,0 +1,26 @@
+Do not link python modules against -lpython2.X. Since KDE4's cmake file
+uses --no-undefined by default, we have to remove that from the default
+CMAKE_SHARED_LINKER_FLAGS variable, but only for the pykde4 subdirectory.
+
+--- a/python/pykde4/cmake/modules/SIPMacros.cmake
++++ b/python/pykde4/cmake/modules/SIPMacros.cmake
+@@ -96,7 +96,6 @@
+         DEPENDS ${_abs_module_sip}
+     )
+     ADD_LIBRARY(${_logical_name} SHARED ${_sip_output_files} )
+-    TARGET_LINK_LIBRARIES(${_logical_name} ${PYTHON_LIBRARY})
+     TARGET_LINK_LIBRARIES(${_logical_name} ${EXTRA_LINK_LIBRARIES})
+     SET_TARGET_PROPERTIES(${_logical_name} PROPERTIES PREFIX "" OUTPUT_NAME ${_child_module_name})
+ 
+--- a/python/pykde4/CMakeLists.txt
++++ b/python/pykde4/CMakeLists.txt
+@@ -53,6 +53,9 @@
+ 
+ ADD_DEFINITIONS(-D_REENTRANT -DQT_NO_DEBUG -DQT_CORE_LIB -DQT_GUI_LIB)
+ 
++# Do not use --no-undefined for python modules.
++STRING(REPLACE -Wl,--no-undefined "" CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS}")
++
+ ADD_SIP_PYTHON_MODULE(PyKDE4.kdecore sip/kdecore/kdecoremod.sip ${KDE4_KDECORE_LIBS} ${KDE4_KPTY_LIBS})
+ ADD_SIP_PYTHON_MODULE(PyKDE4.solid sip/solid/solidmod.sip ${KDE4_SOLID_LIBS})
+ ADD_SIP_PYTHON_MODULE(PyKDE4.kdeui sip/kdeui/kdeuimod.sip ${KDE4_KDEUI_LIBS})

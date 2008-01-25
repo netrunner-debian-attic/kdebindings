@@ -1,5 +1,9 @@
 #! /usr/bin/make -f
 
+include /usr/share/quilt/quilt.make
+
+##
+
 cmake_flags := \
 	-DCMAKE_SKIP_RPATH=true				\
 	-DCMAKE_BUILD_TYPE=Debian			\
@@ -55,7 +59,7 @@ cmake_flags += -DPYTHON_EXECUTABLE=/usr/bin/$(pydefault)
 
 ##
 
-$(objdir)/CMakeCache.txt:
+$(objdir)/CMakeCache.txt: $(QUILT_STAMPFN)
 	-mkdir $(objdir)
 	cd $(objdir) && cmake $(CURDIR) $(cmake_flags) \
 	    -DCMAKE_C_FLAGS="$(CFLAGS)" -DCMAKE_CXX_FLAGS="$(CFLAGS)"
@@ -82,7 +86,7 @@ build-stamp: $(objdir)/CMakeCache.txt
 
 ##
 
-clean:
+clean: unpatch
 	dh_testdir
 	dh_testroot
 	
