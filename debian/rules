@@ -15,11 +15,7 @@ cmake_flags := \
 	-DCONFIG_INSTALL_DIR=/etc/kde4			\
 	-DDATA_INSTALL_DIR=/usr/share/kde4/apps		\
 	-DHTML_INSTALL_DIR=/usr/share/doc/kde4/HTML	\
-	-DKCFG_INSTALL_DIR=/usr/share/kde4/config.kcfg	\
-							\
-	-DCMAKE_EXE_LINKER_FLAGS="-Wl,--no-undefined -Wl,--as-needed"	 \
-	-DCMAKE_SHARED_LINKER_FLAGS="-Wl,--no-undefined -Wl,--as-needed" \
-	-DCMAKE_MODULE_LINKER_FLAGS="-Wl,--no-undefined -Wl,--as-needed" \
+	-DKCFG_INSTALL_DIR=/usr/share/kde4/config.kcf
 
 # OK, here we disable all that we don't want.
 # Please remove lines as you add packaging support for them.
