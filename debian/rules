@@ -64,10 +64,11 @@ $(objdir)/CMakeCache.txt:
 	cd $(objdir) && cmake $(CURDIR) $(cmake_flags) \
 	    -DCMAKE_C_FLAGS="$(CFLAGS)" -DCMAKE_CXX_FLAGS="$(CFLAGS)"
 	
-	for v in $(pyversions); do \
+	set -e; for v in $(pyversions); do \
 	    d=$(objdir)/python/pykde4-$$v; \
 	    mkdir $$d && cd $$d && \
 	    cmake $(CURDIR)/python/pykde4 $(cmake_flags) \
+	    -DCMAKE_SHARED_LINKER_FLAGS="" \
 	    -DPYTHON_EXECUTABLE=/usr/bin/python$$v; \
 	done
 
@@ -77,7 +78,7 @@ build: build-stamp
 build-stamp: $(objdir)/CMakeCache.txt
 	$(MAKE) -C $(objdir)
 	
-	for v in $(pyversions); do \
+	set -e; for v in $(pyversions); do \
 	    make -C $(objdir)/python/pykde4-$$v; \
 	done
 	
@@ -101,7 +102,7 @@ install:
 	dh_testroot
 	$(MAKE) -C $(objdir) install DESTDIR=$(CURDIR)/debian/tmp
 	
-	for v in $(pyversions); do \
+	set -e; for v in $(pyversions); do \
 	    make -C $(objdir)/python/pykde4-$$v install DESTDIR=$(CURDIR)/debian/tmp; \
 	done
 	
