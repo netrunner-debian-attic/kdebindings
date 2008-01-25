@@ -1,0 +1,146 @@
+#! /usr/bin/make -f
+
+cmake_flags := \
+	-DCMAKE_SKIP_RPATH=true				\
+	-DCMAKE_BUILD_TYPE=Debian			\
+	-DCMAKE_INSTALL_PREFIX=/usr			\
+	-DCMAKE_VERBOSE_MAKEFILE=ON			\
+							\
+	-DKDE4_BUILD_TESTS=false			\
+	-DKDE4_USE_ALWAYS_FULL_RPATH=false		\
+	-DKDE_DISTRIBUTION_TEXT="Debian packages"	\
+							\
+	-DLIB_INSTALL_DIR=/usr/lib			\
+	-DSYSCONF_INSTALL_DIR=/etc			\
+	-DCONFIG_INSTALL_DIR=/etc/kde4			\
+	-DDATA_INSTALL_DIR=/usr/share/kde4/apps		\
+	-DHTML_INSTALL_DIR=/usr/share/doc/kde4/HTML	\
+	-DKCFG_INSTALL_DIR=/usr/share/kde4/config.kcfg	\
+							\
+	-DCMAKE_EXE_LINKER_FLAGS="-Wl,--no-undefined -Wl,--as-needed"	 \
+	-DCMAKE_SHARED_LINKER_FLAGS="-Wl,--no-undefined -Wl,--as-needed" \
+	-DCMAKE_MODULE_LINKER_FLAGS="-Wl,--no-undefined -Wl,--as-needed" \
+
+# OK, here we disable all that we don't want.
+# Please remove lines as you add packaging support for them.
+# Do NOT remove ENABLE_PYKDE4, it gets special handling below. -- Dato
+cmake_flags += \
+	-DENABLE_QYOTO=OFF	\
+	-DENABLE_SMOKE=OFF	\
+	-DENABLE_SMOKEKDE=OFF	\
+	-DENABLE_QTRUBY=OFF	\
+	-DENABLE_KORUNDUM=OFF	\
+	-DENABLE_KROSSRUBY=OFF	\
+	-DENABLE_KROSSPYTHON=OFF\
+	-DENABLE_PYKDE4=OFF
+
+##
+
+DEB_HOST_GNU_TYPE  ?= $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
+DEB_BUILD_GNU_TYPE ?= $(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
+
+objdir = $(CURDIR)/obj-$(DEB_HOST_GNU_TYPE)
+
+##
+
+CFLAGS = -Wall -g
+
+ifneq (,$(findstring noopt,$(DEB_BUILD_OPTIONS)))
+    CFLAGS += -O0
+else
+    CFLAGS += -O2
+endif
+
+##
+
+pydefault  := $(shell pyversions --default)
+pyversions := $(shell pyversions --supported --version)
+cmake_flags += -DPYTHON_EXECUTABLE=/usr/bin/$(pydefault)
+
+##
+
+$(objdir)/CMakeCache.txt:
+	-mkdir $(objdir)
+	cd $(objdir) && cmake $(CURDIR) $(cmake_flags) \
+	    -DCMAKE_C_FLAGS="$(CFLAGS)" -DCMAKE_CXX_FLAGS="$(CFLAGS)"
+	
+	for v in $(pyversions); do \
+	    d=$(objdir)/python/pykde4-$$v; \
+	    mkdir $$d && cd $$d && \
+	    cmake $(CURDIR)/python/pykde4 $(cmake_flags) \
+	    -DPYTHON_EXECUTABLE=/usr/bin/python$$v; \
+	done
+
+##
+
+build: build-stamp
+build-stamp: $(objdir)/CMakeCache.txt
+	$(MAKE) -C $(objdir)
+	
+	for v in $(pyversions); do \
+	    make -C $(objdir)/python/pykde4-$$v; \
+	done
+	
+	touch $@
+
+##
+
+clean:
+	dh_testdir
+	dh_testroot
+	
+	rm -f build-stamp
+	rm -rf $(objdir)
+	
+	dh_clean
+
+##
+
+install:
+	dh_testdir
+	dh_testroot
+	$(MAKE) -C $(objdir) install DESTDIR=$(CURDIR)/debian/tmp
+	
+	for v in $(pyversions); do \
+	    make -C $(objdir)/python/pykde4-$$v install DESTDIR=$(CURDIR)/debian/tmp; \
+	done
+	
+	dh_install
+	cd debian/tmp/usr/share/doc/kde4/HTML/PyKDE4 && \
+	    rm -f COPYING.html COPYING.LESSER.html CREATIVECOMMONS.html
+	
+	install -D -m 755 debian/tmp/usr/share/kde4/apps/pykde4/pykdeuic4.py \
+	    debian/python-kde4-dev/usr/bin/pykdeuic4
+
+##
+
+binary: binary-arch binary-indep
+
+binary-arch: build install
+	$(MAKE) -f debian/rules DH_OPTIONS=-s binary-common
+
+binary-indep: build install
+	$(MAKE) -f debian/rules DH_OPTIONS=-i binary-common
+
+binary-common:
+	dh_testdir
+	dh_testroot
+	dh_installchangelogs
+	dh_installdocs
+	dh_installexamples
+	dh_installman
+	dh_pycentral
+	dh_link
+	dh_strip
+	dh_compress
+	dh_fixperms
+	dh_installdeb
+	dh_shlibdeps
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+
+
+##
+
+.PHONY: build clean install binary binary-arch binary-indep binary-common

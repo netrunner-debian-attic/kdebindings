@@ -2,4 +2,8 @@ kde4bindings (4:4.0.0-1) UNRELEASED; urgency=low
 
   * Initial upload.
 
- -- Adeodato Simó <dato@net.com.org.es>  Thu, 10 Jan 2008 12:17:30 +0100
+  [ Adeodato Simó ]
+  * Package PyKDE4 (python-kde4, python-kde4-dev, python-kde4-doc; -dbg
+    versions missing).
+
+ -- Adeodato Simó <dato@net.com.org.es>  Fri, 25 Jan 2008 20:04:20 +0100
