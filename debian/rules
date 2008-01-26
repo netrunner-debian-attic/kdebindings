@@ -108,10 +108,10 @@ install:
 	    make -C $(objdir)/python/pykde4-$$v install DESTDIR=$(CURDIR)/debian/tmp; \
 	done
 	
-	dh_install
 	cd debian/tmp/usr/share/doc/kde4/HTML/PyKDE4 && \
 	    rm -f COPYING.html COPYING.LESSER.html CREATIVECOMMONS.html
 	
+	dh_install
 	install -D -m 755 debian/tmp/usr/share/kde4/apps/pykde4/pykdeuic4.py \
 	    debian/python-kde4-dev/usr/bin/pykdeuic4
 
