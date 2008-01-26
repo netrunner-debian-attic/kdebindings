@@ -41,7 +41,7 @@ Recommends: python-kde4
 Description: UIC compiler and SIP files for PyKDE4
  This package contains pykdeuic4, a wrapper around PyQt's own UIC (user
  interface compiler). It is needed to generate code from Qt Designer's
- .uic files. You want to install this package if you are writing a PyKDE
+ uic files. You want to install this package if you are writing a PyKDE
  application which has .uic files, or running one of these applications
  from source.
  .
