@@ -19,7 +19,10 @@ cmake_flags := \
 	-DCONFIG_INSTALL_DIR=/etc/kde4			\
 	-DDATA_INSTALL_DIR=/usr/share/kde4/apps		\
 	-DHTML_INSTALL_DIR=/usr/share/doc/kde4/HTML	\
-	-DKCFG_INSTALL_DIR=/usr/share/kde4/config.kcf
+	-DKCFG_INSTALL_DIR=/usr/share/kde4/config.kcf	\
+	-DCMAKE_EXE_LINKER_FLAGS="-Wl,--as-needed"	\
+	-DCMAKE_SHARED_LINKER_FLAGS="-Wl,--as-needed"	\
+	-DCMAKE_MODULE_LINKER_FLAGS="-Wl,--as-needed"
 
 # OK, here we disable all that we don't want.
 # Please remove lines as you add packaging support for them.
@@ -68,7 +71,6 @@ $(objdir)/CMakeCache.txt: $(QUILT_STAMPFN)
 	    d=$(objdir)/python/pykde4-$$v; \
 	    mkdir $$d && cd $$d && \
 	    cmake $(CURDIR)/python/pykde4 $(cmake_flags) \
-	    -DCMAKE_SHARED_LINKER_FLAGS="" \
 	    -DPYTHON_EXECUTABLE=/usr/bin/python$$v; \
 	done
 
