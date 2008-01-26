@@ -109,7 +109,8 @@ install:
 	done
 	
 	cd debian/tmp/usr/share/doc/kde4/HTML/PyKDE4 && \
-	    rm -f COPYING.html COPYING.LESSER.html CREATIVECOMMONS.html
+	    rm -f COPYING.html COPYING.LESSER.html CREATIVECOMMONS.html && \
+	    rmdir "creative commons_files"
 	
 	dh_install
 	install -D -m 755 debian/tmp/usr/share/kde4/apps/pykde4/pykdeuic4.py \
