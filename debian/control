@@ -2,7 +2,7 @@ Source: kde4bindings
 Section: kde
 Priority: optional
 Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
-Build-Depends: debhelper (>= 5), cmake, quilt,
+Build-Depends: debhelper (>= 5), cmake (>= 2.6.0), quilt,
  kdelibs5-dev (>> 4:4.0), libphonon-dev,
  python, python-all-dev, sip4, python-sip4-dev, python-qt4-dev,
  ruby1.8-dev,
