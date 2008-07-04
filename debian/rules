@@ -71,7 +71,8 @@ $(objdir)/Makefile: $(QUILT_STAMPFN)
 $(patsubst %,$(objdir)/python/pykde4-%/Makefile,$(pyversions)): $(objdir)/Makefile
 	mkdir -p $(@D)	
 	cd  $(@D) && cmake $(CURDIR)/python/pykde4 $(cmake_flags) \
-	    -DPYTHON_EXECUTABLE=/usr/bin/python$(subst $(objdir)/python/pykde4-,,$(subst /Makefile,,$@)) 
+	    -DPYTHON_EXECUTABLE=/usr/bin/python$(subst $(objdir)/python/pykde4-,,$(subst /Makefile,,$@)) \
+	    -DENABLE_PHONON_PYTHON=off
 
 ##
 
