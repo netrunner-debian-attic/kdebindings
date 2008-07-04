@@ -1,0 +1,21 @@
+Index: b/python/pykde4/CMakeLists.txt
+===================================================================
+--- a/python/pykde4/CMakeLists.txt
++++ b/python/pykde4/CMakeLists.txt
+@@ -3,6 +3,16 @@
+ # This module can be built independant from the rest of kdebindings.
+ SET(CMAKE_MODULE_PATH ${pykde4_SOURCE_DIR}/cmake/modules ${CMAKE_MODULE_PATH})
+ 
++# where to look first for cmake modules, before ${CMAKE_ROOT}/Modules/ is checked
++set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake/modules )
++
++# search packages used by KDE
++find_package(KDE4 REQUIRED)
++include (KDE4Defaults)
++include (MacroLibrary)
++include(MacroOptionalAddSubdirectory)
++
++
+ FIND_PACKAGE(PythonLibrary REQUIRED)
+ INCLUDE(PythonMacros)
+ 
