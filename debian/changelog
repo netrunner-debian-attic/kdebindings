@@ -15,4 +15,4 @@ kdebindings (4:4.0.84-1) UNRELEASED; urgency=low
   * nepomuk apparantly uses a qHash(QUrl) withotu defining it in headers
     - let us add it to some body
 
- -- Debian Qt/KDE Team <debian-qt-kde@lists.debian.org>  Fri, 04 Jul 2008 00:14:23 +0200
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Fri, 04 Jul 2008 00:14:23 +0200
