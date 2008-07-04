@@ -27,15 +27,14 @@ cmake_flags := \
 # OK, here we disable all that we don't want.
 # Please remove lines as you add packaging support for them.
 # Do NOT remove ENABLE_PYKDE4, it gets special handling below. -- Dato
+# PHONON_SMOKE seems broken, but nice to have in future. Sune Vuorela. Version 4.0.84
 cmake_flags += \
-	-DENABLE_QYOTO=OFF	\
-	-DENABLE_SMOKE=OFF	\
-	-DENABLE_SMOKEKDE=OFF	\
-	-DENABLE_QTRUBY=OFF	\
-	-DENABLE_KORUNDUM=OFF	\
-	-DENABLE_KROSSRUBY=OFF	\
-	-DENABLE_KROSSPYTHON=OFF\
-	-DENABLE_PYKDE4=OFF
+	-DENABLE_PYKDE4=OFF\
+	-DENABLE_PHONON_SMOKE=OFF \
+	-DENABLE_PLASMA_SHARP=OFF \
+	-DENABLE_SOPRANO_SMOKE=ON \
+	-DENABLE_KHTML_SHARP=ON \
+	-DENABLE_PHONON_RUBY=OFF
 
 ##
 
@@ -62,22 +61,22 @@ cmake_flags += -DPYTHON_EXECUTABLE=/usr/bin/$(pydefault)
 
 ##
 
-$(objdir)/CMakeCache.txt: $(QUILT_STAMPFN)
-	-mkdir $(objdir)
+$(objdir)/Makefile: $(QUILT_STAMPFN)
+	mkdir -p $(objdir)
 	cd $(objdir) && cmake $(CURDIR) $(cmake_flags) \
 	    -DCMAKE_C_FLAGS="$(CFLAGS)" -DCMAKE_CXX_FLAGS="$(CFLAGS)"
-	
-	set -e; for v in $(pyversions); do \
-	    d=$(objdir)/python/pykde4-$$v; \
-	    mkdir $$d && cd $$d && \
-	    cmake $(CURDIR)/python/pykde4 $(cmake_flags) \
-	    -DPYTHON_EXECUTABLE=/usr/bin/python$$v; \
-	done
+
+##
+
+$(patsubst %,$(objdir)/python/pykde4-%/Makefile,$(pyversions)): $(objdir)/Makefile
+	mkdir -p $(@D)	
+	cd  $(@D) && cmake $(CURDIR)/python/pykde4 $(cmake_flags) \
+	    -DPYTHON_EXECUTABLE=/usr/bin/python$(subst $(objdir)/python/pykde4-,,$(subst /Makefile,,$@)) 
 
 ##
 
 build: build-stamp
-build-stamp: $(objdir)/CMakeCache.txt
+build-stamp: $(objdir)/Makefile $(patsubst %,$(objdir)/python/pykde4-%/Makefile,$(pyversions))
 	$(MAKE) -C $(objdir)
 	
 	set -e; for v in $(pyversions); do \
