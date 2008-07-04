@@ -1,0 +1,16 @@
+Index: b/python/pykde4/sip/nepomuk/resource.sip
+===================================================================
+--- a/python/pykde4/sip/nepomuk/resource.sip
++++ b/python/pykde4/sip/nepomuk/resource.sip
+@@ -19,6 +19,11 @@
+ // You should have received a copy of the GNU General Public License
+ // along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ 
++uint qHash( const QUrl& url )
++{
++    return qHash( ( QString )url.toString() );
++}
++
+ namespace Nepomuk
+ {
+ 

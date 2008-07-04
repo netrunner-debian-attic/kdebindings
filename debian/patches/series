@@ -1,4 +1,5 @@
 01_python_modules_dont_link_against_libpython.diff
 02_include_default_settings_in_python_cmakelist.diff
 03_fix_ruby_and_consts.diff
+03_python_nepomuk_qhash_qurl_fix.diff
 97_fix_target_link_libraries.diff
