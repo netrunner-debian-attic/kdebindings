@@ -30,11 +30,9 @@ cmake_flags := \
 # PHONON_SMOKE seems broken, but nice to have in future. Sune Vuorela. Version 4.0.84
 cmake_flags += \
 	-DENABLE_PYKDE4=OFF\
-	-DENABLE_PHONON_SMOKE=OFF \
 	-DENABLE_PLASMA_SHARP=OFF \
 	-DENABLE_SOPRANO_SMOKE=ON \
 	-DENABLE_KHTML_SHARP=ON \
-	-DENABLE_PHONON_RUBY=OFF
 
 ##
 
@@ -72,7 +70,6 @@ $(patsubst %,$(objdir)/python/pykde4-%/Makefile,$(pyversions)): $(objdir)/Makefi
 	mkdir -p $(@D)	
 	cd  $(@D) && cmake $(CURDIR)/python/pykde4 $(cmake_flags) \
 	    -DPYTHON_EXECUTABLE=/usr/bin/python$(subst $(objdir)/python/pykde4-,,$(subst /Makefile,,$@)) \
-	    -DENABLE_PHONON_PYTHON=off
 
 ##
 
