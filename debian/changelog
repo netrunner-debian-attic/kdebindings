@@ -11,8 +11,7 @@ kdebindings (4:4.0.84-1) UNRELEASED; urgency=low
   * Fix target link libraries
   * Fix ruby build
   * Fix pykde seperate build
+    - For now, disable nepomuk - it doesn't build.
   * Reimplement a shell construct in make to have it be more reliable
-  * nepomuk apparantly uses a qHash(QUrl) withotu defining it in headers
-    - let us add it to some body
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Fri, 04 Jul 2008 00:14:23 +0200
