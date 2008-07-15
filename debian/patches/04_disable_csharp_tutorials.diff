@@ -1,0 +1,11 @@
+Index: b/csharp/kimono/CMakeLists.txt
+===================================================================
+--- a/csharp/kimono/CMakeLists.txt
++++ b/csharp/kimono/CMakeLists.txt
+@@ -1,5 +1,5 @@
+ PROJECT(kimono)
+-add_subdirectory(tutorials)
++#add_subdirectory(tutorials)
+ 
+ INCLUDE(UsePkgConfig)
+ 
