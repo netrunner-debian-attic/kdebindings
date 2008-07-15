@@ -80,30 +80,54 @@ Description: header files for qt4 and kde4 smoke
 
 Package: kimono
 Section: libs
-Depends: libkimono
+Depends: libkhtml2.0-cil, libkde-dotnet4.1-cil
 Architecture: any
 Description: kde4 bindings for c-sharp, metapackage
 
 Package: qyoto
 Section: libs
-Depends: libqyoto
+Depends: libqt-dotnet4.4-cil
 Architecture: any
 Description: qt4 bindings for c-sharp, metapackage
 
-Package: libqyoto
+Package: libqt-dotnet4.4-cil
 Section: libs
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}, ${cli:Depends}
 Architecture: any
 Description: qt4 bindings for csharp
 
-Package: libqyoto-dev
+Package: qyoto-dev
 Section: libdevel
-Depends: ${shlibs:Depends}, libqyoto (= ${binary:Version})
+Depends: ${shlibs:Depends}, libqt-dotnet4.4-cil (= ${binary:Version}), ${cli:Depends}
 Architecture: any
 Description: development files for qt4 bindings for csharp
 
-Package: libkimono
+Package: libkde-dotnet4.1-cil
 Section: libs
-Depends: libqyoto
-Architecture: any
+Depends: libqt-dotnet4.4-cil (= ${binary:Version}), ${cli:Depends}
+Architecture: any 
 Description: kde4 bindings for c-sharp
+
+Package: libkhtml2.0-cil
+Section: libs
+Depends: libqt-dotnet4.4-cil (= ${binary:Version}), libkde-dotnet4.1-cil (= ${binary:Version}), ${cli:Depends}
+Architecture: any
+Description: kde4 bindings for c-sharp, khtml edition
+
+Package: qt4-ruby
+Section: libs
+Depends: ${shlibs:Depends}
+Architecture: any
+Description: qt4 bindings for ruby
+
+Package: kde4-ruby
+Section: libs
+Depends: ${shlibs:Depends}, qt4-ruby (= ${binary:Version})
+Architecture: any
+Description: kde4 bindings for ruby
+
+Package: qt4-ruby-dev
+Section: libdevel
+Depends: ${shlibs:Depends}
+Architecture: any
+Description: qt4 ruby dev tools
