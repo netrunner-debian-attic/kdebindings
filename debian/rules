@@ -122,7 +122,7 @@ mono-is-a-piece-of-weirdo:
 	install -D -m 644 $(CURDIR)/debian/csharp/khtml.dll.config debian/libkhtml2.0-cil/usr/lib/cli/kdebindings-2.0/
 	install -D -m 644 $(objdir)/lib/kde-dotnet.dll debian/libkde-dotnet4.1-cil/usr/lib/cli/kdebindings-4.1/
 	install -D -m 644 $(objdir)/lib/libkimono.so debian/libkde-dotnet4.1-cil/usr/lib/cli/kdebindings-4.1/
-	install -D -m 644 $(CURDIR)/debian/csharp/kde-dotnet.dll.config debian/lib-kde-dotnet4.1-cil/usr/lib/cli/kdebindings-4.1/
+	install -D -m 644 $(CURDIR)/debian/csharp/kde-dotnet.dll.config debian/libkde-dotnet4.1-cil/usr/lib/cli/kdebindings-4.1/
 	install -D -m 644 $(objdir)/lib/qt-dotnet.dll debian/libqt-dotnet4.4-cil/usr/lib/cli/kdebindings-4.4/
 	install -D -m 644 $(objdir)/lib/libqyoto.so debian/libqt-dotnet4.4-cil/usr/lib/cli/kdebindings-4.4/
 	install -D -m 644 $(objdir)/lib/libqyotoshared.so debian/libqt-dotnet4.4-cil/usr/lib/cli/kdebindings-4.4/
