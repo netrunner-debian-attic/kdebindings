@@ -1,2 +1,4 @@
-debian/tmp/usr/lib/python2.*/site-packages/PyKDE4/*.so
-debian/tmp/usr/lib/python2.*/site-packages/PyKDE4/__init__.py
+usr/lib/python2.*/site-packages/PyKDE4/*.so
+usr/lib/python2.*/site-packages/PyKDE4/__init__.py
+usr/lib/python2.*/site-packages/PyKDE4/pykdeconfig.py
+usr/lib/kde4/krosspython.so
