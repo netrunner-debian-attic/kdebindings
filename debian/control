@@ -5,7 +5,7 @@ Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Build-Depends: debhelper (>= 5), cmake (>= 2.4.5), quilt,
  kdelibs5-dev (>> 4:4.0), libphonon-dev, libqt4-opengl-dev,
  python, python-all-dev, sip4, python-sip4-dev, python-qt4-dev,
- ruby1.8-dev,ruby1.8 , mono-gac, mono-gmcs, libmono-dev, cdbs
+ ruby1.8-dev,ruby1.8 , mono-gac, mono-gmcs, libmono-dev, cdbs, cli-common-dev
 Uploaders: Vincent Fourmond <fourmond@debian.org>, Torsten Marek <shlomme@debian.org>, Adeodato Simó <dato@net.com.org.es>
 XS-Python-Version: >= 2.4
 Standards-Version: 3.7.3
