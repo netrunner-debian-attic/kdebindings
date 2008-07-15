@@ -76,7 +76,7 @@ $(patsubst %,$(objdir)/python/pykde4-%/Makefile,$(pyversions)): $(objdir)/Makefi
 
 ##
 $(patsubst %,build-stamp-python-%,$(pyversions)): $(patsubst %,$(objdir)/python/pykde4-%/Makefile,$(pyversions))
-	$(MAKE) -j5 -C $(objdir)/python/pykde4-$(subst build-stamp-python-,,$@)
+	$(MAKE) -C $(objdir)/python/pykde4-$(subst build-stamp-python-,,$@)
 	touch $@
 
 
