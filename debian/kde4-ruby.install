@@ -7,3 +7,7 @@ usr/lib/ruby/1.8/*/korundum4.so
 usr/lib/ruby/1.8/*/ktexteditor.so
 usr/lib/ruby/1.8/*/solid.so
 
+usr/lib/kde4/krossruby.so
+usr/lib/kde4/krubypluginfactory.so
+
+
