@@ -1,4 +1,6 @@
+bindings_branch.diff
 01_python_modules_dont_link_against_libpython.diff
 02_include_default_settings_in_python_cmakelist.diff
 03_disable_python-nepomuk_the_hard_way.diff
+04_disable_csharp_tutorials.diff
 97_fix_target_link_libraries.diff
