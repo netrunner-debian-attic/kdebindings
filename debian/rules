@@ -115,8 +115,8 @@ install: dh_install mono-is-a-piece-of-weirdo
 
 mono-is-a-piece-of-weirdo:
 	install -d debian/libkhtml2.0-cil/usr/lib/cli/kdebindings-2.0
-	install -d debian/libkhtml2.0-cil/usr/lib/cli/kdebindings-4.1
-	install -d debian/libkhtml2.0-cil/usr/lib/cli/kdebindings-4.4
+	install -d debian/libkde-dotnet4.1-cil/usr/lib/cli/kdebindings-4.1
+	install -d debian/libqt-dotnet4.4-cil/usr/lib/cli/kdebindings-4.4
 	install -D -m 644 $(objdir)/lib/khtml.dll debian/libkhtml2.0-cil/usr/lib/cli/kdebindings-2.0/
 	install -D -m 644 $(objdir)/lib/libkhtml-sharp.so debian/libkhtml2.0-cil/usr/lib/cli/kdebindings-2.0/
 	install -D -m 644 $(CURDIR)/debian/csharp/khtml.dll.config debian/libkhtml2.0-cil/usr/lib/cli/kdebindings-2.0/
