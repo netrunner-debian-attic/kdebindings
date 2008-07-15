@@ -1,6 +1,8 @@
 #! /usr/bin/make -f
 
 include /usr/share/quilt/quilt.make
+include /usr/share/cdbs/1/rules/utils.mk
+
 
 ##
 
@@ -27,12 +29,11 @@ cmake_flags := \
 # OK, here we disable all that we don't want.
 # Please remove lines as you add packaging support for them.
 # Do NOT remove ENABLE_PYKDE4, it gets special handling below. -- Dato
-# PHONON_SMOKE seems broken, but nice to have in future. Sune Vuorela. Version 4.0.84
 cmake_flags += \
 	-DENABLE_PYKDE4=OFF\
-	-DENABLE_PLASMA_SHARP=OFF \
 	-DENABLE_SOPRANO_SMOKE=ON \
 	-DENABLE_KHTML_SHARP=ON \
+	-DRUBY_SITE_LIB_DIR=/usr/lib/ruby/1.8/
 
 ##
 
@@ -72,46 +73,47 @@ $(patsubst %,$(objdir)/python/pykde4-%/Makefile,$(pyversions)): $(objdir)/Makefi
 	    -DPYTHON_EXECUTABLE=/usr/bin/python$(subst $(objdir)/python/pykde4-,,$(subst /Makefile,,$@)) \
 
 ##
+$(patsubst %,build-stamp-python-%,$(pyversions)): $(patsubst %,$(objdir)/python/pykde4-%/Makefile,$(pyversions))
+	$(MAKE) -j5 -C $(objdir)/python/pykde4-$(subst build-stamp-python-,,$@)
+	touch $@
+
 
 build: build-stamp
-build-stamp: $(objdir)/Makefile $(patsubst %,$(objdir)/python/pykde4-%/Makefile,$(pyversions))
+build-stamp: $(patsubst %,build-stamp-python-%,$(pyversions)) build-stamp-generic
+	touch $@
+
+build-stamp-generic: $(objdir)/Makefile 
 	$(MAKE) -C $(objdir)
-	
-	set -e; for v in $(pyversions); do \
-	    make -C $(objdir)/python/pykde4-$$v; \
-	done
-	
 	touch $@
 
 ##
 
-clean: unpatch
+clean:: unpatch
 	dh_testdir
 	dh_testroot
 	
 	rm -f build-stamp
+	rm -f build-stamp-*
 	rm -rf $(objdir)
 	
 	dh_clean
 
 ##
-
-install:
+install-pre:
 	dh_testdir
 	dh_testroot
+
+$(patsubst %,install-python-%,$(pyversions)): install-pre
+	$(MAKE) -C $(objdir)/python/pykde4-$(subst install-python-,,$@) install DESTDIR=$(CURDIR)/debian/tmp; \
+
+install-generic:
 	$(MAKE) -C $(objdir) install DESTDIR=$(CURDIR)/debian/tmp
+
+install: $(patsubst %,install-python-%,$(pyversions)) install-generic
 	
-	set -e; for v in $(pyversions); do \
-	    make -C $(objdir)/python/pykde4-$$v install DESTDIR=$(CURDIR)/debian/tmp; \
-	done
-	
-	cd debian/tmp/usr/share/doc/kde4/HTML/PyKDE4 && \
-	    rm -f COPYING.html COPYING.LESSER.html CREATIVECOMMONS.html && \
-	    rmdir "creative commons_files"
-	
-	dh_install
-	install -D -m 755 debian/tmp/usr/share/kde4/apps/pykde4/pykdeuic4.py \
-	    debian/python-kde4-dev/usr/bin/pykdeuic4
+	dh_install --sourcedir=debian/tmp
+	#install -D -m 755 debian/tmp/usr/share/kde4/apps/pykde4/pykdeuic4.py \
+	#    debian/python-kde4-dev/usr/bin/pykdeuic4
 
 ##
 
@@ -136,6 +138,7 @@ binary-common:
 	dh_compress
 	dh_fixperms
 	dh_installdeb
+	dh_makeshlibs -V
 	dh_shlibdeps
 	dh_gencontrol
 	dh_md5sums
