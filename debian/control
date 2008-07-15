@@ -81,29 +81,29 @@ Description: header files for qt4 and kde4 smoke
 Package: kimono
 Section: libs
 Depends: libkimono
-Architecture: all
+Architecture: any
 Description: kde4 bindings for c-sharp, metapackage
 
 Package: qyoto
 Section: libs
 Depends: libqyoto
-Architecture: all
+Architecture: any
 Description: qt4 bindings for c-sharp, metapackage
 
 Package: libqyoto
 Section: libs
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Architecture: all
+Architecture: any
 Description: qt4 bindings for csharp
 
 Package: libqyoto-dev
 Section: libdevel
 Depends: ${shlibs:Depends}, libqyoto (= ${binary:Version})
-Architecture: all
+Architecture: any
 Description: development files for qt4 bindings for csharp
 
 Package: libkimono
 Section: libs
 Depends: libqyoto
-Architecture: all
+Architecture: any
 Description: kde4 bindings for c-sharp
