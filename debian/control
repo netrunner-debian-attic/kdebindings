@@ -5,7 +5,7 @@ Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Build-Depends: debhelper (>= 5), cmake (>= 2.4.5), quilt,
  kdelibs5-dev (>> 4:4.0), libphonon-dev, libqt4-opengl-dev,
  python, python-all-dev, sip4, python-sip4-dev, python-qt4-dev,
- ruby1.8-dev, mono-gac, mono-gmcs, libmono-dev
+ ruby1.8-dev,ruby1.8 , mono-gac, mono-gmcs, libmono-dev, cdbs
 Uploaders: Vincent Fourmond <fourmond@debian.org>, Torsten Marek <shlomme@debian.org>, Adeodato Simó <dato@net.com.org.es>
 XS-Python-Version: >= 2.4
 Standards-Version: 3.7.3
@@ -55,3 +55,55 @@ Description: documentation and examples for PyKDE4
  This package contains documentation for PyKDE4, and some example code
  showing how to use it.
 
+Package: libsmoke-qt4-2
+Section: libs
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Architecture: any
+Description: qt4 smoke libraries
+ smoke libraries are a part of the bindings used for qt and kde. This package 
+ contains pure qt4 smoke.
+
+Package: libsmoke-kde4-2
+Section: libs
+Depends: ${shlibs:Depends}, libsmoke-qt4-2 (= ${binary:Version})
+Architecture: any
+Description: kde4 smoke libraries
+ smoke libraries are part of the bindings used for qt and kde. This package 
+ contains the kde4 parts of smoke.
+
+Package: libsmoke2-dev
+Section: libdevel
+Depends: libsmoke-kde4-2 (= ${binary:Version}), libsmoke-qt4-2 (= ${binary:Version})
+Architecture: any
+Description: header files for qt4 and kde4 smoke
+ This contains the headers needed to build more bindings using smoke.
+
+Package: kimono
+Section: libs
+Depends: libkimono
+Architecture: all
+Description: kde4 bindings for c-sharp, metapackage
+
+Package: qyoto
+Section: libs
+Depends: libqyoto
+Architecture: all
+Description: qt4 bindings for c-sharp, metapackage
+
+Package: libqyoto
+Section: libs
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Architecture: all
+Description: qt4 bindings for csharp
+
+Package: libqyoto-dev
+Section: libdevel
+Depends: ${shlibs:Depends}, libqyoto (= ${binary:Version})
+Architecture: all
+Description: development files for qt4 bindings for csharp
+
+Package: libkimono
+Section: libs
+Depends: libqyoto
+Architecture: all
+Description: kde4 bindings for c-sharp
