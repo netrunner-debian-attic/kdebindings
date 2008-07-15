@@ -29,11 +29,13 @@ cmake_flags := \
 # OK, here we disable all that we don't want.
 # Please remove lines as you add packaging support for them.
 # Do NOT remove ENABLE_PYKDE4, it gets special handling below. -- Dato
+RUBY_SITEARCH=$(shell ruby1.8 -rrbconfig -e 'puts Config::CONFIG["sitearch"]')
 cmake_flags += \
 	-DENABLE_PYKDE4=OFF\
 	-DENABLE_SOPRANO_SMOKE=ON \
 	-DENABLE_KHTML_SHARP=ON \
-	-DRUBY_SITE_LIB_DIR=/usr/lib/ruby/1.8/
+	-DCUSTOM_RUBY_SITE_LIB_DIR=/usr/lib/ruby/1.8/ \
+	-DCUSTOM_RUBY_SITE_ARCH_DIR=/usr/lib/ruby/1.8/$(RUBY_SITEARCH)
 
 ##
 
@@ -109,7 +111,28 @@ $(patsubst %,install-python-%,$(pyversions)): install-pre
 install-generic:
 	$(MAKE) -C $(objdir) install DESTDIR=$(CURDIR)/debian/tmp
 
-install: $(patsubst %,install-python-%,$(pyversions)) install-generic
+install: dh_install mono-is-a-piece-of-weirdo
+
+mono-is-a-piece-of-weirdo:
+	install -d debian/libkhtml2.0-cil/usr/lib/cli/kdebindings-2.0
+	install -d debian/libkhtml2.0-cil/usr/lib/cli/kdebindings-4.1
+	install -d debian/libkhtml2.0-cil/usr/lib/cli/kdebindings-4.4
+	install -D -m 644 $(objdir)/lib/khtml.dll debian/libkhtml2.0-cil/usr/lib/cli/kdebindings-2.0/
+	install -D -m 644 $(objdir)/lib/libkhtml-sharp.so debian/libkhtml2.0-cil/usr/lib/cli/kdebindings-2.0/
+	install -D -m 644 $(CURDIR)/debian/csharp/khtml.dll.config debian/libkhtml2.0-cil/usr/lib/cli/kdebindings-2.0/
+	install -D -m 644 $(objdir)/lib/kde-dotnet.dll debian/libkde-dotnet4.1-cil/usr/lib/cli/kdebindings-4.1/
+	install -D -m 644 $(objdir)/lib/libkimono.so debian/libkde-dotnet4.1-cil/usr/lib/cli/kdebindings-4.1/
+	install -D -m 644 $(CURDIR)/debian/csharp/kde-dotnet.dll.config debian/lib-kde-dotnet4.1-cil/usr/lib/cli/kdebindings-4.1/
+	install -D -m 644 $(objdir)/lib/qt-dotnet.dll debian/libqt-dotnet4.4-cil/usr/lib/cli/kdebindings-4.4/
+	install -D -m 644 $(objdir)/lib/libqyoto.so debian/libqt-dotnet4.4-cil/usr/lib/cli/kdebindings-4.4/
+	install -D -m 644 $(objdir)/lib/libqyotoshared.so debian/libqt-dotnet4.4-cil/usr/lib/cli/kdebindings-4.4/
+	install -D -m 644 $(objdir)/debian/csharp/qt-dotnet.dll.config debian/libkde-dotnet4.1-cil/usr/lib/kdebindings-4.4/
+	dh_makeclilibs -V
+	dh_clideps
+	dh_installcligac
+	dh_clistrip
+
+dh_install: $(patsubst %,install-python-%,$(pyversions)) install-generic
 	
 	dh_install --sourcedir=debian/tmp
 	#install -D -m 755 debian/tmp/usr/share/kde4/apps/pykde4/pykdeuic4.py \
