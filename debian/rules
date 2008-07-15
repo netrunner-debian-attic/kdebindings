@@ -126,7 +126,7 @@ mono-is-a-piece-of-weirdo:
 	install -D -m 644 $(objdir)/lib/qt-dotnet.dll debian/libqt-dotnet4.4-cil/usr/lib/cli/kdebindings-4.4/
 	install -D -m 644 $(objdir)/lib/libqyoto.so debian/libqt-dotnet4.4-cil/usr/lib/cli/kdebindings-4.4/
 	install -D -m 644 $(objdir)/lib/libqyotoshared.so debian/libqt-dotnet4.4-cil/usr/lib/cli/kdebindings-4.4/
-	install -D -m 644 $(objdir)/debian/csharp/qt-dotnet.dll.config debian/libkde-dotnet4.1-cil/usr/lib/kdebindings-4.4/
+	install -D -m 644 $(objdir)/debian/csharp/qt-dotnet.dll.config debian/libkde-dotnet4.1-cil/usr/lib/cli/kdebindings-4.4/
 	dh_makeclilibs -V
 	dh_clideps
 	dh_installcligac
