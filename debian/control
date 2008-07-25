@@ -21,13 +21,6 @@ Description: KDE4 ruby bindings
  of KDE4 bindings including KHTML, Okular
  Nepomuk and Solid bindings.
 
-Package: libsmoke2-dev
-Section: libdevel
-Depends: libsmokekde4 (= ${binary:Version}), libsmoke-qt4-2 (= ${binary:Version})
-Architecture: any
-Description: header files for qt4 and kde4 smoke
- This contains the headers needed to build more bindings using smoke.
-
 Package: libsmokeqt4
 Section: libs
 Depends: ${shlibs:Depends}, ${misc:Depends}
@@ -35,24 +28,12 @@ Architecture: any
 Description: qt4 smoke libraries
  smoke libraries are a part of the bindings used for qt and kde. This package contains pure qt4 smoke.
 
-Package: libsmokeqt4-dev
-sections: libdevel
-Depends: libsmokeqt4
-Architecture: any
-Description: Smoke Qt4 headers
-
 Package: libsmokekde4
 Section: libs
 Depends: ${shlibs:Depends}, libsmokeqt4 (= ${binary:Version})
 Architecture: any
 Description: kde4 smoke libraries
  smoke libraries are part of the bindings used for qt and kde. This package contains the kde4 parts of smoke.
-
-Package: libsmokekde4-dev
-Section: libdevel
-Depends: libsmokekde4-dev
-Architecture: any
-Description: KDE4 smoke headers
 
 Package: libqt4-ruby
 Section: libs
@@ -67,12 +48,6 @@ Section: libs
 Depends: ${shlibs:Depends}, libsmokeqt4
 Architecture: any
 Description: qt4 bindings for ruby
-
-Package: libqt4-ruby1.8-dev
-Section: libdevel
-Depends: libqt4-ruby1.8
-Architecture: any
-Description: qt4 ruby dev tools
 
 Package: libkde4-ruby
 Section: libs
@@ -95,12 +70,6 @@ Depends: ${shlibs:Depends}, libsmokekde4 (= ${binary:Version})
 Architecture: any
 Description: Okular smoke bindings
 
-Package: libsmokeokular-dev
-Section: libdevel
-Depends: libsmokeokular
-Architecture: any
-Description: Okular smoke headers
-
 Package: libokular-ruby
 Section: libs
 Depends: libokular-ruby1.8
@@ -117,12 +86,6 @@ Description: Okular ruby bindings
 Package: libsmokeplasma
 Section: libs
 Depends: libsmokekde4 (= ${binary:Version}), ${shlibs:Depends}
-Architecture: any
-Description: KDE4 plasma smoke library
-
-Package: libsmokeplasma-dev
-Section: libdevel
-Depends: libsmokeplasma, libplasma-dev
 Architecture: any
 Description: KDE4 plasma smoke library
 

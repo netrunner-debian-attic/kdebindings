@@ -1,8 +1,0 @@
-./usr/lib/libsmokephonon.so
-./usr/lib/libsmokeqt.so
-./usr/lib/libsmokeqtuitools.so
-./usr/lib/libsmokeqtwebkit.so
-./usr/include/smoke/phonon_smoke.h                                                                                                               
-./usr/include/smoke/qt_smoke.h
-./usr/include/smoke/qtuitools_smoke.h
-./usr/include/smoke/qtwebkit_smoke.h
