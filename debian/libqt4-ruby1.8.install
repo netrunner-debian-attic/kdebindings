@@ -1,0 +1,16 @@
+usr/lib/libqtruby4shared.so
+usr/lib/ruby/1.8/Qt.rb
+usr/lib/ruby/1.8/Qt/active_item_model.rb
+usr/lib/ruby/1.8/Qt/active_table_model.rb
+usr/lib/ruby/1.8/Qt/qtruby4.rb
+usr/lib/ruby/1.8/Qt4.rb
+usr/lib/ruby/1.8/phonon/phonon.rb
+usr/lib/ruby/1.8/qtuitools/qtuitools.rb
+usr/lib/ruby/1.8/qtwebkit/qtwebkit.rb
+usr/lib/ruby/1.8/*/phonon.so
+usr/lib/ruby/1.8/*/qtruby4.so
+usr/lib/ruby/1.8/*/qtuitools.so
+usr/lib/ruby/1.8/*/qtwebkit.so
+usr/bin/rbqtapi
+usr/bin/rbrcc
+usr/bin/rbuic4

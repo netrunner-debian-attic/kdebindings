@@ -1,0 +1,8 @@
+./usr/include/qtruby/marshall.h
+./usr/include/qtruby/marshall_basetypes.h
+./usr/include/qtruby/marshall_complex.h
+./usr/include/qtruby/marshall_macros.h
+./usr/include/qtruby/marshall_primitives.h
+./usr/include/qtruby/marshall_types.h
+./usr/include/qtruby/qtruby.h
+./usr/include/qtruby/smokeruby.h

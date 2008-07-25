@@ -13,7 +13,7 @@ Index: b/python/pykde4/CMakeLists.txt
  
  MACRO_OPTIONAL_FIND_PACKAGE(KdepimLibs)
  MACRO_LOG_FEATURE(KDEPIMLIBS_FOUND "Kdepimlibs" "KDE pim Libraries" "kdepimlibs" FALSE "" "Required for Akonadi Python bindings.")
-@@ -91,10 +91,10 @@
+@@ -90,10 +90,10 @@
      SET(PYKDE_MODULES "${PYKDE_MODULES} soprano")
  ENDIF(Soprano_FOUND)
  

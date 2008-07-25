@@ -1,0 +1,28 @@
+Index: b/CMakeLists.txt
+===================================================================
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -19,6 +19,8 @@
+ macro_optional_find_package(KdepimLibs)
+ macro_optional_find_package(Phonon)
+ macro_optional_find_package(QScintilla)
++macro_optional_find_package(Okular)
++macro_optional_find_package(Plasma)
+ 
+ macro_optional_add_subdirectory(smoke)
+ macro_optional_add_subdirectory(ruby)
+Index: b/csharp/CMakeLists.txt
+===================================================================
+--- a/csharp/CMakeLists.txt
++++ b/csharp/CMakeLists.txt
+@@ -97,8 +97,8 @@
+     endif(KDEPIMLIBS_FOUND AND Akonadi_FOUND)
+ 	
+ 	IF(PLASMA_FOUND)
+-		SET(PLASMA_SHARP_ENABLED "yes")
+-		ADD_SUBDIRECTORY(plasma)
++		# SET(PLASMA_SHARP_ENABLED "yes")
++		# ADD_SUBDIRECTORY(plasma)
+ 	ENDIF(PLASMA_FOUND)
+ 
+     ENDIF (GMCS_EXECUTABLE AND GACUTIL_EXECUTABLE AND MONO_CECIL_FOUND)

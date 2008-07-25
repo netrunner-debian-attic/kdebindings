@@ -11,6 +11,135 @@ XS-Python-Version: >= 2.4
 Standards-Version: 3.7.3
 Homepage: http://www.kde.org
 
+Package: korundum4
+Section: libs
+Architecture: any
+Depends: libkde4-ruby
+Suggests: libokular-ruby, libplasma-ruby
+Description: KDE4 ruby bindings
+ This package installs the complete suite
+ of KDE4 bindings including KHTML, Okular
+ Nepomuk and Solid bindings.
+
+Package: libsmoke2-dev
+Section: libdevel
+Depends: libsmokekde4 (= ${binary:Version}), libsmoke-qt4-2 (= ${binary:Version})
+Architecture: any
+Description: header files for qt4 and kde4 smoke
+ This contains the headers needed to build more bindings using smoke.
+
+Package: libsmokeqt4
+Section: libs
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Architecture: any
+Description: qt4 smoke libraries
+ smoke libraries are a part of the bindings used for qt and kde. This package contains pure qt4 smoke.
+
+Package: libsmokeqt4-dev
+sections: libdevel
+Depends: libsmokeqt4
+Architecture: any
+Description: Smoke Qt4 headers
+
+Package: libsmokekde4
+Section: libs
+Depends: ${shlibs:Depends}, libsmokeqt4 (= ${binary:Version})
+Architecture: any
+Description: kde4 smoke libraries
+ smoke libraries are part of the bindings used for qt and kde. This package contains the kde4 parts of smoke.
+
+Package: libsmokekde4-dev
+Section: libdevel
+Depends: libsmokekde4-dev
+Architecture: any
+Description: KDE4 smoke headers
+
+Package: libqt4-ruby
+Section: libs
+Depends: libqt4-ruby1.8
+Architecture: any
+Description: Qt4 ruby bindings
+ This package installs the Qt4 bindings for the
+ default ruby version.
+
+Package: libqt4-ruby1.8
+Section: libs
+Depends: ${shlibs:Depends}, libsmokeqt4
+Architecture: any
+Description: qt4 bindings for ruby
+
+Package: libqt4-ruby1.8-dev
+Section: libdevel
+Depends: libqt4-ruby1.8
+Architecture: any
+Description: qt4 ruby dev tools
+
+Package: libkde4-ruby
+Section: libs
+Depends: libkde4-ruby1.8
+Architecture: any
+Description: KDE4 ruby bindings
+ This package installs the ruby bindings for
+ the default ruby interpreter.
+
+Package: libkde4-ruby1.8
+Section: libs
+Depends: ${shlibs:Depends}, libqt4-ruby1.8 (= ${binary:Version}), libsmokekde4 (= ${binary:Version})
+Architecture: any
+Description: kde4 bindings for ruby
+ KDE4 bindings for ruby
+
+Package: libsmokeokular
+Section: libs
+Depends: ${shlibs:Depends}, libsmokekde4 (= ${binary:Version})
+Architecture: any
+Description: Okular smoke bindings
+
+Package: libsmokeokular-dev
+Section: libdevel
+Depends: libsmokeokular
+Architecture: any
+Description: Okular smoke headers
+
+Package: libokular-ruby
+Section: libs
+Depends: libokular-ruby1.8
+Architecture: any
+Description: Okular ruby bindings
+ Defaults to ruby 1.8
+
+Package: libokular-ruby1.8
+Section: libs
+Depends: ${shlibs:Depends}, libkde4-ruby1.8
+Architecture: any
+Description: Okular ruby bindings
+
+Package: libsmokeplasma
+Section: libs
+Depends: libsmokekde4 (= ${binary:Version}), ${shlibs:Depends}
+Architecture: any
+Description: KDE4 plasma smoke library
+
+Package: libsmokeplasma-dev
+Section: libdevel
+Depends: libsmokeplasma, libplasma-dev
+Architecture: any
+Description: KDE4 plasma smoke library
+
+Package: libplasma-ruby
+Section: libs
+Depends: libplasma-ruby1.8
+Architecture: any
+Description: KDE4 plasma ruby bindings
+ This package allows you to create desktop widgets in the Ruby language. Get ruby 1.8.
+
+Package: libplasma-ruby1.8
+Section: libs
+Depends: libsmokeplasma (= ${binary:Version}), ${shlibs:Depends}
+Architecture: any
+Description: KDE4 plasma ruby1.8 bindings
+ This package allows you to create desktop widgets in the Ruby language
+
 Package: python-kde4
 Section: python
 Architecture: any
@@ -55,29 +184,6 @@ Description: documentation and examples for PyKDE4
  This package contains documentation for PyKDE4, and some example code
  showing how to use it.
 
-Package: libsmoke-qt4-2
-Section: libs
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Architecture: any
-Description: qt4 smoke libraries
- smoke libraries are a part of the bindings used for qt and kde. This package 
- contains pure qt4 smoke.
-
-Package: libsmoke-kde4-2
-Section: libs
-Depends: ${shlibs:Depends}, libsmoke-qt4-2 (= ${binary:Version})
-Architecture: any
-Description: kde4 smoke libraries
- smoke libraries are part of the bindings used for qt and kde. This package 
- contains the kde4 parts of smoke.
-
-Package: libsmoke2-dev
-Section: libdevel
-Depends: libsmoke-kde4-2 (= ${binary:Version}), libsmoke-qt4-2 (= ${binary:Version})
-Architecture: any
-Description: header files for qt4 and kde4 smoke
- This contains the headers needed to build more bindings using smoke.
-
 Package: kimono
 Section: libs
 Depends: libkhtml2.0-cil, libkde-dotnet4.1-cil
@@ -114,20 +220,3 @@ Depends: libqt-dotnet4.4-cil (= ${binary:Version}), libkde-dotnet4.1-cil (= ${bi
 Architecture: any
 Description: kde4 bindings for c-sharp, khtml edition
 
-Package: qt4-ruby
-Section: libs
-Depends: ${shlibs:Depends}
-Architecture: any
-Description: qt4 bindings for ruby
-
-Package: kde4-ruby
-Section: libs
-Depends: ${shlibs:Depends}, qt4-ruby (= ${binary:Version})
-Architecture: any
-Description: kde4 bindings for ruby
-
-Package: qt4-ruby-dev
-Section: libdevel
-Depends: ${shlibs:Depends}
-Architecture: any
-Description: qt4 ruby dev tools
