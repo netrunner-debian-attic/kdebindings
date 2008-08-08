@@ -6,7 +6,7 @@ kdebindings (4:4.1.0-1) UNRELEASED; urgency=low
   * Update upstream merged patches
   * Remove patch bindings_branch
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Fri, 7 Ago 2008 13:14:23 +0200
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Fri, 7 Aug 2008 13:14:23 +0200
 
 kdebindings (4:4.0.98-1) UNRELEASED; urgency=low
 
