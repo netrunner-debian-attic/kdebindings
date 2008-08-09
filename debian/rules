@@ -143,8 +143,8 @@ monospecific:
 	install -D -m 644 $(objdir)/lib/libqyotoshared.so debian/libqyoto4.4-cil/usr/lib/cli/kdebindings-4.4/
 	install -D -m 644 $(CURDIR)/debian/csharp/qt-dotnet.dll.config debian/libqyoto4.4-cil/usr/lib/cli/kdebindings-4.4/
 	dh_makeclilibs -V
-	dh_clideps -l debian/libqyoto4.4-cil/usr/lib/cli/kdebindings-4.4/:debian/libkimono4.1-cil/usr/lib/cli/kdebindings-4.1/:debian/libkhtml2.0-cil/usr/lib/cli/kdebindings-2.0/
 	dh_installcligac
+	dh_clideps -l debian/libqyoto4.4-cil/usr/lib/cli/kdebindings-4.4/:debian/libkimono4.1-cil/usr/lib/cli/kdebindings-4.1/:debian/libkhtml2.0-cil/usr/lib/cli/kdebindings-2.0/
 	dh_clistrip
 
 dh_install: $(patsubst %,install-python-%,$(pyversions)) install-generic
