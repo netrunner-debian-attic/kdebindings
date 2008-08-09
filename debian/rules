@@ -3,6 +3,18 @@
 include /usr/share/quilt/quilt.make
 include /usr/share/cdbs/1/rules/utils.mk
 
+ARCH=$(shell dpkg-architecture -qDEB_HOST_ARCH)
+MONOARCHS= "i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390"
+
+ifneq (,$(findstring $(ARCH),$(MONOARCHS)))
+MONOFLAGS=-DENABLE_KHTML_SHARP=ON 
+MONOTARGET=monospecific
+else
+MONO=OFF
+MONOFLAGS=-DENABLE_QYOTO=off
+
+endif
+
 
 ##
 
@@ -33,11 +45,11 @@ RUBY_SITEARCH=$(shell ruby1.8 -rrbconfig -e 'puts Config::CONFIG["sitearch"]')
 cmake_flags += \
 	-DENABLE_PYKDE4=OFF\
 	-DENABLE_SOPRANO_SMOKE=ON \
-	-DENABLE_KHTML_SHARP=ON \
     -DENABLE_NEPOMUK_SMOKE=ON \
     -DENABLE_NEPOMUK_RUBY=ON \
 	-DCUSTOM_RUBY_SITE_LIB_DIR=/usr/lib/ruby/1.8/ \
-	-DCUSTOM_RUBY_SITE_ARCH_DIR=/usr/lib/ruby/1.8/$(RUBY_SITEARCH)
+	-DCUSTOM_RUBY_SITE_ARCH_DIR=/usr/lib/ruby/1.8/$(RUBY_SITEARCH) \
+	$(MONOFLAGS)
 
 ##
 
@@ -78,7 +90,7 @@ $(patsubst %,$(objdir)/python/pykde4-%/Makefile,$(pyversions)): $(objdir)/Makefi
 
 ##
 $(patsubst %,build-stamp-python-%,$(pyversions)): $(patsubst %,$(objdir)/python/pykde4-%/Makefile,$(pyversions))
-	$(MAKE) -C $(objdir)/python/pykde4-$(subst build-stamp-python-,,$@)
+	$(MAKE) -j6 -C $(objdir)/python/pykde4-$(subst build-stamp-python-,,$@)
 	touch $@
 
 
@@ -113,22 +125,22 @@ $(patsubst %,install-python-%,$(pyversions)): install-pre
 install-generic:
 	$(MAKE) -C $(objdir) install DESTDIR=$(CURDIR)/debian/tmp
 
-install: dh_install mono-is-a-piece-of-weirdo
+install: dh_install $(MONOTARGET)
 
-mono-is-a-piece-of-weirdo:
+monospecific:
 	install -d debian/libkhtml2.0-cil/usr/lib/cli/kdebindings-2.0
-	install -d debian/libkde-dotnet4.1-cil/usr/lib/cli/kdebindings-4.1
-	install -d debian/libqt-dotnet4.4-cil/usr/lib/cli/kdebindings-4.4
+	install -d debian/libkimono4.1-cil/usr/lib/cli/kdebindings-4.1
+	install -d debian/libqyoto4.4-cil/usr/lib/cli/kdebindings-4.4
 	install -D -m 644 $(objdir)/lib/khtml.dll debian/libkhtml2.0-cil/usr/lib/cli/kdebindings-2.0/
 	install -D -m 644 $(objdir)/lib/libkhtml-sharp.so debian/libkhtml2.0-cil/usr/lib/cli/kdebindings-2.0/
 	install -D -m 644 $(CURDIR)/debian/csharp/khtml.dll.config debian/libkhtml2.0-cil/usr/lib/cli/kdebindings-2.0/
-	install -D -m 644 $(objdir)/lib/kde-dotnet.dll debian/libkde-dotnet4.1-cil/usr/lib/cli/kdebindings-4.1/
-	install -D -m 644 $(objdir)/lib/libkimono.so debian/libkde-dotnet4.1-cil/usr/lib/cli/kdebindings-4.1/
-	install -D -m 644 $(CURDIR)/debian/csharp/kde-dotnet.dll.config debian/libkde-dotnet4.1-cil/usr/lib/cli/kdebindings-4.1/
-	install -D -m 644 $(objdir)/lib/qt-dotnet.dll debian/libqt-dotnet4.4-cil/usr/lib/cli/kdebindings-4.4/
-	install -D -m 644 $(objdir)/lib/libqyoto.so debian/libqt-dotnet4.4-cil/usr/lib/cli/kdebindings-4.4/
-	install -D -m 644 $(objdir)/lib/libqyotoshared.so debian/libqt-dotnet4.4-cil/usr/lib/cli/kdebindings-4.4/
-	install -D -m 644 $(CURDIR)/debian/csharp/qt-dotnet.dll.config debian/libkde-dotnet4.1-cil/usr/lib/cli/kdebindings-4.1/
+	install -D -m 644 $(objdir)/lib/kde-dotnet.dll debian/libkimono4.1-cil/usr/lib/cli/kdebindings-4.1/
+	install -D -m 644 $(objdir)/lib/libkimono.so debian/libkimono4.1-cil/usr/lib/cli/kdebindings-4.1/
+	install -D -m 644 $(CURDIR)/debian/csharp/kde-dotnet.dll.config debian/libkimono4.1-cil/usr/lib/cli/kdebindings-4.1/
+	install -D -m 644 $(objdir)/lib/qt-dotnet.dll debian/libqyoto4.4-cil/usr/lib/cli/kdebindings-4.4/
+	install -D -m 644 $(objdir)/lib/libqyoto.so debian/libqyoto4.4-cil/usr/lib/cli/kdebindings-4.4/
+	install -D -m 644 $(objdir)/lib/libqyotoshared.so debian/libqyoto4.4-cil/usr/lib/cli/kdebindings-4.4/
+	install -D -m 644 $(CURDIR)/debian/csharp/qt-dotnet.dll.config debian/libqyoto4.4-cil/usr/lib/cli/kdebindings-4.4/
 	dh_makeclilibs -V
 	dh_clideps
 	dh_installcligac

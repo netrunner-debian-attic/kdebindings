@@ -5,7 +5,11 @@ Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Build-Depends: debhelper (>= 5), cmake (>= 2.4.5), quilt,
  kdelibs5-dev (>> 4:4.0), libphonon-dev, libqt4-opengl-dev,
  python, python-all-dev, sip4, python-sip4-dev, python-qt4-dev,
- ruby1.8-dev,ruby1.8 , mono-gac, mono-gmcs, libmono-dev, cdbs, cli-common-dev,
+ ruby1.8-dev,ruby1.8 , 
+ mono-gac [i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390],
+ mono-gmcs [i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390], libmono-dev [i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390],
+ cdbs, 
+ cli-common-dev [i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390],
  okular-dev, kdebase-workspace-dev
 Uploaders: Vincent Fourmond <fourmond@debian.org>, Torsten Marek <shlomme@debian.org>, Adeodato Simó <dato@net.com.org.es>
 XS-Python-Version: >= 2.4
@@ -148,39 +152,27 @@ Description: documentation and examples for PyKDE4
  This package contains documentation for PyKDE4, and some example code
  showing how to use it.
 
-Package: kimono
-Section: libs
-Depends: libkhtml2.0-cil, libkde-dotnet4.1-cil
-Architecture: any
-Description: kde4 bindings for c-sharp, metapackage
-
-Package: qyoto
-Section: libs
-Depends: libqt-dotnet4.4-cil
-Architecture: any
-Description: qt4 bindings for c-sharp, metapackage
-
-Package: libqt-dotnet4.4-cil
+Package: libqyoto4.4-cil
 Section: libs
 Depends: ${shlibs:Depends}, ${misc:Depends}, ${cli:Depends}
-Architecture: any
+Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390
 Description: qt4 bindings for csharp
 
 Package: qyoto-dev
 Section: libdevel
 Depends: ${shlibs:Depends}, libqt-dotnet4.4-cil (= ${binary:Version}), ${cli:Depends}
-Architecture: any
+Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390
 Description: development files for qt4 bindings for csharp
 
-Package: libkde-dotnet4.1-cil
+Package: libkimono4.1-cil
 Section: libs
 Depends: libqt-dotnet4.4-cil (= ${binary:Version}), ${cli:Depends}
-Architecture: any 
+Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390
 Description: kde4 bindings for c-sharp
 
 Package: libkhtml2.0-cil
 Section: libs
-Depends: libqt-dotnet4.4-cil (= ${binary:Version}), libkde-dotnet4.1-cil (= ${binary:Version}), ${cli:Depends}
-Architecture: any
+Depends: libqt-dotnet4.4-cil (= ${binary:Version}), libkimono4.1-cil (= ${binary:Version}), ${cli:Depends}
+Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390
 Description: kde4 bindings for c-sharp, khtml edition
 
