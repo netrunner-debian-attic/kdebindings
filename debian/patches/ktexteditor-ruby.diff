@@ -1,10 +1,12 @@
+Index: b/ruby/ktexteditor/CMakeLists.txt
+===================================================================
 --- a/ruby/ktexteditor/CMakeLists.txt
 +++ b/ruby/ktexteditor/CMakeLists.txt
-@@ -10,7 +10,6 @@
+@@ -10,6 +10,7 @@
      smokeqt 
      smokekde 
      smokektexteditor 
--    katepart
++    katepart
      qtruby4shared)
  set_target_properties(rubyktexteditor PROPERTIES PREFIX "" OUTPUT_NAME ktexteditor)
  install(TARGETS rubyktexteditor DESTINATION ${CUSTOM_RUBY_SITE_ARCH_DIR})

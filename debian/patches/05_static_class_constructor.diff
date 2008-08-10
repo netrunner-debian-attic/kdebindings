@@ -1,0 +1,31 @@
+Index: b/kalyptus/kalyptusCxxToSmoke.pm
+===================================================================
+--- a/kalyptus/kalyptusCxxToSmoke.pm
++++ b/kalyptus/kalyptusCxxToSmoke.pm
+@@ -690,7 +690,10 @@
+ 			}
+ 		}
+ 
+-		
++		if ($name eq 'self' && $m->{Flags} =~ "s") {
++			$classNode->AddProp( "Singleton", 1 );
++		}
++
+ 	    my $argId = 0;
+ 	    my $firstDefaultParam;
+ 	    foreach my $arg ( @{$m->{ParamList}} ) {
+@@ -1706,8 +1709,12 @@
+             $methodCode .= "private:\n";
+             $methodCode .= "    $className *xthis;\n";
+             $methodCode .= "public:\n";
+-            $methodCode .= "    $xClassName\(void *x) : xthis(($className*)x) {}\n";
+-            $switchCode .= "    $xClassName xtmp(obj), *xself = &xtmp;\n";
++            if ($classNode->{Singleton}) {
++                $switchCode .= "    $xClassName *xself = ($xClassName *) $className" . "::self();\n";
++            } else {
++                $methodCode .= "    $xClassName\(void *x) : xthis(($className*)x) {}\n";
++                $switchCode .= "    $xClassName xtmp(obj), *xself = &xtmp;\n";
++            }
+         } else {
+             $switchCode .= "    $xClassName *xself = ($xClassName*)obj;\n";
+             $methodCode .= "public:\n";
