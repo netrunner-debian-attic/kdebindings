@@ -1,8 +1,6 @@
-Index: b/python/pykde4/CMakeLists.txt
-===================================================================
 --- a/python/pykde4/CMakeLists.txt
 +++ b/python/pykde4/CMakeLists.txt
-@@ -3,6 +3,16 @@
+@@ -3,6 +3,18 @@
  # This module can be built independant from the rest of kdebindings.
  SET(CMAKE_MODULE_PATH ${pykde4_SOURCE_DIR}/cmake/modules ${CMAKE_MODULE_PATH})
  
@@ -14,6 +12,8 @@ Index: b/python/pykde4/CMakeLists.txt
 +include (KDE4Defaults)
 +include (MacroLibrary)
 +include(MacroOptionalAddSubdirectory)
++
++add_definitions(${QT_DEFINITIONS} ${KDE4_DEFINITIONS} -DQT3_SUPPORT)
 +
 +
  FIND_PACKAGE(PythonLibrary REQUIRED)
