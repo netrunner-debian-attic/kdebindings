@@ -1,0 +1,36 @@
+--- a/csharp/qyoto/core/QObjectExtras.cs
++++ b/csharp/qyoto/core/QObjectExtras.cs
+@@ -21,7 +21,7 @@
+ 		private static extern void FindQObjectChildren(IntPtr parent, IntPtr regexp,
+ 									string childName, AddToListFn addFn);
+ 		
+-		[DllImport("libqyotoshared", CharSet=CharSet.Ansi)]
++		[DllImport("libqyoto", CharSet=CharSet.Ansi)]
+ 		private static extern bool ConnectDelegate(IntPtr obj, string signal, Delegate d);
+ 		
+ 		public static bool Connect(QObject obj, string signal, NoArgDelegate d) {
+@@ -97,4 +97,4 @@
+ 			return list;
+ 		}
+ 	}
+-}
+\ No newline at end of file
++}
+--- a/csharp/qyoto/src/SmokeMarshallers.cs
++++ b/csharp/qyoto/src/SmokeMarshallers.cs
+@@ -124,7 +124,7 @@
+ 		[DllImport("libqyoto", CharSet=CharSet.Ansi)]
+ 		public static extern void InstallInvokeCustomSlot(InvokeCustomSlotFn callback);
+ 		
+-		[DllImport("libqyotoshared", CharSet=CharSet.Ansi)]
++		[DllImport("libqyoto", CharSet=CharSet.Ansi)]
+ 		public static extern void InstallInvokeDelegate(InvokeDelegateFn callback);
+ 		
+ 		[DllImport("libqyoto", CharSet=CharSet.Ansi)]
+@@ -831,4 +831,4 @@
+ #endregion
+ 
+ 	}
+-}
+\ No newline at end of file
++}
