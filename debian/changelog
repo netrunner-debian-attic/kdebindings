@@ -1,4 +1,4 @@
-kdebindings (4:4.1.0-1) UNRELEASED; urgency=low
+kdebindings (4:4.1.1-1) UNRELEASED; urgency=low
 
   * Initial upload.
   
@@ -18,7 +18,6 @@ kdebindings (4:4.1.0-1) UNRELEASED; urgency=low
   * Fix target link libraries
   * Fix ruby build
   * Fix pykde seperate build
-    - For now, disable nepomuk - it doesn't build.
   * Reimplement a shell construct in make to have it be more reliable
   * Add cdbs for utils.mk
 

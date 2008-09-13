@@ -156,7 +156,7 @@ Package: libqyoto4.4-cil
 Section: libs
 Depends: ${shlibs:Depends}, ${misc:Depends}, ${cli:Depends}
 Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390
-Description: qt4 bindings for CLI
+Description: Qt4 bindings for CLI
  This package provides the qt-dotnet assembly that
  allows CLI based software to use the QT library
 
@@ -164,23 +164,74 @@ Package: qyoto-dev
 Section: libdevel
 Depends: ${shlibs:Depends}, libqt-dotnet4.4-cil (= ${binary:Version}), ${cli:Depends}
 Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390
-Description: development tools for qt CLI bindings
+Description: development tools for Qt CLI bindings
  This package provides csuic and other tools to help building 
  CLI apps with Qt and KDE
 
 Package: libkimono4.1-cil
 Section: libs
-Depends: libqt-dotnet4.4-cil (= ${binary:Version}), ${cli:Depends}
+Depends: libqyoto4.4-cil (= ${binary:Version}), ${cli:Depends}
 Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390
 Description: kde4 bindings for CLI
  This package provides the kde-dotnet assembly that
- allows CLI based software to use the QT library
+ allows CLI based software to use the kde libraries
 
 Package: libkhtml2.0-cil
 Section: libs
-Depends: libqt-dotnet4.4-cil (= ${binary:Version}), libkimono4.1-cil (= ${binary:Version}), ${cli:Depends}
+Depends: libyoto4.4-cil (= ${binary:Version}), libkimono4.1-cil (= ${binary:Version}), ${cli:Depends}
 Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390
 Description: kde4 bindings for CLI, khtml edition
  This package provides the khtml assembly that
- allows CLI based software to use the QT library
+ allows CLI based software to use the KHTML library
 
+Package: libnepomuk2.2-cil
+Section: libs
+Depends: libqyoto4.4-cil (= ${binary:Version}), libkimono4.1-cil (= ${binary:Version}), ${cli:Depends}
+Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390
+Description: kde4 bindings for CLI, Nepomuk-edition
+ This package provides the nepomuk assembly that allows 
+ CLI based software to use the Nepomuk library
+
+Package: libqtscript2.2-cil
+Section: libs
+Depends: libqyoto4.4-cil (= ${binary:Version}), ${cli:Depends}
+Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390
+Description: Qt4 bindings for CLI, QtScript edition
+ This package provides the QtSCript assemply that allows
+ CLI based software to use the qtscript library.
+
+Package: libqtuitools2.2-cil
+Section: libs
+Depends: libqyoto4.4-cil (= ${binary:Version}), ${cli:Depends}
+Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390
+Description: Qt4 bindings for CLI, QtUiTools edition
+ This package provides the QtUiTools assembly, that allows 
+ CLI based software to use the QtUiTools library.
+
+Package: libqtwebkit2.2-cil
+Section: libs
+Depends: libqyoto4.4-cil (= ${binary:Version}), ${cli:Depends}
+Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390
+Description: Qt4 bindings for CLI, QtWebkit edition
+ This package provides the QtWebkit assembly, that allows 
+ CLI based software to use the QtWebkit library
+
+Package: libsoprano2.0-cil
+Section: libs
+Depends: libqyoto4.4-cil (= ${binary:Version}), ${cli:Depends}
+Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390
+Description: Soprano bindings for CLI
+ This package provides the soprano assembly, that allows CLI based 
+ software to use the soprano library.
+
+Package: libqtruby4shared1d
+Section: libs
+Depends: ${shlibs:Depends}
+Architecture: any
+Description: shared library for Qt4 ruby bindings
+
+Package: libqyotoshared1d
+Section: libs
+Depends: ${shlibs:Depends}
+Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390
+Description: shared library for Qt4 CLI bindings

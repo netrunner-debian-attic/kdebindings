@@ -1,3 +1,6 @@
+The qyotoshared is more of a real library than a basic glue library and sholud be treated as such.
+This at least builds, but is not runtime tested yet.
+
 --- a/csharp/qyoto/core/QObjectExtras.cs
 +++ b/csharp/qyoto/core/QObjectExtras.cs
 @@ -21,7 +21,7 @@

@@ -7,6 +7,9 @@ ARCH=$(shell dpkg-architecture -qDEB_HOST_ARCH)
 MONOARCHS= "i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390"
 export MONO_DISABLE_SHM = 1
 
+DEST=$(CURDIR)/debian/tmp
+DEST_USR_LIB=$(DEST)/usr/lib
+
 ifneq (,$(findstring $(ARCH),$(MONOARCHS)))
 MONOFLAGS=-DENABLE_KHTML_SHARP=ON 
 MONOTARGET=monospecific
@@ -129,20 +132,49 @@ install-generic:
 install: dh_install $(MONOTARGET)
 
 monospecific:
+	#khtml
 	install -d debian/libkhtml2.0-cil/usr/lib/cli/kdebindings-2.0
-	install -d debian/libkimono4.1-cil/usr/lib/cli/kdebindings-4.1
-	install -d debian/libqyoto4.4-cil/usr/lib/cli/kdebindings-4.4
-	install -D -m 644 $(objdir)/lib/khtml.dll debian/libkhtml2.0-cil/usr/lib/cli/kdebindings-2.0/
-	install -D -m 644 $(objdir)/lib/libkhtml-sharp.so debian/libkhtml2.0-cil/usr/lib/cli/kdebindings-2.0/
+	install -D -m 644 $(DEST_USR_LIB)/mono/2.0/khtml.dll debian/libkhtml2.0-cil/usr/lib/cli/kdebindings-2.0/
+	install -D -m 644 $(DEST_USR_LIB)/libkhtml-sharp.so debian/libkhtml2.0-cil/usr/lib/cli/kdebindings-2.0/
 	install -D -m 644 $(CURDIR)/debian/csharp/khtml.dll.config debian/libkhtml2.0-cil/usr/lib/cli/kdebindings-2.0/
-	install -D -m 644 $(objdir)/lib/kde-dotnet.dll debian/libkimono4.1-cil/usr/lib/cli/kdebindings-4.1/
-	install -D -m 644 $(objdir)/lib/libkimono.so debian/libkimono4.1-cil/usr/lib/cli/kdebindings-4.1/
-	install -D -m 644 $(CURDIR)/debian/csharp/kde-dotnet.dll.config debian/libkimono4.1-cil/usr/lib/cli/kdebindings-4.1/
-	install -D -m 644 $(objdir)/lib/qt-dotnet.dll debian/libqyoto4.4-cil/usr/lib/cli/kdebindings-4.4/
-	install -D -m 644 $(objdir)/lib/libqyoto.so debian/libqyoto4.4-cil/usr/lib/cli/kdebindings-4.4/
-	install -D -m 644 $(objdir)/lib/libqyotoshared.so debian/libqyoto4.4-cil/usr/lib/cli/kdebindings-4.4/
+	#qyoto
+	install -d debian/libqyoto4.4-cil/usr/lib/cli/kdebindings-4.4
+	install -D -m 644 $(DEST_USR_LIB)/mono/2.0/qt-dotnet.dll debian/libqyoto4.4-cil/usr/lib/cli/kdebindings-4.4/
+	install -D -m 644 $(DEST_USR_LIB)/libqyoto.so debian/libqyoto4.4-cil/usr/lib/cli/kdebindings-4.4/
 	install -D -m 644 $(CURDIR)/debian/csharp/qt-dotnet.dll.config debian/libqyoto4.4-cil/usr/lib/cli/kdebindings-4.4/
-	dh_makeclilibs -V
+	#kimono
+	install -d debian/libkimono4.1-cil/usr/lib/cli/kdebindings-4.1
+	install -D -m 644 $(DEST_USR_LIB)/mono/2.0/kde-dotnet.dll debian/libkimono4.1-cil/usr/lib/cli/kdebindings-4.1/
+	install -D -m 644 $(DEST_USR_LIB)/libkimono.so debian/libkimono4.1-cil/usr/lib/cli/kdebindings-4.1/
+	install -D -m 644 $(CURDIR)/debian/csharp/kde-dotnet.dll.config debian/libkimono4.1-cil/usr/lib/cli/kdebindings-4.1/
+	#nepomuk
+	install -d debian/libnepomuk2.2-cil/usr/lib/cli/kdebindings-2.2
+	install -D -m 644 $(DEST_USR_LIB)/mono/2.0/nepomuk.dll debian/libnepomuk2.2-cil/usr/lib/cli/kdebindings-2.2
+	install -D -m 644 $(DEST_USR_LIB)/libnepomuk-sharp.so debian/libnepomuk2.2-cil/usr/lib/cli/kdebindings-2.2
+	install -D -m 644 $(CURDIR)/debian/csharp/nepomuk.dll.config debian/libnepomuk2.2-cil/usr/lib/cli/kdebindings-2.2
+	#qtscript
+	install -d debian/libqtscript2.2-cil/usr/lib/cli/kdebindings-2.2
+	install -D -m 644 $(DEST_USR_LIB)/mono/2.0/qtscript.dll debian/libqtscript2.2-cil/usr/lib/cli/kdebindings-2.2
+	install -D -m 644 $(DEST_USR_LIB)/libqtscript-sharp.so debian/libqtscript2.2-cil/usr/lib/cli/kdebinding-2.2
+	install -D -m 644 $(CURDIR)/debian/csharp/qtscript.dll.config debian/libqtscript2.2-cil/usr/lib/cli/kdebindings-2.2
+	#soprano
+	install -d debian/libsoprano2.0-cil/usr/lib/cli/kdebindings-2.0
+	install -D -m 644 $(DEST_USR_LIB)/mono/2.0/soprano.dll debian/libsoprano2.0-cil/usr/lib/cli/kdebindings-2.0
+	install -D -m 644 $(DEST_USR_LIB)/libsoprano-sharp.so debian/libsoprano2.0-cil/usr/lib/cli/kdebindings-2.0
+	install -D -m 644 $(CURDIR)/debian/csharp/soprano.dll.config debian/libsoprano2.0-cil/usr/lib/cli/kdebindings-2.0
+	#qtuitools
+	install -d debian/libqtuitools2.2-cil/usr/lib/cli/kdebindings-2.2
+	install -D -m 644 $(DEST_USR_LIB)/mono/2.0/qtuitools.dll debian/libqtuitools2.2-cil/usr/lib/cli/kdebindings-2.2
+	install -D -m 644 $(DEST_USR_LIB)/libqtuitools-sharp.so debian/libqtuitools2.2-cil/usr/lib/cli/kdebindings-2.2
+	install -D -m 644 $(CURDIR)/debian/csharp/qtuitools.dll.config debian/libqtuitools2.2-cil/usr/lib/cli/kdebindings-2.2
+	#qtwebkit
+	install -d debian/libqtwebkit2.2-cil/usr/lib/cli/kdebindings-2.2
+	install -D -m 644 $(DEST_USR_LIB)/mono/2.0/qtwebkit.dll debian/libqtwebkit2.2-cil/usr/lib/cli/kdebindings-2.2
+	install -D -m 644 $(DEST_USR_LIB)/libqtwebkit-sharp.so debian/libqtwebkit2.2-cil/usr/lib/cli/kdebindings-2.2
+	install -D -m 644 $(CURDIR)/debian/csharp/qtwebkit.dll.config debian/libqtwebkit2.2-cil/usr/lib/kdebindings-2.2
+	#end manual installs
+	#setting MONOPATH is a hack to hack around a bug in dh_mkaeclilibs
+	MONO_PATH=$(CURDIR)/debian/libqyoto4.4-cil/usr/lib/cli/kdebindings-4.4/ dh_makeclilibs -V
 	dh_installcligac
 	dh_clideps -l debian/libqyoto4.4-cil/usr/lib/cli/kdebindings-4.4/:debian/libkimono4.1-cil/usr/lib/cli/kdebindings-4.1/:debian/libkhtml2.0-cil/usr/lib/cli/kdebindings-2.0/
 	dh_clistrip

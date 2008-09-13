@@ -1,0 +1,5 @@
+Mono:
+
+"monodis --assemly foo.dll | grep Version" reveals the abi version, which is used in several places.
+"monodis --moduleref foo.dll" reveals the name of the binary glue lib to be used. There might be a need for dll-map files
+
