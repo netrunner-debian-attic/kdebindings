@@ -4,8 +4,10 @@ include /usr/share/quilt/quilt.make
 include /usr/share/cdbs/1/rules/utils.mk
 
 ARCH=$(shell dpkg-architecture -qDEB_HOST_ARCH)
-MONOARCHS= "i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390"
+MONOARCHS= "i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 lpia ia64 arm armeb armel sparc s390"
 export MONO_DISABLE_SHM = 1
+MONOHOME=$(CURDIR)/debian/monohome
+export MONO_SHARED_DIR = $(MONOHOME)
 
 DEST=$(CURDIR)/debian/tmp
 DEST_USR_LIB=$(DEST)/usr/lib
@@ -22,6 +24,7 @@ endif
 
 ##
 
+#generic kde4 stuff
 cmake_flags := \
 	-DCMAKE_SKIP_RPATH=true				\
 	-DCMAKE_BUILD_TYPE=Debian			\
@@ -82,6 +85,7 @@ cmake_flags += -DPYTHON_EXECUTABLE=/usr/bin/$(pydefault)
 
 $(objdir)/Makefile: $(QUILT_STAMPFN)
 	mkdir -p $(objdir)
+	mkdir -p $(MONOHOME)
 	cd $(objdir) && cmake $(CURDIR) $(cmake_flags) \
 	    -DCMAKE_C_FLAGS="$(CFLAGS)" -DCMAKE_CXX_FLAGS="$(CFLAGS)"
 
@@ -115,6 +119,7 @@ clean:: unpatch
 	rm -f build-stamp
 	rm -f build-stamp-*
 	rm -rf $(objdir)
+	rm -rf $(MONOHOME)
 	
 	dh_clean
 
