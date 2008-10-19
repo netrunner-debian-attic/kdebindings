@@ -1,2 +1,2 @@
-usr/lib/ruby/1.8/x86_64-linux/okular.so
+usr/lib/ruby/1.8/*/okular.so
 usr/lib/ruby/1.8/okular/okular.rb
