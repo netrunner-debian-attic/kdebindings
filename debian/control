@@ -10,35 +10,82 @@ Build-Depends: debhelper (>= 5), cmake (>= 2.4.5), quilt,
  mono-gmcs [i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390], libmono-dev [i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390],
  cdbs, 
  cli-common-dev (>= 0.5.4) [i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390],
- okular-dev, kdebase-workspace-dev
+ okular-dev (>= 4:4), kdebase-workspace-dev
 Uploaders: Vincent Fourmond <fourmond@debian.org>, Torsten Marek <shlomme@debian.org>, Adeodato Simó <dato@net.com.org.es>
 XS-Python-Version: >= 2.4
 Standards-Version: 3.7.3
 Homepage: http://www.kde.org
+
+Package: libsmokeqt4
+Section: libs
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Architecture: any
+Description: Qt4 smoke libraries
+ smoke libraries are a part of the bindings used for Qt and KDE. This package contains 
+ pure Qt4 smoke.
+ .
+ Smoke rovides infrastructure which is used for creating bindings for multiple languages 
+ such as Ruby, C# and PHP.
+ .
+ This is part of KDE Bindings module
+
+Package: libsmokekde4
+Section: libs
+Depends: ${shlibs:Depends}, libsmokeqt4 (= ${binary:Version})
+Architecture: any
+Description: KDE smoke libraries
+ smoke libraries are part of the bindings used for Qt and KDE. This package contains the 
+ kde4 parts of smoke.
+ .
+ Smoke rovides infrastructure which is used for creating bindings for multiple languages 
+ such as Ruby, C# and PHP.
+ .
+ This is part of KDE Bindings module
+
+Package: libsmokeokular
+Section: libs
+Depends: ${shlibs:Depends}, libsmokekde4 (= ${binary:Version})
+Architecture: any
+Description: Okular smoke bindings
+ smoke libraries are part of the bindings used for Qt and KDE. This package contains the 
+ okular parts of smoke.
+ .
+ Smoke rovides infrastructure which is used for creating bindings for multiple languages 
+ such as Ruby, C# and PHP.
+ .
+ This is part of KDE Bindings module
+
+Package: libsmokeplasma
+Section: libs
+Depends: libsmokekde4 (= ${binary:Version}), ${shlibs:Depends}
+Architecture: any
+Description: KDE plasma smoke library
+ smoke libraries are part of the bindings used for Qt and KDE. This package contains the plasma parts of smoke.
+ .
+ Smoke rovides infrastructure which is used for creating bindings for multiple languages 
+ such as Ruby, C# and PHP.
+ .
+ This is part of KDE Bindings module
+
 
 Package: korundum4
 Section: libs
 Architecture: any
 Depends: libkde4-ruby
 Suggests: libokular-ruby, libplasma-ruby
-Description: KDE4 ruby bindings
+Description: KDE ruby bindings
  This package installs the complete suite
- of KDE4 bindings including KHTML, Okular
+ of KDE bindings including KHTML, Okular
  Nepomuk and Solid bindings.
+ .
+ This is part of KDE Bindings module
 
-Package: libsmokeqt4
+Package: libqtruby4shared1d
 Section: libs
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${shlibs:Depends}
 Architecture: any
-Description: qt4 smoke libraries
- smoke libraries are a part of the bindings used for qt and kde. This package contains pure qt4 smoke.
-
-Package: libsmokekde4
-Section: libs
-Depends: ${shlibs:Depends}, libsmokeqt4 (= ${binary:Version})
-Architecture: any
-Description: kde4 smoke libraries
- smoke libraries are part of the bindings used for qt and kde. This package contains the kde4 parts of smoke.
+Description: shared library for Qt4 ruby bindings
+ This is part of KDE Bindings module
 
 Package: libqt4-ruby
 Section: libs
@@ -47,33 +94,37 @@ Architecture: any
 Description: Qt4 ruby bindings
  This package installs the Qt4 bindings for the
  default ruby version.
+ .
+ This is part of KDE Bindings module
 
 Package: libqt4-ruby1.8
 Section: libs
 Depends: ${shlibs:Depends}, libsmokeqt4
 Architecture: any
-Description: qt4 bindings for ruby
+Description: Qt4 bindings for ruby
+ This packages contains Qt4 ruby bindings for the ruby1.8 version.
+ .
+ This is part of KDE Bindings module
+
 
 Package: libkde4-ruby
 Section: libs
 Depends: libkde4-ruby1.8
 Architecture: any
-Description: KDE4 ruby bindings
+Description: KDE ruby bindings
  This package installs the ruby bindings for
  the default ruby interpreter.
+ .
+ This is part of KDE Bindings module
 
 Package: libkde4-ruby1.8
 Section: libs
 Depends: ${shlibs:Depends}, libqt4-ruby1.8 (= ${binary:Version}), libsmokekde4 (= ${binary:Version})
 Architecture: any
 Description: kde4 bindings for ruby
- KDE4 bindings for ruby
-
-Package: libsmokeokular
-Section: libs
-Depends: ${shlibs:Depends}, libsmokekde4 (= ${binary:Version})
-Architecture: any
-Description: Okular smoke bindings
+ KDE bindings for ruby
+ .
+ This is part of KDE Bindings module
 
 Package: libokular-ruby
 Section: libs
@@ -81,32 +132,34 @@ Depends: libokular-ruby1.8
 Architecture: any
 Description: Okular ruby bindings
  Defaults to ruby 1.8
+ .
+ This is part of KDE Bindings module
 
 Package: libokular-ruby1.8
 Section: libs
 Depends: ${shlibs:Depends}, libkde4-ruby1.8
 Architecture: any
 Description: Okular ruby bindings
-
-Package: libsmokeplasma
-Section: libs
-Depends: libsmokekde4 (= ${binary:Version}), ${shlibs:Depends}
-Architecture: any
-Description: KDE4 plasma smoke library
+ .
+ This is part of KDE Bindings module
 
 Package: libplasma-ruby
 Section: libs
 Depends: libplasma-ruby1.8
 Architecture: any
-Description: KDE4 plasma ruby bindings
+Description: KDE plasma ruby bindings
  This package allows you to create desktop widgets in the Ruby language. Get ruby 1.8.
+ .
+ This is part of KDE Bindings module
 
 Package: libplasma-ruby1.8
 Section: libs
 Depends: libsmokeplasma (= ${binary:Version}), ${shlibs:Depends}
 Architecture: any
-Description: KDE4 plasma ruby1.8 bindings
+Description: KDE plasma ruby1.8 bindings
  This package allows you to create desktop widgets in the Ruby language
+ .
+ This is part of KDE Bindings module
 
 Package: python-kde4
 Section: python
@@ -114,9 +167,9 @@ Architecture: any
 XB-Python-Version: ${python:Versions}
 Depends: ${shlibs:Depends}, ${python:Depends}, ${misc:Depends}
 Description: Python bindings for the KDE 4 libraries
- This package contains PyKDE4, the Python bindings for the KDE 4
+ This package contains PyKDE, the Python bindings for the KDE 4
  libraries, that allow you to write KDE programs using Python instead of
- C++. It contains the following modules under the PyKDE4 namespace:
+ C++. It contains the following modules under the PyKDE namespace:
  .
   * kdecore
   * kdeui
@@ -128,6 +181,8 @@ Description: Python bindings for the KDE 4 libraries
   * solid
  .
  This package provides modules for all supported Python versions.
+ .
+ This is part of KDE Bindings module
 
 Package: python-kde4-dev
 Section: python
@@ -135,83 +190,101 @@ Architecture: all
 XB-Python-Version: ${python:Versions}
 Depends: ${python:Depends}, python-qt4
 Recommends: python-kde4
-Description: UIC compiler and SIP files for PyKDE4
+Description: UIC compiler and SIP files for PyKDE
  This package contains pykdeuic4, a wrapper around PyQt's own UIC (user
  interface compiler). It is needed to generate code from Qt Designer's
  UI files. You want to install this package if you are writing a PyKDE
  application which has .uic files, or running one of these applications
  from source.
  .
- It also contains the .sip files for PyKDE4, needed to build packages
+ It also contains the .sip files for PyKDE, needed to build packages
  with classes based on PyKDE.
+ .
+ This is part of KDE Bindings module
 
 Package: python-kde4-doc
 Section: doc
 Architecture: all
-Description: documentation and examples for PyKDE4
- This package contains documentation for PyKDE4, and some example code
+Description: documentation and examples for PyKDE
+ This package contains documentation for PyKDE, and some example code
  showing how to use it.
+ .
+ This is part of KDE Bindings module
 
 Package: libqyoto4.4-cil
 Section: libs
 Depends: ${shlibs:Depends}, ${misc:Depends}, ${cli:Depends}
-Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390
+Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390 lpia
 Description: Qt4 bindings for CLI
- This package provides the qt-dotnet assembly that
+ This package provides the Qt-dotnet assembly that
  allows CLI based software to use the QT library
+ .
+ This is part of KDE Bindings module
 
 Package: qyoto-dev
 Section: libdevel
-Depends: ${shlibs:Depends}, libqt-dotnet4.4-cil (= ${binary:Version}), ${cli:Depends}
-Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390
+Depends: ${shlibs:Depends}, libqyoto4.4-cil (= ${binary:Version}), ${cli:Depends}
+Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390 lpia
 Description: development tools for Qt CLI bindings
  This package provides csuic and other tools to help building 
  CLI apps with Qt and KDE
+ .
+ This is part of KDE Bindings module
 
 Package: libkimono4.1-cil
 Section: libs
 Depends: libqyoto4.4-cil (= ${binary:Version}), ${cli:Depends}
-Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390
+Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390 lpia
 Description: kde4 bindings for CLI
  This package provides the kde-dotnet assembly that
- allows CLI based software to use the kde libraries
+ allows CLI based software to use the KDE libraries
+ .
+ This is part of KDE Bindings module
 
 Package: libkhtml2.0-cil
 Section: libs
 Depends: libyoto4.4-cil (= ${binary:Version}), libkimono4.1-cil (= ${binary:Version}), ${cli:Depends}
-Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390
+Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390 lpia
 Description: kde4 bindings for CLI, khtml edition
  This package provides the khtml assembly that
  allows CLI based software to use the KHTML library
+ .
+ This is part of KDE Bindings module
 
 Package: libnepomuk2.2-cil
 Section: libs
 Depends: libqyoto4.4-cil (= ${binary:Version}), libkimono4.1-cil (= ${binary:Version}), ${cli:Depends}
-Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390
+Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390 lpia
 Description: kde4 bindings for CLI, Nepomuk-edition
  This package provides the nepomuk assembly that allows 
  CLI based software to use the Nepomuk library
+ .
+ This is part of KDE Bindings module
 
 Package: libqtscript2.2-cil
 Section: libs
 Depends: libqyoto4.4-cil (= ${binary:Version}), ${cli:Depends}
-Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390
+Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390 lpia
 Description: Qt4 bindings for CLI, QtScript edition
  This package provides the QtSCript assemply that allows
- CLI based software to use the qtscript library.
+ CLI based software to use the Qtscript library.
+ .
+ This is part of KDE Bindings module
 
 Package: libqtuitools2.2-cil
 Section: libs
 Depends: libqyoto4.4-cil (= ${binary:Version}), ${cli:Depends}
-Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390
+Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390 lpia
 Description: Qt4 bindings for CLI, QtUiTools edition
  This package provides the QtUiTools assembly, that allows 
  CLI based software to use the QtUiTools library.
+ .
+ This is part of KDE Bindings module
 
 Package: libqtwebkit2.2-cil
 Section: libs
 Depends: libqyoto4.4-cil (= ${binary:Version}), ${cli:Depends}
-Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390
+Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390 lpia
 Description: Qt4 bindings for CLI, QtWebkit edition
  This package provides the QtWebkit assembly, that allows 
  CLI based software to use the QtWebkit library
@@ -219,19 +292,18 @@ Description: Qt4 bindings for CLI, QtWebkit edition
 Package: libsoprano2.0-cil
 Section: libs
 Depends: libqyoto4.4-cil (= ${binary:Version}), ${cli:Depends}
-Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390
+Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390 lpia
 Description: Soprano bindings for CLI
  This package provides the soprano assembly, that allows CLI based 
  software to use the soprano library.
-
-Package: libqtruby4shared1d
-Section: libs
-Depends: ${shlibs:Depends}
-Architecture: any
-Description: shared library for Qt4 ruby bindings
+ .
+ This is part of KDE Bindings module
 
 Package: libqyotoshared1d
 Section: libs
 Depends: ${shlibs:Depends}
-Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390
+Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390 lpia
 Description: shared library for Qt4 CLI bindings
+ This package provides the shared library for qyoto - the Qt4 CLI bindings
+ .
+ This is part of KDE Bindings module
