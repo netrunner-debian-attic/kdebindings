@@ -299,7 +299,7 @@ Description: Soprano bindings for CLI
  .
  This is part of KDE Bindings module
 
-Package: libqyotoshared1d
+Package: libqyotoshared1
 Section: libs
 Depends: ${shlibs:Depends}
 Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390 lpia

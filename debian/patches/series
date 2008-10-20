@@ -2,6 +2,5 @@
 02_include_default_settings_in_python_cmakelist.diff
 03_csharp_dont_use_qyotoshared_directly.diff
 04_fix_ruby_requires.diff
-06_qyotoshared_needs_soname.diff
 97_fix_target_link_libraries.diff
 99_enable_okular_plasma.diff
