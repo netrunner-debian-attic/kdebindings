@@ -1,3 +1,10 @@
+kdebindings (4:4.1.2-1) UNRELEASED; urgency=low
+
+  * Upstream new. 
+  * Use upstream soname instead of debian soname of qtruby
+
+ -- Sune Vuorela <debian@puslintg.com>  Sun, 19 Oct 2008 23:46:15 +0000
+
 kdebindings (4:4.1.1-1) UNRELEASED; urgency=low
 
   * Initial upload.
@@ -17,7 +24,7 @@ kdebindings (4:4.1.1-1) UNRELEASED; urgency=low
   * Package rest of bindings
   * Fix target link libraries
   * Fix ruby build
-  * Fix pykde seperate build
+  * Fix pykde separate build
   * Reimplement a shell construct in make to have it be more reliable
   * Add cdbs for utils.mk
 

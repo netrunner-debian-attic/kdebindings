@@ -1,8 +1,8 @@
 --- a/python/pykde4/CMakeLists.txt
 +++ b/python/pykde4/CMakeLists.txt
-@@ -3,6 +3,18 @@
- # This module can be built independant from the rest of kdebindings.
- SET(CMAKE_MODULE_PATH ${pykde4_SOURCE_DIR}/cmake/modules ${CMAKE_MODULE_PATH})
+@@ -10,6 +10,18 @@
+     SET(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib/pykde)
+ ENDIF(CMAKE_MAJOR_VERSION EQUAL 2 AND CMAKE_MINOR_VERSION LESS 6)
  
 +# where to look first for cmake modules, before ${CMAKE_ROOT}/Modules/ is checked
 +set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake/modules )

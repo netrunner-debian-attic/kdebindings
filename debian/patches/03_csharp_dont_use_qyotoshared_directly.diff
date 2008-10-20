@@ -30,7 +30,7 @@ This at least builds, but is not runtime tested yet.
  		public static extern void InstallInvokeDelegate(InvokeDelegateFn callback);
  		
  		[DllImport("libqyoto", CharSet=CharSet.Ansi)]
-@@ -831,4 +831,4 @@
+@@ -879,4 +879,4 @@
  #endregion
  
  	}

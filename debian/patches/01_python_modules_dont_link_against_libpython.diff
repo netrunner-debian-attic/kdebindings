@@ -2,8 +2,6 @@ Do not link python modules against -lpython2.X. Since KDE4's cmake file
 uses --no-undefined by default, we have to remove that from the default
 CMAKE_SHARED_LINKER_FLAGS variable, but only for the pykde4 subdirectory.
 
-Index: b/python/pykde4/cmake/modules/SIPMacros.cmake
-===================================================================
 --- a/python/pykde4/cmake/modules/SIPMacros.cmake
 +++ b/python/pykde4/cmake/modules/SIPMacros.cmake
 @@ -106,7 +106,6 @@
@@ -14,11 +12,9 @@ Index: b/python/pykde4/cmake/modules/SIPMacros.cmake
      TARGET_LINK_LIBRARIES(${_logical_name} ${EXTRA_LINK_LIBRARIES})
      SET_TARGET_PROPERTIES(${_logical_name} PROPERTIES PREFIX "" OUTPUT_NAME ${_child_module_name})
  
-Index: b/python/pykde4/CMakeLists.txt
-===================================================================
 --- a/python/pykde4/CMakeLists.txt
 +++ b/python/pykde4/CMakeLists.txt
-@@ -59,6 +59,9 @@
+@@ -66,6 +66,9 @@
  
  ADD_DEFINITIONS(-D_REENTRANT -DQT_NO_DEBUG -DQT_CORE_LIB -DQT_GUI_LIB)
  

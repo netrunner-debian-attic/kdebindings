@@ -1,5 +1,3 @@
-Index: b/smoke/qtuitools/CMakeLists.txt
-===================================================================
 --- a/smoke/qtuitools/CMakeLists.txt
 +++ b/smoke/qtuitools/CMakeLists.txt
 @@ -27,7 +27,7 @@
