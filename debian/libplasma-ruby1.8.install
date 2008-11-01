@@ -1,5 +1,3 @@
-/usr/share/kde4/services/plasma-ruby-applet-web.desktop
-/usr/share/kde4/apps/plasma_ruby_web_applet/web_applet.rb
 /usr/lib/ruby/1.8/*/plasma_applet.so
 /usr/share/kde4/apps/plasma_scriptengine_ruby/package_ruboid.rb
 /usr/share/kde4/apps/plasma_scriptengine_ruby/applet.rb
