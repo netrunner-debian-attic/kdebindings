@@ -1,4 +1,3 @@
-./ruby/korundum/examples
 ./ruby/korundum/examples/CMakeLists.txt
 ./ruby/korundum/examples/systray.rb
 ./ruby/korundum/examples/uikmdi.rc
