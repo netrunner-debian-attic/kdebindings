@@ -1,3 +1,7 @@
+Notes:
+* should public domain still hold copyright holder or original author?
+* Check CHECK: grep CHECK copyright
+
 This package was debianized by the Debian Qt/KDE Maintainers on
 Fri, 11 May 2007 17:23:33 +0200.
 
@@ -77,6 +81,19 @@ python/pykde4/COPYING.LESSER ~ unspec ~ unspec
 python/pykde4/COPYING ~ unspec ~ unspec
 python/pykde4/NEWS ~ unspec ~ unspec
 python/pykde4/BUGS ~ unspec ~ unspec
+python/pykde4/kcolorbutton.py ~ unspec ~ unspec
+python/pykde4/importTest.py ~ unspec ~ unspec
+python/pykde4/pykdeconfig.py.in ~ GPLv2h ~
+                Copyright (c) 2004 Riverbank Computing Limited <info@riverbankcomputing.co.uk>
+                Copyright (c) 2004 Jim Bublitz <jbublitz@nwinternet.com>
+python/pykde4/configure.template ~ GPLv2h ~
+                Copyright (c) 2004 Riverbank Computing Limited <info@riverbankcomputing.co.uk>
+                Copyright (c) 2004 Jim Bublitz <jbublitz@nwinternet.com>
+python/pykde4/INSTALL ~ unspec ~ unspec
+python/pykde4/pykde3920.prj ~ GPLv2h ~ Copyright 2002-2007 Jim Bublitz <jbublitz@nwinternet.com>
+python/pykde4/configure.py ~ GPLv2h ~
+                Copyright (c) 2004 Riverbank Computing Limited <info@riverbankcomputing.co.uk>
+                Copyright (c) 2004 Jim Bublitz <jbublitz@nwinternet.com>
 
 Files under python/pykde4/cmake/modules/
 python/pykde4/cmake/modules/PythonCompile.py ~ public domain
@@ -91,43 +108,42 @@ python/pykde4/cmake/modules/PythonMacros.cmake ~ BSD ~ Copyright (c) 2007, Simon
 python/pykde4/cmake/modules/FindLibPython.py ~ BSD ~ Copyright (c) 2007, Simon Edwards <simon@simonzone.com>
 python/pykde4/cmake/modules/SIPMacros.cmake ~ BSD ~ Copyright (c) 2007, Simon Edwards <simon@simonzone.com>
 
-python/pykde4/kcolorbutton.py
-python/pykde4/importTest.py
 python/pykde4/tools
+python/pykde4/tools/CMakeLists.txt ~ unspec ~ unspec
+python/pykde4/tools/pykdeuic4
+python/pykde4/tools/pykdeuic4/CMakeLists.txt ~ unspec ~ unspec
+python/pykde4/tools/pykdeuic4/kde4.py ~ LGPLv2h ~ Copyright (C) 2007 Simon Edwards <simon@simonzone.com>
+python/pykde4/tools/pykdeuic4/README ~ unspec ~ unspec
+python/pykde4/tools/pykdeuic4/pykdeuic4.py ~ LGPLv2h ~ Copyright (C) 2007 Simon Edwards <simon@simonzone.com>
 python/pykde4/tools/cmake_project
+python/pykde4/tools/cmake_project/README ~ unspec ~ unspec
 python/pykde4/tools/cmake_project/sample_project
-python/pykde4/tools/cmake_project/sample_project/CMakeLists.txt
+python/pykde4/tools/cmake_project/sample_project/CMakeLists.txt ~ public domain
+python/pykde4/tools/cmake_project/sample_project/Messages.sh ~ unspec ~ unspec
 python/pykde4/tools/cmake_project/sample_project/cmake
 python/pykde4/tools/cmake_project/sample_project/cmake/modules
-python/pykde4/tools/cmake_project/sample_project/cmake/modules/FindPyKDE4.cmake
-python/pykde4/tools/cmake_project/sample_project/cmake/modules/FindPyQt4.py
-python/pykde4/tools/cmake_project/sample_project/cmake/modules/DistMacros.cmake
-python/pykde4/tools/cmake_project/sample_project/cmake/modules/print_status.cmake
-python/pykde4/tools/cmake_project/sample_project/cmake/modules/FindGettextMsgfmt.cmake
-python/pykde4/tools/cmake_project/sample_project/cmake/modules/create_exe_symlink.cmake
-python/pykde4/tools/cmake_project/sample_project/cmake/modules/FindPyQt4.cmake
-python/pykde4/tools/cmake_project/sample_project/cmake/modules/FindPyKDE4.py
-python/pykde4/tools/cmake_project/sample_project/cmake/modules/PythonMacros.cmake
-python/pykde4/tools/cmake_project/sample_project/cmake/modules/PythonCompile.py
+python/pykde4/tools/cmake_project/sample_project/cmake/modules/FindPyKDE4.cmake ~ public domain
+python/pykde4/tools/cmake_project/sample_project/cmake/modules/FindPyQt4.py ~ unspec ~ unspec
+python/pykde4/tools/cmake_project/sample_project/cmake/modules/DistMacros.cmake ~ BSD ~  Copyright (c) 2008, Simon Edwards <simon@simonzone.com>
+python/pykde4/tools/cmake_project/sample_project/cmake/modules/print_status.cmake ~ unspec ~ unspec
+python/pykde4/tools/cmake_project/sample_project/cmake/modules/FindGettextMsgfmt.cmake ~ BSD ~  Copyright (c) 2008, Simon Edwards <simon@simonzone.com>
+python/pykde4/tools/cmake_project/sample_project/cmake/modules/create_exe_symlink.cmake ~ unspec ~ unspec
+python/pykde4/tools/cmake_project/sample_project/cmake/modules/FindPyQt4.cmake ~ unspec ~ unspec
+python/pykde4/tools/cmake_project/sample_project/cmake/modules/FindPyKDE4.py ~ public domain
+python/pykde4/tools/cmake_project/sample_project/cmake/modules/PythonMacros.cmake ~ unspec ~ unspec CHECK
+python/pykde4/tools/cmake_project/sample_project/cmake/modules/PythonCompile.py ~ public domain
 python/pykde4/tools/cmake_project/sample_project/doc
 python/pykde4/tools/cmake_project/sample_project/doc/en
-python/pykde4/tools/cmake_project/sample_project/doc/en/index.docbook
-python/pykde4/tools/cmake_project/sample_project/doc/en/index.cache.bz2
+python/pykde4/tools/cmake_project/sample_project/doc/en/index.docbook ~ unspec ~ unspec
+python/pykde4/tools/cmake_project/sample_project/doc/en/index.cache.bz2 ~ unspec ~ unspec
 python/pykde4/tools/cmake_project/sample_project/src
-python/pykde4/tools/cmake_project/sample_project/src/sample_project.py
-python/pykde4/tools/cmake_project/sample_project/src/sample_project_window.ui
-python/pykde4/tools/cmake_project/sample_project/Messages.sh
-python/pykde4/tools/cmake_project/README
-python/pykde4/tools/CMakeLists.txt
-python/pykde4/tools/pykdeuic4
-python/pykde4/tools/pykdeuic4/CMakeLists.txt
-python/pykde4/tools/pykdeuic4/kde4.py
-python/pykde4/tools/pykdeuic4/README
-python/pykde4/tools/pykdeuic4/pykdeuic4.py
-python/pykde4/pykdeconfig.py.in
-python/pykde4/configure.template
+python/pykde4/tools/cmake_project/sample_project/src/sample_project.py ~ public domain
+python/pykde4/tools/cmake_project/sample_project/src/sample_project_window.ui ~ unspec ~ unspec
 python/pykde4/docs
 python/pykde4/docs/CMakeLists.txt
+CHECK acording to python/pykde4/docs/html/general.html:
+Tutorials and other text information produced by the PyKDE4 authors is licensed under the Creative Commons Public License (CCPL - the "share-alike" license - see link above for complete license terms). Materials contributed to PyKDE4 are licensed as specified by the material's respective authors - see the individual files for license terms.
+I hope there are zero or few exceptions. Check later.
 python/pykde4/docs/html
 python/pykde4/docs/html/kio.html
 python/pykde4/docs/html/kate.html
@@ -1218,6 +1234,7 @@ python/pykde4/docs/html/images/poster5.png
 python/pykde4/docs/html/images/pythonlogo.jpg
 python/pykde4/docs/html/images/poster4.png
 python/pykde4/docs/html/images/pkview.png
+CHECK Use script to generate copyright information under sip/
 python/pykde4/sip
 python/pykde4/sip/dnssd
 python/pykde4/sip/dnssd/domainmodel.sip
@@ -1882,54 +1899,44 @@ python/pykde4/sip/soprano/plugin.sip
 python/pykde4/sip/soprano/simplenodeiterator.sip
 python/pykde4/sip/soprano/owl.sip
 python/pykde4/sip/soprano/dbusclient.sip
-python/pykde4/INSTALL
-python/pykde4/pykde3920.prj
-python/pykde4/configure.py
 python/pykde4/example_template.py
 python/pykde4/examples
-python/pykde4/examples/kpartsExamples
-python/pykde4/examples/kpartsExamples/__init__.py
-python/pykde4/examples/khtmlExamples
-python/pykde4/examples/khtmlExamples/__init__.py
-python/pykde4/examples/solidExamples
-python/pykde4/examples/solidExamples/solid_storagedrive.py
-python/pykde4/examples/solidExamples/__init__.py
-python/pykde4/examples/solidExamples/solid_audiointerface.py
-python/pykde4/examples/solidExamples/solid_storageaccess.py
-python/pykde4/examples/solidExamples/solid_networkinterface.py
-python/pykde4/examples/solidExamples/solid_processor.py
-python/pykde4/examples/solidExamples/solid_device.py
-python/pykde4/examples/solidExamples/solid_storagevolume.py
-python/pykde4/examples/__init__.py
-python/pykde4/examples/CMakeLists.txt
-python/pykde4/examples/kutilsExamples
-python/pykde4/examples/kutilsExamples/__init__.py
-python/pykde4/examples/default.py
-python/pykde4/examples/kdeuiExamples
-python/pykde4/examples/kdeuiExamples/kapplication.py
-python/pykde4/examples/kdeuiExamples/__init__.py
-python/pykde4/examples/kdeuiExamples/kcolorbutton.py
-python/pykde4/examples/kdeuiExamples/kcolorcells.py
-python/pykde4/examples/kdeuiExamples/kcolorpatch.py
-python/pykde4/examples/kdeuiExamples/klistwidget.py
-python/pykde4/examples/kdeuiExamples/kaboutapplicationdialog.py
-python/pykde4/examples/kdeuiExamples/kcolorcombo.py
-python/pykde4/examples/kdeuiExamples/kcolordialog.py
-python/pykde4/examples/kdeuiExamples/kcombobox.py
-python/pykde4/examples/kdeuiExamples/kdatepicker.py
-python/pykde4/examples/kdeuiExamples/kaboutkdedialog.py
-python/pykde4/examples/kdeuiExamples/kfontdialog.py
-python/pykde4/examples/kdeuiExamples/kmainwindow.py
-python/pykde4/examples/kdeuiExamples/kdatewidget.py
-python/pykde4/examples/solid_demo.py
-python/pykde4/examples/kioExamples
-python/pykde4/examples/kioExamples/__init__.py
-python/pykde4/examples/kdecoreExamples
-python/pykde4/examples/kdecoreExamples/__init__.py
-python/pykde4/examples/kdecoreExamples/kstandarddirs.py
-python/pykde4/examples/kdecoreExamples/kaboutdata.py
-python/pykde4/tests
-python/pykde4/tests/i18n_test.py
+python/pykde4/examples/__init__.py ~ unspec ~ unspec
+python/pykde4/examples/CMakeLists.txt ~ unspec ~ unspec
+python/pykde4/examples/default.py ~ unspec ~ unspec
+python/pykde4/examples/solid_demo.py ~ GPLv2h ~ Copyright (C) 2007 Simon Edwards <simon@simonzone.com>
+python/pykde4/examples/kpartsExamples/__init__.py ~ unspec ~ unspec
+python/pykde4/examples/khtmlExamples/__init__.py ~ unspec ~ unspec
+python/pykde4/examples/solidExamples/solid_storagedrive.py ~ unspec ~ unspec CHECK this example contains has the copyright coded in the program and not as a comment.
+python/pykde4/examples/solidExamples/__init__.py ~ unspec ~ unspec
+python/pykde4/examples/solidExamples/solid_audiointerface.py ~ unspec ~ unspec
+python/pykde4/examples/solidExamples/solid_storageaccess.py ~ unspec ~ unspec
+python/pykde4/examples/solidExamples/solid_networkinterface.py ~ unspec ~ unspec
+python/pykde4/examples/solidExamples/solid_processor.py ~ unspec ~ unspec
+python/pykde4/examples/solidExamples/solid_device.py ~ unspec ~ unspec
+python/pykde4/examples/solidExamples/solid_storagevolume.py ~ unspec ~ unspec
+python/pykde4/examples/kutilsExamples/__init__.py ~ unspec ~ unspec
+python/pykde4/examples/kdeuiExamples/kapplication.py ~ unspec ~ unspec CHECK
+python/pykde4/examples/kdeuiExamples/__init__.py ~ unspec ~ unspec
+python/pykde4/examples/kdeuiExamples/kcolorbutton.py ~ unspec ~ unspec CHECK
+python/pykde4/examples/kdeuiExamples/kcolorcells.py ~ unspec ~ unspec
+python/pykde4/examples/kdeuiExamples/kcolorpatch.py ~ unspec ~ unspec
+python/pykde4/examples/kdeuiExamples/klistwidget.py ~ unspec ~ unspec
+python/pykde4/examples/kdeuiExamples/kaboutapplicationdialog.py ~ unspec ~ unspec CHECK
+python/pykde4/examples/kdeuiExamples/kcolorcombo.py ~ unspec ~ unspec
+python/pykde4/examples/kdeuiExamples/kcolordialog.py ~ unspec ~ unspec CHECK
+python/pykde4/examples/kdeuiExamples/kcombobox.py ~ unspec ~ unspec CHECK
+python/pykde4/examples/kdeuiExamples/kdatepicker.py ~ unspec ~ unspec CHECK
+python/pykde4/examples/kdeuiExamples/kaboutkdedialog.py ~ unspec ~ unspec CHECK
+python/pykde4/examples/kdeuiExamples/kfontdialog.py ~ unspec ~ unspec CHECK
+python/pykde4/examples/kdeuiExamples/kmainwindow.py ~ unspec ~ unspec
+python/pykde4/examples/kdeuiExamples/kdatewidget.py ~ unspec ~ unspec
+python/pykde4/examples/kioExamples/__init__.py ~ unspec ~ unspec
+python/pykde4/examples/kdecoreExamples/__init__.py ~ unspec ~ unspec CHECK this example contains has the copyright coded in the program and not as a comment.
+python/pykde4/examples/kdecoreExamples/kstandarddirs.py ~ unspec ~ unspec
+python/pykde4/examples/kdecoreExamples/kaboutdata.py ~ unspec ~ unspec
+python/pykde4/tests/i18n_test.py ~ GPLv2h ~ Copyright (C) 2008 Simon Edwards <simon@simonzone.com>
+                                            Original C++ version is Copyright (C) 2006 Chusslove Illich <caslav.ilic@gmx.net>
 kalyptus
 kalyptus/ChangeLog
 kalyptus/perlbin
