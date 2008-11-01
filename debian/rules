@@ -161,7 +161,7 @@ monospecific:
 	#qtscript
 	install -d debian/libqtscript2.2-cil/usr/lib/cli/kdebindings-2.2
 	install -D -m 644 $(DEST_USR_LIB)/mono/2.0/qtscript.dll debian/libqtscript2.2-cil/usr/lib/cli/kdebindings-2.2
-	install -D -m 644 $(DEST_USR_LIB)/libqtscript-sharp.so debian/libqtscript2.2-cil/usr/lib/cli/kdebinding-2.2
+	install -D -m 644 $(DEST_USR_LIB)/libqtscript-sharp.so debian/libqtscript2.2-cil/usr/lib/cli/kdebindings-2.2
 	install -D -m 644 $(CURDIR)/debian/csharp/qtscript.dll.config debian/libqtscript2.2-cil/usr/lib/cli/kdebindings-2.2
 	#soprano
 	install -d debian/libsoprano2.0-cil/usr/lib/cli/kdebindings-2.0
@@ -188,8 +188,8 @@ monospecific:
 dh_install: $(patsubst %,install-python-%,$(pyversions)) install-generic
 	
 	dh_install --sourcedir=debian/tmp
-	#install -D -m 755 debian/tmp/usr/share/kde4/apps/pykde4/pykdeuic4.py \
-	#    debian/python-kde4-dev/usr/bin/pykdeuic4
+	install -D -m 755 debian/tmp/usr/share/kde4/apps/pykde4/pykdeuic4.py \
+	    debian/python-kde4-dev/usr/bin/pykdeuic4
 
 ##
 
@@ -213,7 +213,7 @@ binary-common:
 	dh_strip
 	dh_compress
 	dh_fixperms
-	dh_makeshlibs -V
+	dh_makeshlibs -V -Xcli
 	dh_shlibdeps
 	dh_installdeb
 	dh_gencontrol
