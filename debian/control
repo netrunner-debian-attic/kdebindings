@@ -21,11 +21,11 @@ Section: libs
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Architecture: any
 Description: Qt4 smoke libraries
- smoke libraries are a part of the bindings used for Qt and KDE. This package contains 
- pure Qt4 smoke.
+ smoke libraries are a part of the bindings used for Qt and KDE. This package
+ contains pure Qt4 smoke.
  .
- Smoke rovides infrastructure which is used for creating bindings for multiple languages 
- such as Ruby, C# and PHP.
+ Smoke rovides infrastructure which is used for creating bindings for 
+ multiple languages such as Ruby, C# and PHP.
  .
  This is part of KDE Bindings module
 
@@ -34,11 +34,11 @@ Section: libs
 Depends: ${shlibs:Depends}, libsmokeqt4 (= ${binary:Version})
 Architecture: any
 Description: KDE smoke libraries
- smoke libraries are part of the bindings used for Qt and KDE. This package contains the 
- kde4 parts of smoke.
+ smoke libraries are part of the bindings used for Qt and KDE. This package i
+ contains the kde4 parts of smoke.
  .
- Smoke rovides infrastructure which is used for creating bindings for multiple languages 
- such as Ruby, C# and PHP.
+ Smoke rovides infrastructure which is used for creating bindings for i
+ multiple languages such as Ruby, C# and PHP.
  .
  This is part of KDE Bindings module
 
@@ -47,11 +47,11 @@ Section: libs
 Depends: ${shlibs:Depends}, libsmokekde4 (= ${binary:Version})
 Architecture: any
 Description: Okular smoke bindings
- smoke libraries are part of the bindings used for Qt and KDE. This package contains the 
- okular parts of smoke.
+ smoke libraries are part of the bindings used for Qt and KDE. This package 
+ contains the okular parts of smoke.
  .
- Smoke rovides infrastructure which is used for creating bindings for multiple languages 
- such as Ruby, C# and PHP.
+ Smoke rovides infrastructure which is used for creating bindings for 
+ multiple languages such as Ruby, C# and PHP.
  .
  This is part of KDE Bindings module
 
@@ -60,10 +60,11 @@ Section: libs
 Depends: libsmokekde4 (= ${binary:Version}), ${shlibs:Depends}
 Architecture: any
 Description: KDE plasma smoke library
- smoke libraries are part of the bindings used for Qt and KDE. This package contains the plasma parts of smoke.
+ smoke libraries are part of the bindings used for Qt and KDE. This package 
+ contains the plasma parts of smoke.
  .
- Smoke rovides infrastructure which is used for creating bindings for multiple languages 
- such as Ruby, C# and PHP.
+ Smoke rovides infrastructure which is used for creating bindings for
+ multiple languages such as Ruby, C# and PHP.
  .
  This is part of KDE Bindings module
 
@@ -148,7 +149,8 @@ Section: libs
 Depends: libplasma-ruby1.8
 Architecture: any
 Description: KDE plasma ruby bindings
- This package allows you to create desktop widgets in the Ruby language. Get ruby 1.8.
+ This package allows you to create desktop widgets in the Ruby language. 
+ Get ruby 1.8.
  .
  This is part of KDE Bindings module
 
@@ -243,7 +245,7 @@ Description: kde4 bindings for CLI
 
 Package: libkhtml2.0-cil
 Section: libs
-Depends: libyoto4.4-cil (= ${binary:Version}), libkimono4.1-cil (= ${binary:Version}), ${cli:Depends}, ${shlibs:Depends}
+Depends: libqyoto4.4-cil (= ${binary:Version}), libkimono4.1-cil (= ${binary:Version}), ${cli:Depends}, ${shlibs:Depends}
 Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390 lpia
 Description: kde4 bindings for CLI, khtml edition
  This package provides the khtml assembly that
