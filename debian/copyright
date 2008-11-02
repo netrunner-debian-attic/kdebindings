@@ -1,116 +1,86 @@
 This package was debianized by the Debian Qt/KDE maintainers in 2008.
 
-This package is fetched from svn.kde.org.
+This package is fetched from ftp://ktown.kde.org
 
 Upstream authors and copyright holders:
     Copyright (C) 1989, 1991, 1999 Free Software Foundation, Inc.
     Copyright (C) 1991 Massachusetts Institute of Technology
-    Copyright (C) 1992-2006 Trolltech ASA. All rights reserved.
-    Copyright (C) 1992-2007 Trolltech ASA. All rights reserved.
     Copyright (C) 1992-2008 Trolltech ASA. All rights reserved.
     Copyright (C) 1998-1999 Sirtaj S. Kang <taj@kde.org>
-    Copyright (C) 1998-2006 Jim Bublitz
+    Copyright (C) 1998-2007 Jim Bublitz
     Copyright (C) 1998-2006 Phil Thompson
     Copyright (C) 1998-2007 The Regents of the University of California
     Copyright (C) 1998 Mathias Kalle Dalheimer
     Copyright (C) 1999-2002 Antonio Larrosa Jimenez
-    Copyright (C) 1999 Sirtaj Singh Kang <taj@kde.org>
-    Copyright (C) 2000-2001 Antonio Larrosa Jimenez
-    Copyright (C) 2000-2001 Lost Highway Ltd. All Rights Reserved.
+    Copyright (C) 2000-2002 Lost Highway Ltd
     Copyright (C) 2000-2005 The Kate Authors
     Copyright (C) 2000 Simon Hausmann <hausmann@kde.org>
     Copyright (C) 2001 Anders Lund <anders.lund@lund.tdcadsl.dk>
     Copyright (C) 2001 Christoph Cullmann <cullmann@kde.org>
     Copyright (C) 2001 Jim Menard <jimm@io.com>
     Copyright (C) 2001 Joseph Wenninger <jowenn@kde.org>
-    Copyright (C) 2001 Lost Highway Ltd
     Copyright (C) 2001 Philippe Fremy <pfremy@chez.com>
     Copyright (C) 2002-2006 Aduna BV, GNU LGPL License applies
-    Copyright (C) 2002 Adam Treat. All rights reserved.
+    Copyright (C) 2002 Adam Treat.
     Copyright (C) 2002 Ashley Winters <qaqortog@nwlink.com>
-    Copyright (C) 2002 Jim Bublitz <jbublitz@nwinternet.com>
-    Copyright (C) 2002 Lost Highway Ltd. All Rights Reserved.
-    Copyright (C) 2003-2004 Richard Dale
-    Copyright (C) 2003-2005 Richard Dale
-    Copyright (C) 2003-2006 Richard Dale
-    Copyright (C) 2003-2007 Richard Dale
+    Copyright (C) 2003-2008 Richard Dale
     Copyright (C) 2003 Cornelius Schumacher <schumacher@kde.org>
     Copyright (C) 2003 Germain Garand <germain@ebooksfrance.org>
-    Copyright (C) 2003 Ian Geiser, Zack Rusin
-    Copyright (C) 2003 Jim Bublitz
-    Copyright (C) 2003 Richard Dale
+    Copyright (C) 2003 Ian Geiser
     Copyright (C) 2003 Waldo Bastian <bastian@kde.org>
-    Copyright (C) 2003 Zack Rusin <zack@kde.org>
-    Copyright (C) 2004-2005 Sebastian Sauer <mail@dipe.org>
-    Copyright (C) 2004-2005 Trolltech ASA. All rights reserved.
-    Copyright (C) 2004-2006 Sebastian Sauer <mail@dipe.org>
-    Copyright (C) 2004-2006 Trolltech ASA. All rights reserved.
-    Copyright (C) 2004-2007 Richard Dale, Arno Rehn
+    Copyright (C) 2003-2007 Zack Rusin <zack@kde.org>
+    Copyright (C) 2004-2007 Sebastian Sauer <mail@dipe.org>
+    Copyright (C) 2004-2008 Arno Rehn
     Copyright (C) 2004 Alexander Kellett
     Copyright (C) 2004 Frans Englich <frans.englich@telia.com>
-    Copyright (C) 2004 Richard Dale. All Rights Reserved.
-    Copyright (C) 2004 Zack Rusin <zack@kde.org>
     Copyright (C) 2005,2006,2007 Siraj Razick <siraj@kdemail.net>
     Copyright (C) 2005-2006 Eyal Oren
     Copyright (C) 2005, 2006 KJSEmbed Authors.
-    Copyright (C) 2005-2006 Trolltech ASA. All rights reserved.
-    Copyright (C) 2005,2007 Cyrille Berger <cberger@cberger.net>
-    Copyright (C) 2005 Cyrille Berger <cberger@cberger.net>
+    Copyright (C) 2005-2007 Cyrille Berger <cberger@cberger.net>
     Copyright (C) 2006-2007 Katrina Niolet <katrina@niolet.name>
-    Copyright (C) 2006-2007 Sebastian Sauer <mail@dipe.org>
     Copyright (C) 2006-2007 Thomas Moenicke <tm@php-qt.org>
     Copyright (C) 2006 Chusslove Illich <caslav.ilic@gmx.net>
-    Copyright (C) 2006 Cyrille Berger <cberger@cberger.net>
     Copyright (C) 2006 Michaël Larouche <michael.larouche@kdemail.net>
-    Copyright (C) 2006 Sebastian Sauer
-    Copyright (C) 2006 Sebastian Sauer <mail@dipe.org>
     Copyright (C) 2006 Tobias Koenig <tokoe@kde.org>
     Copyright (C) 2006 Troy Melhase
     Copyright (C) 2007-2008 Riccardo Iaconelli <riccardo@kde.org>
     Copyright (C) 2007-2008 Sebastian Kuegler <sebas@kde.org>
     Copyright (C) 2007-2008 Simon Edwards <simon@simonzone.com>
     Copyright (C) 2007 Aaron Seigo <aseigo@kde.org>
-    Copyright (C) 2007 Arno Rehn <arno@arnorehn.de>
     Copyright (C) 2007 Bruno Virlet <bruno.virlet@gmail.com>
     Copyright (C) 2007 Frerich Raabe <raabe@kde.org>
-    Copyright (C) 2007 Jim Bublitz
     Copyright (C) 2007 Matthias Kretz <kretz@kde.org>
     Copyright (C) 2007 Pau Garcia i Quiles <pgquiles@elpauer.org>
-    Copyright (C) 2007 Riccardo Iaconelli <riccardo@kde.org>
-    Copyright (C) 2007 Riccardo Iaconelli <ruphy@fsfe.org>
-    Copyright (C) 2007 Sebastian Kuegler <sebas@kde.org>
-    Copyright (C) 2007 Sebastian Sauer <mail@dipe.org>
-    Copyright (C) 2007 Simon Edwards <simon@simonzone.com>
     Copyright (C) 2007 The KDE Team
-    Copyright (C) 2007 Thomas Moenicke
-    Copyright (C) 2007 Thomas Moenicke <thomas.moenicke@kdemail.net>
     Copyright (C) 2007 Vincent Verhoeven <verhoevenv@gmail.com>
-    Copyright (C) 2007 Zack Rusin <zack@kde.org>
-    Copyright (C) 2008 Arno Rehn <arno@arnorehn.de>
     Copyright (C) 2008 Helio Castro <helio@kde.org>
     Copyright (C) 2008 Laurent Montel <montel@kde.org>
-    Copyright (C) 2008 Richard Dale <richard.j.dale@gmail.com>
-    Copyright (C) 2008 Simon Edwards <simon@simonzone.com>
     Copyright (C) Lars Knoll <knoll@kde.org>
     Copyright (C) Matthias Ettrich <ettrich@kde.org>
 
 
 cmake/
-      BSD, GPLv2h, bsd-ish
+      BSD, GPLv2+,  BSD as in CMAKE-COPYING-SCRIPTS in kdelibs. Fullquoted later.
 java/
-      LGPLv2h
+      LGPLv2+. Currently not built.
 csharp/
+	Most files autogenerated by kalyptus. They are shipped autogenerated because the autogenerator is still a bit flaky and needs manual hand holding.
+	The non-autogenerated files is gplv2+
 kalyptus/
+	Several files states GPL - and the generic README states GPL
 php/
-      GPLv2h
+      GPLv2+ + exceptions. Might be have issues if built (gpl, php, ..), haven't studied it closely, but currently it is not built 
+               and building php-qt will require a seperate package
 python/
-      bsd-ish, GPLv2h, LGPLv2h, Creative Commons
+      crosspython: bsd-ish, LGPLv2+
+      pykde4: LGPLv2.1+
 ruby/
-      LGPLv2 ???
-smoke/
-      BSD ???
-xparts/
       GPLv2
+smoke/
+	smoke.h is BSD licensed.
+	The rest of smoke is quite trivial and autogenerates code with kalyptus
+xparts/
+      GPLv2 with some parts under LGPLv2 - effectively GPL. Currently not built.
 
 Licenses:
 GPLv2+:
@@ -165,8 +135,6 @@ On Debian systems, the complete text of the GNU Library General
 Public License can be found in `/usr/share/common-licenses/LGPL-2'.
 
 LGPLv2.1+
-    Copyright (C)  2008 Laurent Montel <montel@kde.org>
-
     This library is free software; you can redistribute it and/or
     modify it under the terms of the GNU Lesser General Public
     License as published by the Free Software Foundation; either
