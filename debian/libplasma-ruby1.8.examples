@@ -1,4 +1,3 @@
-./ruby/plasma/examples
 ./ruby/plasma/examples/CMakeLists.txt
 ./ruby/plasma/examples/applets
 ./ruby/plasma/examples/applets/CMakeLists.txt
