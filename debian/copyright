@@ -70,7 +70,7 @@ kalyptus/
 	Several files states GPL - and the generic README states GPL
 php/
       GPLv2+ + exceptions. Might be have issues if built (gpl, php, ..), haven't studied it closely, but currently it is not built 
-               and building php-qt will require a seperate package
+               and building php-qt will require a separate package
 python/
       crosspython: bsd-ish, LGPLv2+
       pykde4: LGPLv2.1+
