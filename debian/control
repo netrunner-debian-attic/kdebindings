@@ -3,14 +3,14 @@ Section: kde
 Priority: optional
 Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Build-Depends: debhelper (>= 5), cmake (>= 2.4.5), quilt,
- kdelibs5-dev (>> 4:4.0), libphonon-dev, libqt4-opengl-dev,
+ kdelibs5-dev (>= 4:4.1.3), libphonon-dev, libqt4-opengl-dev,
  python, python-all-dev, sip4, python-sip4-dev, python-qt4-dev,
  ruby1.8-dev,ruby1.8 , 
  mono-gac [i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390],
  mono-gmcs [i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390], libmono-dev [i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390],
  cdbs, 
  cli-common-dev (>= 0.5.4) [i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390],
- okular-dev (>= 4:4), kdebase-workspace-dev
+ okular-dev (>= 4:4.1.3), kdebase-workspace-dev (>=4.1.3)
 Uploaders: Vincent Fourmond <fourmond@debian.org>, Torsten Marek <shlomme@debian.org>, Adeodato Simó <dato@net.com.org.es>
 XS-Python-Version: >= 2.4
 Standards-Version: 3.7.3
