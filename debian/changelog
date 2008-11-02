@@ -1,17 +1,4 @@
-kdebindings (4:4.1.3-0) UNRELEASED; urgency=low
-
-  * New upstreams
-
- -- Sune Vuorela <debian@pusling.com>  Sat, 01 Nov 2008 22:09:43 +0100
-
-kdebindings (4:4.1.2-1) UNRELEASED; urgency=low
-
-  * Upstream new. 
-  * Use upstream soname instead of debian soname of qtruby
-
- -- Sune Vuorela <debian@puslintg.com>  Sun, 19 Oct 2008 23:46:15 +0000
-
-kdebindings (4:4.1.1-1) UNRELEASED; urgency=low
+kdebindings (4:4.1.3-0) experimental; urgency=low
 
   * Initial upload.
   
@@ -21,17 +8,16 @@ kdebindings (4:4.1.1-1) UNRELEASED; urgency=low
   * Update upstream merged patches
   * Remove patch bindings_branch
 
-
-  [ Adeodato Simó ]
+  [ Adeodato Simó  ]
   * Package PyKDE4 (whithout -dbg version for now):
     + add patch to prevent python modules from linking against libpython.
 
   [ Sune Vuorela ]
   * Package rest of bindings
+  * Provide dllmaps and such for the csharp things
   * Fix target link libraries
   * Fix ruby build
   * Fix pykde separate build
-  * Reimplement a shell construct in make to have it be more reliable
-  * Add cdbs for utils.mk
+  * Add cdbs build-dep for utils.mk
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Fri, 04 Jul 2008 00:14:23 +0200
