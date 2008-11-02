@@ -254,7 +254,6 @@
 ./ruby/qtruby/examples/richtext/orderform/mainwindow.rb
 ./ruby/qtruby/examples/richtext/orderform/detailsdialog.rb
 ./ruby/qtruby/examples/richtext/syntaxhighlighter
-./ruby/qtruby/examples/richtext/syntaxhighlighter/examples
 ./ruby/qtruby/examples/richtext/syntaxhighlighter/examples/example
 ./ruby/qtruby/examples/richtext/syntaxhighlighter/main.rb
 ./ruby/qtruby/examples/richtext/syntaxhighlighter/mainwindow.rb
