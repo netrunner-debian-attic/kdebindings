@@ -187,6 +187,7 @@ monospecific:
 
 dh_install: $(patsubst %,install-python-%,$(pyversions)) install-generic
 	
+	rmdir debian/tmp/usr/share/doc/kde4/HTML/en/pykde4/creative\ commons_files/
 	dh_install --sourcedir=debian/tmp
 	install -D -m 755 debian/tmp/usr/share/kde4/apps/pykde4/pykdeuic4.py \
 	    debian/python-kde4-dev/usr/bin/pykdeuic4
