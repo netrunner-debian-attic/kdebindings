@@ -4,7 +4,6 @@ kdebindings (4:4.1.3-0) experimental; urgency=low
   
   [ David Palacio ]
   * Enable okular, plasma and nepomuk ruby bindings
-  * Add 05_static_class_constructor.diff
   * Update upstream merged patches
   * Remove patch bindings_branch
 
