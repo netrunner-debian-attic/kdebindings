@@ -72,7 +72,7 @@ php/
       GPLv2+ + exceptions. Might be have issues if built (gpl, php, ..), haven't studied it closely, but currently it is not built 
                and building php-qt will require a separate package
 python/
-      crosspython: bsd-ish, LGPLv2+
+      krosspython: bsd-ish, LGPLv2+
       pykde4: LGPLv2.1+
 ruby/
       GPLv2
