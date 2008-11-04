@@ -19,4 +19,8 @@ kdebindings (4:4.1.3-0) experimental; urgency=low
   * Fix pykde separate build
   * Add cdbs build-dep for utils.mk
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Fri, 04 Jul 2008 00:14:23 +0200
+  [ Vincent Fourmond ]
+  * Adding a debian/watch file
+  * Adding Vcs-* fields
+
+ -- Vincent Fourmond <fourmond@debian.org>  Tue, 04 Nov 2008 20:42:13 +0100

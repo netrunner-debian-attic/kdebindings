@@ -15,6 +15,8 @@ Uploaders: Vincent Fourmond <fourmond@debian.org>, Torsten Marek <shlomme@debian
 XS-Python-Version: >= 2.4
 Standards-Version: 3.8.0
 Homepage: http://www.kde.org
+Vcs-Svn: svn://svn.debian.org/svn/pkg-kde/branches/kde4/packages/kdebindings
+Vcs-Browser: http://svn.debian.org/wsvn/pkg-kde/branches/kde4/packages/kdebindings
 
 Package: libsmokeqt4-2
 Section: libs
