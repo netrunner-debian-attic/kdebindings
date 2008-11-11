@@ -1,2 +1,2 @@
 version=3
-ftp://ktown.kde.org/pub/kde/unstable/([\d\.]+)/src/kdebindings-([\d\.]+)\.tar\.bz2
+ftp://ftp.kde.org/pub/kde/stable/([\d\.]+)/src/kdebindings-([\d\.]+)\.tar\.bz2
