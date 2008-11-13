@@ -33,7 +33,7 @@ Description: Qt4 smoke libraries
 
 Package: libsmokekde4-2
 Section: libs
-Depends: ${shlibs:Depends}
+Depends: ${shlibs:Depends}, libsmokeqt4-2 (= ${binary:Version})
 Architecture: any
 Description: KDE smoke libraries
  smoke libraries are part of the bindings used for Qt and KDE. This package i
@@ -46,7 +46,7 @@ Description: KDE smoke libraries
 
 Package: libsmokeokular2
 Section: libs
-Depends: ${shlibs:Depends}
+Depends: ${shlibs:Depends}, libsmokekde4-2 (= ${binary:Version})
 Architecture: any
 Description: Okular smoke bindings
  smoke libraries are part of the bindings used for Qt and KDE. This package 
@@ -59,7 +59,7 @@ Description: Okular smoke bindings
 
 Package: libsmokeplasma2
 Section: libs
-Depends: ${shlibs:Depends}
+Depends: ${shlibs:Depends}, libsmokekde4-2 (= ${binary:Version})
 Architecture: any
 Description: KDE plasma smoke library
  smoke libraries are part of the bindings used for Qt and KDE. This package 
@@ -73,7 +73,7 @@ Description: KDE plasma smoke library
 
 Package: korundum4
 Section: libs
-Architecture: any
+Architecture: all
 Depends: libkde4-ruby
 Suggests: libokular-ruby, libplasma-ruby
 Description: KDE ruby bindings
@@ -85,7 +85,7 @@ Description: KDE ruby bindings
 
 Package: libqtruby4shared2
 Section: libs
-Depends: ${shlibs:Depends}
+Depends: ${shlibs:Depends}, libsmokeqt4-2 (= ${binary:Version})
 Architecture: any
 Description: internal library for Qt4 ruby bindings
  This is an internal library part of KDE Bindings module
@@ -102,7 +102,7 @@ Description: Qt4 ruby bindings
 
 Package: libqt4-ruby1.8
 Section: interpreters
-Depends: ${shlibs:Depends}, ruby1.8
+Depends: ${shlibs:Depends}, ruby1.8, libsmokeqt4-2 (= ${binary:Version})
 Architecture: any
 Description: Qt4 bindings for ruby
  This packages contains Qt4 ruby bindings for Ruby 1.8.
@@ -112,7 +112,8 @@ Description: Qt4 bindings for ruby
 
 Package: libkde4-ruby
 Section: libs
-Depends: libkde4-ruby1.8
+Depends: libkde4-ruby1.8, libsmokeqt4-2 (= ${binary:Version}), 
+ libqtruby4shared2 (= ${binary:Version})
 Architecture: all
 Description: KDE ruby bindings
  This package installs the ruby bindings for
@@ -140,7 +141,7 @@ Description: Okular ruby bindings
 
 Package: libokular-ruby1.8
 Section: libs
-Depends: ${shlibs:Depends}, libkde4-ruby1.8
+Depends: ${shlibs:Depends}, libkde4-ruby1.8 (= ${binary:Version})
 Architecture: any
 Description: Okular ruby bindings
  Bindings for okular for Ruby 1.8
@@ -158,7 +159,7 @@ Description: KDE plasma ruby bindings
 
 Package: libplasma-ruby1.8
 Section: libs
-Depends: ${shlibs:Depends}
+Depends: ${shlibs:Depends}, libkde4-ruby1.8 (= ${binary:Version})
 Architecture: any
 Description: KDE plasma ruby1.8 bindings
  This package allows you to create desktop widgets in the Ruby language.
@@ -218,7 +219,8 @@ Description: documentation and examples for PyKDE
 
 Package: libqyoto4.4-cil
 Section: libs
-Depends: ${shlibs:Depends}, ${misc:Depends}, ${cli:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}, ${cli:Depends}, 
+ libsmokeqt4-2 (= ${binary:Version})
 Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390 lpia
 Description: Qt4 bindings for CLI
  This package provides the Qt-dotnet assembly that
@@ -238,7 +240,8 @@ Description: development tools for Qt CLI bindings
 
 Package: libkimono4.1-cil
 Section: libs
-Depends: libqyoto4.4-cil (= ${binary:Version}), ${cli:Depends}, ${shlibs:Depends}
+Depends: libqyoto4.4-cil (= ${binary:Version}), ${cli:Depends}, 
+ ${shlibs:Depends}, libsmokekde4-2 (= ${binary:Version})
 Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390 lpia
 Description: kde4 bindings for CLI
  This package provides the kde-dotnet assembly that
