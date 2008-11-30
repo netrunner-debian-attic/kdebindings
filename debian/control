@@ -274,8 +274,8 @@ Section: libs
 Depends: libqyoto4.4-cil (= ${binary:Version}), ${cli:Depends}, ${shlibs:Depends}
 Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390 lpia
 Description: Qt4 bindings for CLI, QtScript edition
- This package provides the QtSCript assemply that allows
- CLI based software to use the Qtscript library.
+ This package provides the QtScript assemply that allows
+ CLI based software to use the QtScript library.
  .
  This is part of KDE Bindings module
 
@@ -312,6 +312,6 @@ Section: libs
 Depends: ${shlibs:Depends}
 Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390 lpia
 Description: shared library for Qt4 CLI bindings
- This package provides the shared library for qyoto - the Qt4 CLI bindings
+ This package provides the shared library for Qyoto - the Qt4 CLI bindings
  .
  This is part of KDE Bindings module

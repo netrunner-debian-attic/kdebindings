@@ -177,7 +177,7 @@ monospecific:
 	install -d debian/libqtwebkit2.2-cil/usr/lib/cli/kdebindings-2.2
 	install -D -m 644 $(DEST_USR_LIB)/mono/2.0/qtwebkit.dll debian/libqtwebkit2.2-cil/usr/lib/cli/kdebindings-2.2
 	install -D -m 644 $(DEST_USR_LIB)/libqtwebkit-sharp.so debian/libqtwebkit2.2-cil/usr/lib/cli/kdebindings-2.2
-	install -D -m 644 $(CURDIR)/debian/csharp/qtwebkit.dll.config debian/libqtwebkit2.2-cil/usr/lib/kdebindings-2.2
+	install -D -m 644 $(CURDIR)/debian/csharp/qtwebkit.dll.config debian/libqtwebkit2.2-cil/usr/lib/cli/kdebindings-2.2
 	#end manual installs
 	#setting MONOPATH is a hack to hack around a bug in dh_mkaeclilibs. Reported as #498868
 	MONO_PATH=$(CURDIR)/debian/libqyoto4.4-cil/usr/lib/cli/kdebindings-4.4/ dh_makeclilibs -V
