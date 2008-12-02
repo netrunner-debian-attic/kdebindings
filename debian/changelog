@@ -18,6 +18,8 @@ kdebindings (4:4.1.3-2) UNRELEASED experimental; urgency=low
   [ Sune Vuorela ]
   * Merge in changes from ubuntu, mostly typofixes in important files. Shame
     on me. Thanks Riddell.
+  * Better handling of packages just built on some archs. hopefully fixes the
+    build failure on non-mono archs.
 
  -- Sune Vuorela <debian@pusling.com>  Sun, 30 Nov 2008 23:41:36 +0100
 
