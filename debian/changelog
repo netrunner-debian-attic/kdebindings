@@ -1,4 +1,4 @@
-kdebindings (4:4.1.3-2) UNRELEASED experimental; urgency=low
+kdebindings (4:4.1.3-2) experimental; urgency=low
 
   [ Vincent Fourmond ]
   * Moving libqt4-ruby{,1.8} to section interpreters where they
