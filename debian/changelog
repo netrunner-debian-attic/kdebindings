@@ -1,3 +1,10 @@
+kdebindings (4:4.1.3-3) experimental; urgency=low
+
+  * Fix qt-dotnet.dll.config. Thanks Eric Butler.
+  * Add a cligac file for the qtwebkit assembly. Thanks Eric Butler.
+
+ -- Sune Vuorela <debian@pusling.com>  Fri, 05 Dec 2008 00:36:44 +0100
+
 kdebindings (4:4.1.3-2) experimental; urgency=low
 
   [ Vincent Fourmond ]
