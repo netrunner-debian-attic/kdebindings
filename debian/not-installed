@@ -50,6 +50,7 @@
 ./usr/lib/libsmokeplasma.so
 ./usr/lib/libsmokeqtscript.so
 ./usr/lib/libsmokeqt.so
+./usr/lib/libsmokeqttest.so
 ./usr/lib/libsmokeqtuitools.so
 ./usr/lib/libsmokeqtwebkit.so
 ./usr/lib/libsmokesolid.so

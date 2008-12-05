@@ -8,11 +8,13 @@ usr/lib/ruby/1.8/phonon/phonon.rb
 usr/lib/ruby/1.8/qtuitools/qtuitools.rb
 usr/lib/ruby/1.8/qtwebkit/qtwebkit.rb
 usr/lib/ruby/1.8/qtscript/qtscript.rb
+usr/lib/ruby/1.8/qttest/qttest.rb
 usr/lib/ruby/1.8/*/phonon.so
 usr/lib/ruby/1.8/*/qtruby4.so
 usr/lib/ruby/1.8/*/qtuitools.so
 usr/lib/ruby/1.8/*/qtwebkit.so
 usr/lib/ruby/1.8/*/qtscript.so
+usr/lib/ruby/1.8/*/qttest.so
 
 usr/bin/rbqtapi
 usr/bin/rbrcc

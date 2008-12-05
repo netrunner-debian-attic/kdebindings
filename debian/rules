@@ -28,6 +28,7 @@ endif
 cmake_flags := \
 	-DCMAKE_SKIP_RPATH=true				\
 	-DCMAKE_BUILD_TYPE=Debian			\
+	-DCMAKE_USE_RELATIVE_PATHS=ON			\
 	-DCMAKE_INSTALL_PREFIX=/usr			\
 	-DCMAKE_VERBOSE_MAKEFILE=ON			\
 							\
@@ -52,9 +53,9 @@ RUBY_SITEARCH=$(shell ruby1.8 -rrbconfig -e 'puts Config::CONFIG["sitearch"]')
 cmake_flags += \
 	-DENABLE_PYKDE4=OFF\
 	-DENABLE_SOPRANO_SMOKE=ON \
-    -DENABLE_NEPOMUK_SMOKE=ON \
-    -DENABLE_NEPOMUK_RUBY=ON \
-    -DENABLE_PHONON_RUBY=ON \
+	-DENABLE_NEPOMUK_SMOKE=ON \
+	-DENABLE_NEPOMUK_RUBY=ON \
+	-DENABLE_PHONON_RUBY=ON \
 	-DCUSTOM_RUBY_SITE_LIB_DIR=/usr/lib/ruby/1.8/ \
 	-DCUSTOM_RUBY_SITE_ARCH_DIR=/usr/lib/ruby/1.8/$(RUBY_SITEARCH) \
 	$(MONOFLAGS)
@@ -136,16 +137,16 @@ install-generic: $(patsubst %,install-python-%,$(pyversions))
 	$(MAKE) -C $(objdir) install DESTDIR=$(CURDIR)/debian/tmp
 
 install: $(MONOTARGET) install-generic
-	rmdir debian/tmp/usr/share/doc/kde4/HTML/en/pykde4/creative\ commons_files/
+#	rmdir debian/tmp/usr/share/doc/kde4/HTML/en/pykde4/creative\ commons_files/
 	install -D -m 755 debian/tmp/usr/share/kde4/apps/pykde4/pykdeuic4.py \
 	    debian/python-kde4-dev/usr/bin/pykdeuic4
 
 monospecific: install-generic install-pre 
 	#khtml
 	install -d debian/libkhtml2.0-cil/usr/lib/cli/kdebindings-2.0
-	install -D -m 644 $(DEST_USR_LIB)/mono/2.0/khtml.dll debian/libkhtml2.0-cil/usr/lib/cli/kdebindings-2.0/
+	install -D -m 644 $(DEST_USR_LIB)/mono/2.0/khtml-dll.dll debian/libkhtml2.0-cil/usr/lib/cli/kdebindings-2.0/
 	install -D -m 644 $(DEST_USR_LIB)/libkhtml-sharp.so debian/libkhtml2.0-cil/usr/lib/cli/kdebindings-2.0/
-	install -D -m 644 $(CURDIR)/debian/csharp/khtml.dll.config debian/libkhtml2.0-cil/usr/lib/cli/kdebindings-2.0/
+	install -D -m 644 $(CURDIR)/debian/csharp/khtml-dll.dll.config debian/libkhtml2.0-cil/usr/lib/cli/kdebindings-2.0/
 	#qyoto
 	install -d debian/libqyoto4.4-cil/usr/lib/cli/kdebindings-4.4
 	install -D -m 644 $(DEST_USR_LIB)/mono/2.0/qt-dotnet.dll debian/libqyoto4.4-cil/usr/lib/cli/kdebindings-4.4/
@@ -158,9 +159,14 @@ monospecific: install-generic install-pre
 	install -D -m 644 $(CURDIR)/debian/csharp/kde-dotnet.dll.config debian/libkimono4.1-cil/usr/lib/cli/kdebindings-4.1/
 	#nepomuk
 	install -d debian/libnepomuk2.2-cil/usr/lib/cli/kdebindings-2.2
-	install -D -m 644 $(DEST_USR_LIB)/mono/2.0/nepomuk.dll debian/libnepomuk2.2-cil/usr/lib/cli/kdebindings-2.2
+	install -D -m 644 $(DEST_USR_LIB)/mono/2.0/nepomuk-dll.dll debian/libnepomuk2.2-cil/usr/lib/cli/kdebindings-2.2
 	install -D -m 644 $(DEST_USR_LIB)/libnepomuk-sharp.so debian/libnepomuk2.2-cil/usr/lib/cli/kdebindings-2.2
-	install -D -m 644 $(CURDIR)/debian/csharp/nepomuk.dll.config debian/libnepomuk2.2-cil/usr/lib/cli/kdebindings-2.2
+	install -D -m 644 $(CURDIR)/debian/csharp/nepomuk-dll.dll.config debian/libnepomuk2.2-cil/usr/lib/cli/kdebindings-2.2
+	# plasma
+	install -d debian/libplasma2.0-cil/usr/lib/cli/kdebindings-2.0
+	install -D -m 644 $(DEST_USR_LIB)/mono/2.0/plasma-dll.dll debian/libplasma2.0-cil/usr/lib/cli/kdebindings-2.0
+	install -D -m 644 $(DEST_USR_LIB)/libplasma-sharp.so debian/libplasma2.0-cil/usr/lib/cli/kdebindings-2.0
+	install -D -m 644 $(CURDIR)/debian/csharp/plasma-dll.dll.config debian/libplasma2.0-cil/usr/lib/cli/kdebindings-2.0
 	#qtscript
 	install -d debian/libqtscript2.2-cil/usr/lib/cli/kdebindings-2.2
 	install -D -m 644 $(DEST_USR_LIB)/mono/2.0/qtscript.dll debian/libqtscript2.2-cil/usr/lib/cli/kdebindings-2.2

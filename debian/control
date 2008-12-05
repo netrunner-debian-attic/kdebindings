@@ -171,7 +171,8 @@ Package: python-kde4
 Section: python
 Architecture: any
 XB-Python-Version: ${python:Versions}
-Depends: ${shlibs:Depends}, ${python:Depends}, ${misc:Depends}
+Depends: ${shlibs:Depends}, ${python:Depends}, ${misc:Depends},
+ python-qt4 (>= 4.4.4), python-sip4 (>= 4.7.8)
 Description: Python bindings for the KDE 4 libraries
  This package contains PyKDE, the Python bindings for the KDE 4
  libraries, that allow you to write KDE programs using Python instead of
@@ -249,6 +250,16 @@ Description: kde4 bindings for CLI
  .
  This is part of KDE Bindings module
 
+Package: plasma-scriptengine-kimono
+Section: kde
+Depends: libkimono4.1-cil (= ${binary:Version}), ${cli:Depends}, ${shlibs:Depends}
+Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390 lpia
+Description: Kimono Plasma script engine
+ This package provides the script engine for Plasma which allows
+ to write Plasma applets in CLI languagues.
+ .
+ This is part of KDE Bindings module
+ 
 Package: libkhtml2.0-cil
 Section: libs
 Depends: libqyoto4.4-cil (= ${binary:Version}), libkimono4.1-cil (= ${binary:Version}), ${cli:Depends}, ${shlibs:Depends}
@@ -268,6 +279,17 @@ Description: kde4 bindings for CLI, Nepomuk-edition
  CLI based software to use the Nepomuk library
  .
  This is part of KDE Bindings module
+
+Package: libplasma2.0-cil
+Section: libs
+Depends: libqyoto4.4-cil (= ${binary:Version}), libkimono4.1-cil (= ${binary:Version}), ${cli:Depends}, ${shlibs:Depends}
+Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390 lpia
+Description: kde4 bindings for CLI, Plasma-edition
+ This package provides the plasma assembly that allows 
+ CLI based software to use the Plasma library
+ .
+ This is part of KDE Bindings module
+
 
 Package: libqtscript2.2-cil
 Section: libs
