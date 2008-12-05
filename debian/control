@@ -2,15 +2,15 @@ Source: kdebindings
 Section: kde
 Priority: optional
 Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
-Build-Depends: debhelper (>= 6.0.7~), cmake (>= 2.4.5), quilt,
- kdelibs5-dev (>= 4:4.1.3), libphonon-dev, libqt4-opengl-dev,
- python, python-all-dev, sip4, python-sip4-dev, python-qt4-dev,
+Build-Depends: debhelper (>= 6.0.7~), quilt,
+ kdelibs5-dev (>= 4:4.1.81), libplasma-dev (>= 4:4.1.81), libphonon-dev, libqt4-opengl-dev,
+ python, python-all-dev, sip4 (>= 4.7.8), python-sip4-dev (>= 4.7.8), python-qt4-dev (>= 4.4.4),
  ruby1.8-dev, ruby1.8 , python-central,
  mono-gac [i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390],
  mono-gmcs [i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390], libmono-dev [i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390],
- cdbs, 
+ cdbs, monodoc [i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390],
  cli-common-dev (>= 0.5.4) [i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390],
- okular-dev (>= 4:4.1.3), kdebase-workspace-dev (>=4.1.3)
+ okular-dev (>= 4:4.1.81), kdebase-workspace-dev (>= 4.1.81)
 Uploaders: Vincent Fourmond <fourmond@debian.org>, Torsten Marek <shlomme@debian.org>, Sune Vuorela <debian@pusling.com>, David Palacio <dpalacio@uninorte.edu.co>
 XS-Python-Version: >= 2.4
 Standards-Version: 3.8.0
@@ -194,7 +194,7 @@ Package: python-kde4-dev
 Section: python
 Architecture: all
 XB-Python-Version: ${python:Versions}
-Depends: ${python:Depends}, python-qt4
+Depends: ${python:Depends}, python-qt4 (>= 4.4.4)
 Recommends: python-kde4
 Description: UIC compiler and SIP files for PyKDE
  This package contains pykdeuic4, a wrapper around PyQt's own UIC (user

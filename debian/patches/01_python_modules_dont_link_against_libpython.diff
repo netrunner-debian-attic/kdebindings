@@ -2,16 +2,6 @@ Do not link python modules against -lpython2.X. Since KDE4's cmake file
 uses --no-undefined by default, we have to remove that from the default
 CMAKE_SHARED_LINKER_FLAGS variable, but only for the pykde4 subdirectory.
 
---- a/python/pykde4/cmake/modules/SIPMacros.cmake
-+++ b/python/pykde4/cmake/modules/SIPMacros.cmake
-@@ -106,7 +106,6 @@
-     )
-     
-     ADD_LIBRARY(${_logical_name} SHARED ${_sip_output_files} )
--    TARGET_LINK_LIBRARIES(${_logical_name} ${PYTHON_LIBRARY})
-     TARGET_LINK_LIBRARIES(${_logical_name} ${EXTRA_LINK_LIBRARIES})
-     SET_TARGET_PROPERTIES(${_logical_name} PROPERTIES PREFIX "" OUTPUT_NAME ${_child_module_name})
- 
 --- a/python/pykde4/CMakeLists.txt
 +++ b/python/pykde4/CMakeLists.txt
 @@ -66,6 +66,9 @@
@@ -21,6 +11,6 @@ CMAKE_SHARED_LINKER_FLAGS variable, but only for the pykde4 subdirectory.
 +# Do not use --no-undefined for python modules.
 +STRING(REPLACE -Wl,--no-undefined "" CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS}")
 +
+ FILE(GLOB kdecore_files_sip sip/kdecore/*.sip)
+ set(SIP_EXTRA_FILES_DEPEND ${kdecore_files_sip})
  ADD_SIP_PYTHON_MODULE(PyKDE4.kdecore sip/kdecore/kdecoremod.sip ${KDE4_KDECORE_LIBS} ${KDE4_KPTY_LIBS} ${QT_QTNETWORK_LIBRARY})
- ADD_SIP_PYTHON_MODULE(PyKDE4.solid sip/solid/solidmod.sip ${KDE4_SOLID_LIBS} ${QT_QTCORE_LIBRARY})
- ADD_SIP_PYTHON_MODULE(PyKDE4.kdeui sip/kdeui/kdeuimod.sip ${KDE4_KDEUI_LIBS} ${QT_QTXML_LIBRARY})

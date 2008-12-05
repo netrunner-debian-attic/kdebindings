@@ -1,3 +1,24 @@
+kdebindings (4:4.1.82+svn892615-0r1) UNRELEASED; urgency=low
+
+  * New upstream development snapshot.
+
+  +++ Changes by Modestas Vainius:
+
+  * Resync patches:
+    - 01_python_modules_dont_l~k_against_libpython.diff - adapt to upstream
+      changes;
+    - 03_csharp_dont_use_qyotoshared_directly.diff - fix offsets;
+    - 97_fix_target_link_libraries.diff - remove, merged upstream;
+    - 99_enable_okular_plasma.diff - disable for now.
+  * Build depend on libplasma-dev to build plasma bindings.
+  * Bump KDE build depends to 4.1.81.
+  * Remove explicit cmake from build depends.
+  * Build depend on monodoc to build kio_monodoc.
+  * Bump SIP build dependencies to >= 4.7.8.
+  * Bump python-qt4 dependencies to 4.4.4.
+
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Fri, 05 Dec 2008 12:57:11 +0200
+
 kdebindings (4:4.1.3-2) experimental; urgency=low
 
   [ Vincent Fourmond ]
