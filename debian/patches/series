@@ -6,4 +6,4 @@
 06_build_smokephonon.diff
 07_fix_kpythonpluginfactory_build.diff
 08_csharp_plasma_examples.diff
-#99_enable_okular_plasma.diff
+09_build_ruby_nepomuk.diff
