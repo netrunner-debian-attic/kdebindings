@@ -1,6 +1,9 @@
-kdebindings (4:4.1.82+svn892999-0r1) UNRELEASED; urgency=low
+kdebindings (4:4.1.85+svn896238-0r2) UNRELEASED; urgency=low
 
   * New upstream development snapshot.
+
+  * TODO: there are files missing. Check.
+  * Build depend on monodoc (TODO: useless?).
 
   +++ Changes by Modestas Vainius:
 
@@ -11,7 +14,7 @@ kdebindings (4:4.1.82+svn892999-0r1) UNRELEASED; urgency=low
     - 97_fix_target_link_libraries.diff - remove, merged upstream;
     - 99_enable_okular_plasma.diff - disable for now.
   * Build depend on libplasma-dev to build plasma bindings.
-  * Bump KDE build depends to 4.1.81.
+  * Bump KDE build depends to 4.1.85.
   * Remove explicit cmake from build depends.
   * Build depend on monodoc to build kio_monodoc.
   * Bump SIP build dependencies to >= 4.7.8.
@@ -19,30 +22,33 @@ kdebindings (4:4.1.82+svn892999-0r1) UNRELEASED; urgency=low
   * Pass -DCMAKE_USE_RELATIVE_PATHS=ON to cmake.
   * Make python-kde4 depend on python-qt4 (>= 4.4.4) and python-sip4 (>= 4.7.8)
     (the versions it was built against).
-  
+  * Add patches:
+    - 07_fix_kpythonpluginfactory_build.diff - include Python.h first as Qt
+      includes steals "slots" keyword.
+  * Install a more few files to python-kde4 like python plugin factory.
+  * Add libplasma2.0-cil package for plasma-dll.dll based on libnepomuk2.2-cil.
+  * Add new plasma-scriptengine-kimono package for Kimono plasma script engine.
+  * Install /usr/lib/kde4/kimonopluginfactory.so to libkimono4.1-cil.
+  * khtml.dll, nepomuk.dll got renamed to khtml-dll.dll and nepomuk-dll.dll.
+    respectively.
+  * Update install files.
+
   !! DISCLAIMER !! Changes below are sort of "not really sure what I was doing".
 
-  * Build depend on monodoc (TODO: useless?).
   * Add patches:
     - 06_build_smokephonon.diff - much smoke stuff needs phononsmoke, but that
       one was disabled because it didn't build. Reenable it and hack around its
       brokenness which probably results into useless smokephonon, but working
       builds of other smoke stuff.
-    - 07_fix_kpythonpluginfactory_build.diff - include Python.h first as Qt
-      includes steals "slots" keyword.
     - 08_csharp_plasma_examples.diff - do not build a few csharp plasma
       examples. They fail.
-  * Add libplasma2.0-cil package for plasma-dll.dll based on libnepomuk2.2-cil.
-  * Add new plasma-scriptengine-kimono package for Kimono plasma script engine.
-  * Install /usr/lib/kde4/kimonopluginfactory.so to libkimono4.1-cil.
-  * For some reason csharp khtml.dll, nepomuk.dll got renamed to khtml-dll.dll
-    and nepomuk-dll.dll. Do the renaming but this is probably wrong.
-  * Install a more few files to python-kde4 like python plugin factory.
-  * Ruby nepomuk bindings disappeared.
-  * Some modification to install files. A few disappeared.
-  * TODO: there are files missing. Check.
+  * A few files disappeared.
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Fri, 05 Dec 2008 22:07:24 +0200
+   +++ Changes by David Palacio:
+
+  * Build Ruby Nepomuk bindings (09_build_ruby_nepomuk.diff).
+
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sat, 13 Dec 2008 14:16:26 +0200
 
 kdebindings (4:4.1.3-2) experimental; urgency=low
 
