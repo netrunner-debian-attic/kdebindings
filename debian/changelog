@@ -47,6 +47,7 @@ kdebindings (4:4.1.86+svn903598-0r1) UNRELEASED; urgency=low
   * Get rid of useless cdbs include and build dependency.
   * Use simplier approach for debian/rules binary-* target handling.
   * Run dh_installdirs in install-pre target to make mono helpers more silent.
+  * Steal list-missing implementation from CDBS.
 
   !! DISCLAIMER !! Changes below are sort of "not really sure what I was doing".
 
@@ -67,7 +68,7 @@ kdebindings (4:4.1.86+svn903598-0r1) UNRELEASED; urgency=low
 
   * Change mono build-dep to mono-devel (>= 2.0.1) for mono 2.0 transition
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Wed, 31 Dec 2008 04:09:13 +0200
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Wed, 31 Dec 2008 11:47:36 +0200
 
 kdebindings (4:4.1.3-2) experimental; urgency=low
 
