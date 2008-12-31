@@ -1,0 +1,3 @@
+debian/csharp/soprano.dll.config       usr/lib/cli/kdebindings-2.0/
+usr/lib/libsoprano-sharp.so            usr/lib/cli/kdebindings-2.0/
+usr/lib/mono/gac/soprano/*/soprano.dll usr/lib/cli/kdebindings-2.0/

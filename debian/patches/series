@@ -7,4 +7,4 @@
 07_fix_kpythonpluginfactory_build.diff
 08_csharp_plasma_examples.diff
 09_build_ruby_nepomuk.diff
-#97_fix_target_link_libraries.diff
+10_fix_kimono_dllimports.diff

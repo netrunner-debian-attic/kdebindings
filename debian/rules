@@ -1,10 +1,14 @@
 #! /usr/bin/make -f
 
 include /usr/share/quilt/quilt.make
-include /usr/share/cdbs/1/rules/utils.mk
 
-ARCH=$(shell dpkg-architecture -qDEB_HOST_ARCH)
-MONOARCHS= "i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 lpia ia64 arm armeb armel sparc s390"
+ARCH := $(shell dpkg-architecture -qDEB_HOST_ARCH)
+MONOARCHS := "i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 lpia ia64 arm armeb armel sparc s390"
+MONOPACKAGES := $(shell dh_listpackages | grep '\-cil$$') plasma-scriptengine-kimono
+DH_MONOPACKAGES := $(patsubst %,-p%,$(MONOPACKAGES))
+DH_NO_MONOPACKAGES := $(patsubst %,-N%,$(MONOPACKAGES))
+MONO_L_PATHS = $(shell find $(patsubst %,debian/%,$(MONOPACKAGES)) -path '*/usr/lib/cli/*' -name '*.dll' -type f -printf '%h:') 
+
 export MONO_DISABLE_SHM = 1
 MONOHOME=$(CURDIR)/debian/monohome
 export MONO_SHARED_DIR = $(MONOHOME)
@@ -80,7 +84,7 @@ endif
 ##
 
 pydefault  := $(shell pyversions --default)
-pyversions := $(shell pyversions --supported --version)
+pyversions := $(shell pysupport-parseversions debian/pyversions)
 cmake_flags += -DPYTHON_EXECUTABLE=/usr/bin/$(pydefault)
 
 ##
@@ -129,6 +133,8 @@ clean:: unpatch
 install-pre:
 	dh_testdir
 	dh_testroot
+	dh_prep
+	dh_installdirs
 
 $(patsubst %,install-python-%,$(pyversions)): install-pre
 	$(MAKE) -C $(objdir)/python/pykde4-$(subst install-python-,,$@) install DESTDIR=$(CURDIR)/debian/tmp; \
@@ -141,74 +147,30 @@ install: $(MONOTARGET) install-generic
 	install -D -m 755 debian/tmp/usr/share/kde4/apps/pykde4/pykdeuic4.py \
 	    debian/python-kde4-dev/usr/bin/pykdeuic4
 
-monospecific: install-generic install-pre 
-	#khtml
-	install -d debian/libkhtml2.0-cil/usr/lib/cli/kdebindings-2.0
-	install -D -m 644 $(DEST_USR_LIB)/mono/2.0/khtml-dll.dll debian/libkhtml2.0-cil/usr/lib/cli/kdebindings-2.0/
-	install -D -m 644 $(DEST_USR_LIB)/libkhtml-sharp.so debian/libkhtml2.0-cil/usr/lib/cli/kdebindings-2.0/
-	install -D -m 644 $(CURDIR)/debian/csharp/khtml-dll.dll.config debian/libkhtml2.0-cil/usr/lib/cli/kdebindings-2.0/
-	#qyoto
-	install -d debian/libqyoto4.4-cil/usr/lib/cli/kdebindings-4.4
-	install -D -m 644 $(DEST_USR_LIB)/mono/2.0/qt-dotnet.dll debian/libqyoto4.4-cil/usr/lib/cli/kdebindings-4.4/
-	install -D -m 644 $(DEST_USR_LIB)/libqyoto.so debian/libqyoto4.4-cil/usr/lib/cli/kdebindings-4.4/
-	install -D -m 644 $(CURDIR)/debian/csharp/qt-dotnet.dll.config debian/libqyoto4.4-cil/usr/lib/cli/kdebindings-4.4/
-	#kimono
-	install -d debian/libkimono4.1-cil/usr/lib/cli/kdebindings-4.1
-	install -D -m 644 $(DEST_USR_LIB)/mono/2.0/kde-dotnet.dll debian/libkimono4.1-cil/usr/lib/cli/kdebindings-4.1/
-	install -D -m 644 $(DEST_USR_LIB)/libkimono.so debian/libkimono4.1-cil/usr/lib/cli/kdebindings-4.1/
-	install -D -m 644 $(CURDIR)/debian/csharp/kde-dotnet.dll.config debian/libkimono4.1-cil/usr/lib/cli/kdebindings-4.1/
-	#nepomuk
-	install -d debian/libnepomuk2.2-cil/usr/lib/cli/kdebindings-2.2
-	install -D -m 644 $(DEST_USR_LIB)/mono/2.0/nepomuk-dll.dll debian/libnepomuk2.2-cil/usr/lib/cli/kdebindings-2.2
-	install -D -m 644 $(DEST_USR_LIB)/libnepomuk-sharp.so debian/libnepomuk2.2-cil/usr/lib/cli/kdebindings-2.2
-	install -D -m 644 $(CURDIR)/debian/csharp/nepomuk-dll.dll.config debian/libnepomuk2.2-cil/usr/lib/cli/kdebindings-2.2
-	# plasma
-	install -d debian/libplasma2.0-cil/usr/lib/cli/kdebindings-2.0
-	install -D -m 644 $(DEST_USR_LIB)/mono/2.0/plasma-dll.dll debian/libplasma2.0-cil/usr/lib/cli/kdebindings-2.0
-	install -D -m 644 $(DEST_USR_LIB)/libplasma-sharp.so debian/libplasma2.0-cil/usr/lib/cli/kdebindings-2.0
-	install -D -m 644 $(CURDIR)/debian/csharp/plasma-dll.dll.config debian/libplasma2.0-cil/usr/lib/cli/kdebindings-2.0
-	#qtscript
-	install -d debian/libqtscript2.2-cil/usr/lib/cli/kdebindings-2.2
-	install -D -m 644 $(DEST_USR_LIB)/mono/2.0/qtscript.dll debian/libqtscript2.2-cil/usr/lib/cli/kdebindings-2.2
-	install -D -m 644 $(DEST_USR_LIB)/libqtscript-sharp.so debian/libqtscript2.2-cil/usr/lib/cli/kdebindings-2.2
-	install -D -m 644 $(CURDIR)/debian/csharp/qtscript.dll.config debian/libqtscript2.2-cil/usr/lib/cli/kdebindings-2.2
-	#soprano
-	install -d debian/libsoprano2.0-cil/usr/lib/cli/kdebindings-2.0
-	install -D -m 644 $(DEST_USR_LIB)/mono/2.0/soprano.dll debian/libsoprano2.0-cil/usr/lib/cli/kdebindings-2.0
-	install -D -m 644 $(DEST_USR_LIB)/libsoprano-sharp.so debian/libsoprano2.0-cil/usr/lib/cli/kdebindings-2.0
-	install -D -m 644 $(CURDIR)/debian/csharp/soprano.dll.config debian/libsoprano2.0-cil/usr/lib/cli/kdebindings-2.0
-	#qtuitools
-	install -d debian/libqtuitools2.2-cil/usr/lib/cli/kdebindings-2.2
-	install -D -m 644 $(DEST_USR_LIB)/mono/2.0/qtuitools.dll debian/libqtuitools2.2-cil/usr/lib/cli/kdebindings-2.2
-	install -D -m 644 $(DEST_USR_LIB)/libqtuitools-sharp.so debian/libqtuitools2.2-cil/usr/lib/cli/kdebindings-2.2
-	install -D -m 644 $(CURDIR)/debian/csharp/qtuitools.dll.config debian/libqtuitools2.2-cil/usr/lib/cli/kdebindings-2.2
-	#qtwebkit
-	install -d debian/libqtwebkit2.2-cil/usr/lib/cli/kdebindings-2.2
-	install -D -m 644 $(DEST_USR_LIB)/mono/2.0/qtwebkit.dll debian/libqtwebkit2.2-cil/usr/lib/cli/kdebindings-2.2
-	install -D -m 644 $(DEST_USR_LIB)/libqtwebkit-sharp.so debian/libqtwebkit2.2-cil/usr/lib/cli/kdebindings-2.2
-	install -D -m 644 $(CURDIR)/debian/csharp/qtwebkit.dll.config debian/libqtwebkit2.2-cil/usr/lib/cli/kdebindings-2.2
-	#end manual installs
-	#setting MONOPATH is a hack to hack around a bug in dh_mkaeclilibs. Reported as #498868
-	MONO_PATH=$(CURDIR)/debian/libqyoto4.4-cil/usr/lib/cli/kdebindings-4.4/ dh_makeclilibs -V
-	dh_installcligac
-	dh_clideps -l debian/libqyoto4.4-cil/usr/lib/cli/kdebindings-4.4/:debian/libkimono4.1-cil/usr/lib/cli/kdebindings-4.1/:debian/libkhtml2.0-cil/usr/lib/cli/kdebindings-2.0/
-	dh_clistrip
+# Separate target (from monospecific) is needed for $(MONO_L_PATHS)
+# to work properly
+install-mono: install-generic install-pre
+	dh_install $(DH_MONOPACKAGES)
 
-	
+monospecific: DH_OPTIONS=
+monospecific: install-mono
+	#setting MONOPATH is a hack to hack around a bug in dh_makeclilibs. Reported as #498868
+	MONO_PATH=$(CURDIR)/debian/libqyoto4.4-cil/usr/lib/cli/kdebindings-4.4/ dh_makeclilibs -V $(DH_MONOPACKAGES)
+	dh_installcligac $(DH_MONOPACKAGES)
+	dh_makeshlibs -V $(DH_MONOPACKAGES)
+	dh_clideps -l$(MONO_L_PATHS) $(DH_MONOPACKAGES)
+	dh_clistrip $(DH_MONOPACKAGES)
 
 ##
 
 binary: binary-arch binary-indep
 
-binary-arch: build install
-	dh_install -s --sourcedir=debian/tmp
-	$(MAKE) -f debian/rules DH_OPTIONS=-s binary-common
+binary-arch: export DH_OPTIONS=-s
+binary-indep: export DH_OPTIONS=-i
 
-binary-indep: build install
-	dh_install -i --sourcedir=debian/tmp
-	$(MAKE) -f debian/rules DH_OPTIONS=-i binary-common
-
-binary-common:
+binary-indep binary-arch: build install
+	# Building $@. DH_OPTIONS=$(DH_OPTIONS)
+	dh_install $(DH_NO_MONOPACKAGES)
 	dh_testdir
 	dh_testroot
 	dh_lintian
@@ -227,7 +189,6 @@ binary-common:
 	dh_gencontrol
 	dh_md5sums
 	dh_builddeb
-
 
 ##
 

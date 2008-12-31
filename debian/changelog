@@ -1,4 +1,4 @@
-kdebindings (4:4.1.86+svn902532-0r1) UNRELEASED; urgency=low
+kdebindings (4:4.1.86+svn903598-0r1) UNRELEASED; urgency=low
 
   * New upstream development snapshot.
 
@@ -11,7 +11,7 @@ kdebindings (4:4.1.86+svn902532-0r1) UNRELEASED; urgency=low
       changes;
     - 03_csharp_dont_use_qyotoshared_directly.diff - fix offsets;
     - 97_fix_target_link_libraries.diff - remove, merged upstream;
-    - 99_enable_okular_plasma.diff - disable for now.
+    - 99_enable_okular_plasma.diff - remove, not needed.
   * Build depend on libplasma-dev to build plasma bindings.
   * Bump KDE build depends to 4.1.85.
   * Remove explicit cmake from build depends.
@@ -32,7 +32,21 @@ kdebindings (4:4.1.86+svn902532-0r1) UNRELEASED; urgency=low
     respectively.
   * Update install files.
   * Bump soprano build depend to 2.1.64+svn.
-  * Add 97_fix_target_link_libraries.diff patch.
+  * Limit Mono dh helpers to Mono packages only.
+  * Require debhelper << 7.1 until mono dh helpers are ported.
+  * Add 10_fix_kimono_dllimports.diff patch to fix misnamed libkimono
+    DllImports.
+  * Add myself to Uploaders.
+  * Do not build python 2.4 bindings anymore.
+  * Switch to debhelper v7 for more flexible install file handling:
+    - get rid of manual mono specific installs in debian/rules. Use install
+      files instead;
+    - no longer pass --sourcedir=debian/tmp to dh_install.
+  * Implement autodiscovery of mono L_PATHS and generally try to hardcode as
+    less mono paths as possible.
+  * Get rid of useless cdbs include and build dependency.
+  * Use simplier approach for debian/rules binary-* target handling.
+  * Run dh_installdirs in install-pre target to make mono helpers more silent.
 
   !! DISCLAIMER !! Changes below are sort of "not really sure what I was doing".
 
@@ -53,7 +67,7 @@ kdebindings (4:4.1.86+svn902532-0r1) UNRELEASED; urgency=low
 
   * Change mono build-dep to mono-devel (>= 2.0.1) for mono 2.0 transition
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sun, 21 Dec 2008 12:21:53 +0200
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Wed, 31 Dec 2008 04:09:13 +0200
 
 kdebindings (4:4.1.3-2) experimental; urgency=low
 
