@@ -1,4 +1,4 @@
-kdebindings (4:4.1.86+svn903598-0r1) UNRELEASED; urgency=low
+kdebindings (4:4.1.87+svn905040-0r1) UNRELEASED; urgency=low
 
   * New upstream development snapshot.
 
@@ -37,7 +37,8 @@ kdebindings (4:4.1.86+svn903598-0r1) UNRELEASED; urgency=low
   * Add 10_fix_kimono_dllimports.diff patch to fix misnamed libkimono
     DllImports.
   * Add myself to Uploaders.
-  * Do not build python 2.4 bindings anymore.
+  * Do not build python 2.4 bindings anymore: pyversions file indicates python
+    2.5 or higher.
   * Switch to debhelper v7 for more flexible install file handling:
     - get rid of manual mono specific installs in debian/rules. Use install
       files instead;
@@ -67,6 +68,13 @@ kdebindings (4:4.1.86+svn903598-0r1) UNRELEASED; urgency=low
   +++ Changes by Scott Kitterman:
 
   * Change mono build-dep to mono-devel (>= 2.0.1) for mono 2.0 transition
+
+  +++ Changes by Ana Beatriz Guerrero Lopez:
+
+  * Switch from python-central to python-support:
+    - Replace build depend on python-central for python-support. 
+    - Remove fields X[BS]-Python-Version in debian/control.
+    - Replace call to pycentral for pysupport in debian/rules.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Wed, 31 Dec 2008 11:47:36 +0200
 
