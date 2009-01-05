@@ -12,7 +12,7 @@ kdebindings (4:4.1.87+svn905040-0r1) UNRELEASED; urgency=low
     - 03_csharp_dont_use_qyotoshared_directly.diff - fix offsets;
     - 97_fix_target_link_libraries.diff - remove, merged upstream;
     - 99_enable_okular_plasma.diff - remove, not needed.
-  * Build depend on libplasma-dev to build plasma bindings.
+  * Build Plasma bindings.
   * Bump KDE build depends to 4.1.85.
   * Remove explicit cmake from build depends.
   * Build depend on monodoc to build kio_monodoc.
