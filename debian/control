@@ -3,8 +3,8 @@ Section: kde
 Priority: optional
 Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Build-Depends: debhelper (>= 7), quilt,
- kdelibs5-dev (>= 4:4.1.85), libphonon-dev (>= 4:4.2.80), kdebase-workspace-dev (>= 4:4.1.85),
- libsoprano-dev (>= 2.1.64+svn),
+ kdelibs5-dev (>= 4:4.1.85), libqt4-opengl-dev, libphonon-dev (>= 4:4.2.80),
+ kdebase-workspace-dev (>= 4:4.1.85), libsoprano-dev (>= 2.1.64+svn),
  python, python-all-dev, sip4 (>= 4.7.8), python-sip4-dev (>= 4.7.8), python-qt4 (>= 4.4.4), python-qt4-dev (>= 4.4.4),
  ruby1.8-dev, ruby1.8, python-support (>= 0.6),
  mono-devel (>= 2.0.1) [i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390],
