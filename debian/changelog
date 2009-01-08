@@ -13,7 +13,7 @@ kdebindings (4:4.1.96+svn906627-0r1) UNRELEASED; urgency=low
     - 97_fix_target_link_libraries.diff - remove, merged upstream;
     - 99_enable_okular_plasma.diff - remove, not needed.
   * Build Plasma bindings.
-  * Bump KDE build depends to 4.1.85.
+  * Bump KDE build depends to 4.1.96.
   * Remove explicit cmake from build depends.
   * Build depend on monodoc to build kio_monodoc.
   * Bump SIP build dependencies to >= 4.7.8.
