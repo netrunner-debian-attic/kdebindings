@@ -1,9 +1,12 @@
-kdebindings (4:4.1.3-3) experimental; urgency=low
+kdebindings (4:4.1.4-1) experimental; urgency=low
+
+  * New upstream release.
+  * Bump build-deps.
 
   * Fix qt-dotnet.dll.config. Thanks Eric Butler.
   * Add a cligac file for the qtwebkit assembly. Thanks Eric Butler.
 
- -- Sune Vuorela <debian@pusling.com>  Fri, 05 Dec 2008 00:36:44 +0100
+ -- Sune Vuorela <debian@pusling.com>  Fri, 09 Jan 2009 23:34:39 +0100
 
 kdebindings (4:4.1.3-2) experimental; urgency=low
 
