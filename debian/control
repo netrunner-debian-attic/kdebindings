@@ -17,6 +17,16 @@ Homepage: http://www.kde.org
 Vcs-Svn: svn://svn.debian.org/svn/pkg-kde/branches/kde4/packages/kdebindings
 Vcs-Browser: http://svn.debian.org/wsvn/pkg-kde/branches/kde4/packages/kdebindings
 
+Package: kdebindings-dbg
+Section: libdevel
+Architecture: any
+Priority: extra
+Depends: kdelibs5-dbg
+Recommends: libruby1.8-dbg, python-qt4-dbg, mono-dbg
+Description: debugging symbols for the KDE 4 bindings module
+ This package contains debugging files used to investigate problems with
+ binaries included in the KDE 4 bindings module.
+
 Package: libsmokeqt4-2
 Section: libs
 Depends: ${shlibs:Depends}, ${misc:Depends}
