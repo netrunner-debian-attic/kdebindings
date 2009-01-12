@@ -9,7 +9,7 @@ Build-Depends: debhelper (>= 7), quilt,
  ruby1.8-dev, ruby1.8, python-support (>= 0.6),
  mono-devel (>= 2.0.1) [i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390],
  cli-common-dev (>= 0.5.4) [i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390],
- okular-dev (>= 4:4.1.81)
+ okular-dev (>= 4:4.1.81), kdepimlibs5-dev (>= 4:4.1.96)
 Build-Conflicts: debhelper (>= 7.1)
 Uploaders: Vincent Fourmond <fourmond@debian.org>, Torsten Marek <shlomme@debian.org>, Sune Vuorela <debian@pusling.com>, David Palacio <dpalacio@uninorte.edu.co>, Modestas Vainius <modestas@vainius.eu>
 Standards-Version: 3.8.0
@@ -32,10 +32,10 @@ Section: libs
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Architecture: any
 Description: Qt4 smoke libraries
- smoke libraries are a part of the bindings used for Qt and KDE. This package
+ Smoke libraries are part of the bindings used for Qt and KDE. This package
  contains pure Qt4 smoke.
  .
- Smoke rovides infrastructure which is used for creating bindings for 
+ Smoke provides infrastructure which is used for creating bindings for 
  multiple languages such as Ruby, C# and PHP.
  .
  This is part of KDE Bindings module
@@ -45,10 +45,10 @@ Section: libs
 Depends: ${shlibs:Depends}, libsmokeqt4-2 (= ${binary:Version})
 Architecture: any
 Description: KDE smoke libraries
- smoke libraries are part of the bindings used for Qt and KDE. This package i
+ Smoke libraries are part of the bindings used for Qt and KDE. This package i
  contains the kde4 parts of smoke.
  .
- Smoke rovides infrastructure which is used for creating bindings for i
+ Smoke provides infrastructure which is used for creating bindings for i
  multiple languages such as Ruby, C# and PHP.
  .
  This is part of KDE Bindings module
@@ -58,10 +58,10 @@ Section: libs
 Depends: ${shlibs:Depends}, libsmokekde4-2 (= ${binary:Version})
 Architecture: any
 Description: Okular smoke bindings
- smoke libraries are part of the bindings used for Qt and KDE. This package 
+ Smoke libraries are part of the bindings used for Qt and KDE. This package 
  contains the okular parts of smoke.
  .
- Smoke rovides infrastructure which is used for creating bindings for 
+ Smoke provides infrastructure which is used for creating bindings for 
  multiple languages such as Ruby, C# and PHP.
  .
  This is part of KDE Bindings module
@@ -71,10 +71,24 @@ Section: libs
 Depends: ${shlibs:Depends}, libsmokekde4-2 (= ${binary:Version})
 Architecture: any
 Description: KDE plasma smoke library
- smoke libraries are part of the bindings used for Qt and KDE. This package 
+ Smoke libraries are part of the bindings used for Qt and KDE. This package 
  contains the plasma parts of smoke.
  .
- Smoke rovides infrastructure which is used for creating bindings for
+ Smoke provides infrastructure which is used for creating bindings for
+ multiple languages such as Ruby, C# and PHP.
+ .
+ This is part of KDE Bindings module
+
+
+Package: libsmokeakonadi2
+Section: libs
+Depends: ${shlibs:Depends}, libsmokekde4-2 (= ${binary:Version})
+Architecture: any
+Description: KDE plasma smoke library
+ Smoke libraries are part of the bindings used for Qt and KDE. This package 
+ contains the akonadi parts of smoke.
+ .
+ Smoke provides infrastructure which is used for creating bindings for
  multiple languages such as Ruby, C# and PHP.
  .
  This is part of KDE Bindings module
@@ -172,6 +186,27 @@ Depends: ${shlibs:Depends}, libkde4-ruby1.8 (= ${binary:Version})
 Architecture: any
 Description: KDE plasma ruby1.8 bindings
  This package allows you to create desktop widgets in the Ruby language.
+ Bindings for Ruby version 1.8.
+ .
+ This is part of KDE Bindings module
+
+Package: libakonadi-ruby
+Section: libs
+Depends: libakonadi-ruby1.8
+Architecture: all
+Description: Akonadi ruby bindings
+ This package allows you to create applications that use the Akonadi PIM
+ storage service in the Ruby language. 
+ .
+ This is part of KDE Bindings module
+
+Package: libakonadi-ruby1.8
+Section: libs
+Depends: ${shlibs:Depends}, libkde4-ruby1.8 (= ${binary:Version})
+Architecture: any
+Description: Akonadi ruby1.8 bindings
+ This package allows you to create applications that use the Akonadi PIM
+ storage service in the Ruby language.
  Bindings for Ruby version 1.8.
  .
  This is part of KDE Bindings module
