@@ -8,3 +8,4 @@
 08_csharp_plasma_examples.diff
 09_build_ruby_nepomuk.diff
 10_fix_kimono_dllimports.diff
+11_disable_kross_explicit_gc.dif
