@@ -3,6 +3,8 @@ kdebindings (4:4.1.96+svn912086-0r1) UNRELEASED; urgency=low
   * New upstream development snapshot.
 
   * TODO: there are files missing. Check.
+  * TODO: clean up after python-central in postinst (#479852).
+    - rm -rf /usr/lib/python2.*/site-packages/PyKDE4/
 
   +++ Changes by Modestas Vainius:
 
