@@ -1,6 +1,6 @@
-kdebindings (4:4.1.96+svn912086-0r1) UNRELEASED; urgency=low
+kdebindings (4:4.2.0-0r1) UNRELEASED; urgency=low
 
-  * New upstream development snapshot.
+  * New upstream release.
 
   * TODO: there are files missing. Check.
   * TODO: clean up after python-central in postinst (#479852).
@@ -77,6 +77,7 @@ kdebindings (4:4.1.96+svn912086-0r1) UNRELEASED; urgency=low
     - Replace build depend on python-central for python-support. 
     - Remove fields X[BS]-Python-Version in debian/control.
     - Replace call to pycentral for pysupport in debian/rules.
+  * Bump phonon build depend version to >= 4:4.3.0
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Fri, 16 Jan 2009 21:20:56 +0200
 
