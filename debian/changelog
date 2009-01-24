@@ -17,7 +17,6 @@ kdebindings (4:4.2.0-0r1) UNRELEASED; urgency=low
   * Build Plasma bindings.
   * Bump KDE build depends to 4.1.96.
   * Remove explicit cmake from build depends.
-  * Build depend on monodoc to build kio_monodoc.
   * Bump SIP build dependencies to >= 4.7.8.
   * Bump python-qt4 dependencies to 4.4.4.
   * Pass -DCMAKE_USE_RELATIVE_PATHS=ON to cmake.
@@ -25,15 +24,15 @@ kdebindings (4:4.2.0-0r1) UNRELEASED; urgency=low
     (the versions it was built against).
   * Add patches:
     - 07_fix_kpythonpluginfactory_build.diff - include Python.h first as Qt
-      includes steals "slots" keyword.
-  * Install a more few files to python-kde4 like python plugin factory.
+      includes steal "slots" keyword.
+  * Install a few more files to python-kde4 like python plugin factory.
   * Add libplasma2.0-cil package for plasma-dll.dll based on libnepomuk2.2-cil.
   * Add new plasma-scriptengine-kimono package for Kimono plasma script engine.
   * Install /usr/lib/kde4/kimonopluginfactory.so to libkimono4.1-cil.
   * khtml.dll, nepomuk.dll got renamed to khtml-dll.dll and nepomuk-dll.dll.
     respectively.
   * Update install files.
-  * Bump soprano build depend to 2.1.64+svn.
+  * Bump soprano build depend to 2.1.67.
   * Limit Mono dh helpers to Mono packages only.
   * Require debhelper << 7.1 until mono dh helpers are ported.
   * Add 10_fix_kimono_dllimports.diff patch to fix misnamed libkimono
@@ -47,10 +46,10 @@ kdebindings (4:4.2.0-0r1) UNRELEASED; urgency=low
     - no longer pass --sourcedir=debian/tmp to dh_install.
   * Implement autodiscovery of mono L_PATHS and generally try to hardcode as
     less mono paths as possible.
-  * Get rid of useless cdbs include and build dependency.
+  * Get rid of cdbs include and build dependency:
+    - steal list-missing implementation from CDBS.
   * Use simplier approach for debian/rules binary-* target handling.
   * Run dh_installdirs in install-pre target to make mono helpers more silent.
-  * Steal list-missing implementation from CDBS.
 
   !! DISCLAIMER !! Changes below are sort of "not really sure what I was doing".
 
