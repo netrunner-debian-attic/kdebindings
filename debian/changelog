@@ -32,7 +32,7 @@ kdebindings (4:4.2.0-0r1) UNRELEASED; urgency=low
   * khtml.dll, nepomuk.dll got renamed to khtml-dll.dll and nepomuk-dll.dll.
     respectively.
   * Update install files.
-  * Bump soprano build depend to 2.1.67.
+  * Bump soprano build depend to 2.1.67-2~.
   * Limit Mono dh helpers to Mono packages only.
   * Require debhelper << 7.1 until mono dh helpers are ported.
   * Add 10_fix_kimono_dllimports.diff patch to fix misnamed libkimono
