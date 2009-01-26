@@ -2,10 +2,6 @@ kdebindings (4:4.2.0-0r1) UNRELEASED; urgency=low
 
   * New upstream release.
 
-  * TODO: there are files missing. Check.
-  * TODO: clean up after python-central in postinst (#479852).
-    - rm -rf /usr/lib/python2.*/site-packages/PyKDE4/
-
   +++ Changes by Modestas Vainius:
 
   * Resync patches:
@@ -51,8 +47,6 @@ kdebindings (4:4.2.0-0r1) UNRELEASED; urgency=low
   * Use simplier approach for debian/rules binary-* target handling.
   * Run dh_installdirs in install-pre target to make mono helpers more silent.
 
-  !! DISCLAIMER !! Changes below are sort of "not really sure what I was doing".
-
   * Add patches:
     - 06_build_smokephonon.diff - much smoke stuff needs phononsmoke, but that
       one was disabled because it didn't build. Reenable it and hack around its
@@ -81,6 +75,7 @@ kdebindings (4:4.2.0-0r1) UNRELEASED; urgency=low
   +++ Changes by Sune Vuorela:
 
   * Small copyright file updates.
+  * Create postinst to work around pycentral issues.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Fri, 16 Jan 2009 21:20:56 +0200
 
