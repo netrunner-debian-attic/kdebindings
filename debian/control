@@ -14,8 +14,8 @@ Build-Conflicts: debhelper (>= 7.1)
 Uploaders: Vincent Fourmond <fourmond@debian.org>, Torsten Marek <shlomme@debian.org>, Sune Vuorela <debian@pusling.com>, David Palacio <dpalacio@uninorte.edu.co>, Modestas Vainius <modestas@vainius.eu>
 Standards-Version: 3.8.0
 Homepage: http://www.kde.org
-Vcs-Svn: svn://svn.debian.org/svn/pkg-kde/branches/kde4/packages/kdebindings
-Vcs-Browser: http://svn.debian.org/wsvn/pkg-kde/branches/kde4/packages/kdebindings
+Vcs-Svn: svn://svn.debian.org/svn/pkg-kde/trunk/packages/kdebindings
+Vcs-Browser: http://svn.debian.org/wsvn/pkg-kde/trunk/packages/kdebindings
 
 Package: kdebindings-dbg
 Section: libdevel
