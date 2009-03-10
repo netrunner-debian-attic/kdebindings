@@ -8,17 +8,6 @@
  
  about = KDE::AboutData.new("one", "two", "three")
  KDE::CmdLineArgs.init(1, ["RubberDoc"], about)
---- a/ruby/korundum/examples/kludgeror.rb
-+++ b/ruby/korundum/examples/kludgeror.rb
-@@ -4,7 +4,7 @@
- # -- gg.
- # AK - ported to ruby
- 
--require 'Korundum'
-+require 'korundum4'
- 
- opt =     [ [ "+[url]",      "An URL to open at startup.",         ""            ],
-             [ "z",           "A dummy binary option.",             ""            ],
 --- a/ruby/korundum/examples/menudemo.rb
 +++ b/ruby/korundum/examples/menudemo.rb
 @@ -38,7 +38,7 @@

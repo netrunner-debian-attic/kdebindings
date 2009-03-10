@@ -6,7 +6,14 @@ kdebindings (4:4.2.1-1) UNRELEASED; urgency=low
 
   * Point Debian Vcs URLs to pkg-kde/trunk (new location).
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Mon, 09 Mar 2009 19:54:30 +0100
+  +++ Changes by Ana Beatriz Guerrero Lopez:
+
+  * Update patches:
+    - 04_fix_ruby_requires.
+  * Remove Build-Conflicts on debhelper (>= 7.1), it should not be necessary
+    now.
+
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Tue, 10 Mar 2009 10:35:48 +0100
 
 kdebindings (4:4.2.0-1) experimental; urgency=low
 
