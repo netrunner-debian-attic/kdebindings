@@ -10,6 +10,8 @@ kdebindings (4:4.2.1-1) UNRELEASED; urgency=low
 
   * Update patches:
     - 04_fix_ruby_requires.
+  * Add patch 11_r917439_pykde4.diff based on r917439 re-adding deleted file
+    python/pykde4/tools/pykdeuic4/kde4.py.
   * Remove Build-Conflicts on debhelper (>= 7.1), it should not be necessary
     now.
 
