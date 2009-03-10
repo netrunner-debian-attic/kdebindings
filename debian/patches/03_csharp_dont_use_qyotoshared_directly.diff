@@ -21,7 +21,7 @@ This at least builds, but is not runtime tested yet.
 +}
 --- a/csharp/qyoto/src/SmokeMarshallers.cs
 +++ b/csharp/qyoto/src/SmokeMarshallers.cs
-@@ -124,7 +124,7 @@
+@@ -127,7 +127,7 @@
  		[DllImport("libqyoto", CharSet=CharSet.Ansi)]
  		public static extern void InstallInvokeCustomSlot(InvokeCustomSlotFn callback);
  		
@@ -30,7 +30,7 @@ This at least builds, but is not runtime tested yet.
  		public static extern void InstallInvokeDelegate(InvokeDelegateFn callback);
  		
  		[DllImport("libqyoto", CharSet=CharSet.Ansi)]
-@@ -888,4 +888,4 @@
+@@ -905,4 +905,4 @@
  #endregion
  
  	}

@@ -1,4 +1,4 @@
-kdebindings (4:4.2.1-1) UNRELEASED; urgency=low
+kdebindings (4:4.2.1-1) experimental; urgency=low
 
   * New upstream release.
 
@@ -15,7 +15,7 @@ kdebindings (4:4.2.1-1) UNRELEASED; urgency=low
   * Remove Build-Conflicts on debhelper (>= 7.1), it should not be necessary
     now.
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Tue, 10 Mar 2009 10:35:48 +0100
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Tue, 10 Mar 2009 21:36:23 +0100
 
 kdebindings (4:4.2.0-1) experimental; urgency=low
 
