@@ -10,7 +10,7 @@ Build-Depends: debhelper (>= 7), quilt,
  mono-devel (>= 2.0.1) [i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390],
  cli-common-dev (>= 0.5.4) [i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390],
  okular-dev (>= 4:4.2.0), kdepimlibs5-dev (>= 4:4.2.0), libakonadi-dev (>= 1.1.1)
-Uploaders: Vincent Fourmond <fourmond@debian.org>, Torsten Marek <shlomme@debian.org>, Sune Vuorela <debian@pusling.com>, David Palacio <dpalacio@uninorte.edu.co>, Modestas Vainius <modestas@vainius.eu>
+Uploaders: Torsten Marek <shlomme@debian.org>, Sune Vuorela <debian@pusling.com>, David Palacio <dpalacio@uninorte.edu.co>, Modestas Vainius <modestas@vainius.eu>
 Standards-Version: 3.8.0
 Homepage: http://www.kde.org
 Vcs-Svn: svn://svn.debian.org/svn/pkg-kde/trunk/packages/kdebindings
