@@ -1,8 +1,17 @@
-kdebindings (4:4.2.1-2) experimental UNRELEASED; urgency=low
+kdebindings (4:4.2.2-1) unstable; urgency=low
+
+  +++ Changes by Vincent Fourmond
 
   * Removing myself from Uploaders
 
- -- Vincent Fourmond <fourmond@debian.org>  Fri, 13 Mar 2009 22:26:28 +0100
+  +++ Changes by Sune Vuorela
+
+  * New upstream.
+  * Fix up a dllconfig file. it was pointing wrong place
+  * Add missing installcligac files
+  * Remove patches/11_r917439_pykde4.diff, merged upstream.
+
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Thu, 02 Apr 2009 09:25:21 +0200
 
 kdebindings (4:4.2.1-1) experimental; urgency=low
 
