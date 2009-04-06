@@ -113,7 +113,7 @@ Description: internal library for Qt4 ruby bindings
  This is an internal library part of KDE Bindings module
 
 Package: libqt4-ruby
-Section: interpreters
+Section: ruby
 Depends: libqt4-ruby1.8
 Architecture: all
 Description: Qt4 ruby bindings
@@ -123,7 +123,7 @@ Description: Qt4 ruby bindings
  This is part of KDE Bindings module
 
 Package: libqt4-ruby1.8
-Section: interpreters
+Section: ruby
 Depends: ${shlibs:Depends}, ruby1.8, libsmokeqt4-2 (= ${binary:Version})
 Architecture: any
 Description: Qt4 bindings for ruby
