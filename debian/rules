@@ -84,7 +84,7 @@ endif
 ##
 
 pydefault  := $(shell pyversions --default)
-pyversions := $(shell pysupport-parseversions debian/pyversions)
+pyversions := $(shell pyversions -vr)
 cmake_flags += -DPYTHON_EXECUTABLE=/usr/bin/$(pydefault)
 
 ##
@@ -92,6 +92,7 @@ cmake_flags += -DPYTHON_EXECUTABLE=/usr/bin/$(pydefault)
 $(objdir)/Makefile: $(QUILT_STAMPFN)
 	mkdir -p $(objdir)
 	mkdir -p $(MONOHOME)
+	@echo building all bindings except python bindings. Later building python bindings for $(pyversions).
 	cd $(objdir) && cmake $(CURDIR) $(cmake_flags) \
 	    -DCMAKE_C_FLAGS="$(CFLAGS)" -DCMAKE_CXX_FLAGS="$(CFLAGS)"
 

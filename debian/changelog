@@ -1,6 +1,7 @@
 kdebindings (4:4.2.2-2) UNRELEASED; urgency=low
 
   * Fix sections.
+  * Use pyversions -vr instead of the removed pysupport-parseversions.
 
  -- Sune Vuorela <debian@pusling.com>  Mon, 06 Apr 2009 23:47:59 +0200
 
