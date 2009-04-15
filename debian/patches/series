@@ -7,3 +7,4 @@
 07_fix_kpythonpluginfactory_build.diff
 08_csharp_plasma_examples.diff
 10_fix_kimono_dllimports.diff
+11_make_pykde4_respect_sip_flags.diff
