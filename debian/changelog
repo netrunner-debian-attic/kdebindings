@@ -11,7 +11,7 @@ kdebindings (4:4.2.2-3) UNRELEASED; urgency=low
   * Actually export DH_OPTIONS= so monospecific target does not pick up
     non-mono packages.
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Thu, 02 Apr 2009 09:25:21 +0200
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Thu, 16 Apr 2009 12:55:54 +0300
 
 kdebindings (4:4.2.2-2) unstable; urgency=low
 
