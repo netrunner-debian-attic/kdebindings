@@ -154,7 +154,7 @@ install: $(MONOTARGET) install-generic
 install-mono: install-generic install-pre
 	dh_install $(DH_MONOPACKAGES)
 
-monospecific: DH_OPTIONS=
+monospecific: export DH_OPTIONS=
 monospecific: install-mono
 	#setting MONOPATH is a hack to hack around a bug in dh_makeclilibs. Reported as #498868
 	MONO_PATH=$(CURDIR)/debian/libqyoto4.4-cil/usr/lib/cli/kdebindings-4.4/ dh_makeclilibs -V $(DH_MONOPACKAGES)
