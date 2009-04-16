@@ -1,12 +1,17 @@
 kdebindings (4:4.2.2-3) UNRELEASED; urgency=low
 
+  +++ Changes by Michael Casadevall:
+
   * debian/patches/make_pykde4_respect_sip_flags.diff
     - Corrects FTBFS on armel by making sure pykde4 properly parses
       the python-qt4 flags passed from PythonQt4's cmake file.
+
+  +++ Changes by Modestas Vainius:
+
   * Actually export DH_OPTIONS= so monospecific target does not pick up
     non-mono packages.
 
- -- Michael Casadevall <mcasadevall@debian.org>  Thu, 16 Apr 2009 12:51:00 +0300
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Thu, 02 Apr 2009 09:25:21 +0200
 
 kdebindings (4:4.2.2-2) unstable; urgency=low
 
