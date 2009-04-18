@@ -1,4 +1,4 @@
-kdebindings (4:4.2.2-3) UNRELEASED; urgency=low
+kdebindings (4:4.2.2-2) unstable; urgency=low
 
   +++ Changes by Michael Casadevall:
 
@@ -13,14 +13,12 @@ kdebindings (4:4.2.2-3) UNRELEASED; urgency=low
   * Add install-pre to more install-* prerequisites to make potential
     FBTFS errors more clear.
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sat, 18 Apr 2009 16:52:50 +0300
-
-kdebindings (4:4.2.2-2) unstable; urgency=low
+  +++ Changes by Sune Vuorela:
 
   * Fix sections.
   * Use pyversions -vr instead of the removed pysupport-parseversions.
 
- -- Sune Vuorela <debian@pusling.com>  Mon, 06 Apr 2009 23:47:59 +0200
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sat, 18 Apr 2009 16:56:23 +0300
 
 kdebindings (4:4.2.2-1) unstable; urgency=low
 
