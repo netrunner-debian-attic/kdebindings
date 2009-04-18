@@ -125,6 +125,8 @@ Description: Qt4 ruby bindings
 Package: libqt4-ruby1.8
 Section: ruby
 Depends: ${shlibs:Depends}, ruby1.8, libsmokeqt4-2 (= ${binary:Version})
+Conflicts: libqt0-ruby1.8
+Replaces: libqt0-ruby1.8
 Architecture: any
 Description: Qt4 bindings for ruby
  This packages contains Qt4 ruby bindings for Ruby 1.8.
