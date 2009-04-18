@@ -18,6 +18,7 @@ kdebindings (4:4.2.2-2) UNRELEASED; urgency=low
   * Fix sections.
   * Use pyversions -vr instead of the removed pysupport-parseversions.
     (Closes: #523784) - YES!
+  * Error out if no python versions is found
   * Add ruby related conflicts and replaces (Closes: 513424)
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sat, 18 Apr 2009 16:56:23 +0300

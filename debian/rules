@@ -87,6 +87,10 @@ pydefault  := $(shell pyversions --default)
 pyversions := $(shell pyversions -vr)
 cmake_flags += -DPYTHON_EXECUTABLE=/usr/bin/$(pydefault)
 
+ifeq(,$(pyversions)) 
+	$(error no suitable pythonversion found, failing)
+endif
+
 ##
 
 $(objdir)/Makefile: $(QUILT_STAMPFN)
