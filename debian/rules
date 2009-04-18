@@ -141,7 +141,7 @@ install-pre:
 $(patsubst %,install-python-%,$(pyversions)): install-pre
 	$(MAKE) -C $(objdir)/python/pykde4-$(subst install-python-,,$@) install DESTDIR=$(CURDIR)/debian/tmp; \
 
-install-generic: $(patsubst %,install-python-%,$(pyversions))
+install-generic: install-pre $(patsubst %,install-python-%,$(pyversions))
 	$(MAKE) -C $(objdir) install DESTDIR=$(CURDIR)/debian/tmp
 
 install: $(MONOTARGET) install-generic
@@ -151,7 +151,7 @@ install: $(MONOTARGET) install-generic
 
 # Separate target (from monospecific) is needed for $(MONO_L_PATHS)
 # to work properly
-install-mono: install-generic install-pre
+install-mono: install-pre install-generic
 	dh_install $(DH_MONOPACKAGES)
 
 monospecific: export DH_OPTIONS=

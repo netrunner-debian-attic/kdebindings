@@ -10,8 +10,10 @@ kdebindings (4:4.2.2-3) UNRELEASED; urgency=low
 
   * Actually export DH_OPTIONS= so monospecific target does not pick up
     non-mono packages.
+  * Add install-pre to more install-* prerequisites to make potential
+    FBTFS errors more clear.
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Thu, 16 Apr 2009 12:55:54 +0300
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sat, 18 Apr 2009 16:52:50 +0300
 
 kdebindings (4:4.2.2-2) unstable; urgency=low
 
