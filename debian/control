@@ -220,7 +220,8 @@ Depends: ${shlibs:Depends}, ${python:Depends}, ${misc:Depends},
 Description: Python bindings for the KDE 4 libraries
  This package contains PyKDE, the Python bindings for the KDE 4
  libraries, that allow you to write KDE programs using Python instead of
- C++. It contains the following modules under the PyKDE namespace:
+ C++. It contains at least the following modules under the 
+ PyKDE namespace:
  .
   * kdecore
   * kdeui
@@ -230,6 +231,13 @@ Description: Python bindings for the KDE 4 libraries
   * ktexteditor
   * kutils
   * solid
+  * nepomuk
+  * dnssd
+ .
+ And a few KDE related techonogies like
+ .
+  * soprano
+  * akonadi
  .
  This package provides modules for all supported Python versions.
  .
