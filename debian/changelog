@@ -1,3 +1,12 @@
+kdebindings (4:4.2.2-3) unstable; urgency=low
+
+  +++ Changes by Fathi Boudra:
+
+  * Update 06_build_smokephonon patch to build against Qt 4.5.1.
+  * Force build against Qt 4.5.1.
+
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Thu, 23 Apr 2009 16:00:46 +0200
+
 kdebindings (4:4.2.2-2) unstable; urgency=low
 
   +++ Changes by Michael Casadevall:
@@ -27,7 +36,7 @@ kdebindings (4:4.2.2-2) unstable; urgency=low
 kdebindings (4:4.2.2-1) unstable; urgency=low
 
   * New upstream release.
-  
+
   +++ Changes by Vincent Fourmond:
 
   * Removing myself from Uploaders.
