@@ -1,3 +1,9 @@
+kdebindings (4:4.2.4-1) unstable; urgency=low
+
+  * New upstream
+
+ -- Sune Vuorela <debian@pusling.com>  Sat, 30 May 2009 20:47:41 +0200
+
 kdebindings (4:4.2.2-3) unstable; urgency=low
 
   +++ Changes by Fathi Boudra:
