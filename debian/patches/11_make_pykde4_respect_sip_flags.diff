@@ -1,8 +1,6 @@
-Index: kdebindings-4.2.2/python/pykde4/CMakeLists.txt
-===================================================================
---- kdebindings-4.2.2.orig/python/pykde4/CMakeLists.txt	2009-04-15 07:59:41.000000000 +0000
-+++ kdebindings-4.2.2/python/pykde4/CMakeLists.txt	2009-04-15 07:59:43.000000000 +0000
-@@ -70,10 +70,13 @@
+--- a/python/pykde4/CMakeLists.txt
++++ b/python/pykde4/CMakeLists.txt
+@@ -70,10 +70,13 @@ INCLUDE_DIRECTORIES(
      ${KDE4_INCLUDE_DIR}/dnssd
  )
  
@@ -16,4 +14,4 @@ Index: kdebindings-4.2.2/python/pykde4/CMakeLists.txt
 +SET(SIP_DISABLE_FEATURES VendorID PyQt_NoPrintRangeBug ${SIP_ARM_HACK})
  SET(SIP_EXTRA_OPTIONS -g)
  
- ADD_DEFINITIONS(-D_REENTRANT -DQT_NO_DEBUG -DQT_CORE_LIB -DQT_GUI_LIB)
+ ADD_DEFINITIONS(-D_REENTRANT -DQT_CORE_LIB -DQT_GUI_LIB)

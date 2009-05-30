@@ -1,6 +1,5 @@
-diff -urNad libqt4-ruby-1.4.9~/ruby/qtruby/bin/rbqtapi libqt4-ruby-1.4.9/ruby/qtruby/bin/rbqtapi
---- libqt4-ruby-1.4.9~/ruby/qtruby/bin/rbqtapi	2007-04-20 15:03:22.000000000 +0200
-+++ libqt4-ruby-1.4.9/ruby/qtruby/bin/rbqtapi	2008-04-29 20:37:31.000000000 +0200
+--- a/ruby/qtruby/bin/rbqtapi
++++ b/ruby/qtruby/bin/rbqtapi
 @@ -1,4 +1,4 @@
 -#!/usr/bin/env ruby
 +#!/usr/bin/env ruby1.8

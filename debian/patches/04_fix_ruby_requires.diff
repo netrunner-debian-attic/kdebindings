@@ -10,7 +10,7 @@
  KDE::CmdLineArgs.init(1, ["RubberDoc"], about)
 --- a/ruby/korundum/examples/menudemo.rb
 +++ b/ruby/korundum/examples/menudemo.rb
-@@ -38,7 +38,7 @@
+@@ -38,7 +38,7 @@ dealings in this Software without prior 
  copyright holder.
  =end
  
@@ -21,7 +21,7 @@
  class MainWin < MainWindow
 --- a/ruby/korundum/examples/mimetype.rb
 +++ b/ruby/korundum/examples/mimetype.rb
-@@ -41,7 +41,7 @@
+@@ -41,7 +41,7 @@ dealings in this Software without prior 
  copyright holder.
  =end
  
@@ -32,7 +32,7 @@
  class MainWin < MainWindow
 --- a/ruby/korundum/examples/systray.rb
 +++ b/ruby/korundum/examples/systray.rb
-@@ -31,7 +31,7 @@
+@@ -31,7 +31,7 @@ dealings in this Software without prior 
  copyright holder.
  =end
  
@@ -43,7 +43,7 @@
      def initialize(*args)
 --- a/ruby/korundum/examples/uikmdi.rb
 +++ b/ruby/korundum/examples/uikmdi.rb
-@@ -32,7 +32,7 @@
+@@ -32,7 +32,7 @@ All is not rosy, however:
  
  =end
  
@@ -64,7 +64,7 @@
  about = KDE::AboutData.new("one", "two", "three")
 --- a/ruby/korundum/examples/xmlmenudemo.rb
 +++ b/ruby/korundum/examples/xmlmenudemo.rb
-@@ -38,7 +38,7 @@
+@@ -38,7 +38,7 @@ dealings in this Software without prior 
  copyright holder.
  =end
  
@@ -86,7 +86,7 @@
  	class Application < Qt::Base
 --- a/ruby/korundum/templates/annotated/basicapp.rb
 +++ b/ruby/korundum/templates/annotated/basicapp.rb
-@@ -31,7 +31,7 @@
+@@ -31,7 +31,7 @@ dealings in this Software without prior 
  copyright holder.
  =end
  
@@ -97,7 +97,7 @@
  Most Korundum applications will need a main window - the is the top
 --- a/ruby/korundum/templates/annotated/menuapp1.rb
 +++ b/ruby/korundum/templates/annotated/menuapp1.rb
-@@ -41,7 +41,7 @@
+@@ -41,7 +41,7 @@ copyright holder.
  =end
  
  
@@ -108,7 +108,7 @@
  	TOOLBAR_NEW   = 1
 --- a/ruby/korundum/templates/annotated/menuapp2.rb
 +++ b/ruby/korundum/templates/annotated/menuapp2.rb
-@@ -36,7 +36,7 @@
+@@ -36,7 +36,7 @@ copyright holder.
  =end
  
  
@@ -119,7 +119,7 @@
  
 --- a/ruby/korundum/templates/annotated/menuapp3.rb
 +++ b/ruby/korundum/templates/annotated/menuapp3.rb
-@@ -35,7 +35,7 @@
+@@ -35,7 +35,7 @@ copyright holder.
  =end
  
  
@@ -130,7 +130,7 @@
  	STATUSBAR_LEFT   = 1
 --- a/ruby/korundum/templates/annotated/minimal.rb
 +++ b/ruby/korundum/templates/annotated/minimal.rb
-@@ -36,7 +36,7 @@
+@@ -36,7 +36,7 @@ dealings in this Software without prior 
  copyright holder.
  =end
  
@@ -141,7 +141,7 @@
  =begin
 --- a/ruby/korundum/templates/annotated/systray1.rb
 +++ b/ruby/korundum/templates/annotated/systray1.rb
-@@ -37,7 +37,7 @@
+@@ -37,7 +37,7 @@ dealings in this Software without prior 
  copyright holder.
  =end
  
@@ -152,7 +152,7 @@
  # It solves the problem described in systray.rb by using
 --- a/ruby/korundum/templates/basic/basicapp.rb
 +++ b/ruby/korundum/templates/basic/basicapp.rb
-@@ -31,7 +31,7 @@
+@@ -31,7 +31,7 @@ dealings in this Software without prior 
  copyright holder.
  =end
  
@@ -163,7 +163,7 @@
      def initialize(*args)
 --- a/ruby/korundum/templates/basic/menuapp1.rb
 +++ b/ruby/korundum/templates/basic/menuapp1.rb
-@@ -41,7 +41,7 @@
+@@ -41,7 +41,7 @@ copyright holder.
  =end
  
  
@@ -174,7 +174,7 @@
  	TOOLBAR_NEW   = 1
 --- a/ruby/korundum/templates/basic/menuapp2.rb
 +++ b/ruby/korundum/templates/basic/menuapp2.rb
-@@ -36,7 +36,7 @@
+@@ -36,7 +36,7 @@ copyright holder.
  =end
  
  
@@ -185,7 +185,7 @@
  
 --- a/ruby/korundum/templates/basic/menuapp3.rb
 +++ b/ruby/korundum/templates/basic/menuapp3.rb
-@@ -35,7 +35,7 @@
+@@ -35,7 +35,7 @@ copyright holder.
  =end
  
  
@@ -196,7 +196,7 @@
  	STATUSBAR_LEFT   = 1
 --- a/ruby/korundum/templates/basic/minimal.rb
 +++ b/ruby/korundum/templates/basic/minimal.rb
-@@ -31,7 +31,7 @@
+@@ -31,7 +31,7 @@ dealings in this Software without prior 
  copyright holder.
  =end
  
@@ -207,7 +207,7 @@
  
 --- a/ruby/korundum/templates/basic/systray1.rb
 +++ b/ruby/korundum/templates/basic/systray1.rb
-@@ -31,7 +31,7 @@
+@@ -31,7 +31,7 @@ dealings in this Software without prior 
  copyright holder.
  =end
  
@@ -1470,7 +1470,7 @@
  $KCODE = 'u'
 --- a/ruby/qtruby/rails_support/active_item_model.rb
 +++ b/ruby/qtruby/rails_support/active_item_model.rb
-@@ -15,7 +15,7 @@
+@@ -16,7 +16,7 @@ Written by Richard Dale and Silvio Fonse
  
  =end
  
@@ -1481,7 +1481,7 @@
  #require "active_support"
 --- a/ruby/qtruby/rails_support/active_table_model.rb
 +++ b/ruby/qtruby/rails_support/active_table_model.rb
-@@ -15,7 +15,7 @@
+@@ -15,7 +15,7 @@ Written by Richard Dale and Silvio Fonse
  
  =end
  

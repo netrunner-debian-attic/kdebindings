@@ -3,7 +3,7 @@ This at least builds, but is not runtime tested yet.
 
 --- a/csharp/qyoto/core/QObjectExtras.cs
 +++ b/csharp/qyoto/core/QObjectExtras.cs
-@@ -21,7 +21,7 @@
+@@ -21,7 +21,7 @@ namespace Qyoto {
  		private static extern void FindQObjectChildren(IntPtr parent, IntPtr regexp,
  									string childName, AddToListFn addFn);
  		
@@ -12,7 +12,7 @@ This at least builds, but is not runtime tested yet.
  		private static extern bool ConnectDelegate(IntPtr obj, string signal, Delegate d);
  		
  		public static bool Connect(QObject obj, string signal, NoArgDelegate d) {
-@@ -97,4 +97,4 @@
+@@ -97,4 +97,4 @@ namespace Qyoto {
  			return list;
  		}
  	}
@@ -21,7 +21,7 @@ This at least builds, but is not runtime tested yet.
 +}
 --- a/csharp/qyoto/src/SmokeMarshallers.cs
 +++ b/csharp/qyoto/src/SmokeMarshallers.cs
-@@ -127,7 +127,7 @@
+@@ -127,7 +127,7 @@ namespace Qyoto {
  		[DllImport("libqyoto", CharSet=CharSet.Ansi)]
  		public static extern void InstallInvokeCustomSlot(InvokeCustomSlotFn callback);
  		
@@ -30,7 +30,7 @@ This at least builds, but is not runtime tested yet.
  		public static extern void InstallInvokeDelegate(InvokeDelegateFn callback);
  		
  		[DllImport("libqyoto", CharSet=CharSet.Ansi)]
-@@ -905,4 +905,4 @@
+@@ -905,4 +905,4 @@ namespace Qyoto {
  #endregion
  
  	}
