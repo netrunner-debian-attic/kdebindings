@@ -17,7 +17,7 @@ Vcs-Svn: svn://svn.debian.org/svn/pkg-kde/trunk/packages/kdebindings
 Vcs-Browser: http://svn.debian.org/wsvn/pkg-kde/trunk/packages/kdebindings
 
 Package: kdebindings-dbg
-Section: libdevel
+Section: debug
 Architecture: any
 Priority: extra
 Depends: kdelibs5-dbg
