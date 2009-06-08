@@ -1,8 +1,11 @@
-kdebindings (4:4.2.4-2) UNRELEASED; urgency=low
+kdebindings (4:4.3.1-1) UNRELEASED; urgency=low
 
-  * Fix sections
+  +++ Changes by David Palacio:
 
- -- Sune Vuorela <debian@pusling.com>  Wed, 03 Jun 2009 09:51:55 +0200
+  * Refresh patches.
+  * Package csharp pkgconfig files.
+
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Thu, 07 Jun 2009 16:00:46 +0200
 
 kdebindings (4:4.2.4-1) unstable; urgency=low
 

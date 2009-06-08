@@ -1,3 +1,4 @@
 debian/csharp/qtuitools.dll.config         usr/lib/cli/kdebindings-2.2/
 usr/lib/libqtuitools-sharp.so              usr/lib/cli/kdebindings-2.2/
 usr/lib/mono/gac/qtuitools/*/qtuitools.dll usr/lib/cli/kdebindings-2.2/
+usr/lib/pkgconfig/qtuitools-sharp.pc

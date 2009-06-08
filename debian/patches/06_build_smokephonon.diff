@@ -1,8 +1,10 @@
 This patch is HACK to make kdebindings build. The resulting
 PhononSmoke is useless probably.
+Index: b/smoke/CMakeLists.txt
+===================================================================
 --- a/smoke/CMakeLists.txt
 +++ b/smoke/CMakeLists.txt
-@@ -3,7 +3,7 @@ OPTION(ENABLE_QTWEBKIT_SMOKE "build QtWe
+@@ -3,7 +3,7 @@
  OPTION(ENABLE_QTSCRIPT_SMOKE "build QtScriptSmoke" ON)
  OPTION(ENABLE_QTUITOOLS_SMOKE "build QtUiToolsSmoke" ON)
  OPTION(ENABLE_QTTEST_SMOKE "build QtTestSmoke" ON)
@@ -10,4 +12,4 @@ PhononSmoke is useless probably.
 +OPTION(ENABLE_PHONON_SMOKE "build PhononSmoke" ON)
  OPTION(ENABLE_QSCI_SMOKE "build QsciSmoke" ON)
  OPTION(ENABLE_QWT_SMOKE "build QwtSmoke" OFF)
- OPTION(ENABLE_KDE_SMOKE "build KDESmoke" ON)
+ OPTION(ENABLE_QIMAGEBLITZ_SMOKE "build QImageBlitzSmoke" ON)
