@@ -1,0 +1,111 @@
+Index: kdebindings/python/pykde4/sip/kio/global.sip
+===================================================================
+--- kdebindings/python/pykde4/sip/kio/global.sip	(revision 990181)
++++ kdebindings/python/pykde4/sip/kio/global.sip	(working copy)
+@@ -243,8 +243,8 @@
+     {
+         int iserr = 0;
+ 
+-        acpp = (QString *)sipForceConvertTo_QString (aelem, &iserr);
+-        bcpp = (QString *)sipForceConvertTo_QString (belem, &iserr);
++        acpp = (QString *)sipForceConvertToInstance(aelem, sipClass_QString, NULL, 0, NULL, &iserr);
++        bcpp = (QString *)sipForceConvertToInstance(belem, sipClass_QString, NULL, 0, NULL, &iserr);
+ 
+         if (iserr)
+         {
+Index: kdebindings/python/pykde4/sip/kio/kacl.sip
+===================================================================
+--- kdebindings/python/pykde4/sip/kio/kacl.sip	(revision 990181)
++++ kdebindings/python/pykde4/sip/kio/kacl.sip	(working copy)
+@@ -144,8 +144,7 @@
+     {
+         PyObject *elem = PyList_GET_ITEM (sipPy, i);
+         PyObject *pyp1 = PyTuple_GET_ITEM (elem, 0);
+-        p1 = *(QString *)sipForceConvertTo_QString (pyp1, &iserr);
+-
++        p1 = *(QString *)sipForceConvertToInstance(pyp1, sipClass_QString, NULL, 0, NULL, &iserr);
+         if (iserr)
+         {
+             *sipIsErr = 1;
+Index: kdebindings/python/pykde4/sip/phonon/backendcapabilities.sip
+===================================================================
+--- kdebindings/python/pykde4/sip/phonon/backendcapabilities.sip	(revision 990181)
++++ kdebindings/python/pykde4/sip/phonon/backendcapabilities.sip	(working copy)
+@@ -26,7 +26,7 @@
+ {
+ namespace BackendCapabilities
+ {
+-class Notifier : QObject /NoDefaultCtors,NoQMetaObject/
++class Notifier : QObject /NoDefaultCtors,PyQt4NoQMetaObject/
+ {
+ 
+ signals:
+Index: kdebindings/python/pykde4/sip/kparts/factory.sip
+===================================================================
+--- kdebindings/python/pykde4/sip/kparts/factory.sip	(revision 990181)
++++ kdebindings/python/pykde4/sip/kparts/factory.sip	(working copy)
+@@ -37,7 +37,7 @@
+ 
+ protected:
+     virtual KParts::Part*   createPartObject (QWidget* parentWidget = 0, QObject* parent /Transfer/ = 0, const char* classname = "KParts::Part", const QStringList& args = QStringList()) = 0;
+-    virtual QObject*        createObject (QObject* parent /Transfer/ = 0, const char* classname = "QObject", const QStringList& args = QStringList());
++//ig    virtual QObject*        createObject (QObject* parent /Transfer/ = 0, const char* classname = "QObject", const QStringList& args = QStringList());
+ };   // Factory
+ 
+ };   // KParts
+Index: kdebindings/python/pykde4/sip/akonadi/messagethreadingattribute.sip
+===================================================================
+--- kdebindings/python/pykde4/sip/akonadi/messagethreadingattribute.sip	(revision 990181)
++++ kdebindings/python/pykde4/sip/akonadi/messagethreadingattribute.sip	(working copy)
+@@ -30,7 +30,7 @@
+ 
+ public:
+                             MessageThreadingAttribute ();
+-                            MessageThreadingAttribute (const Akonadi::MessageThreadingAttribute& other);
++//ig                            MessageThreadingAttribute (const Akonadi::MessageThreadingAttribute& other);
+     QList<Akonadi::Entity::Id>         perfectParents () const;
+     void                    setPerfectParents (const QList<Akonadi::Entity::Id>& parents);
+     QList<Akonadi::Entity::Id>         unperfectParents () const;
+Index: kdebindings/python/pykde4/sip/dnssd/servicebase.sip
+===================================================================
+--- kdebindings/python/pykde4/sip/dnssd/servicebase.sip	(revision 990181)
++++ kdebindings/python/pykde4/sip/dnssd/servicebase.sip	(working copy)
+@@ -27,7 +27,7 @@
+ %End
+ 
+ public:
+-    typedef KSharedPtr<DNSSD::ServiceBase> Ptr;
++//    typedef KSharedPtr<DNSSD::ServiceBase> Ptr;
+ 
+     explicit                ServiceBase (const QString& name = QString(), const QString& type = QString(), const QString& domain = QString(), const QString& host = QString(), unsigned short port = 0);
+     QString                 serviceName () const;
+Index: kdebindings/python/pykde4/sip/kdecore/typedefs.sip
+===================================================================
+--- kdebindings/python/pykde4/sip/kdecore/typedefs.sip	(revision 990181)
++++ kdebindings/python/pykde4/sip/kdecore/typedefs.sip	(working copy)
+@@ -244,7 +244,7 @@
+         return PyInstance_Check(sipPy);
+ 
+     int iserr = 0;
+-    TYPE *cpp = (TYPE *)sipForceConvertTo_TYPE (sipPy, &iserr);
++    TYPE *cpp = (TYPE *)sipForceConvertToInstance(sipPy, sipClass_TYPE, NULL, 0, NULL, &iserr);
+ 
+     if (iserr)
+     {
+Index: kdebindings/python/pykde4/sip/kdecore/kptydevice.sip
+===================================================================
+--- kdebindings/python/pykde4/sip/kdecore/kptydevice.sip	(revision 990181)
++++ kdebindings/python/pykde4/sip/kdecore/kptydevice.sip	(working copy)
+@@ -46,9 +46,9 @@
+     void                 readEof ();
+ 
+ protected:
+-    virtual qint64       readData (char*, qint64);
+-    virtual qint64       readLineData (char*, qint64);
+-    virtual qint64       writeData (const char*, qint64);
++//ig    virtual qint64       readData (char*, qint64);
++//ig    virtual qint64       readLineData (char*, qint64);
++//ig    virtual qint64       writeData (const char*, qint64);
+ 
+ };  // class KPtyDevice
+ 

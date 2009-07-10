@@ -215,8 +215,9 @@ Description: Akonadi ruby1.8 bindings
 Package: python-kde4
 Section: python
 Architecture: any
-Depends: ${shlibs:Depends}, ${python:Depends}, ${misc:Depends},
- python-qt4 (>= 4.4.4), python-sip4 (>= 4.7.8)
+Depends: ${shlibs:Depends}, ${python:Depends}, ${misc:Depends}, 
+ python-qt4 (>= ${python-qt4:Version}), python-qt4 (<< ${python-qt4:Version}+~), 
+ python-sip4 (>= ${python-sip4:Version}), python-sip4 (<< ${python-sip4:Version}+~)
 Description: Python bindings for the KDE 4 libraries
  This package contains PyKDE, the Python bindings for the KDE 4
  libraries, that allow you to write KDE programs using Python instead of
@@ -249,6 +250,7 @@ Architecture: all
 XB-Python-Version: ${python:Versions}
 Depends: ${python:Depends}, python-qt4 (>= 4.4.4)
 Recommends: python-kde4
+Breaks: python-kde4 (<< ${source:Version})
 Description: UIC compiler and SIP files for PyKDE
  This package contains pykdeuic4, a wrapper around PyQt's own UIC (user
  interface compiler). It is needed to generate code from Qt Designer's

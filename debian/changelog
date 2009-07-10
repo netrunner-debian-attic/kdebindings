@@ -1,6 +1,9 @@
-kdebindings (4:4.2.4-2) UNRELEASED; urgency=low
+kdebindings (4:4.2.4-2) unstable; urgency=low
 
   * Fix sections
+  * Add patch to build and work with newer sip and pyqt. Thanks to the Pardus people
+    and to Simon Edwards. (Closes: #532574, #533624, #53350)
+  * Make python dependencies ridicously strict.
 
  -- Sune Vuorela <debian@pusling.com>  Wed, 03 Jun 2009 09:51:55 +0200
 

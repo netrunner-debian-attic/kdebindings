@@ -176,6 +176,10 @@ binary-indep: export DH_OPTIONS=-i
 
 binary-indep binary-arch: build install
 	# Building $@. DH_OPTIONS=$(DH_OPTIONS)
+	echo "python-qt4:Version="`dpkg -l python-qt4  | tail -1 | awk '{print $$3}'` >> debian/python-kde4.substvars
+	echo "python-sip4:Version="`dpkg -l python-sip4  | tail -1 | awk '{print $$3}'` >> debian/python-kde4.substvars
+	echo "python-qt4:Version="`dpkg -l python-qt4  | tail -1 | awk '{print $$3}'` >> debian/python-kde4-dev.substvars
+	echo "python-sip4:Version="`dpkg -l python-sip4  | tail -1 | awk '{print $$3}'` >> debian/python-kde4-dev.substvars
 	dh_install $(DH_NO_MONOPACKAGES)
 	dh_testdir
 	dh_testroot
