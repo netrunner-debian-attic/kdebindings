@@ -1,9 +1,18 @@
-kdebindings (4:4.3.1-1) UNRELEASED; urgency=low
+kdebindings (4:4.2.96-0r1) UNRELEASED; urgency=low
 
   +++ Changes by David Palacio:
 
   * Refresh patches.
   * Package csharp pkgconfig files.
+
+  +++ Changes by Sune Vuorela:
+
+  * Add smoke-qt dev package (Closes: #526633)
+  * Add various more cli assembly packages.
+  * Split out the various kross plugins to make it lighter for apps to use
+    kross.
+  * Add kio-monodoc package.
+  * Package smokeqimageblitz.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Thu, 07 Jun 2009 16:00:46 +0200
 
