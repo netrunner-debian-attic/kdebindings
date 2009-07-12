@@ -14,6 +14,10 @@ kdebindings (4:4.2.96-0r1) UNRELEASED; urgency=low
   * Add kio-monodoc package.
   * Package smokeqimageblitz.
 
+  +++ Changes by Mirco Bauer:
+
+  * Make use of dh_clifixperms to ensure shipped dlls have good permissions.
+
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Thu, 07 Jun 2009 16:00:46 +0200
 
 kdebindings (4:4.2.4-1) unstable; urgency=low

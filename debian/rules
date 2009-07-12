@@ -160,6 +160,7 @@ monospecific: install-mono
 	#setting MONOPATH is a hack to hack around a bug in dh_makeclilibs. Reported as #498868
 	MONO_PATH=$(CURDIR)/debian/libqyoto4.4-cil/usr/lib/cli/kdebindings-4.4/ dh_makeclilibs -V $(DH_MONOPACKAGES)
 	dh_installcligac $(DH_MONOPACKAGES)
+	dh_clifixperms $(DH_MONOPACKAGES)
 	dh_makeshlibs -V $(DH_MONOPACKAGES)
 	dh_clideps -l$(MONO_L_PATHS) $(DH_MONOPACKAGES)
 	dh_clistrip $(DH_MONOPACKAGES)
