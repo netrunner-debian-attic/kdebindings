@@ -3,13 +3,11 @@ usr/lib/ruby/1.8/khtml/khtml.rb
 usr/lib/ruby/1.8/ktexteditor/ktexteditor.rb
 usr/lib/ruby/1.8/solid/solid.rb
 usr/lib/ruby/1.8/nepomuk/nepomuk.rb
-usr/lib/ruby/1.8/soprano/soprano.rb
 usr/lib/ruby/1.8/*/khtml.so
 usr/lib/ruby/1.8/*/korundum4.so
 usr/lib/ruby/1.8/*/ktexteditor.so
 usr/lib/ruby/1.8/*/solid.so
 usr/lib/ruby/1.8/*/nepomuk.so
-usr/lib/ruby/1.8/*/soprano.so
 
 usr/lib/kde4/krubypluginfactory.so
 usr/bin/krubyapplication

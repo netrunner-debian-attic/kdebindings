@@ -4,6 +4,7 @@ kdebindings (4:4.2.96-0r1) UNRELEASED; urgency=low
 
   * Refresh patches.
   * Package csharp pkgconfig files.
+  * Package for Soprano bindings.
 
   +++ Changes by Sune Vuorela:
 

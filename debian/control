@@ -122,6 +122,20 @@ Description: KDE plasma smoke library
  This is part of KDE Bindings module
 
 
+Package: libsmokesoprano2
+Section: libs
+Depends: ${shlibs:Depends}, libsmokeqt4-2 (= ${binary:Version})
+Architecture: any
+Description: Soprano smoke library
+ Smoke libraries are part of the bindings used for Qt and KDE. This package 
+ contains the soprano parts of smoke.
+ .
+ Smoke provides infrastructure which is used for creating bindings for
+ multiple languages such as Ruby, C# and PHP.
+ .
+ This is part of KDE Bindings module
+
+
 Package: korundum4
 Section: ruby
 Architecture: all
@@ -237,6 +251,27 @@ Architecture: any
 Description: Akonadi ruby1.8 bindings
  This package allows you to create applications that use the Akonadi PIM
  storage service in the Ruby language.
+ Bindings for Ruby version 1.8.
+ .
+ This is part of KDE Bindings module
+
+Package: libsoprano-ruby
+Section: ruby
+Depends: libsoprano-ruby1.8
+Architecture: all
+Description: Soprano ruby bindings
+ This package allows you to create applications that use the Soprano RDF
+ storage, parsing and serialization framework in the Ruby language.
+ .
+ This is part of KDE Bindings module
+
+Package: libsoprano-ruby1.8
+Section: ruby
+Depends: ${shlibs:Depends}, libqt4-ruby1.8 (= ${binary:Version})
+Architecture: any
+Description: Soprano ruby1.8 bindings
+ This package allows you to create applications that use the Soprano RDF
+ storage, parsing and serialization framework in the Ruby language.
  Bindings for Ruby version 1.8.
  .
  This is part of KDE Bindings module
