@@ -1,5 +1,7 @@
 #installed with a different filename
 ./usr/share/kde4/apps/pykde4/pykdeuic4.py
+./usr/share/kde4/apps/pykde4/pykdeuic4.pyc
+./usr/share/kde4/apps/pykde4/kde4.pyc
 
 #no dev stuff yet
 
@@ -24,40 +26,100 @@
 ./usr/include/qyoto/smokeqyoto.h
 ./usr/include/qyoto/virtualmethodcall.h
 ./usr/include/qyoto/virtualmethodreturnvalue.h
-./usr/include/smoke.h
+./usr/include/smoke/akonadi_smoke.h
 ./usr/include/smoke/kde_smoke.h
 ./usr/include/smoke/khtml_smoke.h
 ./usr/include/smoke/ktexteditor_smoke.h
 ./usr/include/smoke/nepomuk_smoke.h
 ./usr/include/smoke/okular_smoke.h
-./usr/include/smoke/phonon_smoke.h
 ./usr/include/smoke/plasma_smoke.h
-./usr/include/smoke/qtscript_smoke.h
-./usr/include/smoke/qt_smoke.h
-./usr/include/smoke/qtuitools_smoke.h
-./usr/include/smoke/qtwebkit_smoke.h
+./usr/include/smoke/qimageblitz_smoke.h
+./usr/include/smoke/qttest_smoke.h
 ./usr/include/smoke/solid_smoke.h
 ./usr/include/smoke/soprano_smoke.h
 
-
+./usr/lib/libqtruby4shared.so
 ./usr/lib/libqyotoshared.so
+./usr/lib/libsmokeakonadi.so
 ./usr/lib/libsmokekde.so
 ./usr/lib/libsmokekhtml.so
 ./usr/lib/libsmokektexteditor.so
 ./usr/lib/libsmokenepomuk.so
 ./usr/lib/libsmokeokular.so
-./usr/lib/libsmokephonon.so
 ./usr/lib/libsmokeplasma.so
-./usr/lib/libsmokeqtscript.so
-./usr/lib/libsmokeqt.so
-./usr/lib/libsmokeqttest.so
-./usr/lib/libsmokeqtuitools.so
-./usr/lib/libsmokeqtwebkit.so
+./usr/lib/libsmokeqimageblitz.so
 ./usr/lib/libsmokesolid.so
 ./usr/lib/libsmokesoprano.so
+./usr/lib/libsoprano-sharp.so
 
 
 ./usr/share/applications/kde4/dbpedia_references.desktop
 ./usr/share/kde4/apps/dbpedia_references/dbpedia_references.rb
 
+#mangled by python-magics
+#actually installed, but under a different paths and stuff as python-support does it
 
+./usr/lib/python2.5/site-packages/PyKDE4/__init__.py
+./usr/lib/python2.5/site-packages/PyKDE4/__init__.pyc
+./usr/lib/python2.5/site-packages/PyKDE4/akonadi.so
+./usr/lib/python2.5/site-packages/PyKDE4/dnssd.so
+./usr/lib/python2.5/site-packages/PyKDE4/kdecore.so
+./usr/lib/python2.5/site-packages/PyKDE4/kdeui.so
+./usr/lib/python2.5/site-packages/PyKDE4/khtml.so
+./usr/lib/python2.5/site-packages/PyKDE4/kio.so
+./usr/lib/python2.5/site-packages/PyKDE4/knewstuff.so
+./usr/lib/python2.5/site-packages/PyKDE4/kparts.so
+./usr/lib/python2.5/site-packages/PyKDE4/ktexteditor.so
+./usr/lib/python2.5/site-packages/PyKDE4/kutils.so
+./usr/lib/python2.5/site-packages/PyKDE4/nepomuk.so
+./usr/lib/python2.5/site-packages/PyKDE4/phonon.so
+./usr/lib/python2.5/site-packages/PyKDE4/plasma.so
+./usr/lib/python2.5/site-packages/PyKDE4/pykdeconfig.py
+./usr/lib/python2.5/site-packages/PyKDE4/pykdeconfig.pyc
+./usr/lib/python2.5/site-packages/PyKDE4/solid.so
+./usr/lib/python2.5/site-packages/PyKDE4/soprano.so
+
+#mono-handled
+##installed in different paths as how mono policy describes it
+
+./usr/lib/libakonadi-sharp.so
+./usr/lib/libkhtml-sharp.so
+./usr/lib/libkimono.so
+./usr/lib/libktexteditor-sharp.so
+./usr/lib/libnepomuk-sharp.so
+./usr/lib/libplasma-sharp.so
+./usr/lib/libqimageblitz-sharp.so
+./usr/lib/libqtruby4shared.so
+./usr/lib/libqtscript-sharp.so
+./usr/lib/libqttest-sharp.so
+./usr/lib/libqtuitools-sharp.so
+./usr/lib/libqtwebkit-sharp.so
+./usr/lib/libqyoto.so
+./usr/lib/libsoprano-sharp.so
+./usr/lib/mono/2.0/akonadi.dll
+./usr/lib/mono/2.0/kde-dotnet.dll
+./usr/lib/mono/2.0/khtml-dll.dll
+./usr/lib/mono/2.0/ktexteditor-dotnet.dll
+./usr/lib/mono/2.0/nepomuk-dll.dll
+./usr/lib/mono/2.0/plasma-dll.dll
+./usr/lib/mono/2.0/qimageblitz.dll
+./usr/lib/mono/2.0/qt-dotnet.dll
+./usr/lib/mono/2.0/qtscript.dll
+./usr/lib/mono/2.0/qttest.dll
+./usr/lib/mono/2.0/qtuitools.dll
+./usr/lib/mono/2.0/qtwebkit.dll
+./usr/lib/mono/2.0/soprano.dll
+./usr/lib/mono/gac/akonadi/2.2.0.0__194a23ba31c08164/akonadi.dll
+./usr/lib/mono/gac/kde-dotnet/4.1.0.0__194a23ba31c08164/kde-dotnet.dll
+./usr/lib/mono/gac/khtml-dll/2.0.0.0__194a23ba31c08164/khtml-dll.dll
+./usr/lib/mono/gac/ktexteditor-dotnet/4.1.0.0__194a23ba31c08164/ktexteditor-dotnet.dll
+./usr/lib/mono/gac/nepomuk-dll/2.2.0.0__194a23ba31c08164/nepomuk-dll.dll
+./usr/lib/mono/gac/plasma-dll/2.0.0.0__194a23ba31c08164/plasma-dll.dll
+./usr/lib/mono/gac/qimageblitz/0.0.5.0__194a23ba31c08164/qimageblitz.dll
+./usr/lib/mono/gac/qt-dotnet/4.5.0.0__194a23ba31c08164/qt-dotnet.dll
+./usr/lib/mono/gac/qt-dotnet/4.5.0.0__194a23ba31c08164/qt-dotnet.dll.config
+./usr/lib/mono/gac/qtscript/2.2.0.0__194a23ba31c08164/qtscript.dll
+./usr/lib/mono/gac/qttest/2.2.0.0__194a23ba31c08164/qttest.dll
+./usr/lib/mono/gac/qtuitools/2.2.0.0__194a23ba31c08164/qtuitools.dll
+./usr/lib/mono/gac/qtwebkit/2.2.0.0__194a23ba31c08164/qtwebkit.dll
+./usr/lib/mono/gac/soprano/2.0.2.0__194a23ba31c08164/soprano.dll
