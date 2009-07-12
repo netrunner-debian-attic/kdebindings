@@ -9,14 +9,11 @@ DH_MONOPACKAGES := $(patsubst %,-p%,$(MONOPACKAGES))
 DH_NO_MONOPACKAGES := $(patsubst %,-N%,$(MONOPACKAGES))
 MONO_L_PATHS = $(shell find $(patsubst %,debian/%,$(MONOPACKAGES)) -path '*/usr/lib/cli/*' -name '*.dll' -type f -printf '%h:') 
 
-export MONO_DISABLE_SHM = 1
-MONOHOME=$(CURDIR)/debian/monohome
-export MONO_SHARED_DIR = $(MONOHOME)
-
 DEST=$(CURDIR)/debian/tmp
 DEST_USR_LIB=$(DEST)/usr/lib
 
 ifneq (,$(findstring $(ARCH),$(MONOARCHS)))
+export MONO_DISABLE_SHM = 1
 MONOFLAGS=-DENABLE_KHTML_SHARP=ON 
 MONOTARGET=monospecific
 else
@@ -95,7 +92,6 @@ endif
 
 $(objdir)/Makefile: $(QUILT_STAMPFN)
 	mkdir -p $(objdir)
-	mkdir -p $(MONOHOME)
 	@echo building all bindings except python bindings. Later building python bindings for $(pyversions).
 	cd $(objdir) && cmake $(CURDIR) $(cmake_flags) \
 	    -DCMAKE_C_FLAGS="$(CFLAGS)" -DCMAKE_CXX_FLAGS="$(CFLAGS)"
@@ -131,7 +127,6 @@ clean:: unpatch
 	rm -f build-stamp-*
 	rm -f debian/cdbs-install-list debian/cdbs-package-list
 	rm -rf $(objdir)
-	rm -rf $(MONOHOME)
 	
 	dh_clean
 
