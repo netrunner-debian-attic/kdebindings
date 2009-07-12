@@ -4,7 +4,7 @@ include /usr/share/quilt/quilt.make
 
 ARCH := $(shell dpkg-architecture -qDEB_HOST_ARCH)
 MONOARCHS := "i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 lpia ia64 arm armeb armel sparc s390"
-MONOPACKAGES := $(shell dh_listpackages | grep '\-cil$$') plasma-scriptengine-kimono
+MONOPACKAGES := $(shell dh_listpackages | grep '\-cil$$') plasma-scriptengine-kimono kio-monodoc
 DH_MONOPACKAGES := $(patsubst %,-p%,$(MONOPACKAGES))
 DH_NO_MONOPACKAGES := $(patsubst %,-N%,$(MONOPACKAGES))
 MONO_L_PATHS = $(shell find $(patsubst %,debian/%,$(MONOPACKAGES)) -path '*/usr/lib/cli/*' -name '*.dll' -type f -printf '%h:') 
@@ -156,6 +156,8 @@ install: $(MONOTARGET) install-generic
 # Separate target (from monospecific) is needed for $(MONO_L_PATHS)
 # to work properly
 install-mono: install-pre install-generic
+	make -C $(objdir)/csharp/kimono/examples/kio/kio_monodoc
+	make -C $(objdir)/csharp/kimono/examples/kio/kio_monodoc install DESTDIR=$(CURDIR)/debian/tmp/
 	dh_install $(DH_MONOPACKAGES)
 
 monospecific: export DH_OPTIONS=
