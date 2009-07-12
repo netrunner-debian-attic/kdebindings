@@ -299,7 +299,8 @@ Description: documentation and examples for PyKDE
  .
  This is part of KDE Bindings module
 
-Package: libqyoto4.4-cil
+Package: libqyoto4.5-cil
+Replaces: libqyoto4.4-cil
 Section: cli-mono
 Depends: ${shlibs:Depends}, ${misc:Depends}, ${cli:Depends}, 
  libsmokeqt4-2 (= ${binary:Version})
@@ -312,7 +313,7 @@ Description: Qt4 bindings for CLI
 
 Package: qyoto-dev
 Section: cli-mono
-Depends: ${shlibs:Depends}, libqyoto4.4-cil (= ${binary:Version})
+Depends: ${shlibs:Depends}, libqyoto4.5-cil (= ${binary:Version})
 Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390 lpia
 Description: development tools for Qt CLI bindings
  This package provides csuic and other tools to help building 
@@ -322,7 +323,7 @@ Description: development tools for Qt CLI bindings
 
 Package: libkimono4.1-cil
 Section: cli-mono
-Depends: libqyoto4.4-cil (= ${binary:Version}), ${cli:Depends}, 
+Depends: libqyoto4.5-cil (= ${binary:Version}), ${cli:Depends}, 
  ${shlibs:Depends}, libsmokekde4-2 (= ${binary:Version})
 Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390 lpia
 Description: kde4 bindings for CLI
@@ -343,7 +344,7 @@ Description: Kimono Plasma script engine
  
 Package: libkhtml2.0-cil
 Section: cli-mono
-Depends: libqyoto4.4-cil (= ${binary:Version}), libkimono4.1-cil (= ${binary:Version}), ${cli:Depends}, ${shlibs:Depends}
+Depends: libqyoto4.5-cil (= ${binary:Version}), libkimono4.1-cil (= ${binary:Version}), ${cli:Depends}, ${shlibs:Depends}
 Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390 lpia
 Description: kde4 bindings for CLI, khtml edition
  This package provides the khtml assembly that
@@ -351,9 +352,9 @@ Description: kde4 bindings for CLI, khtml edition
  .
  This is part of KDE Bindings module
 
-Package: libakonadi2.0-cil
+Package: libakonadi2.2-cil
 Section: cli-mono
-Depends: libqyoto4.4-cil (= ${binary:Version}), ${cli:Depends}, ${shlibs:Depends}
+Depends: libqyoto4.5-cil (= ${binary:Version}), ${cli:Depends}, ${shlibs:Depends}
 Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390 lpia
 Description: akonadi bindings for CLI
  This package provides the akonadi assembly that
@@ -363,7 +364,7 @@ Description: akonadi bindings for CLI
 
 Package: libktexteditor4.1-cil
 Section: cli-mono
-Depends: libqyoto4.4-cil (= ${binary:Version}), libkimono4.1-cil (= ${binary:Version}), ${cli:Depends}, ${shlibs:Depends}
+Depends: libqyoto4.5-cil (= ${binary:Version}), libkimono4.1-cil (= ${binary:Version}), ${cli:Depends}, ${shlibs:Depends}
 Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390 lpia
 Description: kde4 bindings for CLI, ktexteditor edition
  This package provides the ktexteditor-dotnet assembly that
@@ -374,7 +375,7 @@ Description: kde4 bindings for CLI, ktexteditor edition
 
 Package: libnepomuk2.2-cil
 Section: cli-mono
-Depends: libqyoto4.4-cil (= ${binary:Version}), libkimono4.1-cil (= ${binary:Version}), ${cli:Depends}, ${shlibs:Depends}
+Depends: libqyoto4.5-cil (= ${binary:Version}), libkimono4.1-cil (= ${binary:Version}), ${cli:Depends}, ${shlibs:Depends}
 Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390 lpia
 Description: kde4 bindings for CLI, Nepomuk-edition
  This package provides the nepomuk assembly that allows 
@@ -384,7 +385,7 @@ Description: kde4 bindings for CLI, Nepomuk-edition
 
 Package: libplasma2.0-cil
 Section: cli-mono
-Depends: libqyoto4.4-cil (= ${binary:Version}), libkimono4.1-cil (= ${binary:Version}), ${cli:Depends}, ${shlibs:Depends}
+Depends: libqyoto4.5-cil (= ${binary:Version}), libkimono4.1-cil (= ${binary:Version}), ${cli:Depends}, ${shlibs:Depends}
 Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390 lpia
 Description: kde4 bindings for CLI, Plasma-edition
  This package provides the plasma assembly that allows 
@@ -395,7 +396,7 @@ Description: kde4 bindings for CLI, Plasma-edition
 
 Package: libqtscript2.2-cil
 Section: cli-mono
-Depends: libqyoto4.4-cil (= ${binary:Version}), ${cli:Depends}, ${shlibs:Depends}
+Depends: libqyoto4.5-cil (= ${binary:Version}), ${cli:Depends}, ${shlibs:Depends}
 Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390 lpia
 Description: Qt4 bindings for CLI, QtScript edition
  This package provides the QtScript assemply that allows
@@ -405,7 +406,7 @@ Description: Qt4 bindings for CLI, QtScript edition
 
 Package: libqttest2.2-cil
 Section: cli-mono
-Depends: libqyoto4.4-cil (= ${binary:Version}), ${cli:Depends}, ${shlibs:Depends}
+Depends: libqyoto4.5-cil (= ${binary:Version}), ${cli:Depends}, ${shlibs:Depends}
 Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390 lpia
 Description: Qt4 bindings for CLI, QtTest edition
  This package provides the QtTest assemply that allows
@@ -415,7 +416,7 @@ Description: Qt4 bindings for CLI, QtTest edition
 
 Package: libqtuitools2.2-cil
 Section: cli-mono
-Depends: libqyoto4.4-cil (= ${binary:Version}), ${cli:Depends}, ${shlibs:Depends}
+Depends: libqyoto4.5-cil (= ${binary:Version}), ${cli:Depends}, ${shlibs:Depends}
 Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390 lpia
 Description: Qt4 bindings for CLI, QtUiTools edition
  This package provides the QtUiTools assembly, that allows 
@@ -425,7 +426,7 @@ Description: Qt4 bindings for CLI, QtUiTools edition
 
 Package: libqtwebkit2.2-cil
 Section: cli-mono
-Depends: libqyoto4.4-cil (= ${binary:Version}), ${cli:Depends}, ${shlibs:Depends}
+Depends: libqyoto4.5-cil (= ${binary:Version}), ${cli:Depends}, ${shlibs:Depends}
 Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390 lpia
 Description: Qt4 bindings for CLI, QtWebkit edition
  This package provides the QtWebkit assembly, that allows 
@@ -433,7 +434,7 @@ Description: Qt4 bindings for CLI, QtWebkit edition
 
 Package: libsoprano2.0-cil
 Section: cli-mono
-Depends: libqyoto4.4-cil (= ${binary:Version}), ${cli:Depends}, ${shlibs:Depends}
+Depends: libqyoto4.5-cil (= ${binary:Version}), ${cli:Depends}, ${shlibs:Depends}
 Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390 lpia
 Description: Soprano bindings for CLI
  This package provides the soprano assembly, that allows CLI based 
@@ -450,9 +451,9 @@ Description: shared library for Qt4 CLI bindings
  .
  This is part of KDE Bindings module
 
-Package: libqimageblitz0.5-cil
+Package: libqimageblitz0.0-cil
 Section: cli-mono
-Depends: libqyoto4.4-cil (= ${binary:Version}), ${cli:Depends}, ${shlibs:Depends}
+Depends: libqyoto4.5-cil (= ${binary:Version}), ${cli:Depends}, ${shlibs:Depends}
 Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390 lpia
 Description: QImageBlitz bindings for CLI
  This package provides the qimageblitz assembly, that allows CLI based 

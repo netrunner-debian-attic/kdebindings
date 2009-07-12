@@ -1,3 +1,0 @@
-debian/csharp/qimageblitz.dll.config           usr/lib/cli/qimageblitz-0.5/
-usr/lib/libqimageblitz-sharp.so                usr/lib/cli/qimageblitz-0.5/
-usr/lib/mono/gac/qimageblitz/*/qimageblitz.dll usr/lib/cli/qimageblitz-0.5/

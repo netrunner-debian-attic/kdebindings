@@ -1,3 +1,4 @@
+debian/csharp/soprano-sharp-2.0.pc     usr/lib/pkgconfig/
 debian/csharp/soprano.dll.config       usr/lib/cli/soprano-2.0/
 usr/lib/libsoprano-sharp.so            usr/lib/cli/soprano-2.0/
 usr/lib/mono/gac/soprano/*/soprano.dll usr/lib/cli/soprano-2.0/

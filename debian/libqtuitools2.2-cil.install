@@ -1,4 +1,4 @@
+debian/csharp/qtuitools-sharp-2.2.pc       usr/lib/pkgconfig/
 debian/csharp/qtuitools.dll.config         usr/lib/cli/qtuitools-2.2/
 usr/lib/libqtuitools-sharp.so              usr/lib/cli/qtuitools-2.2/
 usr/lib/mono/gac/qtuitools/*/qtuitools.dll usr/lib/cli/qtuitools-2.2/
-usr/lib/pkgconfig/qtuitools-sharp.pc

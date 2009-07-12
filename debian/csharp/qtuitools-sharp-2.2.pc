@@ -1,0 +1,7 @@
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib/
+
+Name: qtuitools
+Version: 2.2
+Libs: -r:${libdir}/cli/qtuitools-2.2/qtuitools.dll

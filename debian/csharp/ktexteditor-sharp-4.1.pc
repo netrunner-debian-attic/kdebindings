@@ -1,0 +1,7 @@
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib/
+
+Name: ktexteditor
+Version: 4.1
+Libs: -r:${libdir}/cli/ktexteditor-dotnet-4.1/ktexteditor-dotnet.dll

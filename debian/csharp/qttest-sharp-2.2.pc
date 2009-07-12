@@ -1,0 +1,7 @@
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib/
+
+Name: qttest
+Version: 2.2
+Libs: -r:${libdir}/cli/qttest-2.2/qttest.dll

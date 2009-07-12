@@ -1,4 +1,0 @@
-debian/csharp/qt-dotnet.dll.config         usr/lib/cli/qt-dotnet-4.4/
-usr/lib/libqyoto.so                        usr/lib/cli/qt-dotnet-4.4/
-usr/lib/mono/gac/qt-dotnet/*/qt-dotnet.dll usr/lib/cli/qt-dotnet-4.4/
-usr/lib/pkgconfig/qyoto.pc

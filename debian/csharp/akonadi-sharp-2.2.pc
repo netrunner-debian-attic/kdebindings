@@ -1,0 +1,7 @@
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib/
+
+Name: akonadi
+Version: 2.2
+Libs: -r:${libdir}/cli/akonadi-2.2/akonadi.dll

@@ -1,0 +1,7 @@
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib/
+
+Name: qtwebkit
+Version: 2.2
+Libs: -r:${libdir}/cli/qtwebkit-2.2/qtwebkit.dll

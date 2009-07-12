@@ -1,3 +1,4 @@
+debian/csharp/nepomuk-sharp-2.2.pc             usr/lib/pkgconfig/
 debian/csharp/nepomuk-dll.dll.config           usr/lib/cli/nepomuk-dll-2.2/
 usr/lib/libnepomuk-sharp.so                    usr/lib/cli/nepomuk-dll-2.2/
 usr/lib/mono/gac/nepomuk-dll/*/nepomuk-dll.dll usr/lib/cli/nepomuk-dll-2.2/

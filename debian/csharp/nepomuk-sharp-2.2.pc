@@ -1,0 +1,7 @@
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib/
+
+Name: nepomuk
+Version: 2.2
+Libs: -r:${libdir}/cli/nepomuk-dll-2.2/nepomuk-dll.dll

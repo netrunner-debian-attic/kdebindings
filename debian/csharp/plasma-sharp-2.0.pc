@@ -1,0 +1,7 @@
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib/
+
+Name: plasma
+Version: 2.0
+Libs: -r:${libdir}/cli/plasma-dll-2.0/plasma-dll.dll
