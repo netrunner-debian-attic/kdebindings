@@ -21,6 +21,7 @@ kdebindings (4:4.2.96-0r1) UNRELEASED; urgency=low
   * Changed all dll paths using the assemby names.
   * Bumped the libqyoto4.4-cil package ABI to 4.5.
   * Ship versioned and unversioned pkg-config files for all CLI packages.
+  * Ship debug symbols for the CLI libraries in kdebindings-dbg.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Thu, 07 Jun 2009 16:00:46 +0200
 

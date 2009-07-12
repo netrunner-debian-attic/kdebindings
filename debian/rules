@@ -163,7 +163,7 @@ monospecific: install-mono
 	dh_clifixperms $(DH_MONOPACKAGES)
 	dh_makeshlibs -V $(DH_MONOPACKAGES)
 	dh_clideps -l$(MONO_L_PATHS) $(DH_MONOPACKAGES)
-	dh_clistrip $(DH_MONOPACKAGES)
+	dh_clistrip --dbg-package=kdebindings-dbg $(DH_MONOPACKAGES)
 
 ##
 
