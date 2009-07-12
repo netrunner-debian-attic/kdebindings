@@ -11,7 +11,6 @@ usr/lib/ruby/1.8/*/solid.so
 usr/lib/ruby/1.8/*/nepomuk.so
 usr/lib/ruby/1.8/*/soprano.so
 
-usr/lib/kde4/krossruby.so
 usr/lib/kde4/krubypluginfactory.so
 usr/bin/krubyapplication
 usr/bin/rbkconfig_compiler4
