@@ -3,5 +3,6 @@ exec_prefix=${prefix}
 libdir=${exec_prefix}/lib/
 
 Name: qtuitools
+Description: qtuitools
 Version: 2.2
 Libs: -r:${libdir}/cli/qtuitools-2.2/qtuitools.dll

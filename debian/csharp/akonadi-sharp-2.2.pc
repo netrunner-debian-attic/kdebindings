@@ -3,5 +3,6 @@ exec_prefix=${prefix}
 libdir=${exec_prefix}/lib/
 
 Name: akonadi
+Description: akonadi
 Version: 2.2
 Libs: -r:${libdir}/cli/akonadi-2.2/akonadi.dll

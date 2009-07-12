@@ -3,5 +3,6 @@ exec_prefix=${prefix}
 libdir=${exec_prefix}/lib/
 
 Name: nepomuk
+Description: nepomuk
 Version: 2.2
 Libs: -r:${libdir}/cli/nepomuk-dll-2.2/nepomuk-dll.dll

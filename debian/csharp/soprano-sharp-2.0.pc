@@ -3,5 +3,6 @@ exec_prefix=${prefix}
 libdir=${exec_prefix}/lib/
 
 Name: soprano
+Description: soprano
 Version: 2.0
 Libs: -r:${libdir}/cli/soprano-2.0/soprano.dll

@@ -3,5 +3,6 @@ exec_prefix=${prefix}
 libdir=${exec_prefix}/lib/
 
 Name: kimono
+Description: kimono
 Version: 4.1
 Libs: -r:${libdir}/cli/kde-dotnet-4.1/kde-dotnet.dll
