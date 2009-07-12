@@ -361,12 +361,12 @@ Description: akonadi bindings for CLI
  .
  This is part of KDE Bindings module
 
-Package: libktexteditor-dotnet4.1-cil
+Package: libktexteditor4.1-cil
 Section: cli-mono
 Depends: libqyoto4.4-cil (= ${binary:Version}), libkimono4.1-cil (= ${binary:Version}), ${cli:Depends}, ${shlibs:Depends}
 Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390 lpia
 Description: kde4 bindings for CLI, ktexteditor edition
- This package provides the kktexteditor assembly that
+ This package provides the ktexteditor-dotnet assembly that
  allows CLI based software to use the ktexteditor library
  .
  This is part of KDE Bindings module

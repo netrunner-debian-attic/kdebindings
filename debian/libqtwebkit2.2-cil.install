@@ -1,4 +1,4 @@
-debian/csharp/qtwebkit.dll.config        usr/lib/cli/kdebindings-2.2/
-usr/lib/libqtwebkit-sharp.so             usr/lib/cli/kdebindings-2.2/
-usr/lib/mono/gac/qtwebkit/*/qtwebkit.dll usr/lib/cli/kdebindings-2.2/
+debian/csharp/qtwebkit.dll.config        usr/lib/cli/qtwebkit-2.2/
+usr/lib/libqtwebkit-sharp.so             usr/lib/cli/qtwebkit-2.2/
+usr/lib/mono/gac/qtwebkit/*/qtwebkit.dll usr/lib/cli/qtwebkit-2.2/
 usr/lib/pkgconfig/qtwebkit-sharp.pc

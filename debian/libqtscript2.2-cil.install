@@ -1,4 +1,4 @@
-debian/csharp/qtscript.dll.config        usr/lib/cli/kdebindings-2.2/
-usr/lib/libqtscript-sharp.so             usr/lib/cli/kdebindings-2.2/
-usr/lib/mono/gac/qtscript/*/qtscript.dll usr/lib/cli/kdebindings-2.2/
+debian/csharp/qtscript.dll.config        usr/lib/cli/qtscript-2.2/
+usr/lib/libqtscript-sharp.so             usr/lib/cli/qtscript-2.2/
+usr/lib/mono/gac/qtscript/*/qtscript.dll usr/lib/cli/qtscript-2.2/
 usr/lib/pkgconfig/qtscript-sharp.pc
