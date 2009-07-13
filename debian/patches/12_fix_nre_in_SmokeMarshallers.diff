@@ -1,0 +1,11 @@
+--- kdebindings-4.2.96.orig/csharp/qyoto/src/SmokeMarshallers.cs
++++ kdebindings-4.2.96/csharp/qyoto/src/SmokeMarshallers.cs
+@@ -443,7 +443,7 @@
+ 				return IntPtr.Zero;
+ 			}
+ 
+-			if (weakRef.IsAlive) {
++			if (weakRef != null && weakRef.IsAlive) {
+ #if DEBUG
+ 				if (	(QDebug.DebugChannel() & QtDebugChannel.QTDB_GC) != 0
+ 						&& QDebug.debugLevel >= DebugLevel.Extensive ) 
