@@ -125,6 +125,8 @@ Description: Akonadi Smoke library
 Package: libsmokesoprano2
 Section: libs
 Depends: ${shlibs:Depends}, libsmokeqt4-2 (= ${binary:Version})
+Conflicts: libsmokekde4-2 (<< 4:4.2.60)
+Replaces: libsmokekde4-2 (<< 4:4.2.60)
 Architecture: any
 Description: Soprano Smoke library
  Smoke libraries are part of the bindings used for Qt and KDE. This package
@@ -268,6 +270,8 @@ Description: Soprano Ruby bindings
 Package: libsoprano-ruby1.8
 Section: ruby
 Depends: ${shlibs:Depends}, libqt4-ruby1.8 (= ${binary:Version})
+Conflicts: libkde4-ruby1.8 (<< 4:4.2.60)
+Replaces: libkde4-ruby1.8 (<< 4:4.2.60)
 Architecture: any
 Description: Soprano Ruby 1.8 bindings
  This package allows you to create applications that use the Soprano RDF
