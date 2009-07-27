@@ -8,5 +8,3 @@
 08_csharp_plasma_examples.diff
 10_fix_kimono_dllimports.diff
 11_make_pykde4_respect_sip_flags.diff
-12_fix_nre_in_SmokeMarshallers.diff
-13_fix_locking_in_SmokeMarshallers.diff

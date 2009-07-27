@@ -2,6 +2,9 @@ kdebindings (4:4.2.98-0~pre1) UNRELEASED; urgency=low
 
   * New upstream release, RC3.
 
+  * Remove 12_fix_nre_in_SmokeMarshallers.diff and
+    13_fix_locking_in_SmokeMarshallers.diff, merged upstream.
+
   +++ Changes by Frederik Schwarzer
 
   * Fix typos and casing in packages descriptions
