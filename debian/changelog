@@ -1,6 +1,6 @@
-kdebindings (4:4.2.98-0~pre1) UNRELEASED; urgency=low
+kdebindings (4:4.3.0-0r1) UNRELEASED; urgency=low
 
-  * New upstream release, RC3.
+  * New upstream release.
 
   * Remove 12_fix_nre_in_SmokeMarshallers.diff and
     13_fix_locking_in_SmokeMarshallers.diff, merged upstream.
