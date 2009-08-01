@@ -3,8 +3,8 @@ Section: kde
 Priority: optional
 Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Build-Depends: debhelper (>= 7), quilt,
- kdelibs5-dev (>= 4:4.2.90), libqt4-opengl-dev (>= 4.5.1), libphonon-dev (>= 4:4.3.0),
- libsoprano-dev (>= 2.2.67-2~), libqimageblitz-dev,
+ kdelibs5-dev (>= 4:4.3.0), libqt4-opengl-dev (>= 4.5.1), libphonon-dev (>= 4:4.3.0),
+ libsoprano-dev (>= 2.3.0), libqimageblitz-dev,
  python, python-all-dev, sip4 (>= 4.7.8), python-sip4-dev (>= 4.7.8), python-qt4 (>= 4.4.4), python-qt4-dev (>= 4.4.4),
  ruby1.8-dev, ruby1.8, python-support (>= 0.6),
  mono-devel (>= 2.0.1) [i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390],
@@ -12,7 +12,7 @@ Build-Depends: debhelper (>= 7), quilt,
  monodoc-base [i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390],
  okular-dev (>= 4:4.2.90), kdepimlibs5-dev (>= 4:4.2.90), libakonadi-dev (>= 1.1.90)
 Uploaders: Torsten Marek <shlomme@debian.org>, Sune Vuorela <debian@pusling.com>, David Palacio <dpalacio@uninorte.edu.co>, Modestas Vainius <modestas@vainius.eu>
-Standards-Version: 3.8.0
+Standards-Version: 3.8.2
 Homepage: http://www.kde.org
 Vcs-Svn: svn://svn.debian.org/svn/pkg-kde/trunk/packages/kdebindings
 Vcs-Browser: http://svn.debian.org/wsvn/pkg-kde/trunk/packages/kdebindings

@@ -5,11 +5,16 @@ kdebindings (4:4.3.0-0r1) UNRELEASED; urgency=low
   * Remove 12_fix_nre_in_SmokeMarshallers.diff and
     13_fix_locking_in_SmokeMarshallers.diff, merged upstream.
 
-  +++ Changes by Frederik Schwarzer
+  +++ Changes by Frederik Schwarzer:
 
   * Fix typos and casing in packages descriptions
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Mon, 27 Jul 2009 17:30:10 +0200
+  +++ Changes by Ana Beatriz Guerrero Lopez:
+
+  * Bump build dependencies to >= 4.3.0, for soprano to >= 2.3.0.
+  * Update to Standards-Version: 3.8.2, no changes required.  
+
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sat, 01 Aug 2009 17:11:53 +0200
 
 kdebindings (4:4.2.96-1) experimental; urgency=low
 
