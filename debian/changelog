@@ -1,4 +1,4 @@
-kdebindings (4:4.3.0-0r1) UNRELEASED; urgency=low
+kdebindings (4:4.3.0-0r2) UNRELEASED; urgency=low
 
   * New upstream release.
 
@@ -14,7 +14,7 @@ kdebindings (4:4.3.0-0r1) UNRELEASED; urgency=low
   * Bump build dependencies to >= 4.3.0, for soprano to >= 2.3.0.
   * Update to Standards-Version: 3.8.2, no changes required.  
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sat, 01 Aug 2009 17:11:53 +0200
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Mon, 03 Aug 2009 19:27:54 +0200
 
 kdebindings (4:4.2.96-1) experimental; urgency=low
 
