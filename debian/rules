@@ -145,8 +145,8 @@ install-generic: install-pre $(patsubst %,install-python-%,$(pyversions))
 
 install: $(MONOTARGET) install-generic
 #	rmdir debian/tmp/usr/share/doc/kde4/HTML/en/pykde4/creative\ commons_files/
-	install -D -m 755 debian/tmp/usr/share/kde4/apps/pykde4/pykdeuic4.py \
-	    debian/python-kde4-dev/usr/bin/pykdeuic4
+#	install -D -m 755 debian/tmp/usr/share/kde4/apps/pykde4/pykdeuic4.py \
+#	    debian/python-kde4-dev/usr/bin/pykdeuic4
 
 # Separate target (from monospecific) is needed for $(MONO_L_PATHS)
 # to work properly
