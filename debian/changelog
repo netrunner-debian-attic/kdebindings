@@ -2,9 +2,6 @@ kdebindings (4:4.3.0-1) unstable; urgency=low
 
   * New upstream release.
 
-  * Remove 12_fix_nre_in_SmokeMarshallers.diff and
-    13_fix_locking_in_SmokeMarshallers.diff, merged upstream.
-
   +++ Changes by Frederik Schwarzer:
 
   * Fix typos and casing in packages descriptions
@@ -18,6 +15,8 @@ kdebindings (4:4.3.0-1) unstable; urgency=low
       installed there by upstream. Added it to python-kde4-dev.install.
     - Add PyQt4/uic/pykdeuic4.py and PyQt4/uic/widget-plugins/kde4.py to  
       python-kde4 package.
+  * Remove 12_fix_nre_in_SmokeMarshallers.diff and
+    13_fix_locking_in_SmokeMarshallers.diff, merged upstream.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sat, 08 Aug 2009 15:07:37 +0200
 
