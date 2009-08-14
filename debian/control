@@ -181,8 +181,7 @@ Description: Qt 4 bindings for Ruby
 
 Package: libkde4-ruby
 Section: ruby
-Depends: libkde4-ruby1.8, libsmokeqt4-2 (= ${binary:Version}), 
- libqtruby4shared2 (= ${binary:Version})
+Depends: libkde4-ruby1.8
 Architecture: all
 Description: KDE Ruby bindings
  This package installs the KDE 4 bindings for
@@ -192,7 +191,8 @@ Description: KDE Ruby bindings
 
 Package: libkde4-ruby1.8
 Section: ruby
-Depends: ${shlibs:Depends}, libqt4-ruby1.8 (= ${binary:Version})
+Depends: ${shlibs:Depends}, libqt4-ruby1.8 (= ${binary:Version}),
+ libsmokeqt4-2 (= ${binary:Version}), libqtruby4shared2 (= ${binary:Version})
 Architecture: any
 Description: KDE 4 bindings for Ruby
  This packages contains KDE 4 Ruby bindings for Ruby 1.8

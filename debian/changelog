@@ -18,6 +18,11 @@ kdebindings (4:4.3.0-1) unstable; urgency=low
   * Remove 12_fix_nre_in_SmokeMarshallers.diff and
     13_fix_locking_in_SmokeMarshallers.diff, merged upstream.
 
+  +++ Changes by David Palacio:
+
+  * Move unnecessary dependencies from libkde4-ruby metapackage to
+    libkde4-ruby1.8. (Closes: #541539)
+
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sat, 08 Aug 2009 15:07:37 +0200
 
 kdebindings (4:4.2.96-1) experimental; urgency=low
