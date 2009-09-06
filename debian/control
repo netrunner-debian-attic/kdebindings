@@ -21,7 +21,7 @@ Package: kdebindings-dbg
 Section: debug
 Architecture: any
 Priority: extra
-Depends: kdelibs5-dbg
+Depends: kdelibs5-dbg, libsmokeqt4-2 (= ${binary:Version}) | python-kde4 (= ${binary:Version})
 Recommends: libruby1.8-dbg, python-qt4-dbg, mono-dbg
 Description: debugging symbols for the KDE 4 bindings module
  This package contains debugging files used to investigate problems with
@@ -183,7 +183,7 @@ Package: libkde4-ruby
 Section: ruby
 Depends: libkde4-ruby1.8
 Architecture: all
-Description: KDE Ruby bindings
+Description: KDE 4 bindings for Ruby
  This package installs the KDE 4 bindings for
  the default Ruby interpreter.
  .
@@ -194,7 +194,7 @@ Section: ruby
 Depends: ${shlibs:Depends}, libqt4-ruby1.8 (= ${binary:Version}),
  libsmokeqt4-2 (= ${binary:Version}), libqtruby4shared2 (= ${binary:Version})
 Architecture: any
-Description: KDE 4 bindings for Ruby
+Description: KDE 4 bindings for Ruby 1.8
  This packages contains KDE 4 Ruby bindings for Ruby 1.8
  .
  This is part of KDE Bindings module
@@ -212,7 +212,7 @@ Package: libokular-ruby1.8
 Section: ruby
 Depends: ${shlibs:Depends}, libkde4-ruby1.8 (= ${binary:Version})
 Architecture: any
-Description: Okular Ruby bindings
+Description: Okular Ruby 1.8 bindings
  Bindings for Okular for Ruby 1.8
  .
  This is part of KDE Bindings module
@@ -372,7 +372,6 @@ Description: KDE 4 bindings for CLI
  This is part of KDE Bindings module
 
 Package: plasma-scriptengine-kimono
-Section: kde
 Depends: libkimono4.1-cil (= ${binary:Version}), ${cli:Depends}, ${shlibs:Depends}
 Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390 lpia
 Description: Kimono Plasma script engine

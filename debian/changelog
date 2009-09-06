@@ -22,6 +22,7 @@ kdebindings (4:4.3.0-1) unstable; urgency=low
 
   * Move unnecessary dependencies from libkde4-ruby metapackage to
     libkde4-ruby1.8. (Closes: #541539)
+  * Copyright update
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sat, 08 Aug 2009 15:07:37 +0200
 

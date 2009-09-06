@@ -23,7 +23,7 @@ Upstream authors and copyright holders:
     Copyright (C) 2002-2006 Aduna BV, GNU LGPL License applies
     Copyright (C) 2002 Adam Treat.
     Copyright (C) 2002 Ashley Winters <qaqortog@nwlink.com>
-    Copyright (C) 2003-2009 Richard Dale
+    Copyright (C) 2000-2009 Richard Dale <richard.j.dale@gmail.com>
     Copyright (C) 2003 Cornelius Schumacher <schumacher@kde.org>
     Copyright (C) 2003 Germain Garand <germain@ebooksfrance.org>
     Copyright (C) 2003 Ian Geiser
@@ -36,9 +36,9 @@ Upstream authors and copyright holders:
     Copyright (C) 2005,2006,2007 Siraj Razick <siraj@kdemail.net>
     Copyright (C) 2005-2006 Eyal Oren
     Copyright (C) 2005, 2006 KJSEmbed Authors.
-    Copyright (C) 2005-2007 Cyrille Berger <cberger@cberger.net>
+    Copyright (C) 2005-2008 Cyrille Berger <cberger@cberger.net>
     Copyright (C) 2006-2007 Katrina Niolet <katrina@niolet.name>
-    Copyright (C) 2006-2007 Thomas Moenicke <tm@php-qt.org>
+    Copyright (C) 2006-2009 Thomas Moenicke <tm@php-qt.org>
     Copyright (C) 2006 Chusslove Illich <caslav.ilic@gmx.net>
     Copyright (C) 2006 Michaël Larouche <michael.larouche@kdemail.net>
     Copyright (C) 2006 Tobias Koenig <tokoe@kde.org>
@@ -59,6 +59,7 @@ Upstream authors and copyright holders:
     Copyright (C) 2005-2006 KJSEMbed Authors
     Copyright (C) Lars Knoll <knoll@kde.org>
     Copyright (C) Matthias Ettrich <ettrich@kde.org>
+    Copyright (C) 2008 David Boddie <david@boddie.org.uk>
 
 
 cmake/
@@ -84,6 +85,8 @@ python/
       pykde4: LGPLv2.1+
 ruby/
       GPLv2
+  qtruby/src/
+      LGPLv2+
 smoke/
 	smoke.h is BSD licensed.
 	The rest of smoke is quite trivial and autogenerates code with kalyptus

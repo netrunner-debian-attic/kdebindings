@@ -1,3 +1,4 @@
+Use Debian executable name
 --- a/ruby/qtruby/bin/rbqtapi
 +++ b/ruby/qtruby/bin/rbqtapi
 @@ -1,4 +1,4 @@
