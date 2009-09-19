@@ -24,6 +24,12 @@ kdebindings (4:4.3.0-1) unstable; urgency=low
     libkde4-ruby1.8. (Closes: #541539)
   * Copyright update
 
+  +++ Changes by Sune Vuorela:
+
+  * Refresh patches.
+  * Make kpythonfactory dlopen versioned python library. (Closes: 524685,
+    541999)
+
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sat, 08 Aug 2009 15:07:37 +0200
 
 kdebindings (4:4.2.96-1) experimental; urgency=low
