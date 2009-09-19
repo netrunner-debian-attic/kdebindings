@@ -5,7 +5,7 @@
      QLibrary *pythonLib = new QLibrary();
      pythonLib->setLoadHints(QLibrary::ExportExternalSymbolsHint);
 -    pythonLib->setFileName(LIB_PYTHON);
-+    pythonLib->setFileName(LIB_PYTHON+".1");
++    pythonLib->setFileName(LIB_PYTHON ".1");
      pythonLib->load();
      return pythonLib;
  }
