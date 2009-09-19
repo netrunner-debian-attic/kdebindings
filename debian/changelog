@@ -1,6 +1,27 @@
+kdebindings (4:4.3.1-1) unstable; urgency=low
+
+  * New upstream release.
+
+  +++ Changes by David Palacio:
+
+  * Move unnecessary dependencies from libkde4-ruby metapackage to
+    libkde4-ruby1.8. (Closes: #541539)
+  * Copyright update
+
+  +++ Changes by Sune Vuorela:
+
+  * Refresh patches.
+  * Make kpythonfactory dlopen versioned python library. (Closes: 524685,
+    541999)
+
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sun, 20 Sep 2009 00:30:55 +0200
+
 kdebindings (4:4.3.0-1) unstable; urgency=low
 
   * New upstream release.
+
+  * Remove 12_fix_nre_in_SmokeMarshallers.diff and
+    13_fix_locking_in_SmokeMarshallers.diff, merged upstream.
 
   +++ Changes by Frederik Schwarzer:
 
@@ -15,20 +36,6 @@ kdebindings (4:4.3.0-1) unstable; urgency=low
       installed there by upstream. Added it to python-kde4-dev.install.
     - Add PyQt4/uic/pykdeuic4.py and PyQt4/uic/widget-plugins/kde4.py to  
       python-kde4 package.
-  * Remove 12_fix_nre_in_SmokeMarshallers.diff and
-    13_fix_locking_in_SmokeMarshallers.diff, merged upstream.
-
-  +++ Changes by David Palacio:
-
-  * Move unnecessary dependencies from libkde4-ruby metapackage to
-    libkde4-ruby1.8. (Closes: #541539)
-  * Copyright update
-
-  +++ Changes by Sune Vuorela:
-
-  * Refresh patches.
-  * Make kpythonfactory dlopen versioned python library. (Closes: 524685,
-    541999)
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sat, 08 Aug 2009 15:07:37 +0200
 
