@@ -83,7 +83,7 @@
 +require 'Qt4'
  
  module KDE
- 	class Application < Qt::Base
+ 	def KDE.i18n(text, *args)
 --- a/ruby/korundum/templates/annotated/basicapp.rb
 +++ b/ruby/korundum/templates/annotated/basicapp.rb
 @@ -31,7 +31,7 @@ dealings in this Software without prior 
