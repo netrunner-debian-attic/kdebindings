@@ -1,3 +1,11 @@
+kdebindings (4:4.3.2-1) unstable; urgency=low
+
+  * New upstream release.
+  * Reintroduce the strict sip&pyqt dependincies introduced in 4.2.4, but lost
+    in merge. Compabiliwhat?
+
+ -- Sune Vuorela <debian@pusling.com>  Sat, 10 Oct 2009 22:26:54 +0200
+
 kdebindings (4:4.3.1-1) unstable; urgency=low
 
   * New upstream release.
