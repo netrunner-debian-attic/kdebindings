@@ -9,3 +9,4 @@
 10_fix_kimono_dllimports.diff
 11_make_pykde4_respect_sip_flags.diff
 12_pythonpluginfactory_use_versioned_python_lib.diff
+13_csharp_fix_build_deps.diff
