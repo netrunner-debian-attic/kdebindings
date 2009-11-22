@@ -3,6 +3,10 @@ kdebindings (4:4.3.3-0r2) UNRELEASED; urgency=low
   * New upstream release.
   * Fix build dependencies for the csharp bindings: 13_csharp_fix_build_deps.diff
 
+  +++ Changes by Frederik Schwarzer:
+
+  * Fix typo in package description.
+
  -- Lukasz Janyst <janyst@gmail.com>  Wed, 15 Nov 2009 11:55:06 +0100
 
 kdebindings (4:4.3.2-1) unstable; urgency=low

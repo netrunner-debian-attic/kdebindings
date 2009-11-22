@@ -174,7 +174,7 @@ Conflicts: libqt0-ruby1.8
 Replaces: libqt0-ruby1.8
 Architecture: any
 Description: Qt 4 bindings for Ruby
- This packages contains Qt 4 Ruby bindings for Ruby 1.8.
+ This package contains Qt 4 Ruby bindings for Ruby 1.8.
  .
  This is part of KDE Bindings module
 
@@ -195,7 +195,7 @@ Depends: ${shlibs:Depends}, libqt4-ruby1.8 (= ${binary:Version}),
  libsmokeqt4-2 (= ${binary:Version}), libqtruby4shared2 (= ${binary:Version})
 Architecture: any
 Description: KDE 4 bindings for Ruby 1.8
- This packages contains KDE 4 Ruby bindings for Ruby 1.8
+ This package contains KDE 4 Ruby bindings for Ruby 1.8
  .
  This is part of KDE Bindings module
 
