@@ -90,6 +90,15 @@ kdebindings (4:4.2.96-1) experimental; urgency=low
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Thu, 07 Jun 2009 16:00:46 +0200
 
+kdebindings (4:4.2.4-2) unstable; urgency=low
+
+  * Fix sections
+  * Add patch to build and work with newer sip and pyqt. Thanks to the Pardus people
+    and to Simon Edwards. (Closes: #532574, #533624, #53350)
+  * Make python dependencies ridicously strict.
+
+ -- Sune Vuorela <debian@pusling.com>  Wed, 03 Jun 2009 09:51:55 +0200
+
 kdebindings (4:4.2.4-1) unstable; urgency=low
 
   * New upstream
