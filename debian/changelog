@@ -14,6 +14,7 @@ kdebindings (4:4.3.4-0r1) UNRELEASED; urgency=low
   +++ Changes by Modestas Vainius:
 
   * Fix source path of the /usr/bin/pykdeuic4 symlink (Closes: #551142).
+  * Bump KDE build dependencies to current version.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sat, 05 Dec 2009 01:03:50 +0200
 
