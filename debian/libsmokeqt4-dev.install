@@ -1,13 +1,13 @@
 usr/include/smoke.h
 usr/include/smoke/phonon_smoke.h
-usr/include/smoke/qtscript_smoke.h
 usr/include/smoke/qt_smoke.h
+usr/include/smoke/qtscript_smoke.h
 usr/include/smoke/qttest_smoke.h 
 usr/include/smoke/qtuitools_smoke.h
 usr/include/smoke/qtwebkit_smoke.h
 usr/lib/libsmokephonon.so
-usr/lib/libsmokeqtscript.so
 usr/lib/libsmokeqt.so
+usr/lib/libsmokeqtscript.so
 usr/lib/libsmokeqttest.so
 usr/lib/libsmokeqtuitools.so
 usr/lib/libsmokeqtwebkit.so

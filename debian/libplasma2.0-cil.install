@@ -1,4 +1,4 @@
-debian/csharp/plasma-sharp-2.0.pc            usr/lib/pkgconfig/
 debian/csharp/plasma-dll.dll.config          usr/lib/cli/plasma-dll-2.0/
+debian/csharp/plasma-sharp-2.0.pc            usr/lib/pkgconfig/
 usr/lib/libplasma-sharp.so                   usr/lib/cli/plasma-dll-2.0/
 usr/lib/mono/gac/plasma-dll/*/plasma-dll.dll usr/lib/cli/plasma-dll-2.0/

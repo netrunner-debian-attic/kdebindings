@@ -1,4 +1,4 @@
-debian/csharp/khtml-sharp-2.0.pc           usr/lib/pkgconfig/
 debian/csharp/khtml-dll.dll.config         usr/lib/cli/khtml-dll-2.0/
+debian/csharp/khtml-sharp-2.0.pc           usr/lib/pkgconfig/
 usr/lib/libkhtml-sharp.so                  usr/lib/cli/khtml-dll-2.0/
 usr/lib/mono/gac/khtml-dll/*/khtml-dll.dll usr/lib/cli/khtml-dll-2.0/
