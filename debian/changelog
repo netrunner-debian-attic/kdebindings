@@ -1,4 +1,4 @@
-kdebindings (4:4.3.4-0r1) UNRELEASED; urgency=low
+kdebindings (4:4.3.4-1) unstable; urgency=low
 
   * New upstream release.
 
@@ -16,7 +16,7 @@ kdebindings (4:4.3.4-0r1) UNRELEASED; urgency=low
   * Fix source path of the /usr/bin/pykdeuic4 symlink (Closes: #551142).
   * Bump KDE build dependencies to current version.
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sat, 05 Dec 2009 01:03:50 +0200
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Wed, 09 Dec 2009 00:24:06 +0200
 
 kdebindings (4:4.3.2-1) unstable; urgency=low
 
