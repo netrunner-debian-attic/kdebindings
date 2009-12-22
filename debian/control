@@ -15,7 +15,7 @@ Uploaders: Torsten Marek <shlomme@debian.org>, Sune Vuorela <debian@pusling.com>
 Standards-Version: 3.8.2
 Homepage: http://www.kde.org
 Vcs-Svn: svn://svn.debian.org/svn/pkg-kde/trunk/packages/kdebindings
-Vcs-Browser: http://svn.debian.org/wsvn/pkg-kde/trunk/packages/kdebindings
+Vcs-Browser: http://svn.debian.org/wsvn/pkg-kde/trunk/packages/kdebindings/#_trunk_packages_kdebindings_
 
 Package: kdebindings-dbg
 Section: debug
