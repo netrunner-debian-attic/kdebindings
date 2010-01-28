@@ -1,9 +1,14 @@
 kdebindings (4:4.3.4-2) UNRELEASED; urgency=low
 
+  [ Modestas Vainius ]
   * Change my email address to modax@debian.org in Uploaders field.
   * Fix Vcs-Browser URL.
 
- -- Modestas Vainius <modax@debian.org>  Sat, 12 Dec 2009 16:57:11 +0200
+  [ Pino Toscano ]
+  * Few touches to the packages descriptions.
+    - ... including a typo in the python-kde4 one. (Closes: #567161)
+
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Thu, 28 Jan 2010 19:52:47 +0100
 
 kdebindings (4:4.3.4-1) unstable; urgency=low
 

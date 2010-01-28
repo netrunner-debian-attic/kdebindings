@@ -38,7 +38,7 @@ Description: Qt 4 Smoke libraries
  Smoke provides infrastructure which is used for creating bindings for
  multiple languages such as Ruby, C# and PHP.
  .
- This is part of KDE Bindings module
+ This is part of KDE Bindings module.
 
 Package: libsmokeqt4-dev
 Section: libdevel
@@ -53,7 +53,7 @@ Description: development files for Qt 4 Smoke library
  .
  This package contains development files.
  .
- This is part of KDE Bindings module
+ This is part of KDE Bindings module.
 
 Package: libsmokeqimageblitz2
 Section: libs
@@ -66,7 +66,7 @@ Description: QImageBlitz Smoke libraries
  Smoke provides infrastructure which is used for creating bindings for
  multiple languages such as Ruby, C# and PHP.
  .
- This is part of KDE Bindings module
+ This is part of KDE Bindings module.
 
 Package: libsmokekde4-2
 Section: libs
@@ -79,7 +79,7 @@ Description: KDE Smoke libraries
  Smoke provides infrastructure which is used for creating bindings for
  multiple languages such as Ruby, C# and PHP.
  .
- This is part of KDE Bindings module
+ This is part of KDE Bindings module.
 
 Package: libsmokeokular2
 Section: libs
@@ -92,7 +92,7 @@ Description: Okular Smoke bindings
  Smoke provides infrastructure which is used for creating bindings for
  multiple languages such as Ruby, C# and PHP.
  .
- This is part of KDE Bindings module
+ This is part of KDE Bindings module.
 
 Package: libsmokeplasma2
 Section: libs
@@ -105,7 +105,7 @@ Description: KDE Plasma Smoke library
  Smoke provides infrastructure which is used for creating bindings for
  multiple languages such as Ruby, C# and PHP.
  .
- This is part of KDE Bindings module
+ This is part of KDE Bindings module.
 
 
 Package: libsmokeakonadi2
@@ -119,7 +119,7 @@ Description: Akonadi Smoke library
  Smoke provides infrastructure which is used for creating bindings for
  multiple languages such as Ruby, C# and PHP.
  .
- This is part of KDE Bindings module
+ This is part of KDE Bindings module.
 
 
 Package: libsmokesoprano2
@@ -135,7 +135,7 @@ Description: Soprano Smoke library
  Smoke provides infrastructure which is used for creating bindings for
  multiple languages such as Ruby, C# and PHP.
  .
- This is part of KDE Bindings module
+ This is part of KDE Bindings module.
 
 
 Package: korundum4
@@ -144,28 +144,26 @@ Architecture: all
 Depends: libkde4-ruby
 Suggests: libokular-ruby, libplasma-ruby
 Description: KDE Ruby bindings
- This package installs the complete suite
- of KDE bindings including KHTML, Okular
- Nepomuk and Solid bindings.
+ This package installs the complete suite of KDE bindings for Ruby
+ including KHTML, Okular, Nepomuk, and Solid bindings.
  .
- This is part of KDE Bindings module
+ This is part of KDE Bindings module.
 
 Package: libqtruby4shared2
 Section: libs
 Depends: ${shlibs:Depends}, libsmokeqt4-2 (= ${binary:Version})
 Architecture: any
 Description: internal library for Qt 4 Ruby bindings
- This is an internal library part of KDE Bindings module
+ This is an internal library part of KDE Bindings module.
 
 Package: libqt4-ruby
 Section: ruby
 Depends: libqt4-ruby1.8
 Architecture: all
 Description: Qt 4 Ruby bindings
- This package installs the Qt 4 bindings for the
- default Ruby version.
+ This package installs the Qt 4 bindings for the default Ruby version.
  .
- This is part of KDE Bindings module
+ This is part of KDE Bindings module.
 
 Package: libqt4-ruby1.8
 Section: ruby
@@ -176,7 +174,7 @@ Architecture: any
 Description: Qt 4 bindings for Ruby
  This package contains Qt 4 Ruby bindings for Ruby 1.8.
  .
- This is part of KDE Bindings module
+ This is part of KDE Bindings module.
 
 
 Package: libkde4-ruby
@@ -187,7 +185,7 @@ Description: KDE 4 bindings for Ruby
  This package installs the KDE 4 bindings for
  the default Ruby interpreter.
  .
- This is part of KDE Bindings module
+ This is part of KDE Bindings module.
 
 Package: libkde4-ruby1.8
 Section: ruby
@@ -197,25 +195,25 @@ Architecture: any
 Description: KDE 4 bindings for Ruby 1.8
  This package contains KDE 4 Ruby bindings for Ruby 1.8
  .
- This is part of KDE Bindings module
+ This is part of KDE Bindings module.
 
 Package: libokular-ruby
 Section: ruby
 Depends: libokular-ruby1.8
 Architecture: all
 Description: Okular Ruby bindings
- Binding for the default Ruby version
+ Binding for the default Ruby version.
  .
- This is part of KDE Bindings module
+ This is part of KDE Bindings module.
 
 Package: libokular-ruby1.8
 Section: ruby
 Depends: ${shlibs:Depends}, libkde4-ruby1.8 (= ${binary:Version})
 Architecture: any
 Description: Okular Ruby 1.8 bindings
- Bindings for Okular for Ruby 1.8
+ Bindings for Okular for Ruby 1.8.
  .
- This is part of KDE Bindings module
+ This is part of KDE Bindings module.
 
 Package: libplasma-ruby
 Section: ruby
@@ -224,7 +222,7 @@ Architecture: all
 Description: KDE Plasma Ruby bindings
  This package allows you to create desktop widgets in the Ruby language.
  .
- This is part of KDE Bindings module
+ This is part of KDE Bindings module.
 
 Package: libplasma-ruby1.8
 Section: ruby
@@ -234,7 +232,7 @@ Description: KDE Plasma Ruby 1.8 bindings
  This package allows you to create desktop widgets in the Ruby language.
  Bindings for Ruby version 1.8.
  .
- This is part of KDE Bindings module
+ This is part of KDE Bindings module.
 
 Package: libakonadi-ruby
 Section: ruby
@@ -244,7 +242,7 @@ Description: Akonadi Ruby bindings
  This package allows you to create applications that use the Akonadi PIM
  storage service in the Ruby language.
  .
- This is part of KDE Bindings module
+ This is part of KDE Bindings module.
 
 Package: libakonadi-ruby1.8
 Section: ruby
@@ -253,9 +251,10 @@ Architecture: any
 Description: Akonadi Ruby 1.8 bindings
  This package allows you to create applications that use the Akonadi PIM
  storage service in the Ruby language.
+ .
  Bindings for Ruby version 1.8.
  .
- This is part of KDE Bindings module
+ This is part of KDE Bindings module.
 
 Package: libsoprano-ruby
 Section: ruby
@@ -265,7 +264,7 @@ Description: Soprano Ruby bindings
  This package allows you to create applications that use the Soprano RDF
  storage, parsing and serialization framework in the Ruby language.
  .
- This is part of KDE Bindings module
+ This is part of KDE Bindings module.
 
 Package: libsoprano-ruby1.8
 Section: ruby
@@ -276,9 +275,10 @@ Architecture: any
 Description: Soprano Ruby 1.8 bindings
  This package allows you to create applications that use the Soprano RDF
  storage, parsing and serialization framework in the Ruby language.
+ .
  Bindings for Ruby version 1.8.
  .
- This is part of KDE Bindings module
+ This is part of KDE Bindings module.
 
 Package: python-kde4
 Section: python
@@ -303,14 +303,14 @@ Description: Python bindings for the KDE 4 libraries
   * nepomuk
   * dnssd
  .
- And a few KDE related techonogies like
+ And a few KDE related technonogies like:
  .
   * soprano
   * akonadi
  .
  This package provides modules for all supported Python versions.
  .
- This is part of KDE Bindings module
+ This is part of KDE Bindings module.
 
 Package: python-kde4-dev
 Section: python
@@ -323,13 +323,13 @@ Description: UIC compiler and SIP files for PyKDE
  This package contains pykdeuic4, a wrapper around PyQt's own UIC (user
  interface compiler). It is needed to generate code from Qt Designer's
  UI files. You want to install this package if you are writing a PyKDE
- application which has .uic files, or running one of these applications
+ application which has .ui files, or running one of these applications
  from source.
  .
  It also contains the .sip files for PyKDE, needed to build packages
  with classes based on PyKDE.
  .
- This is part of KDE Bindings module
+ This is part of KDE Bindings module.
 
 Package: python-kde4-doc
 Section: doc
@@ -338,7 +338,7 @@ Description: documentation and examples for PyKDE
  This package contains documentation for PyKDE, and some example code
  showing how to use it.
  .
- This is part of KDE Bindings module
+ This is part of KDE Bindings module.
 
 Package: libqyoto4.5-cil
 Replaces: libqyoto4.4-cil
@@ -350,7 +350,7 @@ Description: Qt 4 bindings for CLI
  This package provides the Qt-dotnet assembly that
  allows CLI-based software to use the Qt library.
  .
- This is part of KDE Bindings module
+ This is part of KDE Bindings module.
 
 Package: qyoto-dev
 Section: cli-mono
@@ -358,9 +358,9 @@ Depends: ${shlibs:Depends}, libqyoto4.5-cil (= ${binary:Version})
 Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390 lpia
 Description: development tools for Qt CLI bindings
  This package provides csuic and other tools to help building 
- CLI applications with Qt and KDE
+ CLI applications with Qt and KDE.
  .
- This is part of KDE Bindings module
+ This is part of KDE Bindings module.
 
 Package: libkimono4.1-cil
 Section: cli-mono
@@ -371,16 +371,16 @@ Description: KDE 4 bindings for CLI
  This package provides the KDE-dotnet assembly that
  allows CLI-based software to use the KDE libraries.
  .
- This is part of KDE Bindings module
+ This is part of KDE Bindings module.
 
 Package: plasma-scriptengine-kimono
 Depends: libkimono4.1-cil (= ${binary:Version}), ${cli:Depends}, ${shlibs:Depends}
 Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390 lpia
 Description: Kimono Plasma script engine
  This package provides the script engine for Plasma which allows
- to write Plasma applets in CLI languagues.
+ to write Plasma widgets in CLI languagues.
  .
- This is part of KDE Bindings module
+ This is part of KDE Bindings module.
  
 Package: libkhtml2.0-cil
 Section: cli-mono
@@ -390,7 +390,7 @@ Description: KDE 4 bindings for CLI, KHTML edition
  This package provides the KHTML assembly that
  allows CLI-based software to use the KHTML library.
  .
- This is part of KDE Bindings module
+ This is part of KDE Bindings module.
 
 Package: libakonadi2.2-cil
 Section: cli-mono
@@ -398,9 +398,9 @@ Depends: libqyoto4.5-cil (= ${binary:Version}), ${cli:Depends}, ${shlibs:Depends
 Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390 lpia
 Description: Akonadi bindings for CLI
  This package provides the Akonadi assembly that
- allows CLI-based software to use the akonadi library.
+ allows CLI-based software to use the Akonadi library.
  .
- This is part of KDE Bindings module
+ This is part of KDE Bindings module.
 
 Package: libktexteditor4.1-cil
 Section: cli-mono
@@ -410,7 +410,7 @@ Description: KDE 4 bindings for CLI, KTextEditor edition
  This package provides the KTextEditor-dotnet assembly that
  allows CLI-based software to use the KTextEditor library.
  .
- This is part of KDE Bindings module
+ This is part of KDE Bindings module.
 
 
 Package: libnepomuk2.2-cil
@@ -421,7 +421,7 @@ Description: KDE 4 bindings for CLI, Nepomuk-edition
  This package provides the Nepomuk assembly that allows
  CLI-based software to use the Nepomuk library.
  .
- This is part of KDE Bindings module
+ This is part of KDE Bindings module.
 
 Package: libplasma2.0-cil
 Section: cli-mono
@@ -431,7 +431,7 @@ Description: LDE 4 bindings for CLI, Plasma-edition
  This package provides the Plasma assembly that allows
  CLI-based software to use the Plasma library.
  .
- This is part of KDE Bindings module
+ This is part of KDE Bindings module.
 
 
 Package: libqtscript2.2-cil
@@ -442,7 +442,7 @@ Description: Qt 4 bindings for CLI, QtScript edition
  This package provides the QtScript assemply that allows
  CLI-based software to use the QtScript library.
  .
- This is part of KDE Bindings module
+ This is part of KDE Bindings module.
 
 Package: libqttest2.2-cil
 Section: cli-mono
@@ -452,7 +452,7 @@ Description: Qt 4 bindings for CLI, QtTest edition
  This package provides the QtTest assemply that allows
  CLI-based software to use the QtTest library.
  .
- This is part of KDE Bindings module
+ This is part of KDE Bindings module.
 
 Package: libqtuitools2.2-cil
 Section: cli-mono
@@ -462,7 +462,7 @@ Description: Qt 4 bindings for CLI, QtUiTools edition
  This package provides the QtUiTools assembly, that allows
  CLI-based software to use the QtUiTools library.
  .
- This is part of KDE Bindings module
+ This is part of KDE Bindings module.
 
 Package: libqtwebkit2.2-cil
 Section: cli-mono
@@ -470,7 +470,7 @@ Depends: libqyoto4.5-cil (= ${binary:Version}), ${cli:Depends}, ${shlibs:Depends
 Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390 lpia
 Description: Qt 4 bindings for CLI, QtWebkit edition
  This package provides the QtWebkit assembly, that allows
- CLI-based software to use the QtWebkit library
+ CLI-based software to use the QtWebkit library.
 
 Package: libsoprano2.0-cil
 Section: cli-mono
@@ -480,16 +480,16 @@ Description: Soprano bindings for CLI
  This package provides the Soprano assembly, that allows
  CLI-based software to use the Soprano library.
  .
- This is part of KDE Bindings module
+ This is part of KDE Bindings module.
 
 Package: libqyotoshared1
 Section: libs
 Depends: ${shlibs:Depends}
 Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390 lpia
 Description: shared library for Qt 4 CLI bindings
- This package provides the shared library for Qyoto - the Qt 4 CLI bindings
+ This package provides the shared library for Qyoto, the Qt 4 CLI bindings.
  .
- This is part of KDE Bindings module
+ This is part of KDE Bindings module.
 
 Package: libqimageblitz0.0-cil
 Section: cli-mono
@@ -499,7 +499,7 @@ Description: QImageBlitz bindings for CLI
  This package provides the QImageBlitz assembly, that allows
  CLI-based software to use the QImageBlitz library.
  .
- This is part of KDE Bindings module
+ This is part of KDE Bindings module.
 
 Package: krossruby
 Section: ruby
@@ -512,7 +512,7 @@ Description: Ruby module for Kross
  kinds of KDE applications.
  Kross itself is a part of KDELibs, this package contains Ruby plugin.
  .
- This is part of KDE Bindings module
+ This is part of KDE Bindings module.
 
 Package: krosspython
 Section: python
@@ -525,13 +525,14 @@ Description: Python module for Kross
  kinds of KDE applications.
  Kross itself is a part of KDELibs, this package contains Python plugin.
  .
- This is part of KDE Bindings module
+ This is part of KDE Bindings module.
 
 Package: kio-monodoc
 Section: cli-mono
 Depends: libkimono4.1-cil (= ${binary:Version}), ${cli:Depends}, ${shlibs:Depends}
 Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390 lpia
 Description: Monodoc kio slave
- This package brings Monodoc into konqueror with monodoc:/classname.
+ This package brings the Mono documentation (Monodoc) into Konqueror, allowing
+ to open monodoc:/classname to browse the Monodoc of the specified class.
  .
- This is part of KDE Bindings module
+ This is part of KDE Bindings module.
