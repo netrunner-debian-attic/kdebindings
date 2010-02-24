@@ -1,4 +1,4 @@
-kdebindings (4:4.3.4-2) UNRELEASED; urgency=low
+kdebindings (4:4.4.1~svn-0r1) UNRELEASED; urgency=low
 
   [ Modestas Vainius ]
   * Change my email address to modax@debian.org in Uploaders field.
@@ -8,7 +8,7 @@ kdebindings (4:4.3.4-2) UNRELEASED; urgency=low
   * Few touches to the packages descriptions.
     - ... including a typo in the python-kde4 one. (Closes: #567161)
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Thu, 28 Jan 2010 19:52:47 +0100
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Thu, 25 Feb 2010 01:19:23 +0200
 
 kdebindings (4:4.3.4-1) unstable; urgency=low
 
