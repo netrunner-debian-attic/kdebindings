@@ -1,5 +1,7 @@
 kdebindings (4:4.4.1~svn-0r1) UNRELEASED; urgency=low
 
+  * New upstream release.
+
   [ Modestas Vainius ]
   * Change my email address to modax@debian.org in Uploaders field.
   * Fix Vcs-Browser URL.
