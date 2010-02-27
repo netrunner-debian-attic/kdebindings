@@ -1,6 +1,8 @@
+Index: b/python/pykde4/CMakeLists.txt
+===================================================================
 --- a/python/pykde4/CMakeLists.txt
 +++ b/python/pykde4/CMakeLists.txt
-@@ -75,6 +75,9 @@ INCLUDE_DIRECTORIES(
+@@ -87,6 +87,9 @@
      ${KDEPIMLIBS_INCLUDE_DIRS}
  )
  
@@ -10,12 +12,12 @@
  SET(SIP_INCLUDES ${PYQT4_SIP_DIR} sip)
  SET(SIP_CONCAT_PARTS 8)
  IF (WIN32)
-@@ -82,7 +85,7 @@ IF (WIN32)
+@@ -94,7 +97,7 @@
  ELSE (WIN32)
      SET(SIP_TAGS ALL WS_X11 ${PYQT4_VERSION_TAG})
  ENDIF (WIN32)
 -SET(SIP_DISABLE_FEATURES VendorID PyQt_NoPrintRangeBug)
 +SET(SIP_DISABLE_FEATURES VendorID PyQt_NoPrintRangeBug ${SIP_ARM_HACK})
- SET(SIP_EXTRA_OPTIONS -g)
  
- ADD_DEFINITIONS(-D_REENTRANT -DQT_CORE_LIB -DQT_GUI_LIB -DUSING_SOPRANO_NRLMODEL_UNSTABLE_API)
+ # Use an extra option when compiling on Python 3.
+ IF (PYTHON_3)

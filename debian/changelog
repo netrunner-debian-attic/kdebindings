@@ -12,6 +12,10 @@ kdebindings (4:4.4.1-0) UNRELEASED; urgency=low
   * Few touches to the packages descriptions.
     - ... including a typo in the python-kde4 one. (Closes: #567161)
 
+  [ David Palacio ]
+  * Refresh patches
+    Remove 13_csharp_fix_build_deps.diff: applied upstream
+
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Thu, 25 Feb 2010 01:19:23 +0200
 
 kdebindings (4:4.3.4-1) unstable; urgency=low
