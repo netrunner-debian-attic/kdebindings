@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Build-Depends: kde-sc-dev-latest (>= 4:4.4.1),
  debhelper (>= 7), cmake, quilt,
- kdelibs5-dev (>= 4:4.3.4), libqt4-opengl-dev (>= 4.5.1), libphonon-dev (>= 4:4.3.0),
+ kdelibs5-dev (>= 4:4.4), libqt4-opengl-dev (>= 4.5.1), libphonon-dev (>= 4:4.3.0),
  libsoprano-dev (>= 2.3.0), libqimageblitz-dev,
  python, python-all-dev, sip4 (>= 4.7.8), python-sip4-dev (>= 4.7.8), python-qt4 (>= 4.4.4), python-qt4-dev (>= 4.4.4),
  ruby1.8-dev, ruby1.8, python-support (>= 0.6),

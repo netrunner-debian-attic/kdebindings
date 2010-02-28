@@ -7,6 +7,7 @@ kdebindings (4:4.4.1-0) UNRELEASED; urgency=low
   * Fix Vcs-Browser URL.
   * Add cmake to Build-Depends.
   * Add kde-sc-dev-latest (>= 4:4.4.1) to Build-Depends.
+  * Bump KDE build dependencies to 4:4.4.
 
   [ Pino Toscano ]
   * Few touches to the packages descriptions.
