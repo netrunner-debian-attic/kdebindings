@@ -27,7 +27,6 @@ endif
 
 #generic kde4 stuff
 cmake_flags := \
-	-DCMAKE_SKIP_RPATH=true				\
 	-DCMAKE_BUILD_TYPE=Debian			\
 	-DCMAKE_USE_RELATIVE_PATHS=ON			\
 	-DCMAKE_INSTALL_PREFIX=/usr			\

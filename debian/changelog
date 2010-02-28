@@ -15,6 +15,9 @@ kdebindings (4:4.4.1-0) UNRELEASED; urgency=low
   [ David Palacio ]
   * Refresh patches
     Remove 13_csharp_fix_build_deps.diff: applied upstream
+  * Do not skip RPATH
+  * New packages for modular Smoke
+  * SO version bump to 3 for Smoke packages
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Thu, 25 Feb 2010 01:19:23 +0200
 
