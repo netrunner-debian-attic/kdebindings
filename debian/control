@@ -4,14 +4,14 @@ Priority: optional
 Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Build-Depends: kde-sc-dev-latest (>= 4:4.4.1),
  debhelper (>= 7), cmake, quilt,
- kdelibs5-dev (>= 4:4.4), libqt4-opengl-dev (>= 4.5.1), libphonon-dev (>= 4:4.3.0),
+ kdelibs5-dev (>= 4:4.4), libqt4-opengl-dev (>= 4.6.2), libphonon-dev (>= 4:4.6.0really),
  libsoprano-dev (>= 2.3.0), libqimageblitz-dev,
- python, python-all-dev, sip4 (>= 4.7.8), python-sip4-dev (>= 4.7.8), python-qt4 (>= 4.4.4), python-qt4-dev (>= 4.4.4),
+ python, python-all-dev, sip4 (>= 4.10), python-sip4-dev (>= 4.10), python-qt4 (>> 4.7-2), python-qt4-dev (>> 4.7-2),
  ruby1.8-dev, ruby1.8, python-support (>= 0.6),
  mono-devel (>= 2.0.1) [i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390],
  cli-common-dev (>= 0.5.4) [i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390],
  monodoc-base [i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390],
- okular-dev (>= 4:4.2.90), kdepimlibs5-dev (>= 4:4.2.90), libakonadi-dev (>= 1.1.90), libattica-dev
+ okular-dev (>= 4:4.3.90), kdepimlibs5-dev (>= 4:4.3.90), libakonadi-dev (>= 1.2.90), libattica-dev
 Uploaders: Torsten Marek <shlomme@debian.org>, Sune Vuorela <debian@pusling.com>, David Palacio <dpalacio@uninorte.edu.co>, Modestas Vainius <modax@debian.org>
 Standards-Version: 3.8.2
 Homepage: http://www.kde.org
@@ -683,8 +683,7 @@ Package: python-kde4
 Section: python
 Architecture: any
 Depends: ${shlibs:Depends}, ${python:Depends}, ${misc:Depends}, 
- python-qt4 (>= ${python-qt4:Version}), python-qt4 (<< ${python-qt4:Version}+~), 
- python-sip4 (>= ${python-sip4:Version}), python-sip4 (<< ${python-sip4:Version}+~)
+ python-qt4, ${sip:Depends}
 Description: Python bindings for the KDE 4 libraries
  This package contains PyKDE, the Python bindings for the KDE 4
  libraries, that allow you to write KDE programs using Python instead of
@@ -933,5 +932,16 @@ Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb arm
 Description: Monodoc kio slave
  This package brings the Mono documentation (Monodoc) into Konqueror, allowing
  to open monodoc:/classname to browse the Monodoc of the specified class.
+ .
+ This is part of KDE Bindings module.
+
+Package: smoke-dev-tools
+Section: devel
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Architecture: any
+Description: smoke development tools
+ This package contains the development tools to do bindings with the 
+ Scripting MetaObject Kompiler Engine, used by several Qt and KDE bindings, 
+ as well as some bindings for the wt library
  .
  This is part of KDE Bindings module.

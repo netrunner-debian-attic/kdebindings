@@ -9,3 +9,5 @@
 10_fix_kimono_dllimports.diff
 11_make_pykde4_respect_sip_flags.diff
 12_pythonpluginfactory_use_versioned_python_lib.diff
+version_cppparser_library.diff
+optional_install_sip_files.diff

@@ -1,0 +1,8 @@
+usr/bin/smokeapi
+usr/bin/smokegen
+usr/lib/libcppparser.so.0a*
+usr/lib/smokegen/generator_dump.so
+usr/lib/smokegen/generator_smoke.so
+usr/share/smokegen/kde-config.xml
+usr/share/smokegen/qt-config.xml
+usr/share/smokegen/qtdefines

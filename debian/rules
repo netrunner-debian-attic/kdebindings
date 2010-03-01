@@ -81,7 +81,9 @@ endif
 
 pydefault  := $(shell pyversions --default)
 pyversions := $(shell pyversions -vr)
+pydefaultversion := $(shell pyversions -vd)
 cmake_flags += -DPYTHON_EXECUTABLE=/usr/bin/$(pydefault)
+DEFAULT_PYTHON_ARGS=-DERRORORRORERROR
 
 ifeq (,$(pyversions)) 
 $(error "no suitable pythonversion found, failing")
@@ -101,6 +103,7 @@ $(patsubst %,$(objdir)/python/pykde4-%/Makefile,$(pyversions)): $(objdir)/Makefi
 	mkdir -p $(@D)	
 	cd  $(@D) && cmake $(CURDIR)/python/pykde4 $(cmake_flags) \
 	    -DPYTHON_EXECUTABLE=/usr/bin/python$(subst $(objdir)/python/pykde4-,,$(subst /Makefile,,$@)) \
+	    $(if $(findstring $(pydefaultversion),$@),,-DDONT_INSTALL_DATA_FILES=true)
 
 ##
 $(patsubst %,build-stamp-python-%,$(pyversions)): $(patsubst %,$(objdir)/python/pykde4-%/Makefile,$(pyversions))
@@ -173,10 +176,6 @@ binary-indep: export DH_OPTIONS=-i
 
 binary-indep binary-arch: build install
 	# Building $@. DH_OPTIONS=$(DH_OPTIONS)
-	echo "python-qt4:Version="`dpkg -l python-qt4  | tail -1 | awk '{print $$3}'` >> debian/python-kde4.substvars
-	echo "python-sip4:Version="`dpkg -l python-sip4  | tail -1 | awk '{print $$3}'` >> debian/python-kde4.substvars
-	echo "python-qt4:Version="`dpkg -l python-qt4  | tail -1 | awk '{print $$3}'` >> debian/python-kde4-dev.substvars
-	echo "python-sip4:Version="`dpkg -l python-sip4  | tail -1 | awk '{print $$3}'` >> debian/python-kde4-dev.substvars
 	dh_install $(DH_NO_MONOPACKAGES)
 	dh_testdir
 	dh_testroot
@@ -186,6 +185,7 @@ binary-indep binary-arch: build install
 	dh_installexamples
 	dh_installman
 	dh_pysupport
+	dh_sip
 	dh_link
 	dh_strip --dbg-package=kdebindings-dbg
 	dh_compress

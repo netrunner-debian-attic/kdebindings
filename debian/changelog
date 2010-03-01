@@ -1,4 +1,4 @@
-kdebindings (4:4.4.1-0) UNRELEASED; urgency=low
+kdebindings (4:4.4.1-0r0) UNRELEASED; urgency=low
 
   * New upstream release.
 
@@ -19,6 +19,14 @@ kdebindings (4:4.4.1-0) UNRELEASED; urgency=low
   * Do not skip RPATH
   * New packages for modular Smoke
   * SO version bump to 3 for Smoke packages
+
+  [ Sune Vuorela ]
+  * Add a patch to make it possible to only install the sip files under some
+    conditions
+  * Add a smoke-dev-tools package with most needed tools to create new
+    bindings.
+  * Update install files
+  * Version the cppparser library
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Thu, 25 Feb 2010 01:19:23 +0200
 
