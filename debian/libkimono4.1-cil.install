@@ -1,5 +1,4 @@
 debian/csharp/kde-dotnet.dll.config          usr/lib/cli/kde-dotnet-4.1/
-debian/csharp/kimono-4.1.pc                  usr/lib/pkgconfig/
 usr/lib/kde4/kimonopluginfactory.so
 usr/lib/libkimono.so                         usr/lib/cli/kde-dotnet-4.1/
 usr/lib/mono/gac/kde-dotnet/*/kde-dotnet.dll usr/lib/cli/kde-dotnet-4.1/

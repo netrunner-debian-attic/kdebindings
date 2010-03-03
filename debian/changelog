@@ -27,6 +27,13 @@ kdebindings (4:4.4.1-0r0) UNRELEASED; urgency=low
     bindings.
   * Update install files
   * Version the cppparser library
+  * Make CLI stuff following new policy regarding dev packages with
+    unversioned pc files in -dev packages depending on the right binary
+    packages; rename pc files.
+  * Make several smoke dev packages
+  * Replace strict hardcoded shlib interdependencies with a shlibs.local hack
+    as seen in Qt
+  * Write ${misc:Depends} everywhere
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Thu, 25 Feb 2010 01:19:23 +0200
 

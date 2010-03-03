@@ -12,6 +12,11 @@ MONO_L_PATHS = $(shell find $(patsubst %,debian/%,$(MONOPACKAGES)) -path '*/usr/
 DEST=$(CURDIR)/debian/tmp
 DEST_USR_LIB=$(DEST)/usr/lib
 
+pkgs_lib := $(filter-out %-dev %-dbg %ruby %cil,$(filter lib%,$(shell dh_listpackages)))
+current_version := $(shell dpkg-parsechangelog | sed -n 's/^Version: //p')
+
+
+
 ifneq (,$(findstring $(ARCH),$(MONOARCHS)))
 export MONO_DISABLE_SHM = 1
 MONOFLAGS=-DENABLE_KHTML_SHARP=ON 
@@ -129,6 +134,7 @@ clean:: unpatch
 	rm -f build-stamp-*
 	rm -f debian/cdbs-install-list debian/cdbs-package-list
 	rm -rf $(objdir)
+	rm -f debian/shlibs.local
 	
 	dh_clean
 
@@ -185,12 +191,18 @@ binary-indep binary-arch: build install
 	dh_installexamples
 	dh_installman
 	dh_pysupport
-	dh_sip
+	dh_sip -ppython-kde4
 	dh_link
 	dh_strip --dbg-package=kdebindings-dbg
 	dh_compress
 	dh_fixperms
 	dh_makeshlibs -V -Xcli
+# Generate shlibs local files
+	for pkg in $(pkgs_lib); do \
+		if test -e debian/$${pkg}/DEBIAN/shlibs ; then \
+			sed 's/>=[^)]*/= $(current_version)/' debian/$${pkg}/DEBIAN/shlibs >> debian/shlibs.local ;\
+		fi \
+	done
 	dh_shlibdeps
 	dh_installdeb
 	dh_gencontrol

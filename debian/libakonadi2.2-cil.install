@@ -1,4 +1,3 @@
-debian/csharp/akonadi-sharp-2.2.pc      usr/lib/pkgconfig/
 debian/csharp/akonadi.dll.config        usr/lib/cli/akonadi-2.2/
 usr/lib/libakonadi-sharp.so             usr/lib/cli/akonadi-2.2/
 usr/lib/mono/gac/akonadi/*/akonadi.dll  usr/lib/cli/akonadi-2.2/

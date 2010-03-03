@@ -1,0 +1,8 @@
+debian/csharp/akonadi-sharp.pc      usr/lib/pkgconfig/
+debian/csharp/khtml-sharp.pc           usr/lib/pkgconfig/
+debian/csharp/kimono.pc                  usr/lib/pkgconfig/
+debian/csharp/ktexteditor-sharp.pc                       usr/lib/pkgconfig/
+debian/csharp/nepomuk-sharp.pc             usr/lib/pkgconfig/
+debian/csharp/plasma-sharp.pc            usr/lib/pkgconfig/
+debian/csharp/qimageblitz-sharp.pc         usr/lib/pkgconfig/
+debian/csharp/soprano-sharp.pc     usr/lib/pkgconfig/
