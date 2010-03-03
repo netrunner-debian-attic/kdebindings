@@ -1,0 +1,15 @@
+./usr/include/smoke/akonadi_smoke.h
+./usr/include/smoke/khtml_smoke.h
+./usr/include/smoke/ktexteditor_smoke.h
+./usr/include/smoke/nepomuk_smoke.h
+./usr/include/smoke/okular_smoke.h
+./usr/include/smoke/plasma_smoke.h
+./usr/include/smoke/qimageblitz_smoke.h
+./usr/lib/libsmokeakonadi.so
+./usr/lib/libsmokekhtml.so
+./usr/lib/libsmokektexteditor.so
+./usr/lib/libsmokenepomuk.so
+./usr/lib/libsmokeokular.so
+./usr/lib/libsmokeplasma.so
+./usr/lib/libsmokeqimageblitz.so
+./usr/lib/libsmokesolid.so

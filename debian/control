@@ -7,7 +7,7 @@ Build-Depends: kde-sc-dev-latest (>= 4:4.4.1),
  kdelibs5-dev (>= 4:4.4), libqt4-opengl-dev (>= 4.6.2), libphonon-dev (>= 4:4.6.0really),
  libsoprano-dev (>= 2.3.0), libqimageblitz-dev,
  python, python-all-dev, sip4 (>= 4.10), python-sip4-dev (>= 4.10), python-qt4 (>> 4.7-2), python-qt4-dev (>> 4.7-2),
- ruby1.8-dev, ruby1.8, python-support (>= 0.6),
+ ruby1.8-dev, ruby1.8, python-support (>= 0.6), pkg-kde-tools (>= 0.6.8),
  mono-devel (>= 2.0.1) [i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390],
  cli-common-dev (>= 0.5.4) [i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390],
  monodoc-base [i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390],
@@ -238,8 +238,7 @@ Description: Qt 4 Phonon Smoke library
 
 Package: libsmokeqt4-dev
 Section: libdevel
-Depends: libsmokeqt4-3 (= ${binary:Version}), libsmokephonon3 (= ${binary:Version}), libsmokeqtcore4-3 (= ${binary:Version}), libsmokeqtxmlpatterns4-3 (= ${binary:Version}), libsmokeqtxml4-3 (= ${binary:Version}),
- libsmokeqtwebkit4-3 (= ${binary:Version}), libsmokeqtuitools4-3 (= ${binary:Version}), libsmokeqttest4-3 (= ${binary:Version}), libsmokeqtsvg4-3 (= ${binary:Version})
+Depends: ${so:Depends}, ${shlibs:Depends}
 Architecture: any
 Description: development files for Qt 4 Smoke libraries
  Smoke libraries are part of the bindings used for Qt and KDE. This package
@@ -463,9 +462,7 @@ Description: Akonadi Smoke library
 
 Package: libsmokekde-dev
 Section: libdevel
-Depends: libsmokeqt4-dev (= ${binary:Version}), libsmokesoprano-dev (= ${binary:Version}), libsmokekde4-3 (= ${binary:Version}), libsmokeattica3 (= ${binary:Version}), libsmokeplasma3 (= ${binary:Version}), 
- libsmokeplasma3 (= ${binary:Version}), libsmokekhtml3 (= ${binary:Version}), libsmokeknewstuff3 (= ${binary:Version}), libsmokekio3 (= ${binary:Version}), libsmokesolid3 (= ${binary:Version}), 
- libsmokektexteditor3 (= ${binary:Version}), ${misc:Depends}
+Depends: libsmokeqt4-dev (= ${binary:Version}), ${so:Depends}, ${misc:Depends}
 Architecture: any
 Description: development files for soprano smoke libraries
  Smoke libraries are part of the bindings used for Qt and KDE. This package
@@ -522,7 +519,7 @@ Description: Soprano Smoke library
 
 Package: libsmokesoprano-dev
 Section: libdevel
-Depends: libsmokeqt4-dev (= ${binary:Version}), libsmokesoprano3 (= ${binary:Version}), libsmokesopranoclient3 (= ${binary:Version}), ${misc:Depends}
+Depends: libsmokeqt4-dev (= ${binary:Version}), ${so:Depends}, ${misc:Depends}
 Architecture: any
 Description: development files for soprano smoke libraries
  Smoke libraries are part of the bindings used for Qt and KDE. This package

@@ -4,7 +4,7 @@ include /usr/share/quilt/quilt.make
 
 ARCH := $(shell dpkg-architecture -qDEB_HOST_ARCH)
 MONOARCHS := "i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 lpia ia64 arm armeb armel sparc s390"
-MONOPACKAGES := $(shell dh_listpackages | grep '\-cil$$') plasma-scriptengine-kimono kio-monodoc
+MONOPACKAGES := $(shell dh_listpackages | grep '\-cil$$') plasma-scriptengine-kimono kio-monodoc libkimono-cil-dev libqyoto-cil-dev libqyotoshared1 qyoto-dev
 DH_MONOPACKAGES := $(patsubst %,-p%,$(MONOPACKAGES))
 DH_NO_MONOPACKAGES := $(patsubst %,-N%,$(MONOPACKAGES))
 MONO_L_PATHS = $(shell find $(patsubst %,debian/%,$(MONOPACKAGES)) -path '*/usr/lib/cli/*' -name '*.dll' -type f -printf '%h:') 
@@ -203,6 +203,7 @@ binary-indep binary-arch: build install
 			sed 's/>=[^)]*/= $(current_version)/' debian/$${pkg}/DEBIAN/shlibs >> debian/shlibs.local ;\
 		fi \
 	done
+	dh_sodeps
 	dh_shlibdeps
 	dh_installdeb
 	dh_gencontrol
