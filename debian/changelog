@@ -37,6 +37,9 @@ kdebindings (4:4.4.1-0r1) UNRELEASED; urgency=low
   * Use Modestas' new dh_sodeps tool; add pkg-kde-tools build dep for this.
   * Also consider various mono-required libs as monopackages in rules file
 
+  [ Didier Raboud ]
+  * Update the python-kde install list to include non-2.5 python versions.
+
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Thu, 25 Feb 2010 01:19:23 +0200
 
 kdebindings (4:4.3.4-1) unstable; urgency=low
