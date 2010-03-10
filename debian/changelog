@@ -39,6 +39,7 @@ kdebindings (4:4.4.1-0r1) UNRELEASED; urgency=low
 
   [ Didier Raboud ]
   * Update the python-kde install list to include non-2.5 python versions.
+    (Closes: #573292)
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Thu, 25 Feb 2010 01:19:23 +0200
 
