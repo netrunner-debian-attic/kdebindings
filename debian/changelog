@@ -1,4 +1,4 @@
-kdebindings (4:4.4.1-0r1) UNRELEASED; urgency=low
+kdebindings (4:4.4.2-1) UNRELEASED; urgency=low
 
   * New upstream release.
 
@@ -41,7 +41,10 @@ kdebindings (4:4.4.1-0r1) UNRELEASED; urgency=low
   * Update the python-kde install list to include non-2.5 python versions.
     (Closes: #573292)
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Thu, 25 Feb 2010 01:19:23 +0200
+  [ Michael Meskes ]
+  * Changed build dependency from python-sip4 to python-sip.
+
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Mon, 26 Apr 2010 10:37:03 +0200
 
 kdebindings (4:4.3.4-1) unstable; urgency=low
 
