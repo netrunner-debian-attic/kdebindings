@@ -22,7 +22,9 @@ kdebindings (4:4.4.2-1) UNRELEASED; urgency=low
 
   [ Sune Vuorela ]
   * Add a patch to make it possible to only install the sip files under some
-    conditions. (Closes: #567528, #571924)
+    conditions. 
+  * Use dh_sip rather than the home brewn and fragile way of 
+    ensuring compatible sip versions. (Closes: #567528, #571924)
   * Add a smoke-dev-tools package with most needed tools to create new
     bindings.
   * Update install files
