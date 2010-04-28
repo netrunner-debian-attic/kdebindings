@@ -13,7 +13,7 @@ Build-Depends: kde-sc-dev-latest (>= 4:4.4.2),
  monodoc-base [i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390],
  okular-dev (>= 4:4.3.90), kdepimlibs5-dev (>= 4:4.3.90), libakonadi-dev (>= 1.2.90), libattica-dev, shared-desktop-ontologies
 Uploaders: Torsten Marek <shlomme@debian.org>, Sune Vuorela <debian@pusling.com>, David Palacio <dpalacio@uninorte.edu.co>, Modestas Vainius <modax@debian.org>, Michael Meskes <meskes@debian.org>
-Standards-Version: 3.8.2
+Standards-Version: 3.8.4
 Homepage: http://www.kde.org
 Vcs-Svn: svn://svn.debian.org/svn/pkg-kde/trunk/packages/kdebindings
 Vcs-Browser: http://svn.debian.org/wsvn/pkg-kde/trunk/packages/kdebindings/#_trunk_packages_kdebindings_
