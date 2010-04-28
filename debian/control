@@ -22,7 +22,7 @@ Package: kdebindings-dbg
 Section: debug
 Architecture: any
 Priority: extra
-Depends: kdelibs5-dbg, libsmokeqt4-3 (= ${binary:Version}) | python-kde4 (= ${binary:Version})
+Depends: kdelibs5-dbg, libsmokeqt4-3 (= ${binary:Version}) | python-kde4 (= ${binary:Version}), ${misc:Depends}
 Recommends: libruby1.8-dbg, python-qt4-dbg, mono-dbg
 Description: debugging symbols for the KDE 4 bindings module
  This package contains debugging files used to investigate problems with
@@ -238,7 +238,7 @@ Description: Qt 4 Phonon Smoke library
 
 Package: libsmokeqt4-dev
 Section: libdevel
-Depends: ${so:Depends}, ${shlibs:Depends}
+Depends: ${so:Depends}, ${shlibs:Depends}, ${misc:Depends}
 Architecture: any
 Description: development files for Qt 4 Smoke libraries
  Smoke libraries are part of the bindings used for Qt and KDE. This package
@@ -660,7 +660,7 @@ Description: KDE Plasma Ruby 1.8 bindings
 
 Package: libakonadi-ruby
 Section: ruby
-Depends: libakonadi-ruby1.8
+Depends: libakonadi-ruby1.8, ${misc:Depends}
 Architecture: all
 Description: Akonadi Ruby bindings
  This package allows you to create applications that use the Akonadi PIM
@@ -757,6 +757,7 @@ Description: UIC compiler and SIP files for PyKDE
 Package: python-kde4-doc
 Section: doc
 Architecture: all
+Depends: ${misc:Depends}
 Description: documentation and examples for PyKDE
  This package contains documentation for PyKDE, and some example code
  showing how to use it.
@@ -776,6 +777,7 @@ Description: Qt 4 bindings for CLI
  This is part of KDE Bindings module.
 
 Package: libqyoto-cil-dev
+Section: libdevel
 Replaces:libqyoto4.5-cil (<< 4:4.4), libqtscript2.2-cil (<< 4:4.4), libqttest2.2-cil (<< 4:4.4), libqtuitools2.2-cil (<< 4:4.4), libqtwebkit2.2-cil (<< 4:4.4)
 Depends:libqyoto4.5-cil (= ${binary:Version}), libqtscript2.2-cil (= ${binary:Version}), libqttest2.2-cil (= ${binary:Version}), libqtuitools2.2-cil (= ${binary:Version}), libqtwebkit2.2-cil (= ${binary:Version}), ${misc:Depends}
 Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390 lpia
@@ -806,6 +808,7 @@ Description: KDE 4 bindings for CLI
  This is part of KDE Bindings module.
 
 Package: libkimono-cil-dev
+Section: libdevel
 Replaces: libkimono4.1-cil (<< 4:4.4), libkhtml2.0-cil (<< 4:4.4), libakonadi2.2-cil (<< 4:4.4), libktexteditor4.1-cil (<< 4:4.4), libnepomuk2.2-cil (<< 4:4.4), libplasma2.0-cil (<< 4:4.4), libsoprano2.0-cil (<< 4:4.4), libqimageblitz0.0-cil (<< 4:4.4)
 Depends: libqyoto-cil-dev (= ${binary:Version}), libkimono4.1-cil (= ${binary:Version}), libkhtml2.0-cil (= ${binary:Version}), libakonadi2.2-cil (= ${binary:Version}), libktexteditor4.1-cil (= ${binary:Version}), libnepomuk2.2-cil (= ${binary:Version}), libplasma2.0-cil (= ${binary:Version}), libsoprano2.0-cil (= ${binary:Version}), libqimageblitz0.0-cil (= ${binary:Version}), ${misc:Depends}
 Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390 lpia
