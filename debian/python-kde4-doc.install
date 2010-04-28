@@ -1,2 +1,4 @@
 #usr/share/doc/kde4/HTML/en/pykde4/
 usr/share/kde4/apps/pykde4/examples
+
+python/pykde4/docs/html	usr/share/doc/python-kde4-doc/

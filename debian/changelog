@@ -50,6 +50,7 @@ kdebindings (4:4.4.2-1) experimental; urgency=low
   * Fixed shlibs handling.
   * Added missing section information to some dev packages.
   * Added some lintian overrides.
+  * Install python-kde4 html docs. (Closes: #518646)
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Mon, 26 Apr 2010 10:37:03 +0200
 
