@@ -169,7 +169,7 @@ monospecific: install-mono
 	MONO_PATH=$(CURDIR)/debian/libqyoto4.4-cil/usr/lib/cli/kdebindings-4.4/ dh_makeclilibs -V $(DH_MONOPACKAGES)
 	dh_installcligac $(DH_MONOPACKAGES)
 	dh_clifixperms $(DH_MONOPACKAGES)
-	dh_makeshlibs -V $(DH_MONOPACKAGES)
+	dh_makeclilibs -V $(DH_MONOPACKAGES)
 	dh_clideps -l$(MONO_L_PATHS) $(DH_MONOPACKAGES)
 	dh_clistrip --dbg-package=kdebindings-dbg $(DH_MONOPACKAGES)
 
@@ -196,7 +196,7 @@ binary-indep binary-arch: build install
 	dh_strip --dbg-package=kdebindings-dbg
 	dh_compress
 	dh_fixperms
-	dh_makeshlibs -V -Xcli
+	dh_makeshlibs -V -X/cli/
 # Generate shlibs local files
 	for pkg in $(pkgs_lib); do \
 		if test -e debian/$${pkg}/DEBIAN/shlibs ; then \

@@ -47,6 +47,7 @@ kdebindings (4:4.4.2-1) experimental; urgency=low
   * Changed build dependency from python-sip4 to python-sip.
   * Added myself as uploader.
   * Bumped Standards-Version to 3.8.4, no changes needed.
+  * Fixed shlibs handling.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Mon, 26 Apr 2010 10:37:03 +0200
 
