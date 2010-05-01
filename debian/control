@@ -955,7 +955,7 @@ Replaces: libkde4-ruby1.8 (<< 4:4.2.60)
 Description: Ruby module for Kross
  Kross is a scripting framework to enable scripting in various languages in all
  kinds of KDE applications.
- Kross itself is a part of KDELibs, this package contains Ruby plugin.
+ Kross itself is a part of KDELibs, this package contains the Kross Ruby plugin.
  .
  This is part of KDE Bindings module.
 
@@ -968,7 +968,8 @@ Replaces: python-kde4 (<< 4:4.2.60)
 Description: Python module for Kross
  Kross is a scripting framework to enable scripting in various languages in all
  kinds of KDE applications.
- Kross itself is a part of KDELibs, this package contains Python plugin.
+ Kross itself is a part of KDELibs, this package contains the Kross Python
+ plugin.
  .
  This is part of KDE Bindings module.
 

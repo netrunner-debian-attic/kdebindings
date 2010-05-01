@@ -5,7 +5,11 @@ kdebindings (4:4.4.3-0r1) UNRELEASED; urgency=low
   [ Modestas Vainius ]
   * Bump kde-sc-dev-latest build dependency to 4.4.3.
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Fri, 30 Apr 2010 13:33:03 +0300
+  [ Pino Toscano ]
+  * Few touches to the packages descriptions.
+    - ... including the krosspython one. (Closes: #579712)
+
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sat, 01 May 2010 12:09:54 +0200
 
 kdebindings (4:4.4.2-1) experimental; urgency=low
 
