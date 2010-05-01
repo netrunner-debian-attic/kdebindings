@@ -1,15 +1,16 @@
-kdebindings (4:4.4.3-0r1) UNRELEASED; urgency=low
+kdebindings (4:4.4.3-1) unstable; urgency=low
 
   * New upstream release.
 
   [ Modestas Vainius ]
   * Bump kde-sc-dev-latest build dependency to 4.4.3.
+  * Release KDE SC 4.4.3 to unstable.
 
   [ Pino Toscano ]
   * Few touches to the packages descriptions.
     - ... including the krosspython one. (Closes: #579712)
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sat, 01 May 2010 12:09:54 +0200
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sat, 01 May 2010 23:37:52 +0300
 
 kdebindings (4:4.4.2-1) experimental; urgency=low
 
