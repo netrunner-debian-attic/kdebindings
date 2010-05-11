@@ -1,5 +1,6 @@
 kdebindings (4:4.4.3-2) unstable; urgency=low
 
+  [ Michael Meskes ]
   * Made sure links are created in the right direction so they do not all
     dangle under the same name. (Closes: #580400, #580401)
   * Fixed typo in extended description. (Closes: #580117)
@@ -9,7 +10,7 @@ kdebindings (4:4.4.3-2) unstable; urgency=low
   * Fix segfault when trying to parse/write the akonadi smoke part. Patch
     acknowledged by upstream.
 
- -- Michael Meskes <meskes@debian.org>  Fri, 07 May 2010 21:55:09 +0200
+ -- Michael Meskes <meskes@debian.org>  Tue, 11 May 2010 11:27:06 +0200
 
 kdebindings (4:4.4.3-1) unstable; urgency=low
 
