@@ -872,7 +872,7 @@ Package: libplasma2.0-cil
 Section: cli-mono
 Depends: libqyoto4.5-cil (= ${binary:Version}), libkimono4.1-cil (= ${binary:Version}), ${cli:Depends}, ${shlibs:Depends}, ${misc:Depends}
 Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390 lpia
-Description: LDE 4 bindings for CLI, Plasma-edition
+Description: KDE 4 bindings for CLI, Plasma-edition
  This package provides the Plasma assembly that allows
  CLI-based software to use the Plasma library.
  .
