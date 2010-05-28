@@ -1,4 +1,6 @@
-kdebindings (4:4.4.3-3) UNRELEASED; urgency=low
+kdebindings (4:4.4.4-0r1) UNRELEASED; urgency=low
+
+  * New upstream release.
 
   [ Pino Toscano ]
   * Fix typo in description of libplasma2.0-cil. (Closes: #581404)
@@ -7,7 +9,7 @@ kdebindings (4:4.4.3-3) UNRELEASED; urgency=low
   * Fix qt-dotnet config file. Thanks Dave Page. (Closes: 583112)
   * Update email address.
 
- -- Sune Vuorela <sune@vuorela.dk>  Tue, 25 May 2010 19:43:56 +0200
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Fri, 28 May 2010 21:51:16 +0300
 
 kdebindings (4:4.4.3-2) unstable; urgency=low
 
