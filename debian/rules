@@ -135,7 +135,7 @@ install-generic: install-pre $(patsubst %,install-python-%,$(pyversions))
 	$(MAKE) -C $(objdir) install DESTDIR=$(CURDIR)/debian/tmp
 
 install: $(MONOTARGET) install-generic
-#	rmdir debian/tmp/usr/share/doc/kde4/HTML/en/pykde4/creative\ commons_files/
+#	rmdir debian/tmp/usr/share/doc/kde/HTML/en/pykde4/creative\ commons_files/
 #	install -D -m 755 debian/tmp/usr/share/kde4/apps/pykde4/pykdeuic4.py \
 #	    debian/python-kde4-dev/usr/bin/pykdeuic4
 
