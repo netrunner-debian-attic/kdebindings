@@ -32,7 +32,12 @@ endif
 ##
 
 #generic kde4 stuff
-cmake_flags := $(DEB_CMAKE_KDE4_FLAGS)
+cmake_flags := \
+    -DCMAKE_INSTALL_PREFIX=/usr     \
+    -DCMAKE_USE_RELATIVE_PATHS=ON   \
+    -DCMAKE_VERBOSE_MAKEFILE=ON     \
+    \
+    $(DEB_CMAKE_KDE4_FLAGS)
 
 # OK, here we disable all that we don't want.
 # Please remove lines as you add packaging support for them.
