@@ -79,7 +79,7 @@ endif
 
 ##
 
-$(objdir)/Makefile: $(QUILT_STAMPFN)
+$(objdir)/Makefile:
 	mkdir -p $(objdir)
 	@echo building all bindings except python bindings. Later building python bindings for $(pyversions).
 	cd $(objdir) && cmake $(CURDIR) $(cmake_flags) \
@@ -109,7 +109,7 @@ build-stamp-generic: $(objdir)/Makefile
 
 ##
 
-clean:: unpatch
+clean::
 	dh_testdir
 	dh_testroot
 	
