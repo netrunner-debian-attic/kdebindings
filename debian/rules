@@ -1,6 +1,7 @@
 #! /usr/bin/make -f
 
-include /usr/share/quilt/quilt.make
+DEB_KDE_LINK_WITH_AS_NEEDED := yes
+include /usr/share/pkg-kde-tools/makefiles/1/variables.mk
 
 ARCH := $(shell dpkg-architecture -qDEB_HOST_ARCH)
 MONOARCHS := "i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 lpia ia64 arm armeb armel sparc s390"
@@ -31,25 +32,7 @@ endif
 ##
 
 #generic kde4 stuff
-cmake_flags := \
-	-DCMAKE_BUILD_TYPE=Debian			\
-	-DCMAKE_USE_RELATIVE_PATHS=ON			\
-	-DCMAKE_INSTALL_PREFIX=/usr			\
-	-DCMAKE_VERBOSE_MAKEFILE=ON			\
-							\
-	-DKDE4_BUILD_TESTS=false			\
-	-DKDE4_USE_ALWAYS_FULL_RPATH=false		\
-	-DKDE_DISTRIBUTION_TEXT="Debian packages"	\
-							\
-	-DLIB_INSTALL_DIR=/usr/lib			\
-	-DSYSCONF_INSTALL_DIR=/etc			\
-	-DCONFIG_INSTALL_DIR=/etc/kde4			\
-	-DDATA_INSTALL_DIR=/usr/share/kde4/apps		\
-	-DHTML_INSTALL_DIR=/usr/share/doc/kde4/HTML	\
-	-DKCFG_INSTALL_DIR=/usr/share/kde4/config.kcf	\
-	-DCMAKE_EXE_LINKER_FLAGS="-Wl,--as-needed"	\
-	-DCMAKE_SHARED_LINKER_FLAGS="-Wl,--as-needed"	\
-	-DCMAKE_MODULE_LINKER_FLAGS="-Wl,--as-needed"
+cmake_flags := $(DEB_CMAKE_KDE4_FLAGS)
 
 # OK, here we disable all that we don't want.
 # Please remove lines as you add packaging support for them.
