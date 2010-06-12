@@ -10,8 +10,9 @@ kdebindings (4:4.4.4-1) UNRELEASED; urgency=low
   * Update email address.
 
   [ Modestas Vainius ]
-  * Bump pkg-kde-tools build dependency to (>= 0.9) for HTML_INSTALL_DIR
-    switch and 3.0 (quilt) source format support.
+  * Bump pkg-kde-tools build dependency to (>= 0.9.2) for HTML_INSTALL_DIR
+    switch, 3.0 (quilt) source format support and
+    DEB_KDE_LINK_WITH_NO_UNDEFINED flag.
   * Switch to 3.0 (quilt) source package format and original tar.bz2
     tarballs.
   * Drop quilt from Build-Depends, no longer needed for 3.0 (quilt).

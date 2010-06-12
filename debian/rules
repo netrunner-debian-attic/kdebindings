@@ -1,6 +1,7 @@
 #! /usr/bin/make -f
 
 DEB_KDE_LINK_WITH_AS_NEEDED := yes
+DEB_KDE_LINK_WITH_NO_UNDEFINED := no
 include /usr/share/pkg-kde-tools/makefiles/1/variables.mk
 
 ARCH := $(shell dpkg-architecture -qDEB_HOST_ARCH)
