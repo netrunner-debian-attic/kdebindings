@@ -1,4 +1,4 @@
-kdebindings (4:4.4.4-1) UNRELEASED; urgency=low
+kdebindings (4:4.4.4-1) unstable; urgency=low
 
   * New upstream release.
 
@@ -25,7 +25,7 @@ kdebindings (4:4.4.4-1) UNRELEASED; urgency=low
   * Drop support_armel_in_generator.diff patch, merged upstream.
   * Bump attica build dependency to 0.1.4 (just in case).
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Tue, 01 Jun 2010 01:15:14 +0300
+ -- Modestas Vainius <modax@debian.org>  Sat, 12 Jun 2010 11:36:26 +0300
 
 kdebindings (4:4.4.3-2) unstable; urgency=low
 
