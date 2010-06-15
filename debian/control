@@ -614,7 +614,7 @@ Description: KDE 4 bindings for Ruby
 
 Package: libkde4-ruby1.8
 Section: ruby
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: libqt4-ruby1.8, ${shlibs:Depends}, ${misc:Depends}
 Architecture: any
 Description: KDE 4 bindings for Ruby 1.8
  This package contains KDE 4 Ruby bindings for Ruby 1.8
