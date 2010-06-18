@@ -322,7 +322,7 @@ Depends: ${shlibs:Depends}, ${misc:Depends}
 Architecture: any
 Description: KDE KTextEditor Smoke libraries
  Smoke libraries are part of the bindings used for Qt and KDE. This package
- contains the KDE 4 User Interface parts of Smoke.
+ contains the KDE KTextEditor parts of Smoke.
  .
  Smoke provides infrastructure which is used for creating bindings for
  multiple languages such as Ruby, C# and PHP.
