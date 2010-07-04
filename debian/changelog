@@ -1,3 +1,10 @@
+kdebindings (4:4.4.5-1) UNRELEASED; urgency=low
+
+  * New upstream release.
+  * Bump kde-sc-dev-latest build dependency to 4:4.4.5.
+
+ -- Modestas Vainius <modax@debian.org>  Sun, 04 Jul 2010 19:00:51 +0300
+
 kdebindings (4:4.4.4-2) unstable; urgency=low
 
   * Added missing dependency on libqt4-ruby1.8. (Closes: #584651)
