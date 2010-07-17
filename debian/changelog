@@ -7,6 +7,7 @@ kdebindings (4:4.4.5-1) UNRELEASED; urgency=low
 
   [ Sune Vuorela ]
   * Fix libsmokekfile description. Closes: 586440
+  * Fix descriptions
 
  -- Sune Vuorela <sune@debian.org>  Sun, 18 Jul 2010 01:30:43 +0200
 
