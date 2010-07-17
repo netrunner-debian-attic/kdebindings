@@ -1,10 +1,14 @@
 kdebindings (4:4.4.5-1) UNRELEASED; urgency=low
 
+  [ Modestas Vainius ]
   * New upstream release.
      - Fix ruby marshalling. Closes: #586672
   * Bump kde-sc-dev-latest build dependency to 4:4.4.5.
 
- -- Modestas Vainius <modax@debian.org>  Sun, 04 Jul 2010 19:00:51 +0300
+  [ Sune Vuorela ]
+  * Fix libsmokekfile description. Closes: 586440
+
+ -- Sune Vuorela <sune@debian.org>  Sun, 18 Jul 2010 01:30:43 +0200
 
 kdebindings (4:4.4.4-2) unstable; urgency=low
 
