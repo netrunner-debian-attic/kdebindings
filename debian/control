@@ -15,8 +15,8 @@ Build-Depends: kde-sc-dev-latest (>= 4:4.4.5),
 Uploaders: Torsten Marek <shlomme@debian.org>, Sune Vuorela <sune@debian.org>, David Palacio <dpalacio@uninorte.edu.co>, Modestas Vainius <modax@debian.org>, Michael Meskes <meskes@debian.org>
 Standards-Version: 3.8.4
 Homepage: http://www.kde.org
-Vcs-Svn: svn://svn.debian.org/svn/pkg-kde/trunk/packages/kdebindings
-Vcs-Browser: http://svn.debian.org/wsvn/pkg-kde/trunk/packages/kdebindings/#_trunk_packages_kdebindings_
+Vcs-Git: git://git.debian.org/pkg-kde/kde-sc/kdebindings.git
+Vcs-Browser: http://git.debian.org/?p=pkg-kde/kde-sc/kdebindings.git
 
 Package: kdebindings-dbg
 Section: debug
