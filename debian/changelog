@@ -6,7 +6,12 @@ kdebindings (4:4.4.5-2) UNRELEASED; urgency=low
   [ Pino Toscano ]
   * Fix typo in description of libsmokekparts3. (Closes: #589904)
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Mon, 02 Aug 2010 23:37:14 +0200
+  [ Sune Vuorela ]
+  * Only build the kpythonfactoryplugin on default python version, else
+    it ends up a bit random which one is actually used when built parallel.
+    Closes: #591422
+
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sat, 07 Aug 2010 00:01:00 +0200
 
 kdebindings (4:4.4.5-1) unstable; urgency=low
 

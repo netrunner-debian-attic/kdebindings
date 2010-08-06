@@ -97,7 +97,7 @@ $(patsubst %,$(objdir)/python/pykde4-%/Makefile,$(pyversions)): $(objdir)/Makefi
 	mkdir -p $(@D)	
 	cd  $(@D) && cmake $(CURDIR)/python/pykde4 $(cmake_flags) \
 	    -DPYTHON_EXECUTABLE=/usr/bin/python$(subst $(objdir)/python/pykde4-,,$(subst /Makefile,,$@)) \
-	    $(if $(findstring $(pydefaultversion),$@),,-DDONT_INSTALL_DATA_FILES=true)
+	    $(if $(findstring $(pydefaultversion),$@),-DDEFAULT_PYTHON_VERSION=true,-DDEFAULT_PYTHON_VERSION=false)
 
 ##
 $(patsubst %,build-stamp-python-%,$(pyversions)): $(patsubst %,$(objdir)/python/pykde4-%/Makefile,$(pyversions))
