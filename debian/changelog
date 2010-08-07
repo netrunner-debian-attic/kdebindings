@@ -1,4 +1,4 @@
-kdebindings (4:4.4.5-2) UNRELEASED; urgency=low
+kdebindings (4:4.4.5-2) unstable; urgency=medium
 
   [ Modestas Vainius ]
   * Point debian/control Vcs fields to the new Git repository.
@@ -10,6 +10,7 @@ kdebindings (4:4.4.5-2) UNRELEASED; urgency=low
   * Only build the kpythonfactoryplugin on default python version, else
     it ends up a bit random which one is actually used when built parallel.
     Closes: #591422
+  * Medium urgency due to rc bugfix.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sat, 07 Aug 2010 00:01:00 +0200
 
