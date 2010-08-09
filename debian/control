@@ -335,7 +335,7 @@ Depends: ${shlibs:Depends}, ${misc:Depends}
 Architecture: any
 Description: KUtils Smoke libraries
  Smoke libraries are part of the bindings used for Qt and KDE. This package
- contains the KDE User Interface parts of Smoke.
+ contains the KUtils parts of Smoke.
  .
  Smoke provides infrastructure which is used for creating bindings for
  multiple languages such as Ruby, C# and PHP.
@@ -348,7 +348,7 @@ Depends: ${shlibs:Depends}, ${misc:Depends}
 Architecture: any
 Description: Solid Smoke libraries
  Smoke libraries are part of the bindings used for Qt and KDE. This package
- contains the KDE parts of Smoke.
+ contains the Solid parts of Smoke.
  .
  Smoke provides infrastructure which is used for creating bindings for
  multiple languages such as Ruby, C# and PHP.
@@ -374,7 +374,7 @@ Depends: ${shlibs:Depends}, ${misc:Depends}
 Architecture: any
 Description: KHTML Smoke library
  Smoke libraries are part of the bindings used for Qt and KDE. This package
- contains the KDE parts of Smoke.
+ contains the KHTML parts of Smoke.
  .
  Smoke provides infrastructure which is used for creating bindings for
  multiple languages such as Ruby, C# and PHP.
@@ -387,7 +387,7 @@ Depends: ${shlibs:Depends}, ${misc:Depends}
 Architecture: any
 Description: KIO Smoke library
  Smoke libraries are part of the bindings used for Qt and KDE. This package
- contains the KDE parts of Smoke.
+ contains the KIO parts of Smoke.
  .
  Smoke provides infrastructure which is used for creating bindings for
  multiple languages such as Ruby, C# and PHP.
@@ -400,7 +400,7 @@ Depends: ${shlibs:Depends}, ${misc:Depends}
 Architecture: any
 Description: KNewStuff2 Smoke library
  Smoke libraries are part of the bindings used for Qt and KDE. This package
- contains the KDE parts of Smoke.
+ contains the KNewStuff v2 parts of Smoke.
  .
  Smoke provides infrastructure which is used for creating bindings for
  multiple languages such as Ruby, C# and PHP.
@@ -413,7 +413,7 @@ Depends: ${shlibs:Depends}, ${misc:Depends}
 Architecture: any
 Description: KNewStuff3 Smoke library
  Smoke libraries are part of the bindings used for Qt and KDE. This package
- contains the KDE parts of Smoke.
+ contains the KNewStuff v3 parts of Smoke.
  .
  Smoke provides infrastructure which is used for creating bindings for
  multiple languages such as Ruby, C# and PHP.
@@ -466,7 +466,7 @@ Depends: libsmokeqt4-dev (= ${binary:Version}), ${so:Depends}, ${misc:Depends}
 Architecture: any
 Description: development files for soprano smoke libraries
  Smoke libraries are part of the bindings used for Qt and KDE. This package
- contains soprano smoke development files
+ contains the KDE Smoke development files.
  .
  Smoke provides infrastructure which is used for creating bindings for
  multiple languages such as Ruby, C# and PHP.
@@ -494,7 +494,7 @@ Depends: ${shlibs:Depends}, ${misc:Depends}
 Architecture: any
 Description: Nepomukquery Smoke libraries
  Smoke libraries are part of the bindings used for Qt and KDE. This package
- contains the Nepomuk query parts of Smoke.
+ contains the Nepomuk Query parts of Smoke.
  .
  Smoke provides infrastructure which is used for creating bindings for
  multiple languages such as Ruby, C# and PHP.
@@ -523,7 +523,7 @@ Depends: libsmokeqt4-dev (= ${binary:Version}), ${so:Depends}, ${misc:Depends}
 Architecture: any
 Description: development files for soprano smoke libraries
  Smoke libraries are part of the bindings used for Qt and KDE. This package
- contains soprano smoke development files
+ contains the Soprano Smoke development files.
  .
  Smoke provides infrastructure which is used for creating bindings for
  multiple languages such as Ruby, C# and PHP.
@@ -539,7 +539,7 @@ Replaces: libsmokekde4-2 (<< 4:4.2.60)
 Architecture: any
 Description: Soprano Smoke library
  Smoke libraries are part of the bindings used for Qt and KDE. This package
- contains the Soprano parts of Smoke.
+ contains the Soprano client parts of Smoke.
  .
  Smoke provides infrastructure which is used for creating bindings for
  multiple languages such as Ruby, C# and PHP.
@@ -555,7 +555,7 @@ Replaces: libsmokekde4-2 (<< 4:4.2.60)
 Architecture: any
 Description: Soprano Smoke library
  Smoke libraries are part of the bindings used for Qt and KDE. This package
- contains the Soprano parts of Smoke.
+ contains the Soprano server parts of Smoke.
  .
  Smoke provides infrastructure which is used for creating bindings for
  multiple languages such as Ruby, C# and PHP.
@@ -991,6 +991,6 @@ Architecture: any
 Description: smoke development tools
  This package contains the development tools to do bindings with the 
  Scripting MetaObject Kompiler Engine, used by several Qt and KDE bindings, 
- as well as some bindings for the wt library
+ as well as some bindings for the Wt library.
  .
  This is part of the KDE Bindings module.
