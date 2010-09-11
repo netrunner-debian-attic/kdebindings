@@ -1,4 +1,6 @@
-kdebindings (4:4.4.5-3) UNRELEASED; urgency=low
+kdebindings (4:4.5.1-0r1) UNRELEASED; urgency=low
+
+  * New upstream release
 
   [ Pino Toscano ]
   * python-kde4-dev needs to depend on python-kde4, otherwise pykdeuic4.py
