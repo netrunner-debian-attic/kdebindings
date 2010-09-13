@@ -193,7 +193,11 @@ binary-indep binary-arch: build install
 		fi \
 	done
 	dh_sodeps
-	dh_shlibdeps
+	if [ -d debian/python-kde4 ]; then \
+		DH_OPTIONS= dh_shlibdeps -ppython-kde4 -X"usr/lib/pyshared/python2.5/PyKDE4/" -- \
+        	-dSuggests debian/python-kde4/usr/lib/pyshared/python2.5/PyKDE4/*.so -dDepends; \
+	fi
+	dh_shlibdeps -Npython-kde4
 	dh_installdeb
 	dh_gencontrol
 	dh_md5sums

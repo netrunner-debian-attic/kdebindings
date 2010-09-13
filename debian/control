@@ -709,6 +709,7 @@ Section: python
 Architecture: any
 Depends: ${shlibs:Depends}, ${python:Depends}, ${misc:Depends}, 
  python-qt4, ${sip:Depends}, python-sip
+Suggests: ${shlibs:Suggests}
 Description: Python bindings for the KDE Development Platform
  This package contains PyKDE, the Python bindings for the KDE
  libraries, that allow you to write KDE programs using Python instead of
