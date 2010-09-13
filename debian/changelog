@@ -1,4 +1,4 @@
-kdebindings (4:4.4.5-3) UNRELEASED; urgency=low
+kdebindings (4:4.4.5-3) unstable; urgency=low
 
   [ Pino Toscano ]
   * python-kde4-dev needs to depend on python-kde4, otherwise pykdeuic4.py
@@ -13,7 +13,7 @@ kdebindings (4:4.4.5-3) UNRELEASED; urgency=low
     useful on standard Debian install.
   * Support DEB_BUILD_OPTIONS=parallel=X properly.
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Mon, 09 Aug 2010 22:43:03 +0200
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Mon, 13 Sep 2010 20:44:50 +0300
 
 kdebindings (4:4.4.5-2) unstable; urgency=medium
 
