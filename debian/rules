@@ -4,6 +4,11 @@ DEB_KDE_LINK_WITH_AS_NEEDED := yes
 DEB_KDE_LINK_WITH_NO_UNDEFINED := no
 include /usr/share/pkg-kde-tools/makefiles/1/variables.mk
 
+ifneq (,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
+    NUMJOBS = $(patsubst parallel=%,%,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
+    MAKEFLAGS += -j$(NUMJOBS)
+endif
+
 ARCH := $(shell dpkg-architecture -qDEB_HOST_ARCH)
 MONOARCHS := "i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 lpia ia64 arm armeb armel sparc s390"
 MONOPACKAGES := $(shell dh_listpackages | grep '\-cil$$') plasma-scriptengine-kimono kio-monodoc libkimono-cil-dev libqyoto-cil-dev libqyotoshared1 qyoto-dev
