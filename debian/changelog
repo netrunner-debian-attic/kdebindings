@@ -2,13 +2,24 @@ kdebindings (4:4.5.1-0r1) UNRELEASED; urgency=low
 
   * New upstream release
 
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Mon, 09 Aug 2010 22:43:03 +0200
+
+kdebindings (4:4.4.5-3) unstable; urgency=low
+
   [ Pino Toscano ]
   * python-kde4-dev needs to depend on python-kde4, otherwise pykdeuic4.py
     does not work. (Closes: #592286)
   * Few touches to the packages descriptions.
     - ... including the libsmokekutils3 one. (Closes: #592280)
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Mon, 09 Aug 2010 22:43:03 +0200
+  [ Modestas Vainius ]
+  * Move python2.5 dependencies to python-kde4 Suggests (Closes: #595532).
+    Even if python-kde4 still provides python2.5 bindings, Python 2.5 is no
+    longer a default and hence it is not a pre-requisite for the package to be
+    useful on standard Debian install.
+  * Support DEB_BUILD_OPTIONS=parallel=X properly.
+
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Mon, 13 Sep 2010 20:44:50 +0300
 
 kdebindings (4:4.4.5-2) unstable; urgency=medium
 
