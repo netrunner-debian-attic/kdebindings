@@ -2,16 +2,16 @@ Source: kdebindings
 Section: kde
 Priority: optional
 Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
-Build-Depends: kde-sc-dev-latest (>= 4:4.4.5),
+Build-Depends: kde-sc-dev-latest (>= 4:4.6.0),
  debhelper (>= 7), cmake, pkg-kde-tools (>= 0.9.2),
- kdelibs5-dev (>= 4:4.4), libqt4-opengl-dev (>= 4.6.2), libphonon-dev (>= 4:4.6.0really),
+ kdelibs5-dev (>= 4:4.6), libqt4-opengl-dev (>= 4.6.2), libphonon-dev (>= 4:4.6.0really),
  libsoprano-dev (>= 2.3.0), libqimageblitz-dev,
  python, python-all-dev, python-sip-dev (>= 4.10), python-qt4 (>> 4.7-2), python-qt4-dev (>> 4.7-2),
  ruby1.8-dev, ruby1.8, python-support (>= 0.6), 
  mono-devel (>= 2.0.1) [i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390],
  cli-common-dev (>= 0.5.4) [i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390],
  monodoc-base [i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390],
- okular-dev (>= 4:4.3.90), kdepimlibs5-dev (>= 4:4.3.90), libakonadi-dev (>= 1.2.90), libattica-dev (>= 0.1.4), shared-desktop-ontologies
+ okular-dev (>= 4:4.6), kdepimlibs5-dev (>= 4:4.6), libakonadi-dev (>= 1.5.0), libattica-dev (>= 0.1.4), shared-desktop-ontologies
 Uploaders: Torsten Marek <shlomme@debian.org>, Sune Vuorela <sune@debian.org>, David Palacio <dpalacio@uninorte.edu.co>, Modestas Vainius <modax@debian.org>, Michael Meskes <meskes@debian.org>
 Standards-Version: 3.8.4
 Homepage: http://www.kde.org
