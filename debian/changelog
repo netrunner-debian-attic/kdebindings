@@ -12,6 +12,7 @@ kdebindings (4:4.6.0-0r1) UNRELEASED; urgency=low
   * Bump build dependency on python-sip-dev to 4.12.0.
   * Bump build dependencies on python-qt4 to 4.8.
   * Update installed files.
+  * Add libqtwebkit-dev build dependency.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Mon, 09 Aug 2010 22:43:03 +0200
 
