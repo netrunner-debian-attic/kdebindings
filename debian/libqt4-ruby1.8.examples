@@ -1,5 +1,3 @@
-./ruby/qwt/examples/clock
-./ruby/qwt/examples/clock/analog_clock.rb
 ./ruby/qtruby/examples/desktop
 ./ruby/qtruby/examples/desktop/systray
 ./ruby/qtruby/examples/desktop/systray/main.rb
