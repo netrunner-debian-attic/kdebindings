@@ -999,7 +999,7 @@ Description: Python module for Kross
 
 Package: kio-monodoc
 Section: cli-mono
-Depends: libkimono4.1-cil (= ${binary:Version}), ${cli:Depends}, ${shlibs:Depends}, ${misc:Depends}
+Depends: libkimono4.1-cil (= ${binary:Version}), ${cli:Depends}, ${shlibs:Depends}, ${misc:Depends}, monodoc-manual
 Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390 lpia
 Description: monodoc kio slave
  This package brings the Mono documentation (Monodoc) into Konqueror, allowing
