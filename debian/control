@@ -71,9 +71,9 @@ Package: libsmokeqtdbus4-3
 Section: libs
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Architecture: any
-Description: Qt DBus SMOKE library
+Description: Qt D-Bus SMOKE library
  SMOKE libraries are part of the bindings used for Qt and KDE. This package
- contains Qt DBus SMOKE.
+ contains Qt D-Bus SMOKE.
  .
  SMOKE provides infrastructure which is used for creating bindings for
  multiple languages such as Ruby, C# and PHP.
@@ -464,7 +464,7 @@ Package: libsmokekde-dev
 Section: libdevel
 Depends: libsmokeqt4-dev (= ${binary:Version}), ${so:Depends}, ${misc:Depends}
 Architecture: any
-Description: development files for soprano SMOKE libraries
+Description: development files for Soprano SMOKE libraries
  SMOKE libraries are part of the bindings used for Qt and KDE. This package
  contains the KDE SMOKE development files.
  .
@@ -492,7 +492,7 @@ Package: libsmokenepomukquery3
 Section: libs
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Architecture: any
-Description: Nepomukquery SMOKE libraries
+Description: Nepomuk Query SMOKE libraries
  SMOKE libraries are part of the bindings used for Qt and KDE. This package
  contains the Nepomuk Query parts of SMOKE.
  .
@@ -521,7 +521,7 @@ Package: libsmokesoprano-dev
 Section: libdevel
 Depends: libsmokeqt4-dev (= ${binary:Version}), ${so:Depends}, ${misc:Depends}
 Architecture: any
-Description: development files for soprano SMOKE libraries
+Description: development files for Soprano SMOKE libraries
  SMOKE libraries are part of the bindings used for Qt and KDE. This package
  contains the Soprano SMOKE development files.
  .
