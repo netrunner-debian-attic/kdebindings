@@ -1,5 +1,10 @@
 kdebindings (4:4.4.5-4) UNRELEASED; urgency=low
 
+  [ Pino Toscano ]
+  * Backport some upstream revisions to fix compilation: (Closes: #616139)
+    - r1150375 for SIP > 4.10.
+    - r1170602, r1209688, and r1211266 for PyQt4 4.8.x.
+    - r1184022 to fix a smokegen segfault when parsing QtOpenGL headers.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Sun, 06 Mar 2011 23:58:09 +0100
 

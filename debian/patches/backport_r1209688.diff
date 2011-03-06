@@ -1,0 +1,43 @@
+r1209688 | lbeltrame | 2010-12-28 00:06:31 +0100 (Tue, 28 Dec 2010) | 6 lines
+Changed paths:
+   M /trunk/KDE/kdebindings/python/pykde4/tools/pykdeuic4/pykdeuic4.py
+
+Make pykdeuic4 work again with PyQt 4.8:
+
+- qtproxies.escape -> qtproxies.as_string
+- change the call to compileUi to account the new from_imports parameter
+
+
+Applied-Upstream: 4.6.0
+
+Index: kdebindings/python/pykde4/tools/pykdeuic4/pykdeuic4.py
+===================================================================
+--- kdebindings/python/pykde4/tools/pykdeuic4/pykdeuic4.py	(revision 1209687)
++++ kdebindings/python/pykde4/tools/pykdeuic4/pykdeuic4.py	(revision 1209688)
+@@ -39,7 +39,7 @@
+     def __init__(self,string):
+         original_i18n_string.__init__(self,string)
+     def __str__(self):
+-        return "kdecore.i18n(\"%s\")" % (qtproxies.escape(self.string),)
++        return "kdecore.i18n(%s)" % (qtproxies.as_string(self.string),)
+ qtproxies.i18n_string = kde_i18n_string
+ 
+ def kdeFilter():
+@@ -71,7 +71,7 @@
+     indenter.indentwidth = indent
+     comp = compiler.UICompiler()
+     comp.factory._cwFilters.append(kdeFilter())
+-    winfo = comp.compileUi(uifile, output)
++    winfo = comp.compileUi(uifile, output, None)
+ 
+     if exe:
+         output.write("""
+@@ -104,7 +104,7 @@
+     app = kdeui.KApplication()
+     mainWindow = MainWin(None, "main window")
+     mainWindow.show()
+-    app.connect (app, QtCore.SIGNAL ("lastWindowClosed ()"), app.quit)
++    app.lastWindowClosed.connect(app.quit)
+     app.exec_ ()
+ """)
+ 

@@ -1,0 +1,23 @@
+r1150375 | sedwards | 2010-07-15 22:17:52 +0200 (Thu, 15 Jul 2010) | 2 lines
+Changed paths:
+   M /trunk/KDE/kdebindings/python/pykde4/sip/akonadi/addressattribute.sip
+
+Small compatibility fix for the latest (minor) version of SIP which came out a couple days ago.
+
+Applied-Upstream: 4.6.0
+
+Index: kdebindings/python/pykde4/sip/akonadi/addressattribute.sip
+===================================================================
+--- kdebindings/python/pykde4/sip/akonadi/addressattribute.sip	(revision 1150374)
++++ kdebindings/python/pykde4/sip/akonadi/addressattribute.sip	(revision 1150375)
+@@ -59,6 +59,10 @@
+     else if (dynamic_cast<Akonadi::PersistentSearchAttribute*>(sipCpp))
+         sipType = sipType_Akonadi_PersistentSearchAttribute;
+ %End
++private:
++//force
++Akonadi::AddressAttribute& operator = (const Akonadi::AddressAttribute&);
++//end
+ };
+ };
+ %ModuleHeaderCode
