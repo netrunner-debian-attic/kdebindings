@@ -1,4 +1,4 @@
-kdebindings (4:4.4.5-4) UNRELEASED; urgency=low
+kdebindings (4:4.4.5-4) unstable; urgency=low
 
   [ Pino Toscano ]
   * Backport some upstream revisions to fix compilation: (Closes: #616139)
