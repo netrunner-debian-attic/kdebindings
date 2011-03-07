@@ -6,13 +6,11 @@ Small compatibility fix for the latest (minor) version of SIP which came out a c
 
 Applied-Upstream: 4.6.0
 
-Index: kdebindings/python/pykde4/sip/akonadi/addressattribute.sip
-===================================================================
---- kdebindings/python/pykde4/sip/akonadi/addressattribute.sip	(revision 1150374)
-+++ kdebindings/python/pykde4/sip/akonadi/addressattribute.sip	(revision 1150375)
-@@ -59,6 +59,10 @@
-     else if (dynamic_cast<Akonadi::PersistentSearchAttribute*>(sipCpp))
-         sipType = sipType_Akonadi_PersistentSearchAttribute;
+--- a/python/pykde4/sip/akonadi/addressattribute.sip
++++ b/python/pykde4/sip/akonadi/addressattribute.sip
+@@ -57,6 +57,10 @@ public:
+     else if (dynamic_cast<Akonadi::MessageThreadingAttribute*>(sipCpp))
+         sipType = sipType_Akonadi_MessageThreadingAttribute;
  %End
 +private:
 +//force
