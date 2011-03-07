@@ -12,6 +12,7 @@ kdebindings (4:4.6.1-0r0) UNRELEASED; urgency=low
   * Bump build dependency on python-sip-dev to 4.12.0.
   * Bump build dependencies on python-qt4 to 4.8.
   * Bump build dependency on libqt4-opengl-dev to 4.7.1.
+  * Bump build dependency on libphonon-dev to 4:4.6.0really4.4.4.
   * Update installed files.
   * Add libqtwebkit-dev build dependency.
 
