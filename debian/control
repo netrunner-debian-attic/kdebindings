@@ -28,7 +28,20 @@ Description: debugging symbols for the KDE bindings module
  This package contains debugging files used to investigate problems with
  binaries included in the KDE bindings module.
 
-Package: libsmokeqt4-3
+#Package: libsmokeqt4-3
+#Section: libs
+#Depends: ${shlibs:Depends}, ${misc:Depends}
+#Architecture: any
+#Description: Qt Smoke libraries
+# Smoke libraries are part of the bindings used for Qt and KDE. This package
+# contains pure Qt Smoke.
+# .
+# Smoke provides infrastructure which is used for creating bindings for
+# multiple languages such as Ruby, C# and PHP.
+# .
+# This is part of the KDE Bindings module.
+
+Package: libsmokebase3
 Section: libs
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Architecture: any
@@ -929,7 +942,16 @@ Description: CLI bindings for Soprano
  .
  This is part of the KDE Bindings module.
 
-Package: libqyotoshared1
+#Package: libqyotoshared2
+#Section: libs
+#Depends: ${shlibs:Depends}, ${misc:Depends}
+#Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390 lpia
+#Description: shared library for Qt 4 CLI bindings
+# This package provides the shared library for Qyoto, the Qt 4 CLI bindings.
+# .
+# This is part of the KDE Bindings module.
+
+Package: libqyoto2
 Section: libs
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390 lpia
@@ -948,18 +970,18 @@ Description: CLI bindings for QImageBlitz
  .
  This is part of the KDE Bindings module.
 
-Package: krossruby
-Section: ruby
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Architecture: any
-Conflicts: libkde4-ruby1.8 (<< 4:4.2.60)
-Replaces: libkde4-ruby1.8 (<< 4:4.2.60)
-Description: Ruby module for Kross
- Kross is a scripting framework to enable scripting in various languages in all
- kinds of KDE applications.
- Kross itself is a part of KDELibs, this package contains the Kross Ruby plugin.
- .
- This is part of the KDE Bindings module.
+#Package: krossruby
+#Section: ruby
+#Depends: ${shlibs:Depends}, ${misc:Depends}
+#Architecture: any
+#Conflicts: libkde4-ruby1.8 (<< 4:4.2.60)
+#Replaces: libkde4-ruby1.8 (<< 4:4.2.60)
+#Description: Ruby module for Kross
+# Kross is a scripting framework to enable scripting in various languages in all
+# kinds of KDE applications.
+# Kross itself is a part of KDELibs, this package contains the Kross Ruby plugin.
+# .
+# This is part of the KDE Bindings module.
 
 Package: krosspython
 Section: python
@@ -977,7 +999,7 @@ Description: Python module for Kross
 
 Package: kio-monodoc
 Section: cli-mono
-Depends: libkimono4.1-cil (= ${binary:Version}), ${cli:Depends}, ${shlibs:Depends}, ${misc:Depends}
+Depends: libkimono4.1-cil (= ${binary:Version}), ${cli:Depends}, ${shlibs:Depends}, ${misc:Depends}, monodoc-manual
 Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390 lpia
 Description: monodoc kio slave
  This package brings the Mono documentation (Monodoc) into Konqueror, allowing
