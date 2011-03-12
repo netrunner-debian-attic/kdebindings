@@ -17,6 +17,10 @@ kdebindings (4:4.6.1-0r0) UNRELEASED; urgency=low
   * Add libqtwebkit-dev build dependency.
   * Remove libsmokeqtmultimedia4-3 for now.
 
+  [ Pino Toscano ]
+  * Few touches to the packages descriptions.
+    - ... including the spelling of "Common Intermediate Language". (Closes: #617329)
+
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Mon, 09 Aug 2010 22:43:03 +0200
 
 kdebindings (4:4.4.5-4) unstable; urgency=low

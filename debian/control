@@ -838,7 +838,7 @@ Depends: libkimono4.1-cil (= ${binary:Version}), ${cli:Depends}, ${shlibs:Depend
 Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390 lpia
 Description: Kimono Plasma script engine
  This package provides the script engine for Plasma which allows
- to write Plasma widgets in Common Intermediate Languagues.
+ to write Plasma widgets in Common Intermediate Language.
  .
  This is part of the KDE Bindings module.
  
@@ -867,7 +867,7 @@ Section: cli-mono
 Depends: libqyoto4.5-cil (= ${binary:Version}), libkimono4.1-cil (= ${binary:Version}), ${cli:Depends}, ${shlibs:Depends}, ${misc:Depends}
 Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390 lpia
 Description: CLI-bindings for KTextEditor library
- This package provides the KTextEditor-dotnet assembly that
+ This package provides the KTextEditor assembly that
  allows CLI-based software to use the KTextEditor library.
  .
  This is part of the KDE Bindings module.
@@ -899,8 +899,8 @@ Package: libqtscript2.2-cil
 Section: cli-mono
 Depends: libqyoto4.5-cil (= ${binary:Version}), ${cli:Depends}, ${shlibs:Depends}, ${misc:Depends}
 Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390 lpia
-Description: CLI-bindings for QtScrtipt
- This package provides the QtScript assemply that allows
+Description: CLI-bindings for QtScript
+ This package provides the QtScript assembly that allows
  CLI-based software to use the QtScript library.
  .
  This is part of the KDE Bindings module.
@@ -910,7 +910,7 @@ Section: cli-mono
 Depends: libqyoto4.5-cil (= ${binary:Version}), ${cli:Depends}, ${shlibs:Depends}, ${misc:Depends}
 Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390 lpia
 Description: CLI bindings for QtTest
- This package provides the QtTest assemply that allows
+ This package provides the QtTest assembly that allows
  CLI-based software to use the QtTest library.
  .
  This is part of the KDE Bindings module.
