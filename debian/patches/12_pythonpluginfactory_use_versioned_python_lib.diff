@@ -1,6 +1,6 @@
 --- a/python/pykde4/kpythonpluginfactory/kpythonpluginfactory.cpp
 +++ b/python/pykde4/kpythonpluginfactory/kpythonpluginfactory.cpp
-@@ -297,7 +297,7 @@ QLibrary *LoadPythonLibrary()
+@@ -307,7 +307,7 @@
  {
      QLibrary *pythonLib = new QLibrary();
      pythonLib->setLoadHints(QLibrary::ExportExternalSymbolsHint);

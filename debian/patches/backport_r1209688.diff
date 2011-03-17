@@ -8,8 +8,6 @@ Make pykdeuic4 work again with PyQt 4.8:
 - change the call to compileUi to account the new from_imports parameter
 
 
-Applied-Upstream: 4.6.0
-
 Index: kdebindings/python/pykde4/tools/pykdeuic4/pykdeuic4.py
 ===================================================================
 --- kdebindings/python/pykde4/tools/pykdeuic4/pykdeuic4.py	(revision 1209687)

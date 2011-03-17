@@ -1,6 +1,6 @@
 --- a/python/pykde4/CMakeLists.txt
 +++ b/python/pykde4/CMakeLists.txt
-@@ -249,15 +249,20 @@ PYTHON_INSTALL(${CMAKE_CURRENT_BINARY_DI
+@@ -257,15 +257,20 @@
  
  # Install the .sip files for anyone that wants to build bindings on top of PyKDE4.
  # (Don't forget the / at the end of sip/.)
