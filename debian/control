@@ -12,7 +12,7 @@ Build-Depends: kde-sc-dev-latest (>= 4:4.6.1),
  cli-common-dev (>= 0.5.4) [i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390],
  monodoc-base [i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390],
  okular-dev (>= 4:4.6), kdepimlibs5-dev (>= 4:4.6), libakonadi-dev (>= 1.5.0), libattica-dev (>= 0.1.4), shared-desktop-ontologies,
- libqtwebkit-dev
+ libqtwebkit-dev, libqtassistantclient-dev
 Uploaders: Torsten Marek <shlomme@debian.org>, Sune Vuorela <sune@debian.org>, David Palacio <dpalacio@uninorte.edu.co>, Modestas Vainius <modax@debian.org>, Michael Meskes <meskes@debian.org>
 Standards-Version: 3.8.4
 Homepage: http://www.kde.org
