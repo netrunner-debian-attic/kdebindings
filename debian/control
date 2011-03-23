@@ -14,7 +14,7 @@ Build-Depends: kde-sc-dev-latest (>= 4:4.6.1),
  okular-dev (>= 4:4.6), kdepimlibs5-dev (>= 4:4.6), libakonadi-dev (>= 1.5.0), libattica-dev (>= 0.1.4), shared-desktop-ontologies,
  libqtwebkit-dev, libqtassistantclient-dev
 Uploaders: Torsten Marek <shlomme@debian.org>, Sune Vuorela <sune@debian.org>, David Palacio <dpalacio@uninorte.edu.co>, Modestas Vainius <modax@debian.org>, Michael Meskes <meskes@debian.org>
-Standards-Version: 3.8.4
+Standards-Version: 3.9.1
 Homepage: http://www.kde.org
 Vcs-Git: git://git.debian.org/pkg-kde/kde-sc/kdebindings.git
 Vcs-Browser: http://git.debian.org/?p=pkg-kde/kde-sc/kdebindings.git
@@ -519,7 +519,7 @@ Description: Nepomuk Query SMOKE libraries
 Package: libsmokesoprano3
 Section: libs
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Conflicts: libsmokekde4-2 (<< 4:4.2.60)
+Breaks: libsmokekde4-2 (<< 4:4.2.60)
 Replaces: libsmokekde4-2 (<< 4:4.2.60)
 Architecture: any
 Description: Soprano SMOKE library
@@ -548,7 +548,7 @@ Description: development files for Soprano SMOKE libraries
 Package: libsmokesopranoclient3
 Section: libs
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Conflicts: libsmokekde4-2 (<< 4:4.2.60)
+Breaks: libsmokekde4-2 (<< 4:4.2.60)
 Replaces: libsmokekde4-2 (<< 4:4.2.60)
 Architecture: any
 Description: Soprano SMOKE library
@@ -564,7 +564,7 @@ Description: Soprano SMOKE library
 Package: libsmokesopranoserver3
 Section: libs
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Conflicts: libsmokekde4-2 (<< 4:4.2.60)
+Breaks: libsmokekde4-2 (<< 4:4.2.60)
 Replaces: libsmokekde4-2 (<< 4:4.2.60)
 Architecture: any
 Description: Soprano SMOKE library
@@ -607,7 +607,7 @@ Description: Qt Ruby bindings
 Package: libqt4-ruby1.8
 Section: ruby
 Depends: ${shlibs:Depends}, ruby1.8, ${misc:Depends}
-Conflicts: libqt0-ruby1.8
+Breaks: libqt0-ruby1.8
 Replaces: libqt0-ruby1.8
 Architecture: any
 Description: Qt 4 bindings for Ruby
@@ -707,7 +707,7 @@ Description: Soprano Ruby bindings
 Package: libsoprano-ruby1.8
 Section: ruby
 Depends: ${shlibs:Depends}, libqt4-ruby1.8 (= ${binary:Version}), ${misc:Depends}
-Conflicts: libkde4-ruby1.8 (<< 4:4.2.60)
+Breaks: libkde4-ruby1.8 (<< 4:4.2.60)
 Replaces: libkde4-ruby1.8 (<< 4:4.2.60)
 Architecture: any
 Description: Soprano Ruby 1.8 bindings
@@ -780,6 +780,7 @@ Description: documentation and examples for PyKDE
  This is part of the KDE Bindings module.
 
 Package: libqyoto4.5-cil
+Breaks: libqyoto4.4-cil
 Replaces: libqyoto4.4-cil
 Section: cli-mono
 Depends: ${shlibs:Depends}, ${misc:Depends}, ${cli:Depends}, 
@@ -793,6 +794,7 @@ Description: Qt bindings for CLI
 
 Package: libqyoto-cil-dev
 Section: libdevel
+Breaks:libqyoto4.5-cil (<< 4:4.4), libqtscript2.2-cil (<< 4:4.4), libqttest2.2-cil (<< 4:4.4), libqtuitools2.2-cil (<< 4:4.4), libqtwebkit2.2-cil (<< 4:4.4)
 Replaces:libqyoto4.5-cil (<< 4:4.4), libqtscript2.2-cil (<< 4:4.4), libqttest2.2-cil (<< 4:4.4), libqtuitools2.2-cil (<< 4:4.4), libqtwebkit2.2-cil (<< 4:4.4)
 Depends:libqyoto4.5-cil (= ${binary:Version}), libqtscript2.2-cil (= ${binary:Version}), libqttest2.2-cil (= ${binary:Version}), libqtuitools2.2-cil (= ${binary:Version}), libqtwebkit2.2-cil (= ${binary:Version}), ${misc:Depends}
 Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390 lpia
@@ -824,6 +826,7 @@ Description: CLI bindings for the KDE Development Platform
 
 Package: libkimono-cil-dev
 Section: libdevel
+Breaks: libkimono4.1-cil (<< 4:4.4), libkhtml2.0-cil (<< 4:4.4), libakonadi2.2-cil (<< 4:4.4), libktexteditor4.1-cil (<< 4:4.4), libnepomuk2.2-cil (<< 4:4.4), libplasma2.0-cil (<< 4:4.4), libsoprano2.0-cil (<< 4:4.4), libqimageblitz0.0-cil (<< 4:4.4)
 Replaces: libkimono4.1-cil (<< 4:4.4), libkhtml2.0-cil (<< 4:4.4), libakonadi2.2-cil (<< 4:4.4), libktexteditor4.1-cil (<< 4:4.4), libnepomuk2.2-cil (<< 4:4.4), libplasma2.0-cil (<< 4:4.4), libsoprano2.0-cil (<< 4:4.4), libqimageblitz0.0-cil (<< 4:4.4)
 Depends: libqyoto-cil-dev (= ${binary:Version}), libkimono4.1-cil (= ${binary:Version}), libkhtml2.0-cil (= ${binary:Version}), libakonadi2.2-cil (= ${binary:Version}), libktexteditor4.1-cil (= ${binary:Version}), libnepomuk2.2-cil (= ${binary:Version}), libplasma2.0-cil (= ${binary:Version}), libsoprano2.0-cil (= ${binary:Version}), libqimageblitz0.0-cil (= ${binary:Version}), ${misc:Depends}
 Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390 lpia
@@ -975,7 +978,7 @@ Description: CLI bindings for QImageBlitz
 #Section: ruby
 #Depends: ${shlibs:Depends}, ${misc:Depends}
 #Architecture: any
-#Conflicts: libkde4-ruby1.8 (<< 4:4.2.60)
+#Breaks: libkde4-ruby1.8 (<< 4:4.2.60)
 #Replaces: libkde4-ruby1.8 (<< 4:4.2.60)
 #Description: Ruby module for Kross
 # Kross is a scripting framework to enable scripting in various languages in all
@@ -988,7 +991,7 @@ Package: krosspython
 Section: python
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Architecture: any
-Conflicts: python-kde4 (<< 4:4.2.60)
+Breaks: python-kde4 (<< 4:4.2.60)
 Replaces: python-kde4 (<< 4:4.2.60)
 Description: Python module for Kross
  Kross is a scripting framework to enable scripting in various languages in all

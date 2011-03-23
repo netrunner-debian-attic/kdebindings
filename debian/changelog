@@ -24,6 +24,7 @@ kdebindings (4:4.6.1-0r0) UNRELEASED; urgency=low
     - Delete backport_r1170602.diff.
     - Delete backport_r1184022.diff.
     - Delete backport_r1211266.diff.
+  * Bump S-V to 3.9.1; add Breaks next to Replaces where needed.
 
   [ Pino Toscano ]
   * Few touches to the packages descriptions.
