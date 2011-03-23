@@ -18,6 +18,7 @@ kdebindings (4:4.6.1-0r0) UNRELEASED; urgency=low
     - libqtwebkit-dev
     - libqtassistantclient-dev
   * Remove libsmokeqtmultimedia4-3 for now.
+  * Remove libsmokeqt4-3 package.
   * Refresh patches:
     - Unfuzzy some of them.
     - Delete backport_r1150375.diff.
