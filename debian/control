@@ -23,7 +23,7 @@ Package: kdebindings-dbg
 Section: debug
 Architecture: any
 Priority: extra
-Depends: kdelibs5-dbg, libsmokeqt4-3 (= ${binary:Version}) | python-kde4 (= ${binary:Version}), ${misc:Depends}
+Depends: kdelibs5-dbg, python-kde4 (= ${binary:Version}), ${misc:Depends}
 Recommends: libruby1.8-dbg, python-qt4-dbg, mono-dbg
 Description: debugging symbols for the KDE bindings module
  This package contains debugging files used to investigate problems with
@@ -783,8 +783,7 @@ Package: libqyoto4.5-cil
 Breaks: libqyoto4.4-cil
 Replaces: libqyoto4.4-cil
 Section: cli-mono
-Depends: ${shlibs:Depends}, ${misc:Depends}, ${cli:Depends}, 
- libsmokeqt4-3 (= ${binary:Version})
+Depends: ${shlibs:Depends}, ${misc:Depends}, ${cli:Depends}
 Architecture: i386 kfreebsd-i386 powerpc amd64 kfreebsd-amd64 ia64 arm armeb armel sparc s390 lpia
 Description: Qt bindings for CLI
  This package provides the Qt-dotnet assembly that
