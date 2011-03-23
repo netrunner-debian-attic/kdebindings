@@ -28,7 +28,8 @@ kdebindings (4:4.6.1-0r0) UNRELEASED; urgency=low
 
   [ Pino Toscano ]
   * Few touches to the packages descriptions.
-    - ... including the spelling of "Common Intermediate Language". (Closes: #617329)
+    - ... including the spelling of "Common Intermediate Language".
+      (Closes: #617329)
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Mon, 09 Aug 2010 22:43:03 +0200
 
