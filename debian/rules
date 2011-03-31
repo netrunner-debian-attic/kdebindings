@@ -59,6 +59,9 @@ cmake_flags += \
 	-DCUSTOM_RUBY_SITE_ARCH_DIR=/usr/lib/ruby/1.8/$(RUBY_SITEARCH) \
 	$(MONOFLAGS)
 
+# Since Qt4.7, QtMultimedia is not shipped anymore
+cmake_flags += -DENABLE_QTMULTIMEDIA_SMOKE=OFF
+
 ##
 
 DEB_HOST_GNU_TYPE  ?= $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)

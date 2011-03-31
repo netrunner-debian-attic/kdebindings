@@ -4,7 +4,6 @@ usr/include/smoke/qt_smoke.h
 usr/include/smoke/qtcore_smoke.h
 usr/include/smoke/qtdbus_smoke.h
 usr/include/smoke/qtgui_smoke.h
-usr/include/smoke/qtmultimedia_smoke.h
 usr/include/smoke/qtnetwork_smoke.h
 usr/include/smoke/qtopengl_smoke.h
 usr/include/smoke/qtscript_smoke.h
@@ -20,7 +19,6 @@ usr/lib/libsmokeqt.so
 usr/lib/libsmokeqtcore.so
 usr/lib/libsmokeqtdbus.so
 usr/lib/libsmokeqtgui.so
-usr/lib/libsmokeqtmultimedia.so
 usr/lib/libsmokeqtnetwork.so
 usr/lib/libsmokeqtopengl.so
 usr/lib/libsmokeqtscript.so
