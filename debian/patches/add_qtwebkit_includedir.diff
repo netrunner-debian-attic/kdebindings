@@ -1,0 +1,14 @@
+Origin: vendor
+Forwarded: Not needed
+Author: sune
+
+--- kdebindings-4.4.5.orig/python/pykde4/CMakeLists.txt
++++ kdebindings-4.4.5/python/pykde4/CMakeLists.txt
+@@ -75,6 +75,7 @@ INCLUDE_DIRECTORIES(
+     ${QT_QTSQL_INCLUDE_DIR}
+     ${QT_QTXML_INCLUDE_DIR}
+     ${QT_QTSVG_INCLUDE_DIR}
++    ${QT_QTWEBKIT_INCLUDE_DIR}
+     ${KDE4_INCLUDE_DIR}
+     ${KDE4_INCLUDE_DIR}/solid
+     ${KDE4_INCLUDE_DIR}/kio

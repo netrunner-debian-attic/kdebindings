@@ -17,3 +17,4 @@ backport_r1170602.diff
 backport_r1184022.diff
 backport_r1209688.diff
 backport_r1211266.diff
+add_qtwebkit_includedir.diff

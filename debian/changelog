@@ -5,6 +5,9 @@ kdebindings (4:4.4.5-5) UNRELEASED; urgency=high
     - Urgency high for Qt4.7 transition.
   * Add libqtwebkit-dev B-D (Closes: #618215)
 
+  [ Sune Vuorela ]
+  * Add qtwebkit includes to python build
+
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Thu, 31 Mar 2011 14:31:18 +0200
 
 kdebindings (4:4.4.5-4) unstable; urgency=low
