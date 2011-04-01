@@ -1,4 +1,6 @@
-kdebindings (4:4.4.5-5) UNRELEASED; urgency=high
+kdebindings (4:4.4.5-5) unstable; urgency=high
+
+  * Saluting Canterbury Distribution
 
   [ Didier Raboud ]
   * Drop libsmokeqtmultimedia4-3 (Closes: #620219).
