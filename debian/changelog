@@ -1,4 +1,4 @@
-kdebindings (4:4.6.1-0r1) UNRELEASED; urgency=low
+kdebindings (4:4.6.2-0r0) UNRELEASED; urgency=low
 
   * New upstream release
 
@@ -6,7 +6,7 @@ kdebindings (4:4.6.1-0r1) UNRELEASED; urgency=low
   * Make kio-monodoc depend on monodoc-manual.
   
   [ José Manuel Santamaría Lema ]
-  * Bump kde-sc-dev-latest build dependency to 4:4.6.1.
+  * Bump kde-sc-dev-latest build dependency to 4:4.6.2.
   * Bump build dependencies on KDE SC libs to 4:4.6.
   * Bump build dependency on libakonadi-dev to 1.5.0.
   * Bump build dependency on python-sip-dev to 4.12.0.
