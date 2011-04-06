@@ -1,3 +1,4 @@
+
 usr/include/smoke.h
 usr/include/smoke/akonadi_smoke.h
 usr/include/smoke/attica_smoke.h
@@ -11,8 +12,8 @@ usr/include/smoke/knewstuff3_smoke.h
 usr/include/smoke/kparts_smoke.h
 usr/include/smoke/ktexteditor_smoke.h
 usr/include/smoke/kutils_smoke.h
-usr/include/smoke/nepomukquery_smoke.h
 usr/include/smoke/nepomuk_smoke.h
+usr/include/smoke/nepomukquery_smoke.h
 usr/include/smoke/okular_smoke.h
 usr/include/smoke/phonon_smoke.h
 usr/include/smoke/plasma_smoke.h
@@ -29,12 +30,12 @@ usr/include/smoke/qtsvg_smoke.h
 usr/include/smoke/qttest_smoke.h
 usr/include/smoke/qtuitools_smoke.h
 usr/include/smoke/qtwebkit_smoke.h
-usr/include/smoke/qtxmlpatterns_smoke.h
 usr/include/smoke/qtxml_smoke.h
+usr/include/smoke/qtxmlpatterns_smoke.h
 usr/include/smoke/solid_smoke.h
+usr/include/smoke/soprano_smoke.h
 usr/include/smoke/sopranoclient_smoke.h
 usr/include/smoke/sopranoserver_smoke.h
-usr/include/smoke/soprano_smoke.h
 usr/lib/libsmokephonon.so
 usr/lib/libsmokeqtcore.so
 usr/lib/libsmokeqtdbus.so
@@ -50,4 +51,3 @@ usr/lib/libsmokeqtuitools.so
 usr/lib/libsmokeqtwebkit.so
 usr/lib/libsmokeqtxml.so
 usr/lib/libsmokeqtxmlpatterns.so
-
