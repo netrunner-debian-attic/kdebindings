@@ -1,4 +1,4 @@
-kdebindings (4:4.4.5-6) UNRELEASED; urgency=low
+kdebindings (4:4.4.5-6) unstable; urgency=low
 
   [ Pino Toscano ]
   * Backport upstream fixes (merged in smokegen_phonon.diff) to make
@@ -8,7 +8,7 @@ kdebindings (4:4.4.5-6) UNRELEASED; urgency=low
   * Do not hardcode python versions in debian/rules. Use pyversions instead.
     This should make kdebindings fully binNMUable for python transitions.
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Mon, 09 May 2011 12:21:58 +0200
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Tue, 10 May 2011 01:03:07 +0300
 
 kdebindings (4:4.4.5-5) unstable; urgency=high
 
