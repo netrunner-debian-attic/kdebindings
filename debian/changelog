@@ -1,3 +1,8 @@
+kdebindings (4:4.4.5-6) UNRELEASED; urgency=low
+
+
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Mon, 09 May 2011 12:21:58 +0200
+
 kdebindings (4:4.4.5-5) unstable; urgency=high
 
   * Saluting Canterbury Distribution
