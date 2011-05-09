@@ -1,4 +1,4 @@
-kdebindings (4:4.6.2-0r0) UNRELEASED; urgency=low
+kdebindings (4:4.6.3-0r0) UNRELEASED; urgency=low
 
   * New upstream release
 
@@ -32,7 +32,38 @@ kdebindings (4:4.6.2-0r0) UNRELEASED; urgency=low
     - ... including the spelling of "Common Intermediate Language".
       (Closes: #617329)
 
+  [ Modestas Vainius ]
+  * Drop add_qtwebkit_includedir.diff patch, merged upstream.
+  * Adapt smokegen_phonon.diff to upstream changes.
+  * No longer set -DENABLE_QTMULTIMEDIA_SMOKE=OFF, not needed anymore.
+
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Mon, 09 Aug 2010 22:43:03 +0200
+
+kdebindings (4:4.4.5-6) unstable; urgency=low
+
+  [ Pino Toscano ]
+  * Backport upstream fixes (merged in smokegen_phonon.diff) to make
+    smokephonon compile with Phonon >= 4.5.0. (Closes: #625707)
+
+  [ Modestas Vainius ]
+  * Do not hardcode python versions in debian/rules. Use pyversions instead.
+    This should make kdebindings fully binNMUable for python transitions.
+
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Tue, 10 May 2011 01:03:07 +0300
+
+kdebindings (4:4.4.5-5) unstable; urgency=high
+
+  * Saluting Canterbury Distribution
+
+  [ Didier Raboud ]
+  * Drop libsmokeqtmultimedia4-3 (Closes: #620219).
+    - Urgency high for Qt4.7 transition.
+  * Add libqtwebkit-dev B-D (Closes: #618215)
+
+  [ Sune Vuorela ]
+  * Add qtwebkit includes to python build
+
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Thu, 31 Mar 2011 14:31:18 +0200
 
 kdebindings (4:4.4.5-4) unstable; urgency=low
 

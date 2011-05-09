@@ -81,6 +81,7 @@ endif
 pydefault  := $(shell pyversions --default)
 pyversions := $(shell pyversions -vr)
 pydefaultversion := $(shell pyversions -vd)
+pyshared_nondefault = $(foreach v,$(filter-out $(pydefaultversion),$(pyversions)),usr/lib/pyshared/python$v/PyKDE4)
 cmake_flags += -DPYTHON_EXECUTABLE=/usr/bin/$(pydefault)
 DEFAULT_PYTHON_ARGS=-DERRORORRORERROR
 
@@ -199,8 +200,8 @@ binary-indep binary-arch: build install
 	done
 	dh_sodeps
 	if [ -d debian/python-kde4 ]; then \
-		DH_OPTIONS= dh_shlibdeps -ppython-kde4 -X"usr/lib/pyshared/python2.5/PyKDE4/" -- \
-        	-dSuggests debian/python-kde4/usr/lib/pyshared/python2.5/PyKDE4/*.so -dDepends; \
+        DH_OPTIONS= dh_shlibdeps -ppython-kde4 $(foreach s,$(pyshared_nondefault),-X'$s/') -- \
+        	-dSuggests $(foreach s,$(pyshared_nondefault),debian/python-kde4/$s/*.so) -dDepends; \
 	fi
 	dh_shlibdeps -Npython-kde4
 	dh_installdeb

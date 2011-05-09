@@ -94,19 +94,6 @@ Description: Qt D-Bus SMOKE library
  .
  This is part of the KDE Bindings module.
 
-#Package: libsmokeqtmultimedia4-3
-#Section: libs
-#Depends: ${shlibs:Depends}, ${misc:Depends}
-#Architecture: any
-#Description: Qt Multimedia Smoke library
-# Smoke libraries are part of the bindings used for Qt and KDE. This package
-# contains Qt Multimedia Smoke.
-# .
-# Smoke provides infrastructure which is used for creating bindings for
-# multiple languages such as Ruby, C# and PHP.
-# .
-# This is part of the KDE Bindings module.
-
 Package: libsmokeqtnetwork4-3
 Section: libs
 Depends: ${shlibs:Depends}, ${misc:Depends}

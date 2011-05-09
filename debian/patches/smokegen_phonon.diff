@@ -1,0 +1,18 @@
+Author: Pino Toscano <pino@kde.org>
+Description: Fix compilation with newer Phonon.
+ This includes two patches committed upstream, slightly adapted to support old
+ smokegen (which does not define __SMOKEGEN_RUN__ when running).
+Forwarded: not-needed
+Origin: vendor
+Last-Update: 2011-05-09
+
+--- a/smoke/qt/phonon/phonon_includes.h
++++ b/smoke/qt/phonon/phonon_includes.h
+@@ -1,6 +1,7 @@
+ #ifdef __SMOKEGEN_RUN__
+ #  define PHONON_EXPORT
+ #  define PHONON_DEPRECATED
++#  define PHONON_EXPORT_DEPRECATED
+ #endif
+ 
+ #include <phonon/abstractaudiooutput.h>
