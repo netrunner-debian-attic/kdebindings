@@ -36,6 +36,7 @@ kdebindings (4:4.6.3-0r0) UNRELEASED; urgency=low
   * Drop add_qtwebkit_includedir.diff patch, merged upstream.
   * Adapt smokegen_phonon.diff to upstream changes.
   * No longer set -DENABLE_QTMULTIMEDIA_SMOKE=OFF, not needed anymore.
+  * Adapt backport_r1209688.diff patch to upstream changes.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Mon, 09 Aug 2010 22:43:03 +0200
 
