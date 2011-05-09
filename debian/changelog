@@ -1,5 +1,8 @@
 kdebindings (4:4.4.5-6) UNRELEASED; urgency=low
 
+  [ Pino Toscano ]
+  * Backport upstream fixes (merged in smokegen_phonon.diff) to make
+    smokephonon compile with Phonon >= 4.5.0. (Closes: #625707)
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Mon, 09 May 2011 12:21:58 +0200
 
