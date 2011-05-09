@@ -4,6 +4,10 @@ kdebindings (4:4.4.5-6) UNRELEASED; urgency=low
   * Backport upstream fixes (merged in smokegen_phonon.diff) to make
     smokephonon compile with Phonon >= 4.5.0. (Closes: #625707)
 
+  [ Modestas Vainius ]
+  * Do not hardcode python versions in debian/rules. Use pyversions instead.
+    This should make kdebindings fully binNMUable for python transitions.
+
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Mon, 09 May 2011 12:21:58 +0200
 
 kdebindings (4:4.4.5-5) unstable; urgency=high
