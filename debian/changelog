@@ -37,8 +37,18 @@ kdebindings (4:4.6.3-0r0) UNRELEASED; urgency=low
   * Adapt smokegen_phonon.diff to upstream changes.
   * No longer set -DENABLE_QTMULTIMEDIA_SMOKE=OFF, not needed anymore.
   * Adapt backport_r1209688.diff patch to upstream changes.
+  * Adapt smokegen_load_system_defines.diff to upstream changes.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Mon, 09 Aug 2010 22:43:03 +0200
+
+kdebindings (4:4.4.5-7) unstable; urgency=low
+
+  * Make smokegen load system #defines directly from gcc rather than using
+    an incomplete list of hardcoded macros (smokegen_load_system_defines.diff).
+    This fixes FTBFS on kFreeBSD triggered by system header changes in eglibc
+    2.13. (Closes: #626631)
+
+ -- Modestas Vainius <modax@debian.org>  Fri, 13 May 2011 23:48:55 +0300
 
 kdebindings (4:4.4.5-6) unstable; urgency=low
 

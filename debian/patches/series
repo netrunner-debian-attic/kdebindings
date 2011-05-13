@@ -14,3 +14,4 @@ version_cppparser_library.diff
 optional_install_sip_files.diff
 backport_r1209688.diff
 smokegen_phonon.diff
+smokegen_load_system_defines.diff
