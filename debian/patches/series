@@ -19,3 +19,4 @@ backport_r1209688.diff
 backport_r1211266.diff
 add_qtwebkit_includedir.diff
 smokegen_phonon.diff
+smokegen_load_system_defines.diff

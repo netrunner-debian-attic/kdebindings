@@ -1,5 +1,9 @@
 kdebindings (4:4.4.5-7) UNRELEASED; urgency=low
 
+  * Make smokegen load system #defines directly from gcc rather than using
+    an incomplete list of hardcoded macros (smokegen_load_system_defines.diff).
+    This fixes FTBFS on kFreeBSD triggered by system header changes in eglibc
+    2.13. (Closes: #626631)
 
  -- Modestas Vainius <modax@debian.org>  Fri, 13 May 2011 23:33:18 +0300
 
